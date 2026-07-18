@@ -57,45 +57,11 @@ system. The host keeps its source of truth, domain data, permissions, execution
 systems, and final decisions. COS supplies protocols, artifact contracts,
 conformance examples, and adoption guidance.
 
-```mermaid
-flowchart TB
-    H["Host project\nBusiness source of truth"]
-
-    subgraph COS["CollaborationOS public core"]
-        G["Governance\nConstitution and invariants"]
-        P["Protocols\nP01-P07"]
-        A["Artifacts\nA01-A09 schemas and templates"]
-        C["Conformance\n126 synthetic fixtures and 4 matrices"]
-        D["Adoption\nGate Pack and host adoption kit"]
-
-        G --> P
-        P --> A
-        A --> C
-        C --> D
-    end
-
-    H <-->|"adopt by reference; no payload transfer"| D
-    D -.->|"bounded guidance only"| H
-```
+![CollaborationOS system architecture](assets/architecture/cos-system-architecture.svg)
 
 ### The seven-protocol governance loop
 
-```mermaid
-flowchart LR
-    P01["P01 Context Recovery\nA01 Context Packet"]
-    P02["P02 Evidence Admission\nA02 Evidence Record"]
-    P03["P03 Authority Binding\nA03 Role/Authority Map"]
-    P04["P04 Decision Before Instruction\nA04 Decision + optional A05 Cost"]
-    P05["P05 Execution Handoff\nA06 Handoff"]
-    P06["P06 Independent Acceptance\nA07 Acceptance + optional A08 Failure"]
-    P07["P07 Learning and Promotion\nA09 Learning Candidate"]
-
-    P01 --> P02 --> P03 --> P04 --> P05 --> P06 --> P07
-
-    P05 -->|"legal stop"| STOP["No execution\nNo implicit retry"]
-    P06 -->|"failure / ambiguity"| TAKEOVER["Preserve evidence\nHuman takeover"]
-    P07 -->|"separate human authority"| PROMOTE["Optional promotion decision"]
-```
+![CollaborationOS seven-protocol governance loop](assets/architecture/cos-seven-protocol-loop.svg)
 
 Every transition checks current upstream evidence and authority. A filename,
 actor identity, successful tool call, or later result cannot create authority

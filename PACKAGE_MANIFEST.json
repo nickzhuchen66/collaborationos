@@ -5,7 +5,7 @@
   "license": "Apache-2.0",
   "non_self": true,
   "publication_authorized": true,
-  "member_count": 196,
+  "member_count": 198,
   "members": [
     {
       "path": ".github/CODEOWNERS",
@@ -904,13 +904,13 @@
     },
     {
       "path": "README.md",
-      "bytes": 10729,
-      "sha256": "386d45b6bee5cda4dc9e202021fbd33d2c0af14150c532703150c338e68fb0bc"
+      "bytes": 9627,
+      "sha256": "11fafe5ea2e90372a079b26071f3073a9b875e5bf66d7d79107baf3e579abe73"
     },
     {
       "path": "README.zh-CN.md",
-      "bytes": 8593,
-      "sha256": "169a2e759a8fca7b0fcba22dbdaf426dda237f17bffaa0748f1c68d7749d9efd"
+      "bytes": 7552,
+      "sha256": "453b428f148e20e9fd2e8978951f6450f6d7b5c83528b63254ba3a60bcea894c"
     },
     {
       "path": "RELEASE_NOTES.md",
@@ -926,6 +926,16 @@
       "path": "SECURITY.md",
       "bytes": 1174,
       "sha256": "568ee5c4445432fb41e3d63182a01c97a0c55365890b4042871d68cb395dc967"
+    },
+    {
+      "path": "assets/architecture/cos-seven-protocol-loop.svg",
+      "bytes": 13240,
+      "sha256": "0260438ae434422735924ca0eabbd2e2fc8a8e1da6685d4c058b4ce6182cfcde"
+    },
+    {
+      "path": "assets/architecture/cos-system-architecture.svg",
+      "bytes": 11113,
+      "sha256": "a9e822afc16f0fe7ec5b8262486d903d6f0bb70b48f3e3a86f4df137031e4a77"
     },
     {
       "path": "docs/adoption-kit-v0.1/COS_NEW_HOST_PROJECT_ADOPTION_MANUAL_v0.1.md",

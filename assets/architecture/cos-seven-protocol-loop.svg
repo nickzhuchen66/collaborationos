@@ -1,0 +1,148 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="700" viewBox="0 0 1440 700" role="img" aria-labelledby="title desc">
+  <title id="title">CollaborationOS seven-protocol governance loop</title>
+  <desc id="desc">The ordered P01 through P07 governance path with explicit legal-stop, failure takeover, and separate promotion branches.</desc>
+  <defs>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M 32 0 L 0 0 0 32" fill="none" stroke="#26334A" stroke-width="1" opacity="0.28"/>
+    </pattern>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#71839D"/>
+    </marker>
+    <marker id="branchArrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#F08A8A"/>
+    </marker>
+  </defs>
+
+  <rect width="1440" height="700" fill="#0B1020"/>
+  <rect width="1440" height="700" fill="url(#grid)"/>
+
+  <rect x="64" y="48" width="8" height="86" rx="4" fill="#6EA8FE"/>
+  <text x="94" y="72" fill="#6EA8FE" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="15" font-weight="700">P01-P07 / GOVERNANCE PATH</text>
+  <text x="94" y="108" fill="#F4F7FB" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="32" font-weight="700">Seven protocols, one inspectable authority chain</text>
+  <text x="94" y="136" fill="#9FB0C7" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="17">Execution is not acceptance. Failure is evidence. Learning is not promotion.</text>
+
+  <g stroke="#71839D" stroke-width="2" fill="none" marker-end="url(#arrow)">
+    <path d="M240 306 H260"/>
+    <path d="M428 306 H448"/>
+    <path d="M616 306 H636"/>
+    <path d="M804 306 H824"/>
+    <path d="M992 306 H1012"/>
+    <path d="M1180 306 H1200"/>
+  </g>
+
+  <g>
+    <rect x="72" y="198" width="168" height="216" rx="8" fill="#121A2B" stroke="#33425D"/>
+    <rect x="72" y="198" width="168" height="7" rx="4" fill="#6EA8FE"/>
+    <text x="92" y="239" fill="#6EA8FE" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="14" font-weight="700">P01</text>
+    <text x="92" y="276" fill="#F4F7FB" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="20" font-weight="700">Context</text>
+    <text x="92" y="300" fill="#F4F7FB" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="20" font-weight="700">Recovery</text>
+    <line x1="92" y1="326" x2="220" y2="326" stroke="#2A3853"/>
+    <text x="92" y="355" fill="#9FB0C7" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13">Accepted context</text>
+    <rect x="92" y="373" width="56" height="24" rx="6" fill="#1B3150"/>
+    <text x="120" y="390" text-anchor="middle" fill="#AFCBFF" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12" font-weight="700">A01</text>
+  </g>
+
+  <g>
+    <rect x="260" y="198" width="168" height="216" rx="8" fill="#121A2B" stroke="#33425D"/>
+    <rect x="260" y="198" width="168" height="7" rx="4" fill="#61D7D0"/>
+    <text x="280" y="239" fill="#61D7D0" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="14" font-weight="700">P02</text>
+    <text x="280" y="276" fill="#F4F7FB" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="20" font-weight="700">Evidence</text>
+    <text x="280" y="300" fill="#F4F7FB" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="20" font-weight="700">Admission</text>
+    <line x1="280" y1="326" x2="408" y2="326" stroke="#2A3853"/>
+    <text x="280" y="355" fill="#9FB0C7" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13">Grounded evidence</text>
+    <rect x="280" y="373" width="56" height="24" rx="6" fill="#17384A"/>
+    <text x="308" y="390" text-anchor="middle" fill="#A6F0EB" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12" font-weight="700">A02</text>
+  </g>
+
+  <g>
+    <rect x="448" y="198" width="168" height="216" rx="8" fill="#121A2B" stroke="#33425D"/>
+    <rect x="448" y="198" width="168" height="7" rx="4" fill="#B69AF8"/>
+    <text x="468" y="239" fill="#B69AF8" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="14" font-weight="700">P03</text>
+    <text x="468" y="276" fill="#F4F7FB" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="20" font-weight="700">Authority</text>
+    <text x="468" y="300" fill="#F4F7FB" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="20" font-weight="700">Binding</text>
+    <line x1="468" y1="326" x2="596" y2="326" stroke="#2A3853"/>
+    <text x="468" y="355" fill="#9FB0C7" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13">Roles + permissions</text>
+    <rect x="468" y="373" width="56" height="24" rx="6" fill="#30264D"/>
+    <text x="496" y="390" text-anchor="middle" fill="#D9CAFF" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12" font-weight="700">A03</text>
+  </g>
+
+  <g>
+    <rect x="636" y="198" width="168" height="216" rx="8" fill="#121A2B" stroke="#33425D"/>
+    <rect x="636" y="198" width="168" height="7" rx="4" fill="#F2C66D"/>
+    <text x="656" y="239" fill="#F2C66D" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="14" font-weight="700">P04</text>
+    <text x="656" y="276" fill="#F4F7FB" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="20" font-weight="700">Human</text>
+    <text x="656" y="300" fill="#F4F7FB" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="20" font-weight="700">Decision</text>
+    <line x1="656" y1="326" x2="784" y2="326" stroke="#2A3853"/>
+    <text x="656" y="355" fill="#9FB0C7" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13">Decision + cost gate</text>
+    <rect x="656" y="373" width="86" height="24" rx="6" fill="#463A20"/>
+    <text x="699" y="390" text-anchor="middle" fill="#FFE3A0" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12" font-weight="700">A04 · A05</text>
+  </g>
+
+  <g>
+    <rect x="824" y="198" width="168" height="216" rx="8" fill="#121A2B" stroke="#33425D"/>
+    <rect x="824" y="198" width="168" height="7" rx="4" fill="#F08A8A"/>
+    <text x="844" y="239" fill="#F08A8A" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="14" font-weight="700">P05</text>
+    <text x="844" y="276" fill="#F4F7FB" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="20" font-weight="700">Execution</text>
+    <text x="844" y="300" fill="#F4F7FB" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="20" font-weight="700">Handoff</text>
+    <line x1="844" y1="326" x2="972" y2="326" stroke="#2A3853"/>
+    <text x="844" y="355" fill="#9FB0C7" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13">Bounded instruction</text>
+    <rect x="844" y="373" width="56" height="24" rx="6" fill="#4A292F"/>
+    <text x="872" y="390" text-anchor="middle" fill="#FFC4C4" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12" font-weight="700">A06</text>
+  </g>
+
+  <g>
+    <rect x="1012" y="198" width="168" height="216" rx="8" fill="#121A2B" stroke="#33425D"/>
+    <rect x="1012" y="198" width="168" height="7" rx="4" fill="#77D196"/>
+    <text x="1032" y="239" fill="#77D196" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="14" font-weight="700">P06</text>
+    <text x="1032" y="276" fill="#F4F7FB" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="20" font-weight="700">Independent</text>
+    <text x="1032" y="300" fill="#F4F7FB" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="20" font-weight="700">Acceptance</text>
+    <line x1="1032" y1="326" x2="1160" y2="326" stroke="#2A3853"/>
+    <text x="1032" y="355" fill="#9FB0C7" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13">Review or takeover</text>
+    <rect x="1032" y="373" width="86" height="24" rx="6" fill="#1F3C39"/>
+    <text x="1075" y="390" text-anchor="middle" fill="#B9F1CD" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12" font-weight="700">A07 · A08</text>
+  </g>
+
+  <g>
+    <rect x="1200" y="198" width="168" height="216" rx="8" fill="#121A2B" stroke="#33425D"/>
+    <rect x="1200" y="198" width="168" height="7" rx="4" fill="#61D7D0"/>
+    <text x="1220" y="239" fill="#61D7D0" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="14" font-weight="700">P07</text>
+    <text x="1220" y="276" fill="#F4F7FB" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="20" font-weight="700">Learning</text>
+    <text x="1220" y="300" fill="#F4F7FB" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="20" font-weight="700">Candidate</text>
+    <line x1="1220" y1="326" x2="1348" y2="326" stroke="#2A3853"/>
+    <text x="1220" y="355" fill="#9FB0C7" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13">No auto-promotion</text>
+    <rect x="1220" y="373" width="56" height="24" rx="6" fill="#17384A"/>
+    <text x="1248" y="390" text-anchor="middle" fill="#A6F0EB" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12" font-weight="700">A09</text>
+  </g>
+
+  <path d="M908 414 V472 H784 V514" fill="none" stroke="#F08A8A" stroke-width="2" marker-end="url(#branchArrow)"/>
+  <path d="M1096 414 V472 H1038 V514" fill="none" stroke="#F08A8A" stroke-width="2" marker-end="url(#branchArrow)"/>
+  <path d="M1284 414 V514" fill="none" stroke="#61D7D0" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <g>
+    <rect x="660" y="514" width="248" height="112" rx="8" fill="#211A24" stroke="#6D3E4A"/>
+    <text x="682" y="546" fill="#F08A8A" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13" font-weight="700">P05 · LEGAL STOP</text>
+    <text x="682" y="577" fill="#F4F7FB" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="17" font-weight="700">No execution</text>
+    <text x="682" y="600" fill="#9FB0C7" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13">Downstream not attempted · no retry</text>
+  </g>
+
+  <g>
+    <rect x="924" y="514" width="248" height="112" rx="8" fill="#211A24" stroke="#6D3E4A"/>
+    <text x="946" y="546" fill="#F08A8A" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13" font-weight="700">P06 · FAILURE / AMBIGUITY</text>
+    <text x="946" y="577" fill="#F4F7FB" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="17" font-weight="700">Preserve and take over</text>
+    <text x="946" y="600" fill="#9FB0C7" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13">A08 records truth · human endpoint</text>
+  </g>
+
+  <g>
+    <rect x="1188" y="514" width="180" height="112" rx="8" fill="#13272A" stroke="#2E6768"/>
+    <text x="1210" y="546" fill="#61D7D0" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13" font-weight="700">P07 · SEPARATE GATE</text>
+    <text x="1210" y="577" fill="#F4F7FB" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="17" font-weight="700">Human promotion</text>
+    <text x="1210" y="600" fill="#9FB0C7" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13">Candidate ≠ core change</text>
+  </g>
+
+  <rect x="72" y="652" width="1296" height="1" fill="#2A3853"/>
+  <text x="72" y="678" fill="#71839D" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12">PRIMARY PATH</text>
+  <line x1="166" y1="674" x2="210" y2="674" stroke="#71839D" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="248" y="678" fill="#71839D" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12">FAIL-CLOSED BRANCH</text>
+  <line x1="390" y1="674" x2="434" y2="674" stroke="#F08A8A" stroke-width="2" marker-end="url(#branchArrow)"/>
+  <text x="1368" y="678" text-anchor="end" fill="#77D196" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12" font-weight="700">FINAL CONSEQUENTIAL AUTHORITY REMAINS HUMAN</text>
+</svg>

@@ -45,45 +45,11 @@ COS 让这条链路可检查：
 
 COS 把稳定的治理核心与每个接入项目的业务系统分开。Host 项目继续拥有业务真相源、领域数据、权限、执行系统和最终决策；COS 提供协议、工件合同、Conformance 样例和接入指南。
 
-```mermaid
-flowchart TB
-    H["Host 项目\n业务真相源"]
-
-    subgraph COS["CollaborationOS 公开核心"]
-        G["Governance\n宪法与不变量"]
-        P["Protocols\nP01-P07"]
-        A["Artifacts\nA01-A09 Schema 与模板"]
-        C["Conformance\n126 个合成 Fixture 与 4 个 Matrix"]
-        D["Adoption\nGate Pack 与 Host Adoption Kit"]
-
-        G --> P
-        P --> A
-        A --> C
-        C --> D
-    end
-
-    H <-->|"按引用接入，不转移业务 payload"| D
-    D -.->|"仅提供有边界的治理指导"| H
-```
+![CollaborationOS 系统架构](assets/architecture/cos-system-architecture.svg)
 
 ### 七协议治理闭环
 
-```mermaid
-flowchart LR
-    P01["P01 上下文恢复\nA01 Context Packet"]
-    P02["P02 证据准入\nA02 Evidence Record"]
-    P03["P03 权限绑定\nA03 Role/Authority Map"]
-    P04["P04 决策先于指令\nA04 Decision + 可选 A05 Cost"]
-    P05["P05 执行交接\nA06 Handoff"]
-    P06["P06 独立验收\nA07 Acceptance + 可选 A08 Failure"]
-    P07["P07 学习与晋升\nA09 Learning Candidate"]
-
-    P01 --> P02 --> P03 --> P04 --> P05 --> P06 --> P07
-
-    P05 -->|"legal stop"| STOP["不执行\n不隐式重试"]
-    P06 -->|"失败或所有权歧义"| TAKEOVER["保留证据\n人工接管"]
-    P07 -->|"独立人类权限"| PROMOTE["可选晋升决策"]
-```
+![CollaborationOS 七协议治理闭环](assets/architecture/cos-seven-protocol-loop.svg)
 
 每个阶段都检查当前上游证据和权限。文件名、参与者身份、工具调用成功或后续结果，都不能反向创造权限。
 
