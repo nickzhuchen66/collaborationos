@@ -1,12 +1,47 @@
 {
   "schema_version": "COS_PUBLIC_PACKAGE_MANIFEST_v0.1",
-  "package_id": "CollaborationOS-public-v0.1.0-refreeze01",
-  "release": "v0.1.0-public-refreeze01",
+  "package_id": "CollaborationOS-public-main-v0.1.1-development",
+  "release": "v0.1.1-development",
   "license": "Apache-2.0",
   "non_self": true,
-  "publication_authorized": false,
-  "member_count": 185,
+  "publication_authorized": true,
+  "member_count": 196,
   "members": [
+    {
+      "path": ".github/CODEOWNERS",
+      "bytes": 18,
+      "sha256": "079aefa326743b18412a15cfb3026cbe2e123ee3fc01eed7ee305af274ad4f58"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/config.yml",
+      "bytes": 415,
+      "sha256": "22095c3b4e516037de50bde58868becfbf41ba09e9e30cb1a7fc769e9a9b52d4"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/documentation.yml",
+      "bytes": 1043,
+      "sha256": "6e45a03b41b36f15efadb57227c562193b4f85aa14f4daab2992e7da1f84f465"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/feature-proposal.yml",
+      "bytes": 1464,
+      "sha256": "638b0a3ce71e14b99b88787c3e921a596eb6e35abf34a5abc6e5140791f0f48a"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/fixture-conformance.yml",
+      "bytes": 1558,
+      "sha256": "1a00ebbd8058a6b620fe4f0950553c8ed1b0e4852e9e6fa01adc2641fa9b0e83"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/protocol-schema-defect.yml",
+      "bytes": 1877,
+      "sha256": "2d72614fcd79db46c757bba6a29c9d3826681f1050eab8f652313d24e7d38f28"
+    },
+    {
+      "path": ".github/PULL_REQUEST_TEMPLATE.md",
+      "bytes": 1172,
+      "sha256": "d78eb87b4e8e9319ded9eaea9186f3e5be3de481f47447c03efae3711b1cb534"
+    },
     {
       "path": ".gitignore",
       "bytes": 142,
@@ -24,8 +59,8 @@
     },
     {
       "path": "01_Core/COS_Target_Architecture.md",
-      "bytes": 2552,
-      "sha256": "59dce39deee875266bd65d329194ac4522507c301ee5edbdf5797ce318a43357"
+      "bytes": 2538,
+      "sha256": "e3f54a47bf18b0ba268a751a056957e1f26ba77d9b0651e49ef35817e6a23762"
     },
     {
       "path": "01_Core/README.md",
@@ -838,14 +873,24 @@
       "sha256": "fb59b82e962cbe324eb3c6a9b363886c031de055ff8cd274b6d9a2880ded3d55"
     },
     {
+      "path": "CHANGELOG.md",
+      "bytes": 1337,
+      "sha256": "b107cbfeef282b9f8b6ce87d4edc814a647b2ffa345abd7316afdd0380d18217"
+    },
+    {
+      "path": "CITATION.cff",
+      "bytes": 602,
+      "sha256": "3981dee522ab99eb571e771316fd926aa18fc85a294757dce7aab7a477b07eb2"
+    },
+    {
       "path": "CODE_OF_CONDUCT.md",
       "bytes": 1177,
       "sha256": "e61160d75d9005d636782685954c4dca7e9f8a24e1fae7521fe776347be84a5d"
     },
     {
       "path": "CONTRIBUTING.md",
-      "bytes": 1642,
-      "sha256": "8bbfde058f25621445d715624274ff80a1c76456e179687669508baa0efcceb2"
+      "bytes": 2627,
+      "sha256": "25e547b200083a80574c30a485ddcabcb11c7972ec6bbc5d181390c6de61cf63"
     },
     {
       "path": "LICENSE",
@@ -859,18 +904,28 @@
     },
     {
       "path": "README.md",
-      "bytes": 3266,
-      "sha256": "5a1d14cce95b2ed43cf1b43d95ec1ee2b7f8b244ceda0efd4a9360740e64eebb"
+      "bytes": 10729,
+      "sha256": "386d45b6bee5cda4dc9e202021fbd33d2c0af14150c532703150c338e68fb0bc"
+    },
+    {
+      "path": "README.zh-CN.md",
+      "bytes": 8593,
+      "sha256": "169a2e759a8fca7b0fcba22dbdaf426dda237f17bffaa0748f1c68d7749d9efd"
     },
     {
       "path": "RELEASE_NOTES.md",
-      "bytes": 1076,
-      "sha256": "b6c015a19d9fcdf513a744332f656a3224e5d0c8231d4b4c95a7b549046dfb90"
+      "bytes": 1204,
+      "sha256": "a47ba7e335d685cbfb0f7c516745f078a2f556913ff1c04f56d1204ee84ed3fb"
+    },
+    {
+      "path": "ROADMAP.md",
+      "bytes": 2495,
+      "sha256": "922c5529f674f93563f03d249fdeb068ed02b0019d63fa7f664ceca79f2cee6a"
     },
     {
       "path": "SECURITY.md",
-      "bytes": 1173,
-      "sha256": "fd1747bd527622ce2e65968e86264d2edf252f6eeb5add616d65139ad5328e02"
+      "bytes": 1174,
+      "sha256": "568ee5c4445432fb41e3d63182a01c97a0c55365890b4042871d68cb395dc967"
     },
     {
       "path": "docs/adoption-kit-v0.1/COS_NEW_HOST_PROJECT_ADOPTION_MANUAL_v0.1.md",
@@ -879,8 +934,8 @@
     },
     {
       "path": "docs/adoption-kit-v0.1/PACKAGE_MANIFEST.json",
-      "bytes": 1200,
-      "sha256": "c9c49599fddcd69aa3fecdb0d7802a669b29e62171150ca68f92a608282d5b75"
+      "bytes": 1194,
+      "sha256": "bc8b33fbf1360f6a347c91ef8d5910dc64e7d34fdfc5da366d0401ae0ba64163"
     },
     {
       "path": "docs/adoption-kit-v0.1/README.md",
@@ -919,8 +974,8 @@
     },
     {
       "path": "docs/gate-pack-v0.1/PACKAGE_MANIFEST.json",
-      "bytes": 919,
-      "sha256": "c850471d4045678c0cda48dfea6f8cd7f15df65eec2618dfb5c2300564531a54"
+      "bytes": 913,
+      "sha256": "1e1634ccd724198d65e61f2d21c518fff13fefc96ae6a2725919990b6b8af406"
     },
     {
       "path": "docs/gate-pack-v0.1/README.md",

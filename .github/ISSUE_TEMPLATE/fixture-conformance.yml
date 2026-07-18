@@ -1,0 +1,54 @@
+name: Fixture or conformance proposal
+description: Propose a synthetic positive, legal-stop, failure, or adjacent case.
+title: "[Conformance]: "
+labels: []
+body:
+  - type: dropdown
+    id: branch
+    attributes:
+      label: Case type
+      options:
+        - Positive
+        - Legal stop
+        - Failure and takeover
+        - Adjacent mutation
+        - Matrix clarification
+    validations:
+      required: true
+  - type: input
+    id: protocol
+    attributes:
+      label: Protocol, artifact, or matrix
+      placeholder: P05 / A06 / M5C
+    validations:
+      required: true
+  - type: textarea
+    id: predicate
+    attributes:
+      label: Exact predicate and expected outcome
+      description: Include the first expected stage, outcome, and downstream non-reachability.
+    validations:
+      required: true
+  - type: textarea
+    id: value
+    attributes:
+      label: Why the current public set does not cover this case
+    validations:
+      required: true
+  - type: textarea
+    id: synthetic
+    attributes:
+      label: Minimal synthetic facts
+      description: Do not include a real host payload or private evidence.
+    validations:
+      required: true
+  - type: checkboxes
+    id: boundaries
+    attributes:
+      label: Boundary confirmation
+      options:
+        - label: The proposal does not grant AI final authority, implicit retry, self-acceptance, or automatic promotion.
+          required: true
+        - label: The proposal uses no secret, personal data, private path, or proprietary host evidence.
+          required: true
+

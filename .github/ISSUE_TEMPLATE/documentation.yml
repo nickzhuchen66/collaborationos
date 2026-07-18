@@ -1,0 +1,38 @@
+name: Documentation improvement
+description: Report unclear, missing, inconsistent, or inaccessible public documentation.
+title: "[Docs]: "
+labels: []
+body:
+  - type: input
+    id: location
+    attributes:
+      label: Document and section
+      placeholder: README.md - Quick Start
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What is unclear or missing?
+    validations:
+      required: true
+  - type: textarea
+    id: audience
+    attributes:
+      label: Who is affected?
+      description: For example, evaluator, adopter, reviewer, contributor, or maintainer.
+    validations:
+      required: true
+  - type: textarea
+    id: improvement
+    attributes:
+      label: Suggested improvement
+      description: A concrete outline or replacement text is welcome but not required.
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Public-content confirmation
+      options:
+        - label: This issue uses only public or synthetic information.
+          required: true
+

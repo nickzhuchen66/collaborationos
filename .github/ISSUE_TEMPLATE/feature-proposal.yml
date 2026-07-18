@@ -1,0 +1,46 @@
+name: Bounded feature proposal
+description: Suggest a public capability or adoption improvement without silently widening authority.
+title: "[Proposal]: "
+labels: []
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem statement
+      description: Describe the user problem before proposing the solution.
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Proposed public scope
+      description: List the affected protocols, artifacts, documents, or adoption surfaces.
+    validations:
+      required: true
+  - type: textarea
+    id: exclusions
+    attributes:
+      label: Explicit exclusions
+      description: State what this proposal does not authorize or claim.
+    validations:
+      required: true
+  - type: textarea
+    id: criteria
+    attributes:
+      label: Synthetic acceptance criteria
+      description: Include positive, legal-stop, and failure behavior when applicable.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+  - type: checkboxes
+    id: boundary
+    attributes:
+      label: Governance boundary
+      options:
+        - label: This proposal does not assume that documentation, code generation, or execution success grants authority or acceptance.
+          required: true
+        - label: This proposal does not require publishing private host evidence.
+          required: true

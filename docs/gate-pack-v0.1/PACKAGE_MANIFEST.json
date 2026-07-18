@@ -1,7 +1,7 @@
 {
   "schema_version": "COS_PUBLIC_PACKAGE_MANIFEST_v0.1",
   "package_id": "COS_PUBLIC_GATE_PACK_v0.1",
-  "release": "v0.1.0-public-refreeze01",
+  "release": "v0.1.1-development",
   "non_self": true,
   "member_count": 4,
   "members": [

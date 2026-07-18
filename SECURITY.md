@@ -2,7 +2,7 @@
 
 ## Supported release
 
-The initial public draft is a manual/static specification. It contains no
+The current public release is a manual/static specification. It contains no
 supported runtime service. Security reports may still concern schema bypass,
 authority escalation, secret exposure, unsafe examples, dependency confusion,
 or documentation that could cause dangerous execution.
@@ -29,4 +29,3 @@ Acknowledgment is best-effort and no SLA is promised. A documentation or schema
 fix does not retroactively authorize host action. Security fixes should preserve
 failure evidence, avoid implicit retry, and receive independent review before
 release.
-

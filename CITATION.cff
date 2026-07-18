@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use CollaborationOS, please cite the project and its release."
+title: "CollaborationOS"
+abstract: "A manual/static governance framework for consequential human-AI collaboration."
+type: software
+authors:
+  - family-names: "Zhu"
+    given-names: "Nick"
+repository-code: "https://github.com/nickzhuchen66/collaborationos"
+url: "https://github.com/nickzhuchen66/collaborationos"
+license: Apache-2.0
+version: 0.1.0
+date-released: 2026-07-18
+keywords:
+  - human-AI collaboration
+  - AI governance
+  - evidence governance
+  - decision governance
+  - independent acceptance

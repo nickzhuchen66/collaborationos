@@ -1,6 +1,6 @@
 # CollaborationOS Target Architecture
 
-Version: `v0.1.0-public-draft`
+Version: `v0.1.0`
 
 ## 1. Architecture objective
 
@@ -73,4 +73,3 @@ Executable Skills, Workflows, validators, CLIs, SDKs, host connectors,
 schedulers, and production services are outside v0.1.0. If introduced later,
 they must preserve the same authority flow and cannot self-authorize, self-
 accept, or silently widen permissions.
-

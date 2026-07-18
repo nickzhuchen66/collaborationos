@@ -1,7 +1,7 @@
 {
   "schema_version": "COS_PUBLIC_PACKAGE_MANIFEST_v0.1",
   "package_id": "COS_PUBLIC_HOST_ADOPTION_KIT_v0.1",
-  "release": "v0.1.0-public-refreeze01",
+  "release": "v0.1.1-development",
   "non_self": true,
   "member_count": 5,
   "members": [

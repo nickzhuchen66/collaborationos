@@ -1,0 +1,9 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Adoption and design discussions
+    url: https://github.com/nickzhuchen66/collaborationos/discussions
+    about: Ask open-ended questions and discuss how COS may fit a project.
+  - name: Security reporting
+    url: https://github.com/nickzhuchen66/collaborationos/security/policy
+    about: Read the private reporting guidance before sharing sensitive details.
+

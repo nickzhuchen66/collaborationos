@@ -1,0 +1,64 @@
+name: Protocol or schema defect
+description: Report a reproducible inconsistency, unsafe state, or contract gap.
+title: "[Defect]: "
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use synthetic information only. Do not include secrets, private host paths, personal data, or proprietary evidence.
+  - type: dropdown
+    id: surface
+    attributes:
+      label: Affected surface
+      options:
+        - Protocol P01-P07
+        - Schema or template A01-A09
+        - Conformance fixture or matrix
+        - Gate Pack
+        - Host Adoption Kit
+        - Other public documentation
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version or commit
+      placeholder: v0.1.0 or commit SHA
+    validations:
+      required: true
+  - type: textarea
+    id: invariant
+    attributes:
+      label: Violated invariant or expected contract
+      description: Link the exact public clause, schema path, or matrix row when possible.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Minimal synthetic reproduction
+      description: Show the smallest safe example that reaches the problem.
+    validations:
+      required: true
+  - type: textarea
+    id: observed
+    attributes:
+      label: Observed and expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: authority
+    attributes:
+      label: Authority and side-effect boundary
+      description: State whether any access, write, external call, cost, retry, or real host operation occurred.
+    validations:
+      required: true
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Safety confirmation
+      options:
+        - label: This report contains no secret, credential, personal data, private path, or real host payload.
+          required: true
+

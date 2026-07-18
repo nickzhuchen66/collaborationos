@@ -1,4 +1,4 @@
-# CollaborationOS v0.1.0 Public Draft
+# CollaborationOS v0.1.0
 
 ## Included
 
@@ -27,8 +27,11 @@ This draft describes a manual/static governance baseline. It does not claim
 automated enforcement, production readiness, or completed cross-host
 validation.
 
-## Draft status
+## Release
 
-The directory is a local release candidate. It has not been initialized as a
-Git repository, published to GitHub, tagged, or formally released.
+The public release is available at
+<https://github.com/nickzhuchen66/collaborationos/releases/tag/v0.1.0>.
 
+The `v0.1.0` tag preserves the independently reviewed release bytes. Later
+changes on `main` improve repository usability without rewriting that tag or
+widening its capability claim.
