@@ -1,0 +1,109 @@
+{
+  "artifact": {
+    "acceptance_event": null,
+    "approval_ceiling": 150,
+    "artifact_id": "COS-A05-CANDIDATE-BASE",
+    "artifact_lifecycle": "rejected",
+    "artifact_type": "COS-A05",
+    "cost_gate_result": "not_applicable",
+    "cost_owner_binding": {
+      "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+      "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+      "accepted_a03_binding_id": "binding-cost-owner",
+      "actor_id": "human-cost-owner",
+      "actor_kind": "human",
+      "authority_source_checksum": "9999999999999999999999999999999999999999999999999999999999999999",
+      "authority_source_ref": "cos:decision/COS-019",
+      "scope": "M5-B evidence and decision packet"
+    },
+    "created_at": "2026-07-15T00:00:00Z",
+    "currency": "USD",
+    "effective_cost_allow": false,
+    "estimates": [
+      {
+        "amount": 100,
+        "assumptions": [
+          "bounded usage"
+        ],
+        "cost_class": "usage",
+        "currency": "USD",
+        "horizon_months": 12
+      }
+    ],
+    "exit_trigger": "Exit before vendor lock-in.",
+    "parent_decision_frame_checksum": "4444444444444444444444444444444444444444444444444444444444444444",
+    "parent_decision_frame_id": "decision-frame-cost-1",
+    "preparer_actor_id": "ai-preparer",
+    "protocol_run": {
+      "downstream_started": false,
+      "failure_envelope": {
+        "code": "M5B-FAILED",
+        "evidence_refs": [
+          "packet:M5B-FAILED"
+        ],
+        "last_safe_checkpoint": "cost_trigger_analysis",
+        "manual_takeover_required": true,
+        "owner_role": "takeover_owner",
+        "public_message": "Candidate scenario stopped without external side effect.",
+        "retryable": false,
+        "side_effect_occurred": false
+      },
+      "outcome": "failed",
+      "protocol_id": "COS-P04-COST-GATE",
+      "stages": [
+        {
+          "invoked": true,
+          "reason": "scenario failed",
+          "stage_id": "cost_trigger_analysis",
+          "status": "failed"
+        },
+        {
+          "invoked": false,
+          "reason": "prior stop",
+          "stage_id": "cost_inventory",
+          "status": "not_attempted"
+        },
+        {
+          "invoked": false,
+          "reason": "prior stop",
+          "stage_id": "unknown_cost_check",
+          "status": "not_attempted"
+        },
+        {
+          "invoked": false,
+          "reason": "prior stop",
+          "stage_id": "cost_owner_review",
+          "status": "not_attempted"
+        },
+        {
+          "invoked": false,
+          "reason": "prior stop",
+          "stage_id": "a05_acceptance",
+          "status": "not_attempted"
+        },
+        {
+          "invoked": false,
+          "reason": "prior stop",
+          "stage_id": "archive_lineage",
+          "status": "not_attempted"
+        }
+      ]
+    },
+    "revisit_trigger": "Revisit if estimate exceeds ceiling.",
+    "schema_version": "0.1",
+    "time_horizon_months": 12,
+    "trigger_analysis": "",
+    "trigger_applicable": false,
+    "trigger_classes": [],
+    "unknown_costs": []
+  },
+  "expected_artifact_lifecycle": "rejected",
+  "expected_assertions": [
+    "M5B-AST-N18"
+  ],
+  "expected_protocol_outcome": "failed",
+  "expected_schema_valid": false,
+  "fixture_version": "0.1",
+  "scenario_id": "M5B-N18",
+  "target_schema": "COS-A05"
+}

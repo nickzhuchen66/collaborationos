@@ -1,0 +1,29 @@
+{
+  "schema_version": "COS_PUBLIC_PACKAGE_MANIFEST_v0.1",
+  "package_id": "COS_PUBLIC_GATE_PACK_v0.1",
+  "release": "v0.1.0-public-refreeze01",
+  "non_self": true,
+  "member_count": 4,
+  "members": [
+    {
+      "path": "docs/gate-pack-v0.1/ARTIFACT_SELECTION_AND_OWNERSHIP.md",
+      "bytes": 6062,
+      "sha256": "5c0f38233b96a33ad819bcc5452c5a39da9ffe4e7005b6885299180998b52b49"
+    },
+    {
+      "path": "docs/gate-pack-v0.1/MANUAL_CONFORMANCE_GUIDE.md",
+      "bytes": 1985,
+      "sha256": "ea651b8a84e64817675e442ac5c14b28bb11a9e1c4c1bd70d241eacbf728059a"
+    },
+    {
+      "path": "docs/gate-pack-v0.1/MANUAL_OPERATOR_FLOW.md",
+      "bytes": 5314,
+      "sha256": "f6aa890dc3c6554d8423f9355a2fe79151bea735816603dcf2e67889d3dbc435"
+    },
+    {
+      "path": "docs/gate-pack-v0.1/README.md",
+      "bytes": 1982,
+      "sha256": "839b868a625f5e8b11439faab843e103b8fa844dbe2fddcccc8316ca39ef5bcf"
+    }
+  ]
+}

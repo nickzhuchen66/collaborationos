@@ -1,0 +1,139 @@
+{
+  "artifact": {
+    "a06_ref": {
+      "artifact_id": "COS-A06-M5C-01",
+      "checksum": "6666666666666666666666666666666666666666666666666666666666666666",
+      "current": true,
+      "cutoff": "2026-07-15T05:00:00Z",
+      "lifecycle": "accepted"
+    },
+    "a07_ref": {
+      "artifact_id": "COS-A07-M5C-01",
+      "checksum": "7777777777777777777777777777777777777777777777777777777777777777",
+      "current": true,
+      "cutoff": "2026-07-15T05:00:00Z",
+      "lifecycle": "accepted"
+    },
+    "artifact_body_checksum": "88d4b5f7705649e77ff8024f3178967a180d47d0b57353aa83c52043cf08548f",
+    "artifact_id": "COS-A08-M5C-01",
+    "artifact_type": "COS-A08",
+    "derived_head_event_id": "event-a08-takeover-02",
+    "events": [
+      {
+        "event_checksum": "693765c7ffd1f3ebc52d4b5e87cf7602e4ec147b6a076132dbe416e02c35137a",
+        "event_id": "event-a08-failure-01",
+        "event_kind": "failure_final",
+        "observed_at": "2026-07-15T05:20:00Z",
+        "previous_event_checksum": null,
+        "previous_event_id": null,
+        "sequence": 1
+      },
+      {
+        "event_checksum": "53e4788f74f1dfacaf92d5fb74e332d4b0b196612a792e67873d0cbe256645f9",
+        "event_id": "event-a08-takeover-02",
+        "event_kind": "takeover_acknowledged",
+        "observed_at": "2026-07-15T05:21:00Z",
+        "previous_event_checksum": "693765c7ffd1f3ebc52d4b5e87cf7602e4ec147b6a076132dbe416e02c35137a",
+        "previous_event_id": "event-a08-failure-01",
+        "sequence": 2
+      }
+    ],
+    "execution_attempt_id": "attempt-m5c-01",
+    "failure": {
+      "code": "M5C-IMPLEMENTATION-STOP",
+      "current_parity_known": true,
+      "failure_class": "implementation",
+      "last_safe_checkpoint": "checkpoint-precopy",
+      "public_message": "bounded attempt stopped",
+      "secret_redacted": true,
+      "side_effect_state": "observed_within_scope",
+      "technical_detail_ref": "packet:evidence/failure-detail"
+    },
+    "lifecycle": "accepted",
+    "new_attempt_started": false,
+    "partial_state_treated_as_acceptance": false,
+    "prior_attempt_id": null,
+    "protocol_outcome": "failed",
+    "recovery_disposition": "rollback_manually",
+    "retry_authorized": false,
+    "retry_recommended": false,
+    "rollback": {
+      "attempted": true,
+      "authorized": true,
+      "history_preserved": true,
+      "operation": "REMOVE",
+      "owner_matches": true,
+      "path_matches": true,
+      "preimage_valid": true,
+      "result": "succeeded",
+      "target_state": "occupied"
+    },
+    "schema_version": "0.1",
+    "scope_expanded": false,
+    "stages": [
+      {
+        "stage": "bind_execution_handoff",
+        "status": "completed"
+      },
+      {
+        "stage": "admit_builder_change_evidence",
+        "status": "completed"
+      },
+      {
+        "stage": "verify_scope_integrity_and_side_effects",
+        "status": "completed"
+      },
+      {
+        "stage": "verify_tests_and_assertion_reachability",
+        "status": "completed"
+      },
+      {
+        "stage": "resolve_independent_acceptor_authority",
+        "status": "completed"
+      },
+      {
+        "stage": "record_independent_acceptance",
+        "status": "completed"
+      },
+      {
+        "stage": "record_failure_final",
+        "status": "completed"
+      },
+      {
+        "stage": "evaluate_and_record_rollback",
+        "status": "completed"
+      },
+      {
+        "stage": "acknowledge_manual_takeover",
+        "status": "completed"
+      },
+      {
+        "stage": "reduce_p06_outcome",
+        "status": "completed"
+      }
+    ],
+    "takeover_acknowledged": true,
+    "takeover_owner": {
+      "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+      "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+      "accepted_a03_binding_id": "binding-takeover_owner",
+      "actor_id": "human-takeover",
+      "actor_kind": "human",
+      "authority_domain": "takeover",
+      "authority_source_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+      "authority_source_ref": "COS-A03-M5A-ACCEPTED",
+      "current": true,
+      "expires_at": "2026-12-31T23:59:59Z",
+      "functional_role": "takeover_owner",
+      "governed_scope": "M5-C exact bounded attempt"
+    },
+    "unresolved_risks": []
+  },
+  "expected_schema_valid": true,
+  "expected_semantic_valid": false,
+  "fixture_id": "M5C-N21-remove-rollback-target-occupied",
+  "primary_assertion_id": "M5C-AST-29",
+  "scenario": "rollback_remove_occupied",
+  "target_predicate": "ROLLBACK_REMOVE_OCCUPIED",
+  "target_schema": "COS-A08"
+}

@@ -1,0 +1,936 @@
+{
+  "schema_version": "COS_PUBLIC_PACKAGE_MANIFEST_v0.1",
+  "package_id": "CollaborationOS-public-v0.1.0-refreeze01",
+  "release": "v0.1.0-public-refreeze01",
+  "license": "Apache-2.0",
+  "non_self": true,
+  "publication_authorized": false,
+  "member_count": 185,
+  "members": [
+    {
+      "path": ".gitignore",
+      "bytes": 142,
+      "sha256": "f12c5a3c7ddeff81a9773f3ccb2fde54c4f6734423fcb1b736a6a63d889b95e6"
+    },
+    {
+      "path": "00_Governance/COS_Constitution.md",
+      "bytes": 3669,
+      "sha256": "fe4885c4be7c23c2bd792f0171a206d4f0df7b423f59157ce9215d8b64876b01"
+    },
+    {
+      "path": "01_Core/COS_Methodology.md",
+      "bytes": 5030,
+      "sha256": "9ef46156a848dadcdba47f1ba6ccec6476127afc2c2e65bddf1efcbec0753c7d"
+    },
+    {
+      "path": "01_Core/COS_Target_Architecture.md",
+      "bytes": 2552,
+      "sha256": "59dce39deee875266bd65d329194ac4522507c301ee5edbdf5797ce318a43357"
+    },
+    {
+      "path": "01_Core/README.md",
+      "bytes": 354,
+      "sha256": "372cb5a640b18b1724f224a692aaec6091344a292a29be5de6358f18b770e504"
+    },
+    {
+      "path": "02_Protocols/COS_Context_Recovery_Protocol_v0.1.md",
+      "bytes": 7457,
+      "sha256": "ec4c7c2c49a113eec84d58a6e7a18606bffc46fd601d9ff8fc0f2c87edb3b8e8"
+    },
+    {
+      "path": "02_Protocols/COS_Decision_Before_Instruction_Protocol_v0.1.md",
+      "bytes": 4971,
+      "sha256": "61c5c3b6b42262f96da928cea4364f4f094854a8e3d6f3638fbbe08d1527bb7a"
+    },
+    {
+      "path": "02_Protocols/COS_Evidence_Admission_Grounding_Protocol_v0.1.md",
+      "bytes": 6516,
+      "sha256": "92c735323e5a87949c552dcb384176c67431a6ec7b1194150f8df3de081d8431"
+    },
+    {
+      "path": "02_Protocols/COS_Execution_Handoff_Permission_Protocol_v0.1.md",
+      "bytes": 2552,
+      "sha256": "c260f22c25b202d13584c2765c44991aa7daf4328bfa935dbcfd5647cd85c64a"
+    },
+    {
+      "path": "02_Protocols/COS_Independent_Acceptance_Failure_Takeover_Protocol_v0.1.md",
+      "bytes": 2278,
+      "sha256": "cb3a692833c8a0fc72d899d681e2f4435c5b7049554f9fe13f56adcdcded080e"
+    },
+    {
+      "path": "02_Protocols/COS_Learning_Pattern_Promotion_Protocol_v0.1.md",
+      "bytes": 7454,
+      "sha256": "e39c2e026de47124ebaadc67881362fec1d7b861addc1927b8844d81a85bff47"
+    },
+    {
+      "path": "02_Protocols/COS_Protocol_System_Map_v0.1.md",
+      "bytes": 2300,
+      "sha256": "27f152a8bf0a7dd8929655930da5d0bc3ecec9ef623caa94758698561feea308"
+    },
+    {
+      "path": "02_Protocols/COS_Role_Authority_Binding_Protocol_v0.1.md",
+      "bytes": 7773,
+      "sha256": "59349f02d94e9436244509f30485a17ceef9af2acc799df13984096486a0826c"
+    },
+    {
+      "path": "02_Protocols/README.md",
+      "bytes": 806,
+      "sha256": "57514b1f52b26c4285522abac74321705302c079c54ad0ee508d3ba156edf78e"
+    },
+    {
+      "path": "03_Schemas_and_Templates/COS_Change_Acceptance_Packet_Template_v0.1.md",
+      "bytes": 1377,
+      "sha256": "41957a0711b2cf86a4e7346ce1354a1264991323cba3b8e5ec15af05397546b6"
+    },
+    {
+      "path": "03_Schemas_and_Templates/COS_Change_Acceptance_Packet_v0.1.schema.json",
+      "bytes": 14409,
+      "sha256": "76f3cf13025823ee397af248a42b2b1d9cf0359235235232883356baae54574e"
+    },
+    {
+      "path": "03_Schemas_and_Templates/COS_Context_Packet_Template_v0.1.md",
+      "bytes": 2395,
+      "sha256": "eaa5bd52487e0663e5cdbcc04234c8dc3df97caeb53cd3be7e451a87af49bd25"
+    },
+    {
+      "path": "03_Schemas_and_Templates/COS_Context_Packet_v0.1.schema.json",
+      "bytes": 13770,
+      "sha256": "9aea4593685934e309615c3f71ddb9de47f34164510212c835266ae8f4d1edee"
+    },
+    {
+      "path": "03_Schemas_and_Templates/COS_Cost_Decision_Packet_Template_v0.1.md",
+      "bytes": 2308,
+      "sha256": "80cb038494c17ffaf39648fcf732d8c641240003766b9835ae15fe2eb72c5594"
+    },
+    {
+      "path": "03_Schemas_and_Templates/COS_Cost_Decision_Packet_v0.1.schema.json",
+      "bytes": 12820,
+      "sha256": "f60dc52c82ae09fbf43f41c2119b4575ea8d689d247f8db1b828e5707f69eb57"
+    },
+    {
+      "path": "03_Schemas_and_Templates/COS_Decision_Packet_Template_v0.1.md",
+      "bytes": 3102,
+      "sha256": "28946f82ab9f71eee8b8981f5a7bdf09201b03a5fa58f099980541171ebbbdc3"
+    },
+    {
+      "path": "03_Schemas_and_Templates/COS_Decision_Packet_v0.1.schema.json",
+      "bytes": 18424,
+      "sha256": "e96782d116b79ce26856e92a8fb2cdc8f687a36a2ccf230a6ec48883725a07d4"
+    },
+    {
+      "path": "03_Schemas_and_Templates/COS_Evidence_Record_Template_v0.1.md",
+      "bytes": 3564,
+      "sha256": "29093d235333437e12f9d4a6ae4cf102c3a910e352efaed34c266c232533a6b0"
+    },
+    {
+      "path": "03_Schemas_and_Templates/COS_Evidence_Record_v0.1.schema.json",
+      "bytes": 21247,
+      "sha256": "ef338a37c8bbca1f40db3d376b6f0b578e78d5d8d88c0a4897f436bba54a62df"
+    },
+    {
+      "path": "03_Schemas_and_Templates/COS_Execution_Handoff_Template_v0.1.md",
+      "bytes": 1138,
+      "sha256": "abffb38d4c574e4900eaf402327bdc3fa9e72a085fe14ff791c07e7e8d2d15a0"
+    },
+    {
+      "path": "03_Schemas_and_Templates/COS_Execution_Handoff_v0.1.schema.json",
+      "bytes": 17905,
+      "sha256": "301777eae56b32e24781af36ac5983bdcc32d37bf0880d26e51d77cd06a868ef"
+    },
+    {
+      "path": "03_Schemas_and_Templates/COS_Failure_Manual_Takeover_Record_Template_v0.1.md",
+      "bytes": 1244,
+      "sha256": "03734a81a76917b2e229f8cfaa71f14094187c7bde63b22d40168b4a02b650f2"
+    },
+    {
+      "path": "03_Schemas_and_Templates/COS_Failure_Manual_Takeover_Record_v0.1.schema.json",
+      "bytes": 15097,
+      "sha256": "c257f9a928d44dc1d0ec628c7d646ba66d22465dc1853e83536d85021b5ec0a5"
+    },
+    {
+      "path": "03_Schemas_and_Templates/COS_Gate_Pack_Artifact_Register_v0.1.md",
+      "bytes": 2156,
+      "sha256": "69fd01eeb9ba57ffdfcf2a71d2d948510db71bd377a42eeca41a1496a4c0567a"
+    },
+    {
+      "path": "03_Schemas_and_Templates/COS_Learning_Candidate_Record_Template_v0.1.md",
+      "bytes": 2802,
+      "sha256": "b8993bf5fb946873b736cffdafcaab85f06c1de5e23079d5ae93a8f4d2fa5e3d"
+    },
+    {
+      "path": "03_Schemas_and_Templates/COS_Learning_Candidate_Record_v0.1.schema.json",
+      "bytes": 17654,
+      "sha256": "cc1e6678bf68c4fb90efc1be2524e7d0398438f37f607eb8385bbf417ef40be9"
+    },
+    {
+      "path": "03_Schemas_and_Templates/COS_Role_Authority_Map_Template_v0.1.md",
+      "bytes": 2786,
+      "sha256": "af846d80d94768ac521f451d4ae120488401cd3428c5e376bb269489c8a2eee3"
+    },
+    {
+      "path": "03_Schemas_and_Templates/COS_Role_Authority_Map_v0.1.schema.json",
+      "bytes": 16616,
+      "sha256": "1371fbb871cad8b14fd955896b530dc182d0e05263abfe5acd4c94ada32bd4aa"
+    },
+    {
+      "path": "03_Schemas_and_Templates/README.md",
+      "bytes": 367,
+      "sha256": "43b0d0835eb06db22c2c6b25cf34f86e366955afb8fdd54b651ab5a31c1730ba"
+    },
+    {
+      "path": "05_Conformance/COS_Evidence_Maturity_Model.md",
+      "bytes": 1787,
+      "sha256": "a8b51a3dde612e3e59ca56a319c2b777a1ab9e16ae64b539345cfe2d88e2e6ec"
+    },
+    {
+      "path": "05_Conformance/M5A/COS_M5A_Manual_Conformance_Matrix_v0.1.md",
+      "bytes": 10707,
+      "sha256": "6047cc068cfba0bd6c1397617a1fa0af760dbcff1aff8fece963212f9d7041e7"
+    },
+    {
+      "path": "05_Conformance/M5A/fixtures/M5A-N01-required-source-stale.json",
+      "bytes": 6199,
+      "sha256": "ec6f7d0488a36501b2708c3847415e95d64cac3e0f5d29ecc1c76350cb166894"
+    },
+    {
+      "path": "05_Conformance/M5A/fixtures/M5A-N02-optional-source-stale.json",
+      "bytes": 6644,
+      "sha256": "b748825a3195978b422bea60616daca90be035c9d327295703d14f60f14d7a60"
+    },
+    {
+      "path": "05_Conformance/M5A/fixtures/M5A-N03-formal-source-conflict.json",
+      "bytes": 6942,
+      "sha256": "f3c829ce7ab5a1dc03cc5349a5cbef40e293c1306e4b50fe7afe47d38371a561"
+    },
+    {
+      "path": "05_Conformance/M5A/fixtures/M5A-N04-checksum-mismatch.json",
+      "bytes": 6304,
+      "sha256": "e960b534e0bba1bbd9bbf8edb5c85ffbd050b5946162f25e2c44ad7a4e4181e0"
+    },
+    {
+      "path": "05_Conformance/M5A/fixtures/M5A-N05-state-classification-collision.json",
+      "bytes": 6664,
+      "sha256": "0a3ec0316b0b6368e415c6bd15a0865116d7f565299a2c5b6ceae6d282adcde7"
+    },
+    {
+      "path": "05_Conformance/M5A/fixtures/M5A-N06-missing-human-final-authority.json",
+      "bytes": 17046,
+      "sha256": "666cfeb9c6e9114f0c2857b5371997f62f98ed8c613616a5cbc8171114da2d8e"
+    },
+    {
+      "path": "05_Conformance/M5A/fixtures/M5A-N07-authority-source-mismatch.json",
+      "bytes": 17097,
+      "sha256": "cf62f120f95a1955f99675530aae597c8e043fa6ab756f9d8232c8da56700781"
+    },
+    {
+      "path": "05_Conformance/M5A/fixtures/M5A-N08-ai-final-authority.json",
+      "bytes": 17009,
+      "sha256": "df5213374ef6d5001c83515572032e21a9dbdd7a42d4083d4674bcbd7881e747"
+    },
+    {
+      "path": "05_Conformance/M5A/fixtures/M5A-N09-missing-permission-entry.json",
+      "bytes": 16437,
+      "sha256": "cd17c0aa738d6ddc35d6630928d02ed8d4a145ffeb45804aae2f6fe67744f9c2"
+    },
+    {
+      "path": "05_Conformance/M5A/fixtures/M5A-N10-permission-escalation.json",
+      "bytes": 17021,
+      "sha256": "2cfc779ec01c71ec5af343ae9f18e27223eff1610fcd6b38e8911a4a276af664"
+    },
+    {
+      "path": "05_Conformance/M5A/fixtures/M5A-N11-self-acceptance-conflict.json",
+      "bytes": 17608,
+      "sha256": "93cfa384ca937daa04fadebe72483eb2570ae2581cd5cb26170c8212c0fed79b"
+    },
+    {
+      "path": "05_Conformance/M5A/fixtures/M5A-N12-takeover-without-human-endpoint.json",
+      "bytes": 17041,
+      "sha256": "34d2fb7e604145f0208a651bac27919fd656193d95906a56d5a8ce33c263bf57"
+    },
+    {
+      "path": "05_Conformance/M5A/fixtures/M5A-N13-unknown-coerced-to-zero.json",
+      "bytes": 6076,
+      "sha256": "13838c1fb1fc4c68718983531ae71924f84630c7c0ab0c4f9fbc3cdf6837c17f"
+    },
+    {
+      "path": "05_Conformance/M5A/fixtures/M5A-N14-host-payload-or-secret-leak.json",
+      "bytes": 6061,
+      "sha256": "9067e6b0f18599edb6440691baba581305d7891589c70fca4e2bdb5b96b6b116"
+    },
+    {
+      "path": "05_Conformance/M5A/fixtures/M5A-N15-context-superseded-during-p03.json",
+      "bytes": 17016,
+      "sha256": "98da7cf67d200ae93fd85dcf1b9bc69e56b2b4276e72a531b7fae30ae620242d"
+    },
+    {
+      "path": "05_Conformance/M5A/fixtures/M5A-N16-unauthorized-downstream-start.json",
+      "bytes": 17038,
+      "sha256": "2e6e5933b562728b8db79ab8bc2633f3331650e497086f9d00d782f4fefaadd9"
+    },
+    {
+      "path": "05_Conformance/M5A/fixtures/M5A-N17-invoked-optional-stage-failed.json",
+      "bytes": 6106,
+      "sha256": "8a8b393479c38680acf4fdfb27365c1d42a0ee7c590dba26dadfa6d303d10905"
+    },
+    {
+      "path": "05_Conformance/M5A/fixtures/M5A-N18-optional-stage-skipped.json",
+      "bytes": 5687,
+      "sha256": "837eb0e23473a57c13f4c7fa8f9aae9cb5f97e3b7c46b8e352f2e9cce5e9dcee"
+    },
+    {
+      "path": "05_Conformance/M5A/fixtures/M5A-N19-disabled-stages-recorded.json",
+      "bytes": 24124,
+      "sha256": "7b61427006b38b3176d24b60af5e1275091117b398a621411472f2c2fcd9e8f9"
+    },
+    {
+      "path": "05_Conformance/M5A/fixtures/M5A-N20-downstream-not-attempted-after-stop.json",
+      "bytes": 6250,
+      "sha256": "8d3f3cfc5c307bac3a9911349f39d1a958b354278e5b1e3ad201b4877521704f"
+    },
+    {
+      "path": "05_Conformance/M5A/fixtures/M5A-N21-partial-success-accepted-with-limitations.json",
+      "bytes": 6550,
+      "sha256": "a120e54f4220a7f2867a52842c4528c79fa7258ba7d54edee868f2c6abdddfef"
+    },
+    {
+      "path": "05_Conformance/M5A/fixtures/M5A-N22-p03-partial-success-rejected.json",
+      "bytes": 17051,
+      "sha256": "800fbe246c76ef5ccf5a4112867a94931be3f7f3dced4680cd0b89757e56896a"
+    },
+    {
+      "path": "05_Conformance/M5A/fixtures/M5A-N23-a01-participant-authority-laundering.json",
+      "bytes": 54445,
+      "sha256": "661ae5095b59c3a6276a0d12d98edb42c214ba8703650ef6f072120603242dc9"
+    },
+    {
+      "path": "05_Conformance/M5A/fixtures/M5A-N24-unknown-permission-declaration.json",
+      "bytes": 52886,
+      "sha256": "e9fe75b6e9a5218b90f88732491a22ef07140a1aef9e4c614100a6476cf14e7f"
+    },
+    {
+      "path": "05_Conformance/M5A/fixtures/M5A-P01-POS-01-context-success.json",
+      "bytes": 5699,
+      "sha256": "d566a9fc0cac232459ecbe1c11747c893970bc5438027e29a8302684a53de5fe"
+    },
+    {
+      "path": "05_Conformance/M5A/fixtures/M5A-P03-POS-01-authority-success.json",
+      "bytes": 16607,
+      "sha256": "103958ec26a739123c09e435b7181d30d37be6f027e39d75d984c91f1f81a453"
+    },
+    {
+      "path": "05_Conformance/M5B/COS_M5B_Manual_Conformance_Matrix_v0.1.md",
+      "bytes": 7395,
+      "sha256": "7c2e3229f9d0ee0ea1d8796feaea188f05b899dafe6aa09ddd7ce66fc76cbaa0"
+    },
+    {
+      "path": "05_Conformance/M5B/fixtures/M5B-A05-POS-01-known-cost-approved.json",
+      "bytes": 12881,
+      "sha256": "cdf356fdc432143b1545f5c02a3d94426dfbb5465ddb8992518b3138e329d032"
+    },
+    {
+      "path": "05_Conformance/M5B/fixtures/M5B-A05-POS-02-known-cost-rejected.json",
+      "bytes": 3939,
+      "sha256": "fd1624ddeb450c860adf4da642b5ec31d2b006f6318bb13180631eb4e582fbfa"
+    },
+    {
+      "path": "05_Conformance/M5B/fixtures/M5B-A05-POS-03-cost-not-applicable-with-analysis.json",
+      "bytes": 3773,
+      "sha256": "3a57f2015def7b17cf2c59063d40ad0754e62e836c73cf2854e856ef77296ff0"
+    },
+    {
+      "path": "05_Conformance/M5B/fixtures/M5B-A05-STOP-01-unknown-cost-legal-stop.json",
+      "bytes": 3576,
+      "sha256": "88b13e8e128ffecf240883f42d053c25ea817f70e231a156c8038cc67fd05e94"
+    },
+    {
+      "path": "05_Conformance/M5B/fixtures/M5B-N01-p02-context-not-accepted.json",
+      "bytes": 6091,
+      "sha256": "6e5c4ad4afd41cfeb67d4a7d355759bb462c917965945bb5c3592f8c65cab757"
+    },
+    {
+      "path": "05_Conformance/M5B/fixtures/M5B-N02-source-checksum-mismatch.json",
+      "bytes": 6079,
+      "sha256": "fdd190674bea656851595584075c1be3cd87d30562752af6cc46618f04025bf2"
+    },
+    {
+      "path": "05_Conformance/M5B/fixtures/M5B-N03-evidence-interpretation-conflation.json",
+      "bytes": 6162,
+      "sha256": "4a3736aa14b04e42d87c3032eab54f151a0c4fe4ec813d424f7b828f81ccf470"
+    },
+    {
+      "path": "05_Conformance/M5B/fixtures/M5B-N04-ungrounded-item-admitted.json",
+      "bytes": 6107,
+      "sha256": "d590fdd0aa777043ea3487c98bc00f40d54a458bd0a863c3e5b155a8001ecaca"
+    },
+    {
+      "path": "05_Conformance/M5B/fixtures/M5B-N05-optional-evidence-limited.json",
+      "bytes": 8739,
+      "sha256": "c3ae2e27a4f3051cb5f56143a37fbe452a3cf9404a47ea98568316ad26a76c0a"
+    },
+    {
+      "path": "05_Conformance/M5B/fixtures/M5B-N06-required-evidence-unavailable.json",
+      "bytes": 6018,
+      "sha256": "00c000448a5a5f84149281ae165e48f0d02e00ab0cd88b0bd9cb480d48c03b55"
+    },
+    {
+      "path": "05_Conformance/M5B/fixtures/M5B-N07-submitter-self-acceptance.json",
+      "bytes": 56324,
+      "sha256": "b62fabe4341c3bcc5bb77f4cc8c045add39c43ce44403d3eca3fcd183a36a664"
+    },
+    {
+      "path": "05_Conformance/M5B/fixtures/M5B-N08-excluded-evidence-in-decision-basis.json",
+      "bytes": 5835,
+      "sha256": "e352d1fab6a0a2b2046c36d5353ac64443714958e8b06e53a6c3de4363b0ce25"
+    },
+    {
+      "path": "05_Conformance/M5B/fixtures/M5B-N09-context-lineage-mismatch.json",
+      "bytes": 5839,
+      "sha256": "7054d1599279a91683fe6a6fd4a6ab97714c482a93c425551b02bd2cddcb440f"
+    },
+    {
+      "path": "05_Conformance/M5B/fixtures/M5B-N10-blank-decision-coerced.json",
+      "bytes": 5892,
+      "sha256": "c28ce74208cf7a801973eec149d58465e5713e5e3cb7a58a955643acf7f05eac"
+    },
+    {
+      "path": "05_Conformance/M5B/fixtures/M5B-N11-ai-final-decision-owner.json",
+      "bytes": 5859,
+      "sha256": "db56866f3e719f44129c93b26b87f02b8f23efd0b284091aed117fd4929e6c34"
+    },
+    {
+      "path": "05_Conformance/M5B/fixtures/M5B-N12-approved-without-chosen-option.json",
+      "bytes": 5857,
+      "sha256": "490269da880ea9227f0bc77e0b1865fd774da8feb98d87efb814c44f42d46029"
+    },
+    {
+      "path": "05_Conformance/M5B/fixtures/M5B-N13-decision-boundaries-incomplete.json",
+      "bytes": 5795,
+      "sha256": "514f5134ef57c1c5acebc02ce22ce3af5a2e5e6d01fbf327f5be81828534d00b"
+    },
+    {
+      "path": "05_Conformance/M5B/fixtures/M5B-N14-decision-authority-mismatch.json",
+      "bytes": 5865,
+      "sha256": "bccd6c5d644867e81fa7bcf11cf142965abddf7fe4c04dd2000d7d77926116dc"
+    },
+    {
+      "path": "05_Conformance/M5B/fixtures/M5B-N15-cost-trigger-without-a05.json",
+      "bytes": 5867,
+      "sha256": "8dcfacaeaeba4ba40d4882ae8a4aaf28ddceef443cb98050c79f9b7938c302b2"
+    },
+    {
+      "path": "05_Conformance/M5B/fixtures/M5B-N16-unknown-cost-coerced.json",
+      "bytes": 3525,
+      "sha256": "e4cea83c39245e08ff41dbcf1ac94eb7b1a71d437b80ce54aa622619673170c4"
+    },
+    {
+      "path": "05_Conformance/M5B/fixtures/M5B-N17-a05-overrides-a04.json",
+      "bytes": 3548,
+      "sha256": "bb918c42358e48404be3819566872c6b922706dac3107425842815511b14dd13"
+    },
+    {
+      "path": "05_Conformance/M5B/fixtures/M5B-N18-cost-not-applicable-without-analysis.json",
+      "bytes": 3380,
+      "sha256": "339cd560077db3cb5ce448938d639b35f597d6d545d59b4c351a8926320abd27"
+    },
+    {
+      "path": "05_Conformance/M5B/fixtures/M5B-N19-unauthorized-downstream-start.json",
+      "bytes": 5905,
+      "sha256": "0d193d833a888f1acda9fbd461f54aaed79d473375537eb11200d357f0b29066"
+    },
+    {
+      "path": "05_Conformance/M5B/fixtures/M5B-N20-p04-partial-success.json",
+      "bytes": 5535,
+      "sha256": "851ea62dafeb4ab5bd6f1a68d9ede377c5241825e1bc9cadc0da8201d64977fc"
+    },
+    {
+      "path": "05_Conformance/M5B/fixtures/M5B-N21-superseded-decision-used.json",
+      "bytes": 6662,
+      "sha256": "36c75e19a59bd86c6febfcd5f04cc69438df4baa3a468f678643c26ff9dbc79c"
+    },
+    {
+      "path": "05_Conformance/M5B/fixtures/M5B-N22-unknown-state-collision.json",
+      "bytes": 188574,
+      "sha256": "3bb1ea08e9f72aa3e7d95a1ae6744de1c5666ee951d21afc7674020016faa59f"
+    },
+    {
+      "path": "05_Conformance/M5B/fixtures/M5B-P02-POS-01-evidence-admitted.json",
+      "bytes": 6599,
+      "sha256": "9c0167d159fc5d0b7e2c2e071af97af94066c4ede2446dc9d22215af012c2d09"
+    },
+    {
+      "path": "05_Conformance/M5B/fixtures/M5B-P02-POS-02-evidence-limited-partial.json",
+      "bytes": 8753,
+      "sha256": "1ee85f58b3bd1752370970eec29b52d95ce8e995a9b291b84993f6b9270e50a8"
+    },
+    {
+      "path": "05_Conformance/M5B/fixtures/M5B-P04-POS-01-human-decision-approved.json",
+      "bytes": 162051,
+      "sha256": "c217eee141aed86b36812f48e543b0c672c11f70c5e06a01cf8ca73f29d63643"
+    },
+    {
+      "path": "05_Conformance/M5B/fixtures/M5B-P04-POS-02-human-decision-rejected.json",
+      "bytes": 6333,
+      "sha256": "05bd7d24ba9782d9c6b466461231ba2fe0614787d9a004a2b1036a643143f05d"
+    },
+    {
+      "path": "05_Conformance/M5B/fixtures/M5B-P04-POS-03-human-decision-deferred.json",
+      "bytes": 6333,
+      "sha256": "6aa2af1c3ca08cb6381f4e71550fdc411adaf3e5f9690fcedf4e7ed937d3cf49"
+    },
+    {
+      "path": "05_Conformance/M5B/fixtures/M5B-P04-POS-04-human-decision-needs-information.json",
+      "bytes": 6387,
+      "sha256": "68cd5d33dc8aae8458cb7d092c694132a7ab9d27defb70fc9e8151ce63f1e1b1"
+    },
+    {
+      "path": "05_Conformance/M5C/COS_M5C_Manual_Conformance_Matrix_v0.1.md",
+      "bytes": 4463,
+      "sha256": "8cff48357890e8cfcf9b2388fcabaddd5ab54fb9631797c3983b7a3f028f08e5"
+    },
+    {
+      "path": "05_Conformance/M5C/fixtures/M5C-N01-upstream-lineage-mismatch.json",
+      "bytes": 14346,
+      "sha256": "58866caec8d90e882e4bed4dfb921146a3f7ee00a8f726fdfa4878a70222d92e"
+    },
+    {
+      "path": "05_Conformance/M5C/fixtures/M5C-N02-forged-p05-eligibility.json",
+      "bytes": 14347,
+      "sha256": "7a794c27da8fedba1184a9b1225d4420242ead65b42ab79a428fd203625c66e8"
+    },
+    {
+      "path": "05_Conformance/M5C/fixtures/M5C-N03-permission-registry-missing.json",
+      "bytes": 13923,
+      "sha256": "ea0a12e15030082a9adc2889d6eecaedbba849a56fe9dd9fb22b7999c8b517b6"
+    },
+    {
+      "path": "05_Conformance/M5C/fixtures/M5C-N04-permission-crosswalk-widening.json",
+      "bytes": 14355,
+      "sha256": "b67fef5fc389272b0c60744dba037565a087c537369c0c3cdf83984c2869aa84"
+    },
+    {
+      "path": "05_Conformance/M5C/fixtures/M5C-N05-builder-or-executor-self-acceptance.json",
+      "bytes": 14339,
+      "sha256": "7dca798a341f94f56b118284154cb3eeffe4749f35ba7e9026ced253f2b7c9d0"
+    },
+    {
+      "path": "05_Conformance/M5C/fixtures/M5C-N06-wildcard-alias-or-overlap-scope.json",
+      "bytes": 14799,
+      "sha256": "75bb7824b0cbeaaea1ea1bc7bee92c15aacdd495b8ae1e9fe1936f1fc0f49623"
+    },
+    {
+      "path": "05_Conformance/M5C/fixtures/M5C-N07-operation-precondition-mismatch.json",
+      "bytes": 14361,
+      "sha256": "81d334e84d7bf95b3707d3ba1bbfd77b64c1d5c088ad7551a57314969bed9442"
+    },
+    {
+      "path": "05_Conformance/M5C/fixtures/M5C-N08-protected-surface-drift.json",
+      "bytes": 5195,
+      "sha256": "624fe54c71e9667b76fe880847bed5ff58fb270be1e68717bc13c8f6406b747f"
+    },
+    {
+      "path": "05_Conformance/M5C/fixtures/M5C-N09-cost-or-external-permission-mismatch.json",
+      "bytes": 14353,
+      "sha256": "80980ebc92b5c8b48407ab2ca5b5fe15ed592e5d1e380b216cffdb8372d484b6"
+    },
+    {
+      "path": "05_Conformance/M5C/fixtures/M5C-N10-irreversible-action-without-authority.json",
+      "bytes": 14379,
+      "sha256": "e0e954b3efab0ea16ace9cfd12d71253b3b5f909675259643ca16ad504a66fa2"
+    },
+    {
+      "path": "05_Conformance/M5C/fixtures/M5C-N11-posthoc-or-unreachable-acceptance.json",
+      "bytes": 14327,
+      "sha256": "a6aedcac6f91f247878149a192620656d22a052044b7416d76eb792b508784bd"
+    },
+    {
+      "path": "05_Conformance/M5C/fixtures/M5C-N12-extra-missing-operation-or-transient.json",
+      "bytes": 5252,
+      "sha256": "4c4c91fa0035e4107fe106cd2d053878906ff5b8091bbc7e01ef88d2077d0407"
+    },
+    {
+      "path": "05_Conformance/M5C/fixtures/M5C-N13-test-summary-without-invocation.json",
+      "bytes": 5211,
+      "sha256": "f4f6ea097be8e6beac19ff838a365864cf5de251d76df0a8d47342a5767f5c76"
+    },
+    {
+      "path": "05_Conformance/M5C/fixtures/M5C-N14-technical-success-rewrites-business-decision.json",
+      "bytes": 5226,
+      "sha256": "bb964bf83e442cfd58f107085b869ac0f9fb6d6c475009ecd435910d60dd9a31"
+    },
+    {
+      "path": "05_Conformance/M5C/fixtures/M5C-N15-unknown-or-not-observed-coerced.json",
+      "bytes": 5212,
+      "sha256": "299b437dc849c7035f2019875273e5842a951112f2e994b544bd073223179be8"
+    },
+    {
+      "path": "05_Conformance/M5C/fixtures/M5C-N16-false-partial-success.json",
+      "bytes": 5205,
+      "sha256": "6cb279ad2f20de1ce248bc6bb297b13c536f49c626744395307b52ede6fbe43a"
+    },
+    {
+      "path": "05_Conformance/M5C/fixtures/M5C-N17-same-id-retry-or-lineage-cycle.json",
+      "bytes": 4616,
+      "sha256": "e45c4d457d90bbbf69ec4ff111111227ac57bf6b52f97b07587dc04377e52664"
+    },
+    {
+      "path": "05_Conformance/M5C/fixtures/M5C-N18-a07-duplicate-fork-or-order-dependence.json",
+      "bytes": 5548,
+      "sha256": "e8c05ce4f562ae43340d70690600b7b6c2f2a837b6cbad94ebf84eeb2d57df1f"
+    },
+    {
+      "path": "05_Conformance/M5C/fixtures/M5C-N19-add-rollback-foreign-replacement.json",
+      "bytes": 4612,
+      "sha256": "25c636d5415ed0eb12894fe771cd9408784231fe6057a78c5fb2c192e3efd2c3"
+    },
+    {
+      "path": "05_Conformance/M5C/fixtures/M5C-N20-modify-rollback-current-hash-mismatch.json",
+      "bytes": 4614,
+      "sha256": "8aebd3a57e03dd455ef97bff6fd91329bee694895ce671d1ca0dac41540065df"
+    },
+    {
+      "path": "05_Conformance/M5C/fixtures/M5C-N21-remove-rollback-target-occupied.json",
+      "bytes": 4611,
+      "sha256": "6744b2f4b1407d2494dc097ead1f6a66cd85da429b7cecab0e98a795c82d8698"
+    },
+    {
+      "path": "05_Conformance/M5C/fixtures/M5C-N22-rollback-unauthorized-or-owner-mismatch.json",
+      "bytes": 4626,
+      "sha256": "70f6c5f97dffbea5f7455a6eeb4f4c78e154ca391247ee9311f113c74827790c"
+    },
+    {
+      "path": "05_Conformance/M5C/fixtures/M5C-N23-rollback-success-preserves-evidence.json",
+      "bytes": 4618,
+      "sha256": "148c654af88a8ed2b4de063727b7c53844c988f61f2e9ba65f84c1decf8cd3b7"
+    },
+    {
+      "path": "05_Conformance/M5C/fixtures/M5C-N24-a08-overwrite-fork-or-cycle.json",
+      "bytes": 4580,
+      "sha256": "704b1fc8503b85c16f6bb87c05b18dc06b841a3be2e579b3943eb1544aff7d7c"
+    },
+    {
+      "path": "05_Conformance/M5C/fixtures/M5C-N25-failure-envelope-checkpoint-or-secret-defect.json",
+      "bytes": 4621,
+      "sha256": "84d5fd476b1576a241f86d84bd3ddb6034043921e53b0dc0a592b9d15f5ebff6"
+    },
+    {
+      "path": "05_Conformance/M5C/fixtures/M5C-N26-takeover-owner-invalid-stale-or-nonhuman.json",
+      "bytes": 4623,
+      "sha256": "ce7bfcd1b52112fcd46d6f909268eb50dc627f7ceeea6ff0223bb5a9474ae682"
+    },
+    {
+      "path": "05_Conformance/M5C/fixtures/M5C-N27-takeover-scope-expansion-or-partial-state-laundering.json",
+      "bytes": 4632,
+      "sha256": "36579875b72d8dc9fa522eae4b677ff56c75d57848a1581bfb6c867aaff41148"
+    },
+    {
+      "path": "05_Conformance/M5C/fixtures/M5C-N28-retry-recommendation-treated-as-authorization.json",
+      "bytes": 4622,
+      "sha256": "e21f59b89982b2e12248ae51945b05db312475ee2ee40841b34237eb87d454c3"
+    },
+    {
+      "path": "05_Conformance/M5C/fixtures/M5C-P05-POS-01-exact-no-cost-handoff.json",
+      "bytes": 14346,
+      "sha256": "15986418419a67c3b02dc3f61300316bb2ce04a8ab67f01dc47f62e840a03a30"
+    },
+    {
+      "path": "05_Conformance/M5C/fixtures/M5C-P05-POS-02-cost-gated-handoff.json",
+      "bytes": 14563,
+      "sha256": "4e87ea4dfa6f86c869c190dbb4916e05fe6e1848decb4b1035efe620fdb2b764"
+    },
+    {
+      "path": "05_Conformance/M5C/fixtures/M5C-P05-STOP-01-eligibility-false.json",
+      "bytes": 14370,
+      "sha256": "e53d167cbf13a5627e2a8e5f333c4b3b6158d5f836d6c55a3afb15c1c67e4e6d"
+    },
+    {
+      "path": "05_Conformance/M5C/fixtures/M5C-P05-STOP-02-stale-or-superseded-authority.json",
+      "bytes": 14381,
+      "sha256": "a683cf155d83eb21f0d6cd10eca7fee5e83ecb62051a90ab21b321704b3e00f4"
+    },
+    {
+      "path": "05_Conformance/M5C/fixtures/M5C-P05-STOP-03-required-cost-unknown.json",
+      "bytes": 14403,
+      "sha256": "0f54009dd2cc464f846c74b07fc326ab289e8fc3d3e2162b65a5379157f8aa19"
+    },
+    {
+      "path": "05_Conformance/M5C/fixtures/M5C-P06-POS-01-independent-accepted.json",
+      "bytes": 5198,
+      "sha256": "251a309ebae3eed442ef85d81581299f3b2f7a197d859a98c0c78dc39efd2745"
+    },
+    {
+      "path": "05_Conformance/M5C/fixtures/M5C-P06-POS-02-optional-limitations-partial-success.json",
+      "bytes": 5256,
+      "sha256": "ea9a69b7be813b0e4c4997209933fd58eb86e4cba9446e8c97333d34f510d228"
+    },
+    {
+      "path": "05_Conformance/M5C/fixtures/M5C-P06-STOP-01-preexecution-acceptor-unavailable.json",
+      "bytes": 5307,
+      "sha256": "cbebb0e172b039986476b2fe6aeece08261d0d0bb6dd240fcdbd1ca6013227a5"
+    },
+    {
+      "path": "05_Conformance/M5D/COS_M5D_Manual_Conformance_Matrix_v0.1.md",
+      "bytes": 1958,
+      "sha256": "fc40a3ea10d1324b3706de16cfdc89143e5dd8a68e85cc8109899a64f56c918c"
+    },
+    {
+      "path": "05_Conformance/M5D/fixtures/M5D-N01-source-checksum-authority-cutoff-mismatch.json",
+      "bytes": 12415,
+      "sha256": "e8fe5e7061e069c651fd2c862736c82cf68422cb3831f3d2fcb84e60f61a8fe3"
+    },
+    {
+      "path": "05_Conformance/M5D/fixtures/M5D-N02-unaccepted-a07-a08-claimed.json",
+      "bytes": 12405,
+      "sha256": "5bcd0b5ffbcc982bf00985cf5b1280107ade7e5a7b2138986066b9c000d3c222"
+    },
+    {
+      "path": "05_Conformance/M5D/fixtures/M5D-N03-forbidden-sensitive-payload.json",
+      "bytes": 12408,
+      "sha256": "8b3f6042ac117714add0cc5348b6cc901167eca8e971e6f869a94d50462e7e69"
+    },
+    {
+      "path": "05_Conformance/M5D/fixtures/M5D-N04-cross-type-identity-collision.json",
+      "bytes": 12414,
+      "sha256": "f7dafa858ffc2b5b6b6e00433f9d48e7d10861aacd6c67effc942188a909f2b8"
+    },
+    {
+      "path": "05_Conformance/M5D/fixtures/M5D-N05-submission-ruling-laundering.json",
+      "bytes": 12427,
+      "sha256": "1470ac1df35ce705d3edefdc2402d322422fa4b1e2cab81f1fbae00d2c648201"
+    },
+    {
+      "path": "05_Conformance/M5D/fixtures/M5D-N06-domain-ontology-disguised-as-core.json",
+      "bytes": 12377,
+      "sha256": "439814fad98370dc8760371dcc6e9efa35bfb6283ae8b4164bc163b28e41cf35"
+    },
+    {
+      "path": "05_Conformance/M5D/fixtures/M5D-N07-mixed-split-identity-or-owner-reuse.json",
+      "bytes": 12833,
+      "sha256": "4bd01d5c426128e7264bbb400f8319ec507c40c801d30e18fe7f5922cb325422"
+    },
+    {
+      "path": "05_Conformance/M5D/fixtures/M5D-N08-project-count-or-same-structure-cross-host.json",
+      "bytes": 13011,
+      "sha256": "f581439733c9be0010157589295e8a2b42792756efa3f939195210e6c701d7d6"
+    },
+    {
+      "path": "05_Conformance/M5D/fixtures/M5D-N09-clause-version-or-scope-mismatch.json",
+      "bytes": 12981,
+      "sha256": "3b07dd4f5548ea3c2a67b8fd4a2314194e991ae7d43f033fc5fa859a3f909926"
+    },
+    {
+      "path": "05_Conformance/M5D/fixtures/M5D-N10-recommendation-exceeds-derived-ceiling.json",
+      "bytes": 12391,
+      "sha256": "92d3a84def463b298803e27b1b80f2484ca9d751f48a00d52a9e3d36bb1fefa8"
+    },
+    {
+      "path": "05_Conformance/M5D/fixtures/M5D-N11-promotion-missing-failure-or-conformance.json",
+      "bytes": 13296,
+      "sha256": "a9ca65189107b6a7750d460b7f22342c116354e22edf1afc5ca91db1fafe9f06"
+    },
+    {
+      "path": "05_Conformance/M5D/fixtures/M5D-N12-article-framework-or-summary-raises-maturity.json",
+      "bytes": 13020,
+      "sha256": "a1f58e4313177f0eb0ca837f5099e621167aba51c78c8d5fee812eae78388d2d"
+    },
+    {
+      "path": "05_Conformance/M5D/fixtures/M5D-N13-self-review-or-authority-laundering.json",
+      "bytes": 12387,
+      "sha256": "d6e9b5b8cc49f118b08d22049fda0489e69e16f1e6e500a3b3798945ca977262"
+    },
+    {
+      "path": "05_Conformance/M5D/fixtures/M5D-N14-review-event-overwrite-fork-or-cycle.json",
+      "bytes": 13927,
+      "sha256": "21b834c1f7df632a82809ac8ad564fab5da39827807bf35974081ed45280bb4c"
+    },
+    {
+      "path": "05_Conformance/M5D/fixtures/M5D-N15-rejected-or-superseded-history-deleted.json",
+      "bytes": 12392,
+      "sha256": "b1a0acaea3632793a37bf1362e8728244363630795813b80c2b8bbeec3d61dfd"
+    },
+    {
+      "path": "05_Conformance/M5D/fixtures/M5D-N16-route-or-disposition-aliased-to-core.json",
+      "bytes": 12385,
+      "sha256": "e90eded4bf65d662cfbc833d83c4669f95e76fdeb4416afcb9941f9c2dbbde29"
+    },
+    {
+      "path": "05_Conformance/M5D/fixtures/M5D-N17-core-promotion-auto-applied-to-host.json",
+      "bytes": 12373,
+      "sha256": "4fb57788cb2d5c84a96dcc40a8f8d7fe5ebcdb534cd276d3fde837da9b3cc74d"
+    },
+    {
+      "path": "05_Conformance/M5D/fixtures/M5D-N18-recommendation-creates-canonical-write.json",
+      "bytes": 13060,
+      "sha256": "89098816df0341941ab6c30e66855dbddf890f47d8487f881225f0ab6f8efa61"
+    },
+    {
+      "path": "05_Conformance/M5D/fixtures/M5D-N19-unknown-not-observed-coerced.json",
+      "bytes": 12395,
+      "sha256": "a29a8e88569f4619771116772d13be085efcf0827d76fdb8d9de316dc54b9eaa"
+    },
+    {
+      "path": "05_Conformance/M5D/fixtures/M5D-N20-promotion-decision-owner-or-checksum-mismatch.json",
+      "bytes": 13267,
+      "sha256": "12fc314a9ba41aa0d337c0692b24f5364923089b4e1d0f7633cf7627bf3bb31a"
+    },
+    {
+      "path": "05_Conformance/M5D/fixtures/M5D-P07-POS-01-single-host-observed.json",
+      "bytes": 12373,
+      "sha256": "bd10699ff4a628a7fc099d616e6c4ff0804803f5494355638e9b322ca0b8e7ff"
+    },
+    {
+      "path": "05_Conformance/M5D/fixtures/M5D-P07-POS-02-same-host-validated.json",
+      "bytes": 12989,
+      "sha256": "fc898a5ff9d1dbd00b37e0bba93722d958af0a2cfa492136da2f1944ceedfa9a"
+    },
+    {
+      "path": "05_Conformance/M5D/fixtures/M5D-P07-POS-03-cross-host-supported.json",
+      "bytes": 12996,
+      "sha256": "c4094ec65a1dfef42974f9e318bca2dae70ce02b3fa32bc81772a011d119f8e7"
+    },
+    {
+      "path": "05_Conformance/M5D/fixtures/M5D-P07-POS-04-domain-extension-only.json",
+      "bytes": 12386,
+      "sha256": "48defe9acd30660376b7583a7d077d311396669ef46ba625e32dcf8668656ea3"
+    },
+    {
+      "path": "05_Conformance/M5D/fixtures/M5D-P07-POS-05-ai-native-capability-route.json",
+      "bytes": 12379,
+      "sha256": "899a0baf0296d3216817a51caf2820ce2be582a16d603b60e6b510b7ef40e0b7"
+    },
+    {
+      "path": "05_Conformance/M5D/fixtures/M5D-P07-POS-06-mixed-split-distinct-children.json",
+      "bytes": 12831,
+      "sha256": "715abd2271af158d1c3bbd0928da71e8495394e54a67762922b53fb1b2eacc79"
+    },
+    {
+      "path": "05_Conformance/M5D/fixtures/M5D-P07-POS-07-rejected-history-preserved.json",
+      "bytes": 12397,
+      "sha256": "60d0302a98543a2214605b382baec233b349a22ca78f5c69a5791c5296b83619"
+    },
+    {
+      "path": "05_Conformance/M5D/fixtures/M5D-P07-POS-08-decision-backed-promotion-record.json",
+      "bytes": 13254,
+      "sha256": "65519f72de3ca06d63bc3ef597f38148d1824176cd543aa799cf4474b360756b"
+    },
+    {
+      "path": "05_Conformance/M5D/fixtures/M5D-P07-STOP-01-core-adopt-decision-absent.json",
+      "bytes": 12991,
+      "sha256": "1de409b17a4f41f6250bc8734011fafe7077c241e587497f2ab3a7f6dc02bab0"
+    },
+    {
+      "path": "05_Conformance/M5D/fixtures/M5D-P07-STOP-02-required-admitted-evidence-unavailable.json",
+      "bytes": 12308,
+      "sha256": "fe44964df89159be78cba7b7782290e5c05f861f0286138f5a7328f41a15cd3e"
+    },
+    {
+      "path": "05_Conformance/M5D/fixtures/M5D-P07-STOP-03-reviewer-authority-unavailable.json",
+      "bytes": 12399,
+      "sha256": "54055fdf0d16b2c78014bf169c4d9537274361cf48856ed860c2666eee1ab60b"
+    },
+    {
+      "path": "05_Conformance/M5D/fixtures/M5D-P07-STOP-04-redaction-not-observed.json",
+      "bytes": 12426,
+      "sha256": "8158702dff987d21d0888172f9c70933ae8ae7123e60e6172bbe537afc46e107"
+    },
+    {
+      "path": "05_Conformance/README.md",
+      "bytes": 673,
+      "sha256": "fb59b82e962cbe324eb3c6a9b363886c031de055ff8cd274b6d9a2880ded3d55"
+    },
+    {
+      "path": "CODE_OF_CONDUCT.md",
+      "bytes": 1177,
+      "sha256": "e61160d75d9005d636782685954c4dca7e9f8a24e1fae7521fe776347be84a5d"
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "bytes": 1642,
+      "sha256": "8bbfde058f25621445d715624274ff80a1c76456e179687669508baa0efcceb2"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "path": "NOTICE",
+      "bytes": 290,
+      "sha256": "bd4d09ec6fcb617ee2e867950f99bde790ee85fab63000447f05547dc89d68be"
+    },
+    {
+      "path": "README.md",
+      "bytes": 3266,
+      "sha256": "5a1d14cce95b2ed43cf1b43d95ec1ee2b7f8b244ceda0efd4a9360740e64eebb"
+    },
+    {
+      "path": "RELEASE_NOTES.md",
+      "bytes": 1076,
+      "sha256": "b6c015a19d9fcdf513a744332f656a3224e5d0c8231d4b4c95a7b549046dfb90"
+    },
+    {
+      "path": "SECURITY.md",
+      "bytes": 1173,
+      "sha256": "fd1747bd527622ce2e65968e86264d2edf252f6eeb5add616d65139ad5328e02"
+    },
+    {
+      "path": "docs/adoption-kit-v0.1/COS_NEW_HOST_PROJECT_ADOPTION_MANUAL_v0.1.md",
+      "bytes": 14519,
+      "sha256": "6be7db885e58974f8eb2f8cc14b072c62ed425498ee7620eab21c08d61c2b801"
+    },
+    {
+      "path": "docs/adoption-kit-v0.1/PACKAGE_MANIFEST.json",
+      "bytes": 1200,
+      "sha256": "c9c49599fddcd69aa3fecdb0d7802a669b29e62171150ca68f92a608282d5b75"
+    },
+    {
+      "path": "docs/adoption-kit-v0.1/README.md",
+      "bytes": 1446,
+      "sha256": "30e59abd045e8f896ba17667fc4ff6eef19000c46a4f021b9d9fb313cf3703ac"
+    },
+    {
+      "path": "docs/adoption-kit-v0.1/templates/COS_HOST_ADAPTER_TEMPLATE_v0.1.md",
+      "bytes": 3943,
+      "sha256": "b0b755ecca57c34527060ba4d9d993cd462a1230391f235b31310e22732cb523"
+    },
+    {
+      "path": "docs/adoption-kit-v0.1/templates/COS_HOST_ADOPTION_RECORD_TEMPLATE_v0.1.md",
+      "bytes": 2588,
+      "sha256": "ee94f00131b26a53c8afc21e7c703a2a34dbfd8d6f805f1d1b088e975e694368"
+    },
+    {
+      "path": "docs/adoption-kit-v0.1/templates/COS_HOST_ENTRY_POINTER_TEMPLATE_v0.1.md",
+      "bytes": 1150,
+      "sha256": "69b5852d499562b332626a45e6c2e901d13d6a652aaae91f2475c1b99b4b6e0b"
+    },
+    {
+      "path": "docs/gate-pack-v0.1/ARTIFACT_SELECTION_AND_OWNERSHIP.md",
+      "bytes": 6062,
+      "sha256": "5c0f38233b96a33ad819bcc5452c5a39da9ffe4e7005b6885299180998b52b49"
+    },
+    {
+      "path": "docs/gate-pack-v0.1/MANUAL_CONFORMANCE_GUIDE.md",
+      "bytes": 1985,
+      "sha256": "ea651b8a84e64817675e442ac5c14b28bb11a9e1c4c1bd70d241eacbf728059a"
+    },
+    {
+      "path": "docs/gate-pack-v0.1/MANUAL_OPERATOR_FLOW.md",
+      "bytes": 5314,
+      "sha256": "f6aa890dc3c6554d8423f9355a2fe79151bea735816603dcf2e67889d3dbc435"
+    },
+    {
+      "path": "docs/gate-pack-v0.1/PACKAGE_MANIFEST.json",
+      "bytes": 919,
+      "sha256": "c850471d4045678c0cda48dfea6f8cd7f15df65eec2618dfb5c2300564531a54"
+    },
+    {
+      "path": "docs/gate-pack-v0.1/README.md",
+      "bytes": 1982,
+      "sha256": "839b868a625f5e8b11439faab843e103b8fa844dbe2fddcccc8316ca39ef5bcf"
+    },
+    {
+      "path": "examples/synthetic/README.md",
+      "bytes": 3077,
+      "sha256": "8f2153e7e499a3b2031fc71e3e7e6cb9ecafd866b0f27b7c37c8612d70979a29"
+    }
+  ]
+}

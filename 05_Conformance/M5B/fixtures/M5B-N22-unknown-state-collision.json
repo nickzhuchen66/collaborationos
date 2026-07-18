@@ -1,0 +1,4825 @@
+{
+  "artifact": {
+    "acceptance_event": null,
+    "admission_events": [
+      {
+        "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+        "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+        "accepted_a03_binding_id": "binding-evidence-review",
+        "admission_event_id": "admission-event-1",
+        "event_sequence": 1,
+        "evidence_item_id": "evidence-required-1",
+        "prior_admission_disposition": "none",
+        "prior_admission_event_id": "none",
+        "reason": "Required evidence grounded and independently reviewed.",
+        "result_admission_disposition": "admitted",
+        "reviewed_at": "2026-07-15T01:00:00Z",
+        "reviewer_actor_id": "human-evidence-reviewer"
+      },
+      {
+        "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+        "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+        "accepted_a03_binding_id": "binding-evidence-review",
+        "admission_event_id": "admission-event-1",
+        "event_sequence": 2,
+        "evidence_item_id": "evidence-required-1",
+        "prior_admission_disposition": "admitted",
+        "prior_admission_event_id": "admission-event-1",
+        "reason": "Attempted overwrite with colliding event identity.",
+        "result_admission_disposition": "excluded",
+        "reviewed_at": "2026-07-15T01:00:00Z",
+        "reviewer_actor_id": "human-evidence-reviewer"
+      }
+    ],
+    "artifact_id": "COS-A02-CANDIDATE-BASE",
+    "artifact_lifecycle": "rejected",
+    "artifact_type": "COS-A02",
+    "context_ref": {
+      "artifact_id": "COS-A01-M5A-ACCEPTED",
+      "artifact_lifecycle": "accepted",
+      "checksum": "1111111111111111111111111111111111111111111111111111111111111111",
+      "current": true,
+      "cutoff": "2026-07-15T00:00:00Z"
+    },
+    "created_at": "2026-07-15T00:00:00Z",
+    "current_admission": [
+      {
+        "admission_disposition": "excluded",
+        "decision_basis_eligible": false,
+        "derived_from_event_id": "admission-event-1",
+        "evidence_item_id": "evidence-required-1"
+      }
+    ],
+    "evidence_items": [
+      {
+        "claim_id": "claim-1",
+        "conflict_state": "none",
+        "evidence_item_id": "evidence-required-1",
+        "grounding_state": "grounded",
+        "requirement_class": "required",
+        "safe_statement": "Formal source supports the bounded claim.",
+        "source_checksum": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "source_id": "source-formal-1",
+        "statement_type": "source_report"
+      }
+    ],
+    "interpretations": [
+      {
+        "assumptions": [
+          "scope remains current"
+        ],
+        "claim_id": "claim-1",
+        "confidence_state": "high",
+        "contradicting_evidence_ids": [],
+        "interpretation_id": "interpretation-1",
+        "limitations": [],
+        "limiting_evidence_ids": [],
+        "supporting_evidence_ids": [
+          "evidence-required-1"
+        ]
+      }
+    ],
+    "limitations": [],
+    "protocol_run": {
+      "downstream_started": false,
+      "failure_envelope": {
+        "code": "M5B-FAILED",
+        "evidence_refs": [
+          "packet:M5B-FAILED"
+        ],
+        "last_safe_checkpoint": "independent_admission_review",
+        "manual_takeover_required": true,
+        "owner_role": "takeover_owner",
+        "public_message": "Candidate scenario stopped without external side effect.",
+        "retryable": false,
+        "side_effect_occurred": false
+      },
+      "outcome": "failed",
+      "protocol_id": "COS-P02",
+      "stages": [
+        {
+          "invoked": true,
+          "reason": "static assertion completed",
+          "stage_id": "accepted_context_binding",
+          "status": "completed"
+        },
+        {
+          "invoked": true,
+          "reason": "static assertion completed",
+          "stage_id": "source_inventory_integrity",
+          "status": "completed"
+        },
+        {
+          "invoked": true,
+          "reason": "static assertion completed",
+          "stage_id": "evidence_interpretation_classification",
+          "status": "completed"
+        },
+        {
+          "invoked": true,
+          "reason": "static assertion completed",
+          "stage_id": "admission_grounding_evaluation",
+          "status": "completed"
+        },
+        {
+          "invoked": true,
+          "reason": "static assertion completed",
+          "stage_id": "conflict_unknown_limitation_recording",
+          "status": "completed"
+        },
+        {
+          "invoked": true,
+          "reason": "scenario failed",
+          "stage_id": "independent_admission_review",
+          "status": "failed"
+        },
+        {
+          "invoked": false,
+          "reason": "prior stop",
+          "stage_id": "a02_acceptance",
+          "status": "not_attempted"
+        },
+        {
+          "invoked": false,
+          "reason": "prior stop",
+          "stage_id": "archive_lineage",
+          "status": "not_attempted"
+        },
+        {
+          "invoked": false,
+          "reason": "fixed disabled in M5-B",
+          "stage_id": "automated_external_verification",
+          "status": "disabled"
+        }
+      ]
+    },
+    "reviewer_binding": {
+      "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+      "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+      "accepted_a03_binding_id": "binding-evidence-review",
+      "actor_id": "human-evidence-reviewer",
+      "actor_kind": "human",
+      "authority_source_checksum": "9999999999999999999999999999999999999999999999999999999999999999",
+      "authority_source_ref": "cos:decision/COS-019",
+      "scope": "M5-B evidence and decision packet"
+    },
+    "schema_version": "0.1",
+    "source_register": [
+      {
+        "authority_class": "formal",
+        "availability_state": "observed",
+        "checksum_state": "observed",
+        "freshness_state": "fresh",
+        "observed_at": "2026-07-15T00:00:00Z",
+        "observed_checksum": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "requirement_class": "required",
+        "safe_ref": "cos:source/formal-1",
+        "source_id": "source-formal-1"
+      }
+    ],
+    "submitter_actor_id": "ai-preparer",
+    "support_links": [
+      {
+        "claim_id": "claim-1",
+        "evidence_item_id": "evidence-required-1",
+        "relation": "supporting",
+        "support_link_id": "support-link-1"
+      }
+    ],
+    "unknowns": []
+  },
+  "expected_artifact_lifecycle": "rejected",
+  "expected_assertions": [
+    "M5B-AST-N22A",
+    "M5B-AST-N22B",
+    "M5B-AST-N22C-I"
+  ],
+  "expected_protocol_outcome": "failed",
+  "expected_schema_valid": true,
+  "fixture_version": "0.1",
+  "scenario_id": "M5B-N22",
+  "target_schema": "COS-A02",
+  "variants": [
+    {
+      "artifact": {
+        "acceptance_event": {
+          "acceptance_event_id": "accept-cos-a02-candidate-base",
+          "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+          "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+          "accepted_a03_binding_id": "binding-evidence-review",
+          "accepted_at": "2026-07-15T01:00:00Z",
+          "accepted_by_actor_id": "human-evidence-reviewer",
+          "artifact_checksum": "9c4e31f1f599812919bbdad38eb1176a8d917987f4be1149bf57b11205a59291",
+          "artifact_id": "COS-A02-CANDIDATE-BASE",
+          "assertions": [
+            "M5B-AST-P02-POS-01"
+          ],
+          "authority_source_checksum": "9999999999999999999999999999999999999999999999999999999999999999",
+          "authority_source_ref": "cos:decision/COS-019",
+          "result": "pass",
+          "scope": "M5-B manual static acceptance"
+        },
+        "admission_events": [
+          {
+            "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+            "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+            "accepted_a03_binding_id": "binding-evidence-review",
+            "admission_event_id": "evidence-required-1",
+            "event_sequence": 1,
+            "evidence_item_id": "evidence-required-1",
+            "prior_admission_disposition": "none",
+            "prior_admission_event_id": "none",
+            "reason": "Required evidence grounded and independently reviewed.",
+            "result_admission_disposition": "admitted",
+            "reviewed_at": "2026-07-15T01:00:00Z",
+            "reviewer_actor_id": "human-evidence-reviewer"
+          }
+        ],
+        "artifact_id": "COS-A02-CANDIDATE-BASE",
+        "artifact_lifecycle": "accepted",
+        "artifact_type": "COS-A02",
+        "context_ref": {
+          "artifact_id": "COS-A01-M5A-ACCEPTED",
+          "artifact_lifecycle": "accepted",
+          "checksum": "1111111111111111111111111111111111111111111111111111111111111111",
+          "current": true,
+          "cutoff": "2026-07-15T00:00:00Z"
+        },
+        "created_at": "2026-07-15T00:00:00Z",
+        "current_admission": [
+          {
+            "admission_disposition": "admitted",
+            "decision_basis_eligible": true,
+            "derived_from_event_id": "evidence-required-1",
+            "evidence_item_id": "evidence-required-1"
+          }
+        ],
+        "evidence_items": [
+          {
+            "claim_id": "claim-1",
+            "conflict_state": "none",
+            "evidence_item_id": "evidence-required-1",
+            "grounding_state": "grounded",
+            "requirement_class": "required",
+            "safe_statement": "Formal source supports the bounded claim.",
+            "source_checksum": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "source_id": "source-formal-1",
+            "statement_type": "source_report"
+          }
+        ],
+        "interpretations": [
+          {
+            "assumptions": [
+              "scope remains current"
+            ],
+            "claim_id": "claim-1",
+            "confidence_state": "high",
+            "contradicting_evidence_ids": [],
+            "interpretation_id": "interpretation-1",
+            "limitations": [],
+            "limiting_evidence_ids": [],
+            "supporting_evidence_ids": [
+              "evidence-required-1"
+            ]
+          }
+        ],
+        "limitations": [],
+        "protocol_run": {
+          "downstream_started": false,
+          "failure_envelope": null,
+          "outcome": "success",
+          "protocol_id": "COS-P02",
+          "stages": [
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "accepted_context_binding",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "source_inventory_integrity",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "evidence_interpretation_classification",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "admission_grounding_evaluation",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "conflict_unknown_limitation_recording",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "independent_admission_review",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "a02_acceptance",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "archive_lineage",
+              "status": "completed"
+            },
+            {
+              "invoked": false,
+              "reason": "fixed disabled in M5-B",
+              "stage_id": "automated_external_verification",
+              "status": "disabled"
+            }
+          ]
+        },
+        "reviewer_binding": {
+          "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+          "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+          "accepted_a03_binding_id": "binding-evidence-review",
+          "actor_id": "human-evidence-reviewer",
+          "actor_kind": "human",
+          "authority_source_checksum": "9999999999999999999999999999999999999999999999999999999999999999",
+          "authority_source_ref": "cos:decision/COS-019",
+          "scope": "M5-B evidence and decision packet"
+        },
+        "schema_version": "0.1",
+        "source_register": [
+          {
+            "authority_class": "formal",
+            "availability_state": "observed",
+            "checksum_state": "observed",
+            "freshness_state": "fresh",
+            "observed_at": "2026-07-15T00:00:00Z",
+            "observed_checksum": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "requirement_class": "required",
+            "safe_ref": "cos:source/formal-1",
+            "source_id": "source-formal-1"
+          }
+        ],
+        "submitter_actor_id": "ai-preparer",
+        "support_links": [
+          {
+            "claim_id": "claim-1",
+            "evidence_item_id": "evidence-required-1",
+            "relation": "supporting",
+            "support_link_id": "support-link-1"
+          }
+        ],
+        "unknowns": []
+      },
+      "expected_schema_valid": false,
+      "expected_semantic_valid": false,
+      "target_schema": "COS-A02",
+      "variant_id": "M5B-N22C-CROSS-TYPE-IDENTITY"
+    },
+    {
+      "artifact": {
+        "acceptance_event": {
+          "acceptance_event_id": "accept-cos-a02-candidate-base",
+          "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+          "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+          "accepted_a03_binding_id": "binding-evidence-review",
+          "accepted_at": "2026-07-15T01:00:00Z",
+          "accepted_by_actor_id": "human-evidence-reviewer",
+          "artifact_checksum": "e99360767ed7f1ef01a431f8df5c09eb3412ff1c6f096d535182f763541b60d8",
+          "artifact_id": "COS-A02-CANDIDATE-BASE",
+          "assertions": [
+            "M5B-AST-P02-POS-01"
+          ],
+          "authority_source_checksum": "9999999999999999999999999999999999999999999999999999999999999999",
+          "authority_source_ref": "cos:decision/COS-019",
+          "result": "pass",
+          "scope": "M5-B manual static acceptance"
+        },
+        "admission_events": [
+          {
+            "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+            "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+            "accepted_a03_binding_id": "binding-evidence-review",
+            "admission_event_id": "admission-event-1",
+            "event_sequence": 1,
+            "evidence_item_id": "evidence-required-1",
+            "prior_admission_disposition": "none",
+            "prior_admission_event_id": "none",
+            "reason": "Required evidence grounded and independently reviewed.",
+            "result_admission_disposition": "admitted",
+            "reviewed_at": "2026-07-15T01:00:00Z",
+            "reviewer_actor_id": "human-evidence-reviewer"
+          },
+          {
+            "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+            "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+            "accepted_a03_binding_id": "binding-evidence-review",
+            "admission_event_id": "admission-event-2",
+            "event_sequence": 2,
+            "evidence_item_id": "evidence-required-1",
+            "prior_admission_disposition": "admitted",
+            "prior_admission_event_id": "admission-event-unknown",
+            "reason": "Second immutable review event.",
+            "result_admission_disposition": "excluded",
+            "reviewed_at": "2026-07-15T01:00:00Z",
+            "reviewer_actor_id": "human-evidence-reviewer"
+          }
+        ],
+        "artifact_id": "COS-A02-CANDIDATE-BASE",
+        "artifact_lifecycle": "accepted",
+        "artifact_type": "COS-A02",
+        "context_ref": {
+          "artifact_id": "COS-A01-M5A-ACCEPTED",
+          "artifact_lifecycle": "accepted",
+          "checksum": "1111111111111111111111111111111111111111111111111111111111111111",
+          "current": true,
+          "cutoff": "2026-07-15T00:00:00Z"
+        },
+        "created_at": "2026-07-15T00:00:00Z",
+        "current_admission": [
+          {
+            "admission_disposition": "excluded",
+            "decision_basis_eligible": false,
+            "derived_from_event_id": "admission-event-2",
+            "evidence_item_id": "evidence-required-1"
+          }
+        ],
+        "evidence_items": [
+          {
+            "claim_id": "claim-1",
+            "conflict_state": "none",
+            "evidence_item_id": "evidence-required-1",
+            "grounding_state": "grounded",
+            "requirement_class": "required",
+            "safe_statement": "Formal source supports the bounded claim.",
+            "source_checksum": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "source_id": "source-formal-1",
+            "statement_type": "source_report"
+          }
+        ],
+        "interpretations": [
+          {
+            "assumptions": [
+              "scope remains current"
+            ],
+            "claim_id": "claim-1",
+            "confidence_state": "high",
+            "contradicting_evidence_ids": [],
+            "interpretation_id": "interpretation-1",
+            "limitations": [],
+            "limiting_evidence_ids": [],
+            "supporting_evidence_ids": [
+              "evidence-required-1"
+            ]
+          }
+        ],
+        "limitations": [],
+        "protocol_run": {
+          "downstream_started": false,
+          "failure_envelope": null,
+          "outcome": "success",
+          "protocol_id": "COS-P02",
+          "stages": [
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "accepted_context_binding",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "source_inventory_integrity",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "evidence_interpretation_classification",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "admission_grounding_evaluation",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "conflict_unknown_limitation_recording",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "independent_admission_review",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "a02_acceptance",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "archive_lineage",
+              "status": "completed"
+            },
+            {
+              "invoked": false,
+              "reason": "fixed disabled in M5-B",
+              "stage_id": "automated_external_verification",
+              "status": "disabled"
+            }
+          ]
+        },
+        "reviewer_binding": {
+          "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+          "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+          "accepted_a03_binding_id": "binding-evidence-review",
+          "actor_id": "human-evidence-reviewer",
+          "actor_kind": "human",
+          "authority_source_checksum": "9999999999999999999999999999999999999999999999999999999999999999",
+          "authority_source_ref": "cos:decision/COS-019",
+          "scope": "M5-B evidence and decision packet"
+        },
+        "schema_version": "0.1",
+        "source_register": [
+          {
+            "authority_class": "formal",
+            "availability_state": "observed",
+            "checksum_state": "observed",
+            "freshness_state": "fresh",
+            "observed_at": "2026-07-15T00:00:00Z",
+            "observed_checksum": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "requirement_class": "required",
+            "safe_ref": "cos:source/formal-1",
+            "source_id": "source-formal-1"
+          }
+        ],
+        "submitter_actor_id": "ai-preparer",
+        "support_links": [
+          {
+            "claim_id": "claim-1",
+            "evidence_item_id": "evidence-required-1",
+            "relation": "supporting",
+            "support_link_id": "support-link-1"
+          }
+        ],
+        "unknowns": []
+      },
+      "expected_schema_valid": true,
+      "expected_semantic_valid": false,
+      "target_schema": "COS-A02",
+      "variant_id": "M5B-N22D-UNKNOWN-PREDECESSOR"
+    },
+    {
+      "artifact": {
+        "acceptance_event": {
+          "acceptance_event_id": "accept-cos-a02-candidate-base",
+          "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+          "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+          "accepted_a03_binding_id": "binding-evidence-review",
+          "accepted_at": "2026-07-15T01:00:00Z",
+          "accepted_by_actor_id": "human-evidence-reviewer",
+          "artifact_checksum": "2c3346e8b621ba95eeaa11ba695b7b900df6b1e7cdd559e8ea4fa95c36fbc8ff",
+          "artifact_id": "COS-A02-CANDIDATE-BASE",
+          "assertions": [
+            "M5B-AST-P02-POS-01"
+          ],
+          "authority_source_checksum": "9999999999999999999999999999999999999999999999999999999999999999",
+          "authority_source_ref": "cos:decision/COS-019",
+          "result": "pass",
+          "scope": "M5-B manual static acceptance"
+        },
+        "admission_events": [
+          {
+            "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+            "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+            "accepted_a03_binding_id": "binding-evidence-review",
+            "admission_event_id": "admission-event-1",
+            "event_sequence": 1,
+            "evidence_item_id": "evidence-required-1",
+            "prior_admission_disposition": "none",
+            "prior_admission_event_id": "none",
+            "reason": "Required evidence grounded and independently reviewed.",
+            "result_admission_disposition": "admitted",
+            "reviewed_at": "2026-07-15T01:00:00Z",
+            "reviewer_actor_id": "human-evidence-reviewer"
+          },
+          {
+            "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+            "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+            "accepted_a03_binding_id": "binding-evidence-review",
+            "admission_event_id": "admission-event-2",
+            "event_sequence": 2,
+            "evidence_item_id": "evidence-required-1",
+            "prior_admission_disposition": "excluded",
+            "prior_admission_event_id": "admission-event-1",
+            "reason": "Second immutable review event.",
+            "result_admission_disposition": "excluded",
+            "reviewed_at": "2026-07-15T01:00:00Z",
+            "reviewer_actor_id": "human-evidence-reviewer"
+          }
+        ],
+        "artifact_id": "COS-A02-CANDIDATE-BASE",
+        "artifact_lifecycle": "accepted",
+        "artifact_type": "COS-A02",
+        "context_ref": {
+          "artifact_id": "COS-A01-M5A-ACCEPTED",
+          "artifact_lifecycle": "accepted",
+          "checksum": "1111111111111111111111111111111111111111111111111111111111111111",
+          "current": true,
+          "cutoff": "2026-07-15T00:00:00Z"
+        },
+        "created_at": "2026-07-15T00:00:00Z",
+        "current_admission": [
+          {
+            "admission_disposition": "excluded",
+            "decision_basis_eligible": false,
+            "derived_from_event_id": "admission-event-2",
+            "evidence_item_id": "evidence-required-1"
+          }
+        ],
+        "evidence_items": [
+          {
+            "claim_id": "claim-1",
+            "conflict_state": "none",
+            "evidence_item_id": "evidence-required-1",
+            "grounding_state": "grounded",
+            "requirement_class": "required",
+            "safe_statement": "Formal source supports the bounded claim.",
+            "source_checksum": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "source_id": "source-formal-1",
+            "statement_type": "source_report"
+          }
+        ],
+        "interpretations": [
+          {
+            "assumptions": [
+              "scope remains current"
+            ],
+            "claim_id": "claim-1",
+            "confidence_state": "high",
+            "contradicting_evidence_ids": [],
+            "interpretation_id": "interpretation-1",
+            "limitations": [],
+            "limiting_evidence_ids": [],
+            "supporting_evidence_ids": [
+              "evidence-required-1"
+            ]
+          }
+        ],
+        "limitations": [],
+        "protocol_run": {
+          "downstream_started": false,
+          "failure_envelope": null,
+          "outcome": "success",
+          "protocol_id": "COS-P02",
+          "stages": [
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "accepted_context_binding",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "source_inventory_integrity",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "evidence_interpretation_classification",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "admission_grounding_evaluation",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "conflict_unknown_limitation_recording",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "independent_admission_review",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "a02_acceptance",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "archive_lineage",
+              "status": "completed"
+            },
+            {
+              "invoked": false,
+              "reason": "fixed disabled in M5-B",
+              "stage_id": "automated_external_verification",
+              "status": "disabled"
+            }
+          ]
+        },
+        "reviewer_binding": {
+          "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+          "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+          "accepted_a03_binding_id": "binding-evidence-review",
+          "actor_id": "human-evidence-reviewer",
+          "actor_kind": "human",
+          "authority_source_checksum": "9999999999999999999999999999999999999999999999999999999999999999",
+          "authority_source_ref": "cos:decision/COS-019",
+          "scope": "M5-B evidence and decision packet"
+        },
+        "schema_version": "0.1",
+        "source_register": [
+          {
+            "authority_class": "formal",
+            "availability_state": "observed",
+            "checksum_state": "observed",
+            "freshness_state": "fresh",
+            "observed_at": "2026-07-15T00:00:00Z",
+            "observed_checksum": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "requirement_class": "required",
+            "safe_ref": "cos:source/formal-1",
+            "source_id": "source-formal-1"
+          }
+        ],
+        "submitter_actor_id": "ai-preparer",
+        "support_links": [
+          {
+            "claim_id": "claim-1",
+            "evidence_item_id": "evidence-required-1",
+            "relation": "supporting",
+            "support_link_id": "support-link-1"
+          }
+        ],
+        "unknowns": []
+      },
+      "expected_schema_valid": true,
+      "expected_semantic_valid": false,
+      "target_schema": "COS-A02",
+      "variant_id": "M5B-N22E-PRIOR-DISPOSITION-MISMATCH"
+    },
+    {
+      "artifact": {
+        "acceptance_event": {
+          "acceptance_event_id": "accept-cos-a02-candidate-base",
+          "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+          "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+          "accepted_a03_binding_id": "binding-evidence-review",
+          "accepted_at": "2026-07-15T01:00:00Z",
+          "accepted_by_actor_id": "human-evidence-reviewer",
+          "artifact_checksum": "fa5b434b47e80b345b445765007c078b344078d8682f9333bda9c9be9bc8626c",
+          "artifact_id": "COS-A02-CANDIDATE-BASE",
+          "assertions": [
+            "M5B-AST-P02-POS-01"
+          ],
+          "authority_source_checksum": "9999999999999999999999999999999999999999999999999999999999999999",
+          "authority_source_ref": "cos:decision/COS-019",
+          "result": "pass",
+          "scope": "M5-B manual static acceptance"
+        },
+        "admission_events": [
+          {
+            "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+            "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+            "accepted_a03_binding_id": "binding-evidence-review",
+            "admission_event_id": "admission-event-1",
+            "event_sequence": 1,
+            "evidence_item_id": "evidence-required-1",
+            "prior_admission_disposition": "none",
+            "prior_admission_event_id": "none",
+            "reason": "Required evidence grounded and independently reviewed.",
+            "result_admission_disposition": "admitted",
+            "reviewed_at": "2026-07-15T01:00:00Z",
+            "reviewer_actor_id": "human-evidence-reviewer"
+          },
+          {
+            "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+            "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+            "accepted_a03_binding_id": "binding-evidence-review",
+            "admission_event_id": "admission-event-2",
+            "event_sequence": 3,
+            "evidence_item_id": "evidence-required-1",
+            "prior_admission_disposition": "admitted",
+            "prior_admission_event_id": "admission-event-1",
+            "reason": "Second immutable review event.",
+            "result_admission_disposition": "excluded",
+            "reviewed_at": "2026-07-15T01:00:00Z",
+            "reviewer_actor_id": "human-evidence-reviewer"
+          }
+        ],
+        "artifact_id": "COS-A02-CANDIDATE-BASE",
+        "artifact_lifecycle": "accepted",
+        "artifact_type": "COS-A02",
+        "context_ref": {
+          "artifact_id": "COS-A01-M5A-ACCEPTED",
+          "artifact_lifecycle": "accepted",
+          "checksum": "1111111111111111111111111111111111111111111111111111111111111111",
+          "current": true,
+          "cutoff": "2026-07-15T00:00:00Z"
+        },
+        "created_at": "2026-07-15T00:00:00Z",
+        "current_admission": [
+          {
+            "admission_disposition": "excluded",
+            "decision_basis_eligible": false,
+            "derived_from_event_id": "admission-event-2",
+            "evidence_item_id": "evidence-required-1"
+          }
+        ],
+        "evidence_items": [
+          {
+            "claim_id": "claim-1",
+            "conflict_state": "none",
+            "evidence_item_id": "evidence-required-1",
+            "grounding_state": "grounded",
+            "requirement_class": "required",
+            "safe_statement": "Formal source supports the bounded claim.",
+            "source_checksum": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "source_id": "source-formal-1",
+            "statement_type": "source_report"
+          }
+        ],
+        "interpretations": [
+          {
+            "assumptions": [
+              "scope remains current"
+            ],
+            "claim_id": "claim-1",
+            "confidence_state": "high",
+            "contradicting_evidence_ids": [],
+            "interpretation_id": "interpretation-1",
+            "limitations": [],
+            "limiting_evidence_ids": [],
+            "supporting_evidence_ids": [
+              "evidence-required-1"
+            ]
+          }
+        ],
+        "limitations": [],
+        "protocol_run": {
+          "downstream_started": false,
+          "failure_envelope": null,
+          "outcome": "success",
+          "protocol_id": "COS-P02",
+          "stages": [
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "accepted_context_binding",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "source_inventory_integrity",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "evidence_interpretation_classification",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "admission_grounding_evaluation",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "conflict_unknown_limitation_recording",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "independent_admission_review",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "a02_acceptance",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "archive_lineage",
+              "status": "completed"
+            },
+            {
+              "invoked": false,
+              "reason": "fixed disabled in M5-B",
+              "stage_id": "automated_external_verification",
+              "status": "disabled"
+            }
+          ]
+        },
+        "reviewer_binding": {
+          "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+          "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+          "accepted_a03_binding_id": "binding-evidence-review",
+          "actor_id": "human-evidence-reviewer",
+          "actor_kind": "human",
+          "authority_source_checksum": "9999999999999999999999999999999999999999999999999999999999999999",
+          "authority_source_ref": "cos:decision/COS-019",
+          "scope": "M5-B evidence and decision packet"
+        },
+        "schema_version": "0.1",
+        "source_register": [
+          {
+            "authority_class": "formal",
+            "availability_state": "observed",
+            "checksum_state": "observed",
+            "freshness_state": "fresh",
+            "observed_at": "2026-07-15T00:00:00Z",
+            "observed_checksum": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "requirement_class": "required",
+            "safe_ref": "cos:source/formal-1",
+            "source_id": "source-formal-1"
+          }
+        ],
+        "submitter_actor_id": "ai-preparer",
+        "support_links": [
+          {
+            "claim_id": "claim-1",
+            "evidence_item_id": "evidence-required-1",
+            "relation": "supporting",
+            "support_link_id": "support-link-1"
+          }
+        ],
+        "unknowns": []
+      },
+      "expected_schema_valid": true,
+      "expected_semantic_valid": false,
+      "target_schema": "COS-A02",
+      "variant_id": "M5B-N22F-SEQUENCE-GAP"
+    },
+    {
+      "artifact": {
+        "acceptance_event": {
+          "acceptance_event_id": "accept-cos-a02-candidate-base",
+          "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+          "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+          "accepted_a03_binding_id": "binding-evidence-review",
+          "accepted_at": "2026-07-15T01:00:00Z",
+          "accepted_by_actor_id": "human-evidence-reviewer",
+          "artifact_checksum": "a04b0a6fa99c71f2067f1a74f9e389dac32f2ced93fcf081a271147db2a0d91b",
+          "artifact_id": "COS-A02-CANDIDATE-BASE",
+          "assertions": [
+            "M5B-AST-P02-POS-01"
+          ],
+          "authority_source_checksum": "9999999999999999999999999999999999999999999999999999999999999999",
+          "authority_source_ref": "cos:decision/COS-019",
+          "result": "pass",
+          "scope": "M5-B manual static acceptance"
+        },
+        "admission_events": [
+          {
+            "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+            "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+            "accepted_a03_binding_id": "binding-evidence-review",
+            "admission_event_id": "admission-event-1",
+            "event_sequence": 1,
+            "evidence_item_id": "evidence-required-1",
+            "prior_admission_disposition": "none",
+            "prior_admission_event_id": "none",
+            "reason": "Required evidence grounded and independently reviewed.",
+            "result_admission_disposition": "admitted",
+            "reviewed_at": "2026-07-15T01:00:00Z",
+            "reviewer_actor_id": "human-evidence-reviewer"
+          },
+          {
+            "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+            "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+            "accepted_a03_binding_id": "binding-evidence-review",
+            "admission_event_id": "admission-event-2",
+            "event_sequence": 2,
+            "evidence_item_id": "evidence-required-1",
+            "prior_admission_disposition": "admitted",
+            "prior_admission_event_id": "admission-event-1",
+            "reason": "Second immutable review event.",
+            "result_admission_disposition": "excluded",
+            "reviewed_at": "2026-07-15T01:00:00Z",
+            "reviewer_actor_id": "human-evidence-reviewer"
+          }
+        ],
+        "artifact_id": "COS-A02-CANDIDATE-BASE",
+        "artifact_lifecycle": "accepted",
+        "artifact_type": "COS-A02",
+        "context_ref": {
+          "artifact_id": "COS-A01-M5A-ACCEPTED",
+          "artifact_lifecycle": "accepted",
+          "checksum": "1111111111111111111111111111111111111111111111111111111111111111",
+          "current": true,
+          "cutoff": "2026-07-15T00:00:00Z"
+        },
+        "created_at": "2026-07-15T00:00:00Z",
+        "current_admission": [
+          {
+            "admission_disposition": "excluded",
+            "decision_basis_eligible": false,
+            "derived_from_event_id": "admission-event-1",
+            "evidence_item_id": "evidence-required-1"
+          }
+        ],
+        "evidence_items": [
+          {
+            "claim_id": "claim-1",
+            "conflict_state": "none",
+            "evidence_item_id": "evidence-required-1",
+            "grounding_state": "grounded",
+            "requirement_class": "required",
+            "safe_statement": "Formal source supports the bounded claim.",
+            "source_checksum": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "source_id": "source-formal-1",
+            "statement_type": "source_report"
+          }
+        ],
+        "interpretations": [
+          {
+            "assumptions": [
+              "scope remains current"
+            ],
+            "claim_id": "claim-1",
+            "confidence_state": "high",
+            "contradicting_evidence_ids": [],
+            "interpretation_id": "interpretation-1",
+            "limitations": [],
+            "limiting_evidence_ids": [],
+            "supporting_evidence_ids": [
+              "evidence-required-1"
+            ]
+          }
+        ],
+        "limitations": [],
+        "protocol_run": {
+          "downstream_started": false,
+          "failure_envelope": null,
+          "outcome": "success",
+          "protocol_id": "COS-P02",
+          "stages": [
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "accepted_context_binding",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "source_inventory_integrity",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "evidence_interpretation_classification",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "admission_grounding_evaluation",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "conflict_unknown_limitation_recording",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "independent_admission_review",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "a02_acceptance",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "archive_lineage",
+              "status": "completed"
+            },
+            {
+              "invoked": false,
+              "reason": "fixed disabled in M5-B",
+              "stage_id": "automated_external_verification",
+              "status": "disabled"
+            }
+          ]
+        },
+        "reviewer_binding": {
+          "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+          "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+          "accepted_a03_binding_id": "binding-evidence-review",
+          "actor_id": "human-evidence-reviewer",
+          "actor_kind": "human",
+          "authority_source_checksum": "9999999999999999999999999999999999999999999999999999999999999999",
+          "authority_source_ref": "cos:decision/COS-019",
+          "scope": "M5-B evidence and decision packet"
+        },
+        "schema_version": "0.1",
+        "source_register": [
+          {
+            "authority_class": "formal",
+            "availability_state": "observed",
+            "checksum_state": "observed",
+            "freshness_state": "fresh",
+            "observed_at": "2026-07-15T00:00:00Z",
+            "observed_checksum": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "requirement_class": "required",
+            "safe_ref": "cos:source/formal-1",
+            "source_id": "source-formal-1"
+          }
+        ],
+        "submitter_actor_id": "ai-preparer",
+        "support_links": [
+          {
+            "claim_id": "claim-1",
+            "evidence_item_id": "evidence-required-1",
+            "relation": "supporting",
+            "support_link_id": "support-link-1"
+          }
+        ],
+        "unknowns": []
+      },
+      "expected_schema_valid": true,
+      "expected_semantic_valid": false,
+      "target_schema": "COS-A02",
+      "variant_id": "M5B-N22G-CURRENT-PROJECTION-MISMATCH"
+    },
+    {
+      "artifact": {
+        "acceptance_event": {
+          "acceptance_event_id": "accept-cos-a02-candidate-base",
+          "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+          "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+          "accepted_a03_binding_id": "binding-evidence-review",
+          "accepted_at": "2026-07-15T01:00:00Z",
+          "accepted_by_actor_id": "human-evidence-reviewer",
+          "artifact_checksum": "e1e8e5843a563c5109188f67ac58148921d1f2e3d182f62dfc8334e3a35ccb93",
+          "artifact_id": "COS-A02-CANDIDATE-BASE",
+          "assertions": [
+            "M5B-AST-P02-POS-01"
+          ],
+          "authority_source_checksum": "9999999999999999999999999999999999999999999999999999999999999999",
+          "authority_source_ref": "cos:decision/COS-019",
+          "result": "pass",
+          "scope": "M5-B manual static acceptance"
+        },
+        "admission_events": [
+          {
+            "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+            "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+            "accepted_a03_binding_id": "binding-evidence-review",
+            "admission_event_id": "admission-event-1",
+            "event_sequence": 1,
+            "evidence_item_id": "evidence-required-1",
+            "prior_admission_disposition": "none",
+            "prior_admission_event_id": "none",
+            "reason": "Mutated historical event.",
+            "result_admission_disposition": "admitted",
+            "reviewed_at": "2026-07-15T01:00:00Z",
+            "reviewer_actor_id": "human-evidence-reviewer"
+          },
+          {
+            "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+            "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+            "accepted_a03_binding_id": "binding-evidence-review",
+            "admission_event_id": "admission-event-2",
+            "event_sequence": 2,
+            "evidence_item_id": "evidence-required-1",
+            "prior_admission_disposition": "admitted",
+            "prior_admission_event_id": "admission-event-1",
+            "reason": "Second immutable review event.",
+            "result_admission_disposition": "excluded",
+            "reviewed_at": "2026-07-15T01:00:00Z",
+            "reviewer_actor_id": "human-evidence-reviewer"
+          }
+        ],
+        "artifact_id": "COS-A02-CANDIDATE-BASE",
+        "artifact_lifecycle": "accepted",
+        "artifact_type": "COS-A02",
+        "context_ref": {
+          "artifact_id": "COS-A01-M5A-ACCEPTED",
+          "artifact_lifecycle": "accepted",
+          "checksum": "1111111111111111111111111111111111111111111111111111111111111111",
+          "current": true,
+          "cutoff": "2026-07-15T00:00:00Z"
+        },
+        "created_at": "2026-07-15T00:00:00Z",
+        "current_admission": [
+          {
+            "admission_disposition": "excluded",
+            "decision_basis_eligible": false,
+            "derived_from_event_id": "admission-event-2",
+            "evidence_item_id": "evidence-required-1"
+          }
+        ],
+        "evidence_items": [
+          {
+            "claim_id": "claim-1",
+            "conflict_state": "none",
+            "evidence_item_id": "evidence-required-1",
+            "grounding_state": "grounded",
+            "requirement_class": "required",
+            "safe_statement": "Formal source supports the bounded claim.",
+            "source_checksum": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "source_id": "source-formal-1",
+            "statement_type": "source_report"
+          }
+        ],
+        "interpretations": [
+          {
+            "assumptions": [
+              "scope remains current"
+            ],
+            "claim_id": "claim-1",
+            "confidence_state": "high",
+            "contradicting_evidence_ids": [],
+            "interpretation_id": "interpretation-1",
+            "limitations": [],
+            "limiting_evidence_ids": [],
+            "supporting_evidence_ids": [
+              "evidence-required-1"
+            ]
+          }
+        ],
+        "limitations": [],
+        "protocol_run": {
+          "downstream_started": false,
+          "failure_envelope": null,
+          "outcome": "success",
+          "protocol_id": "COS-P02",
+          "stages": [
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "accepted_context_binding",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "source_inventory_integrity",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "evidence_interpretation_classification",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "admission_grounding_evaluation",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "conflict_unknown_limitation_recording",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "independent_admission_review",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "a02_acceptance",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "archive_lineage",
+              "status": "completed"
+            },
+            {
+              "invoked": false,
+              "reason": "fixed disabled in M5-B",
+              "stage_id": "automated_external_verification",
+              "status": "disabled"
+            }
+          ]
+        },
+        "reviewer_binding": {
+          "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+          "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+          "accepted_a03_binding_id": "binding-evidence-review",
+          "actor_id": "human-evidence-reviewer",
+          "actor_kind": "human",
+          "authority_source_checksum": "9999999999999999999999999999999999999999999999999999999999999999",
+          "authority_source_ref": "cos:decision/COS-019",
+          "scope": "M5-B evidence and decision packet"
+        },
+        "schema_version": "0.1",
+        "source_register": [
+          {
+            "authority_class": "formal",
+            "availability_state": "observed",
+            "checksum_state": "observed",
+            "freshness_state": "fresh",
+            "observed_at": "2026-07-15T00:00:00Z",
+            "observed_checksum": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "requirement_class": "required",
+            "safe_ref": "cos:source/formal-1",
+            "source_id": "source-formal-1"
+          }
+        ],
+        "submitter_actor_id": "ai-preparer",
+        "support_links": [
+          {
+            "claim_id": "claim-1",
+            "evidence_item_id": "evidence-required-1",
+            "relation": "supporting",
+            "support_link_id": "support-link-1"
+          }
+        ],
+        "unknowns": []
+      },
+      "expected_schema_valid": true,
+      "expected_semantic_valid": false,
+      "prior_artifact": {
+        "acceptance_event": {
+          "acceptance_event_id": "accept-cos-a02-candidate-base",
+          "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+          "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+          "accepted_a03_binding_id": "binding-evidence-review",
+          "accepted_at": "2026-07-15T01:00:00Z",
+          "accepted_by_actor_id": "human-evidence-reviewer",
+          "artifact_checksum": "a0cdabbc3dae269a6af7566ad14725d38e9732b5235091611921ca6806011572",
+          "artifact_id": "COS-A02-CANDIDATE-BASE",
+          "assertions": [
+            "M5B-AST-P02-POS-01"
+          ],
+          "authority_source_checksum": "9999999999999999999999999999999999999999999999999999999999999999",
+          "authority_source_ref": "cos:decision/COS-019",
+          "result": "pass",
+          "scope": "M5-B manual static acceptance"
+        },
+        "admission_events": [
+          {
+            "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+            "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+            "accepted_a03_binding_id": "binding-evidence-review",
+            "admission_event_id": "admission-event-1",
+            "event_sequence": 1,
+            "evidence_item_id": "evidence-required-1",
+            "prior_admission_disposition": "none",
+            "prior_admission_event_id": "none",
+            "reason": "Required evidence grounded and independently reviewed.",
+            "result_admission_disposition": "admitted",
+            "reviewed_at": "2026-07-15T01:00:00Z",
+            "reviewer_actor_id": "human-evidence-reviewer"
+          },
+          {
+            "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+            "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+            "accepted_a03_binding_id": "binding-evidence-review",
+            "admission_event_id": "admission-event-2",
+            "event_sequence": 2,
+            "evidence_item_id": "evidence-required-1",
+            "prior_admission_disposition": "admitted",
+            "prior_admission_event_id": "admission-event-1",
+            "reason": "Second immutable review event.",
+            "result_admission_disposition": "excluded",
+            "reviewed_at": "2026-07-15T01:00:00Z",
+            "reviewer_actor_id": "human-evidence-reviewer"
+          }
+        ],
+        "artifact_id": "COS-A02-CANDIDATE-BASE",
+        "artifact_lifecycle": "accepted",
+        "artifact_type": "COS-A02",
+        "context_ref": {
+          "artifact_id": "COS-A01-M5A-ACCEPTED",
+          "artifact_lifecycle": "accepted",
+          "checksum": "1111111111111111111111111111111111111111111111111111111111111111",
+          "current": true,
+          "cutoff": "2026-07-15T00:00:00Z"
+        },
+        "created_at": "2026-07-15T00:00:00Z",
+        "current_admission": [
+          {
+            "admission_disposition": "excluded",
+            "decision_basis_eligible": false,
+            "derived_from_event_id": "admission-event-2",
+            "evidence_item_id": "evidence-required-1"
+          }
+        ],
+        "evidence_items": [
+          {
+            "claim_id": "claim-1",
+            "conflict_state": "none",
+            "evidence_item_id": "evidence-required-1",
+            "grounding_state": "grounded",
+            "requirement_class": "required",
+            "safe_statement": "Formal source supports the bounded claim.",
+            "source_checksum": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "source_id": "source-formal-1",
+            "statement_type": "source_report"
+          }
+        ],
+        "interpretations": [
+          {
+            "assumptions": [
+              "scope remains current"
+            ],
+            "claim_id": "claim-1",
+            "confidence_state": "high",
+            "contradicting_evidence_ids": [],
+            "interpretation_id": "interpretation-1",
+            "limitations": [],
+            "limiting_evidence_ids": [],
+            "supporting_evidence_ids": [
+              "evidence-required-1"
+            ]
+          }
+        ],
+        "limitations": [],
+        "protocol_run": {
+          "downstream_started": false,
+          "failure_envelope": null,
+          "outcome": "success",
+          "protocol_id": "COS-P02",
+          "stages": [
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "accepted_context_binding",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "source_inventory_integrity",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "evidence_interpretation_classification",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "admission_grounding_evaluation",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "conflict_unknown_limitation_recording",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "independent_admission_review",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "a02_acceptance",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "archive_lineage",
+              "status": "completed"
+            },
+            {
+              "invoked": false,
+              "reason": "fixed disabled in M5-B",
+              "stage_id": "automated_external_verification",
+              "status": "disabled"
+            }
+          ]
+        },
+        "reviewer_binding": {
+          "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+          "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+          "accepted_a03_binding_id": "binding-evidence-review",
+          "actor_id": "human-evidence-reviewer",
+          "actor_kind": "human",
+          "authority_source_checksum": "9999999999999999999999999999999999999999999999999999999999999999",
+          "authority_source_ref": "cos:decision/COS-019",
+          "scope": "M5-B evidence and decision packet"
+        },
+        "schema_version": "0.1",
+        "source_register": [
+          {
+            "authority_class": "formal",
+            "availability_state": "observed",
+            "checksum_state": "observed",
+            "freshness_state": "fresh",
+            "observed_at": "2026-07-15T00:00:00Z",
+            "observed_checksum": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "requirement_class": "required",
+            "safe_ref": "cos:source/formal-1",
+            "source_id": "source-formal-1"
+          }
+        ],
+        "submitter_actor_id": "ai-preparer",
+        "support_links": [
+          {
+            "claim_id": "claim-1",
+            "evidence_item_id": "evidence-required-1",
+            "relation": "supporting",
+            "support_link_id": "support-link-1"
+          }
+        ],
+        "unknowns": []
+      },
+      "target_schema": "COS-A02",
+      "variant_id": "M5B-N22H-HISTORICAL-OVERWRITE"
+    },
+    {
+      "artifact": {
+        "acceptance_event": {
+          "acceptance_event_id": "accept-cos-a02-candidate-base",
+          "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+          "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+          "accepted_a03_binding_id": "binding-evidence-review",
+          "accepted_at": "2026-07-15T01:00:00Z",
+          "accepted_by_actor_id": "human-evidence-reviewer",
+          "artifact_checksum": "d43cfe252464c8b2c21e8d8b616b406600b8c5aeb3943d10d5d462d3bb922d67",
+          "artifact_id": "COS-A02-CANDIDATE-BASE",
+          "assertions": [
+            "M5B-AST-P02-POS-01"
+          ],
+          "authority_source_checksum": "9999999999999999999999999999999999999999999999999999999999999999",
+          "authority_source_ref": "cos:decision/COS-019",
+          "result": "pass",
+          "scope": "M5-B manual static acceptance"
+        },
+        "admission_events": [
+          {
+            "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+            "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+            "accepted_a03_binding_id": "binding-evidence-review",
+            "admission_event_id": "admission-event-2",
+            "event_sequence": 2,
+            "evidence_item_id": "evidence-required-1",
+            "prior_admission_disposition": "admitted",
+            "prior_admission_event_id": "admission-event-1",
+            "reason": "Second immutable review event.",
+            "result_admission_disposition": "excluded",
+            "reviewed_at": "2026-07-15T01:00:00Z",
+            "reviewer_actor_id": "human-evidence-reviewer"
+          }
+        ],
+        "artifact_id": "COS-A02-CANDIDATE-BASE",
+        "artifact_lifecycle": "accepted",
+        "artifact_type": "COS-A02",
+        "context_ref": {
+          "artifact_id": "COS-A01-M5A-ACCEPTED",
+          "artifact_lifecycle": "accepted",
+          "checksum": "1111111111111111111111111111111111111111111111111111111111111111",
+          "current": true,
+          "cutoff": "2026-07-15T00:00:00Z"
+        },
+        "created_at": "2026-07-15T00:00:00Z",
+        "current_admission": [
+          {
+            "admission_disposition": "excluded",
+            "decision_basis_eligible": false,
+            "derived_from_event_id": "admission-event-2",
+            "evidence_item_id": "evidence-required-1"
+          }
+        ],
+        "evidence_items": [
+          {
+            "claim_id": "claim-1",
+            "conflict_state": "none",
+            "evidence_item_id": "evidence-required-1",
+            "grounding_state": "grounded",
+            "requirement_class": "required",
+            "safe_statement": "Formal source supports the bounded claim.",
+            "source_checksum": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "source_id": "source-formal-1",
+            "statement_type": "source_report"
+          }
+        ],
+        "interpretations": [
+          {
+            "assumptions": [
+              "scope remains current"
+            ],
+            "claim_id": "claim-1",
+            "confidence_state": "high",
+            "contradicting_evidence_ids": [],
+            "interpretation_id": "interpretation-1",
+            "limitations": [],
+            "limiting_evidence_ids": [],
+            "supporting_evidence_ids": [
+              "evidence-required-1"
+            ]
+          }
+        ],
+        "limitations": [],
+        "protocol_run": {
+          "downstream_started": false,
+          "failure_envelope": null,
+          "outcome": "success",
+          "protocol_id": "COS-P02",
+          "stages": [
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "accepted_context_binding",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "source_inventory_integrity",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "evidence_interpretation_classification",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "admission_grounding_evaluation",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "conflict_unknown_limitation_recording",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "independent_admission_review",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "a02_acceptance",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "archive_lineage",
+              "status": "completed"
+            },
+            {
+              "invoked": false,
+              "reason": "fixed disabled in M5-B",
+              "stage_id": "automated_external_verification",
+              "status": "disabled"
+            }
+          ]
+        },
+        "reviewer_binding": {
+          "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+          "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+          "accepted_a03_binding_id": "binding-evidence-review",
+          "actor_id": "human-evidence-reviewer",
+          "actor_kind": "human",
+          "authority_source_checksum": "9999999999999999999999999999999999999999999999999999999999999999",
+          "authority_source_ref": "cos:decision/COS-019",
+          "scope": "M5-B evidence and decision packet"
+        },
+        "schema_version": "0.1",
+        "source_register": [
+          {
+            "authority_class": "formal",
+            "availability_state": "observed",
+            "checksum_state": "observed",
+            "freshness_state": "fresh",
+            "observed_at": "2026-07-15T00:00:00Z",
+            "observed_checksum": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "requirement_class": "required",
+            "safe_ref": "cos:source/formal-1",
+            "source_id": "source-formal-1"
+          }
+        ],
+        "submitter_actor_id": "ai-preparer",
+        "support_links": [
+          {
+            "claim_id": "claim-1",
+            "evidence_item_id": "evidence-required-1",
+            "relation": "supporting",
+            "support_link_id": "support-link-1"
+          }
+        ],
+        "unknowns": []
+      },
+      "expected_schema_valid": true,
+      "expected_semantic_valid": false,
+      "prior_artifact": {
+        "acceptance_event": {
+          "acceptance_event_id": "accept-cos-a02-candidate-base",
+          "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+          "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+          "accepted_a03_binding_id": "binding-evidence-review",
+          "accepted_at": "2026-07-15T01:00:00Z",
+          "accepted_by_actor_id": "human-evidence-reviewer",
+          "artifact_checksum": "a0cdabbc3dae269a6af7566ad14725d38e9732b5235091611921ca6806011572",
+          "artifact_id": "COS-A02-CANDIDATE-BASE",
+          "assertions": [
+            "M5B-AST-P02-POS-01"
+          ],
+          "authority_source_checksum": "9999999999999999999999999999999999999999999999999999999999999999",
+          "authority_source_ref": "cos:decision/COS-019",
+          "result": "pass",
+          "scope": "M5-B manual static acceptance"
+        },
+        "admission_events": [
+          {
+            "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+            "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+            "accepted_a03_binding_id": "binding-evidence-review",
+            "admission_event_id": "admission-event-1",
+            "event_sequence": 1,
+            "evidence_item_id": "evidence-required-1",
+            "prior_admission_disposition": "none",
+            "prior_admission_event_id": "none",
+            "reason": "Required evidence grounded and independently reviewed.",
+            "result_admission_disposition": "admitted",
+            "reviewed_at": "2026-07-15T01:00:00Z",
+            "reviewer_actor_id": "human-evidence-reviewer"
+          },
+          {
+            "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+            "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+            "accepted_a03_binding_id": "binding-evidence-review",
+            "admission_event_id": "admission-event-2",
+            "event_sequence": 2,
+            "evidence_item_id": "evidence-required-1",
+            "prior_admission_disposition": "admitted",
+            "prior_admission_event_id": "admission-event-1",
+            "reason": "Second immutable review event.",
+            "result_admission_disposition": "excluded",
+            "reviewed_at": "2026-07-15T01:00:00Z",
+            "reviewer_actor_id": "human-evidence-reviewer"
+          }
+        ],
+        "artifact_id": "COS-A02-CANDIDATE-BASE",
+        "artifact_lifecycle": "accepted",
+        "artifact_type": "COS-A02",
+        "context_ref": {
+          "artifact_id": "COS-A01-M5A-ACCEPTED",
+          "artifact_lifecycle": "accepted",
+          "checksum": "1111111111111111111111111111111111111111111111111111111111111111",
+          "current": true,
+          "cutoff": "2026-07-15T00:00:00Z"
+        },
+        "created_at": "2026-07-15T00:00:00Z",
+        "current_admission": [
+          {
+            "admission_disposition": "excluded",
+            "decision_basis_eligible": false,
+            "derived_from_event_id": "admission-event-2",
+            "evidence_item_id": "evidence-required-1"
+          }
+        ],
+        "evidence_items": [
+          {
+            "claim_id": "claim-1",
+            "conflict_state": "none",
+            "evidence_item_id": "evidence-required-1",
+            "grounding_state": "grounded",
+            "requirement_class": "required",
+            "safe_statement": "Formal source supports the bounded claim.",
+            "source_checksum": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "source_id": "source-formal-1",
+            "statement_type": "source_report"
+          }
+        ],
+        "interpretations": [
+          {
+            "assumptions": [
+              "scope remains current"
+            ],
+            "claim_id": "claim-1",
+            "confidence_state": "high",
+            "contradicting_evidence_ids": [],
+            "interpretation_id": "interpretation-1",
+            "limitations": [],
+            "limiting_evidence_ids": [],
+            "supporting_evidence_ids": [
+              "evidence-required-1"
+            ]
+          }
+        ],
+        "limitations": [],
+        "protocol_run": {
+          "downstream_started": false,
+          "failure_envelope": null,
+          "outcome": "success",
+          "protocol_id": "COS-P02",
+          "stages": [
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "accepted_context_binding",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "source_inventory_integrity",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "evidence_interpretation_classification",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "admission_grounding_evaluation",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "conflict_unknown_limitation_recording",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "independent_admission_review",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "a02_acceptance",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "archive_lineage",
+              "status": "completed"
+            },
+            {
+              "invoked": false,
+              "reason": "fixed disabled in M5-B",
+              "stage_id": "automated_external_verification",
+              "status": "disabled"
+            }
+          ]
+        },
+        "reviewer_binding": {
+          "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+          "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+          "accepted_a03_binding_id": "binding-evidence-review",
+          "actor_id": "human-evidence-reviewer",
+          "actor_kind": "human",
+          "authority_source_checksum": "9999999999999999999999999999999999999999999999999999999999999999",
+          "authority_source_ref": "cos:decision/COS-019",
+          "scope": "M5-B evidence and decision packet"
+        },
+        "schema_version": "0.1",
+        "source_register": [
+          {
+            "authority_class": "formal",
+            "availability_state": "observed",
+            "checksum_state": "observed",
+            "freshness_state": "fresh",
+            "observed_at": "2026-07-15T00:00:00Z",
+            "observed_checksum": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "requirement_class": "required",
+            "safe_ref": "cos:source/formal-1",
+            "source_id": "source-formal-1"
+          }
+        ],
+        "submitter_actor_id": "ai-preparer",
+        "support_links": [
+          {
+            "claim_id": "claim-1",
+            "evidence_item_id": "evidence-required-1",
+            "relation": "supporting",
+            "support_link_id": "support-link-1"
+          }
+        ],
+        "unknowns": []
+      },
+      "target_schema": "COS-A02",
+      "variant_id": "M5B-N22I-HISTORICAL-DELETE"
+    },
+    {
+      "artifact": {
+        "acceptance_event": {
+          "acceptance_event_id": "accept-cos-a02-candidate-base",
+          "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+          "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+          "accepted_a03_binding_id": "binding-evidence-review",
+          "accepted_at": "2026-07-15T01:00:00Z",
+          "accepted_by_actor_id": "human-evidence-reviewer",
+          "artifact_checksum": "3872ec7bda0b4bb95f11795630f0fecc5363bc6fa487c4aa0f8c35ec67bb0c4d",
+          "artifact_id": "COS-A02-CANDIDATE-BASE",
+          "assertions": [
+            "M5B-AST-P02-POS-01"
+          ],
+          "authority_source_checksum": "9999999999999999999999999999999999999999999999999999999999999999",
+          "authority_source_ref": "cos:decision/COS-019",
+          "result": "pass",
+          "scope": "M5-B manual static acceptance"
+        },
+        "admission_events": [
+          {
+            "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+            "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+            "accepted_a03_binding_id": "binding-evidence-review",
+            "admission_event_id": "admission-event-1",
+            "event_sequence": 1,
+            "evidence_item_id": "evidence-required-1",
+            "prior_admission_disposition": "none",
+            "prior_admission_event_id": "none",
+            "reason": "Required evidence grounded and independently reviewed.",
+            "result_admission_disposition": "admitted",
+            "reviewed_at": "2026-07-15T01:00:00Z",
+            "reviewer_actor_id": "human-evidence-reviewer"
+          }
+        ],
+        "artifact_id": "COS-A02-CANDIDATE-BASE",
+        "artifact_lifecycle": "accepted",
+        "artifact_type": "COS-A02",
+        "context_ref": {
+          "artifact_id": "COS-A01-M5A-ACCEPTED",
+          "artifact_lifecycle": "accepted",
+          "checksum": "1111111111111111111111111111111111111111111111111111111111111111",
+          "current": true,
+          "cutoff": "2026-07-15T00:00:00Z"
+        },
+        "created_at": "2026-07-15T00:00:00Z",
+        "current_admission": [
+          {
+            "admission_disposition": "admitted",
+            "decision_basis_eligible": true,
+            "derived_from_event_id": "admission-event-1",
+            "evidence_item_id": "evidence-required-1"
+          }
+        ],
+        "evidence_items": [
+          {
+            "claim_id": "claim-1",
+            "conflict_state": "none",
+            "evidence_item_id": "evidence-required-1",
+            "grounding_state": "grounded",
+            "requirement_class": "required",
+            "safe_statement": "Formal source supports the bounded claim.",
+            "source_checksum": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "source_id": "source-formal-1",
+            "statement_type": "source_report"
+          }
+        ],
+        "interpretations": [
+          {
+            "assumptions": [
+              "scope remains current"
+            ],
+            "claim_id": "claim-missing",
+            "confidence_state": "high",
+            "contradicting_evidence_ids": [],
+            "interpretation_id": "interpretation-1",
+            "limitations": [],
+            "limiting_evidence_ids": [],
+            "supporting_evidence_ids": [
+              "evidence-required-1"
+            ]
+          }
+        ],
+        "limitations": [],
+        "protocol_run": {
+          "downstream_started": false,
+          "failure_envelope": null,
+          "outcome": "success",
+          "protocol_id": "COS-P02",
+          "stages": [
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "accepted_context_binding",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "source_inventory_integrity",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "evidence_interpretation_classification",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "admission_grounding_evaluation",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "conflict_unknown_limitation_recording",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "independent_admission_review",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "a02_acceptance",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "archive_lineage",
+              "status": "completed"
+            },
+            {
+              "invoked": false,
+              "reason": "fixed disabled in M5-B",
+              "stage_id": "automated_external_verification",
+              "status": "disabled"
+            }
+          ]
+        },
+        "reviewer_binding": {
+          "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+          "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+          "accepted_a03_binding_id": "binding-evidence-review",
+          "actor_id": "human-evidence-reviewer",
+          "actor_kind": "human",
+          "authority_source_checksum": "9999999999999999999999999999999999999999999999999999999999999999",
+          "authority_source_ref": "cos:decision/COS-019",
+          "scope": "M5-B evidence and decision packet"
+        },
+        "schema_version": "0.1",
+        "source_register": [
+          {
+            "authority_class": "formal",
+            "availability_state": "observed",
+            "checksum_state": "observed",
+            "freshness_state": "fresh",
+            "observed_at": "2026-07-15T00:00:00Z",
+            "observed_checksum": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "requirement_class": "required",
+            "safe_ref": "cos:source/formal-1",
+            "source_id": "source-formal-1"
+          }
+        ],
+        "submitter_actor_id": "ai-preparer",
+        "support_links": [
+          {
+            "claim_id": "claim-1",
+            "evidence_item_id": "evidence-required-1",
+            "relation": "supporting",
+            "support_link_id": "support-link-1"
+          }
+        ],
+        "unknowns": []
+      },
+      "expected_schema_valid": true,
+      "expected_semantic_valid": false,
+      "target_schema": "COS-A02",
+      "variant_id": "M5B-N22J-DANGLING-INTERPRETATION-CLAIM"
+    },
+    {
+      "artifact": {
+        "acceptance_event": {
+          "acceptance_event_id": "accept-cos-a02-candidate-base",
+          "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+          "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+          "accepted_a03_binding_id": "binding-evidence-review",
+          "accepted_at": "2026-07-15T01:00:00Z",
+          "accepted_by_actor_id": "human-evidence-reviewer",
+          "artifact_checksum": "a1479faec93972367279593326cbd3515cd600851c4188aaa43b48623615132f",
+          "artifact_id": "COS-A02-CANDIDATE-BASE",
+          "assertions": [
+            "M5B-AST-P02-POS-01"
+          ],
+          "authority_source_checksum": "9999999999999999999999999999999999999999999999999999999999999999",
+          "authority_source_ref": "cos:decision/COS-019",
+          "result": "pass",
+          "scope": "M5-B manual static acceptance"
+        },
+        "admission_events": [
+          {
+            "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+            "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+            "accepted_a03_binding_id": "binding-evidence-review",
+            "admission_event_id": "admission-event-1",
+            "event_sequence": 1,
+            "evidence_item_id": "evidence-required-1",
+            "prior_admission_disposition": "none",
+            "prior_admission_event_id": "none",
+            "reason": "Required evidence grounded and independently reviewed.",
+            "result_admission_disposition": "admitted",
+            "reviewed_at": "2026-07-15T01:00:00Z",
+            "reviewer_actor_id": "human-evidence-reviewer"
+          }
+        ],
+        "artifact_id": "COS-A02-CANDIDATE-BASE",
+        "artifact_lifecycle": "accepted",
+        "artifact_type": "COS-A02",
+        "context_ref": {
+          "artifact_id": "COS-A01-M5A-ACCEPTED",
+          "artifact_lifecycle": "accepted",
+          "checksum": "1111111111111111111111111111111111111111111111111111111111111111",
+          "current": true,
+          "cutoff": "2026-07-15T00:00:00Z"
+        },
+        "created_at": "2026-07-15T00:00:00Z",
+        "current_admission": [
+          {
+            "admission_disposition": "admitted",
+            "decision_basis_eligible": true,
+            "derived_from_event_id": "admission-event-1",
+            "evidence_item_id": "evidence-required-1"
+          }
+        ],
+        "evidence_items": [
+          {
+            "claim_id": "claim-1",
+            "conflict_state": "none",
+            "evidence_item_id": "evidence-required-1",
+            "grounding_state": "grounded",
+            "requirement_class": "required",
+            "safe_statement": "Formal source supports the bounded claim.",
+            "source_checksum": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "source_id": "source-formal-1",
+            "statement_type": "source_report"
+          }
+        ],
+        "interpretations": [
+          {
+            "assumptions": [
+              "scope remains current"
+            ],
+            "claim_id": "claim-1",
+            "confidence_state": "high",
+            "contradicting_evidence_ids": [],
+            "interpretation_id": "interpretation-1",
+            "limitations": [],
+            "limiting_evidence_ids": [],
+            "supporting_evidence_ids": [
+              "evidence-required-1"
+            ]
+          }
+        ],
+        "limitations": [],
+        "protocol_run": {
+          "downstream_started": false,
+          "failure_envelope": null,
+          "outcome": "success",
+          "protocol_id": "COS-P02",
+          "stages": [
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "accepted_context_binding",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "source_inventory_integrity",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "evidence_interpretation_classification",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "admission_grounding_evaluation",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "conflict_unknown_limitation_recording",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "independent_admission_review",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "a02_acceptance",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "archive_lineage",
+              "status": "completed"
+            },
+            {
+              "invoked": false,
+              "reason": "fixed disabled in M5-B",
+              "stage_id": "automated_external_verification",
+              "status": "disabled"
+            }
+          ]
+        },
+        "reviewer_binding": {
+          "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+          "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+          "accepted_a03_binding_id": "binding-evidence-review",
+          "actor_id": "human-evidence-reviewer",
+          "actor_kind": "human",
+          "authority_source_checksum": "9999999999999999999999999999999999999999999999999999999999999999",
+          "authority_source_ref": "cos:decision/COS-019",
+          "scope": "M5-B evidence and decision packet"
+        },
+        "schema_version": "0.1",
+        "source_register": [
+          {
+            "authority_class": "formal",
+            "availability_state": "observed",
+            "checksum_state": "observed",
+            "freshness_state": "fresh",
+            "observed_at": "2026-07-15T00:00:00Z",
+            "observed_checksum": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "requirement_class": "required",
+            "safe_ref": "cos:source/formal-1",
+            "source_id": "source-formal-1"
+          }
+        ],
+        "submitter_actor_id": "ai-preparer",
+        "support_links": [
+          {
+            "claim_id": "claim-1",
+            "evidence_item_id": "evidence-missing",
+            "relation": "supporting",
+            "support_link_id": "support-link-1"
+          }
+        ],
+        "unknowns": []
+      },
+      "expected_schema_valid": true,
+      "expected_semantic_valid": false,
+      "target_schema": "COS-A02",
+      "variant_id": "M5B-N22K-DANGLING-SUPPORT-EVIDENCE"
+    },
+    {
+      "artifact": {
+        "acceptance_event": {
+          "acceptance_event_id": "accept-cos-a02-candidate-base",
+          "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+          "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+          "accepted_a03_binding_id": "binding-evidence-review",
+          "accepted_at": "2026-07-15T01:00:00Z",
+          "accepted_by_actor_id": "human-evidence-reviewer",
+          "artifact_checksum": "2e0d1281bd6548f2211a246e02930d620273ef44972411f637bf7c416e48653b",
+          "artifact_id": "COS-A02-CANDIDATE-BASE",
+          "assertions": [
+            "M5B-AST-P02-POS-01"
+          ],
+          "authority_source_checksum": "9999999999999999999999999999999999999999999999999999999999999999",
+          "authority_source_ref": "cos:decision/COS-019",
+          "result": "pass",
+          "scope": "M5-B manual static acceptance"
+        },
+        "admission_events": [
+          {
+            "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+            "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+            "accepted_a03_binding_id": "binding-evidence-review",
+            "admission_event_id": "admission-event-1",
+            "event_sequence": 1,
+            "evidence_item_id": "evidence-required-1",
+            "prior_admission_disposition": "none",
+            "prior_admission_event_id": "none",
+            "reason": "Required evidence grounded and independently reviewed.",
+            "result_admission_disposition": "admitted",
+            "reviewed_at": "2026-07-15T01:00:00Z",
+            "reviewer_actor_id": "human-evidence-reviewer"
+          }
+        ],
+        "artifact_id": "COS-A02-CANDIDATE-BASE",
+        "artifact_lifecycle": "accepted",
+        "artifact_type": "COS-A02",
+        "context_ref": {
+          "artifact_id": "COS-A01-M5A-ACCEPTED",
+          "artifact_lifecycle": "accepted",
+          "checksum": "1111111111111111111111111111111111111111111111111111111111111111",
+          "current": true,
+          "cutoff": "2026-07-15T00:00:00Z"
+        },
+        "created_at": "2026-07-15T00:00:00Z",
+        "current_admission": [
+          {
+            "admission_disposition": "admitted",
+            "decision_basis_eligible": true,
+            "derived_from_event_id": "admission-event-1",
+            "evidence_item_id": "evidence-required-1"
+          },
+          {
+            "admission_disposition": "admitted",
+            "decision_basis_eligible": true,
+            "derived_from_event_id": "admission-event-1",
+            "evidence_item_id": "evidence-required-1"
+          }
+        ],
+        "evidence_items": [
+          {
+            "claim_id": "claim-1",
+            "conflict_state": "none",
+            "evidence_item_id": "evidence-required-1",
+            "grounding_state": "grounded",
+            "requirement_class": "required",
+            "safe_statement": "Formal source supports the bounded claim.",
+            "source_checksum": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "source_id": "source-formal-1",
+            "statement_type": "source_report"
+          }
+        ],
+        "interpretations": [
+          {
+            "assumptions": [
+              "scope remains current"
+            ],
+            "claim_id": "claim-1",
+            "confidence_state": "high",
+            "contradicting_evidence_ids": [],
+            "interpretation_id": "interpretation-1",
+            "limitations": [],
+            "limiting_evidence_ids": [],
+            "supporting_evidence_ids": [
+              "evidence-required-1"
+            ]
+          }
+        ],
+        "limitations": [],
+        "protocol_run": {
+          "downstream_started": false,
+          "failure_envelope": null,
+          "outcome": "success",
+          "protocol_id": "COS-P02",
+          "stages": [
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "accepted_context_binding",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "source_inventory_integrity",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "evidence_interpretation_classification",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "admission_grounding_evaluation",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "conflict_unknown_limitation_recording",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "independent_admission_review",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "a02_acceptance",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "archive_lineage",
+              "status": "completed"
+            },
+            {
+              "invoked": false,
+              "reason": "fixed disabled in M5-B",
+              "stage_id": "automated_external_verification",
+              "status": "disabled"
+            }
+          ]
+        },
+        "reviewer_binding": {
+          "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+          "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+          "accepted_a03_binding_id": "binding-evidence-review",
+          "actor_id": "human-evidence-reviewer",
+          "actor_kind": "human",
+          "authority_source_checksum": "9999999999999999999999999999999999999999999999999999999999999999",
+          "authority_source_ref": "cos:decision/COS-019",
+          "scope": "M5-B evidence and decision packet"
+        },
+        "schema_version": "0.1",
+        "source_register": [
+          {
+            "authority_class": "formal",
+            "availability_state": "observed",
+            "checksum_state": "observed",
+            "freshness_state": "fresh",
+            "observed_at": "2026-07-15T00:00:00Z",
+            "observed_checksum": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "requirement_class": "required",
+            "safe_ref": "cos:source/formal-1",
+            "source_id": "source-formal-1"
+          }
+        ],
+        "submitter_actor_id": "ai-preparer",
+        "support_links": [
+          {
+            "claim_id": "claim-1",
+            "evidence_item_id": "evidence-required-1",
+            "relation": "supporting",
+            "support_link_id": "support-link-1"
+          }
+        ],
+        "unknowns": []
+      },
+      "expected_schema_valid": false,
+      "expected_semantic_valid": false,
+      "target_schema": "COS-A02",
+      "variant_id": "M5B-N22L-DUPLICATE-CURRENT-PROJECTION"
+    },
+    {
+      "artifact": {
+        "acceptance_event": {
+          "acceptance_event_id": "accept-cos-a02-candidate-base",
+          "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+          "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+          "accepted_a03_binding_id": "binding-evidence-review",
+          "accepted_at": "2026-07-15T01:00:00Z",
+          "accepted_by_actor_id": "human-evidence-reviewer",
+          "artifact_checksum": "f145667b534a5b0c0d15e9d676f55085c8638e407a27b87f64b4f3004113b68d",
+          "artifact_id": "COS-A02-CANDIDATE-BASE",
+          "assertions": [
+            "M5B-AST-P02-POS-01"
+          ],
+          "authority_source_checksum": "9999999999999999999999999999999999999999999999999999999999999999",
+          "authority_source_ref": "cos:decision/COS-019",
+          "result": "pass",
+          "scope": "M5-B manual static acceptance"
+        },
+        "admission_events": [
+          {
+            "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+            "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+            "accepted_a03_binding_id": "binding-evidence-review",
+            "admission_event_id": "admission-event-1",
+            "event_sequence": 1,
+            "evidence_item_id": "evidence-required-1",
+            "prior_admission_disposition": "none",
+            "prior_admission_event_id": "none",
+            "reason": "Required evidence grounded and independently reviewed.",
+            "result_admission_disposition": "admitted",
+            "reviewed_at": "2026-07-15T01:00:00Z",
+            "reviewer_actor_id": "human-evidence-reviewer"
+          }
+        ],
+        "artifact_id": "COS-A02-CANDIDATE-BASE",
+        "artifact_lifecycle": "accepted",
+        "artifact_type": "COS-A02",
+        "context_ref": {
+          "artifact_id": "COS-A01-M5A-ACCEPTED",
+          "artifact_lifecycle": "accepted",
+          "checksum": "1111111111111111111111111111111111111111111111111111111111111111",
+          "current": true,
+          "cutoff": "2026-07-15T00:00:00Z"
+        },
+        "created_at": "2026-07-15T00:00:00Z",
+        "current_admission": [],
+        "evidence_items": [
+          {
+            "claim_id": "claim-1",
+            "conflict_state": "none",
+            "evidence_item_id": "evidence-required-1",
+            "grounding_state": "grounded",
+            "requirement_class": "required",
+            "safe_statement": "Formal source supports the bounded claim.",
+            "source_checksum": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "source_id": "source-formal-1",
+            "statement_type": "source_report"
+          }
+        ],
+        "interpretations": [
+          {
+            "assumptions": [
+              "scope remains current"
+            ],
+            "claim_id": "claim-1",
+            "confidence_state": "high",
+            "contradicting_evidence_ids": [],
+            "interpretation_id": "interpretation-1",
+            "limitations": [],
+            "limiting_evidence_ids": [],
+            "supporting_evidence_ids": [
+              "evidence-required-1"
+            ]
+          }
+        ],
+        "limitations": [],
+        "protocol_run": {
+          "downstream_started": false,
+          "failure_envelope": null,
+          "outcome": "success",
+          "protocol_id": "COS-P02",
+          "stages": [
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "accepted_context_binding",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "source_inventory_integrity",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "evidence_interpretation_classification",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "admission_grounding_evaluation",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "conflict_unknown_limitation_recording",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "independent_admission_review",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "a02_acceptance",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "archive_lineage",
+              "status": "completed"
+            },
+            {
+              "invoked": false,
+              "reason": "fixed disabled in M5-B",
+              "stage_id": "automated_external_verification",
+              "status": "disabled"
+            }
+          ]
+        },
+        "reviewer_binding": {
+          "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+          "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+          "accepted_a03_binding_id": "binding-evidence-review",
+          "actor_id": "human-evidence-reviewer",
+          "actor_kind": "human",
+          "authority_source_checksum": "9999999999999999999999999999999999999999999999999999999999999999",
+          "authority_source_ref": "cos:decision/COS-019",
+          "scope": "M5-B evidence and decision packet"
+        },
+        "schema_version": "0.1",
+        "source_register": [
+          {
+            "authority_class": "formal",
+            "availability_state": "observed",
+            "checksum_state": "observed",
+            "freshness_state": "fresh",
+            "observed_at": "2026-07-15T00:00:00Z",
+            "observed_checksum": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "requirement_class": "required",
+            "safe_ref": "cos:source/formal-1",
+            "source_id": "source-formal-1"
+          }
+        ],
+        "submitter_actor_id": "ai-preparer",
+        "support_links": [
+          {
+            "claim_id": "claim-1",
+            "evidence_item_id": "evidence-required-1",
+            "relation": "supporting",
+            "support_link_id": "support-link-1"
+          }
+        ],
+        "unknowns": []
+      },
+      "expected_schema_valid": false,
+      "expected_semantic_valid": false,
+      "target_schema": "COS-A02",
+      "variant_id": "M5B-N22M-MISSING-CURRENT-PROJECTION"
+    },
+    {
+      "artifact": {
+        "acceptance_event": {
+          "acceptance_event_id": "accept-cos-a02-candidate-base",
+          "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+          "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+          "accepted_a03_binding_id": "binding-evidence-review",
+          "accepted_at": "2026-07-15T01:00:00Z",
+          "accepted_by_actor_id": "human-evidence-reviewer",
+          "artifact_checksum": "46ecbf85e826878bce07eb1215d0a111c0735cefe0756342252973735956362c",
+          "artifact_id": "COS-A02-CANDIDATE-BASE",
+          "assertions": [
+            "M5B-AST-P02-POS-01"
+          ],
+          "authority_source_checksum": "9999999999999999999999999999999999999999999999999999999999999999",
+          "authority_source_ref": "cos:decision/COS-019",
+          "result": "pass",
+          "scope": "M5-B manual static acceptance"
+        },
+        "admission_events": [
+          {
+            "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+            "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+            "accepted_a03_binding_id": "binding-evidence-review",
+            "admission_event_id": "admission-event-1",
+            "event_sequence": 1,
+            "evidence_item_id": "evidence-required-1",
+            "prior_admission_disposition": "none",
+            "prior_admission_event_id": "none",
+            "reason": "Required evidence grounded and independently reviewed.",
+            "result_admission_disposition": "admitted",
+            "reviewed_at": "2026-07-15T01:00:00Z",
+            "reviewer_actor_id": "human-evidence-reviewer"
+          }
+        ],
+        "artifact_id": "COS-A02-CANDIDATE-BASE",
+        "artifact_lifecycle": "accepted",
+        "artifact_type": "COS-A02",
+        "context_ref": {
+          "artifact_id": "COS-A01-M5A-ACCEPTED",
+          "artifact_lifecycle": "accepted",
+          "checksum": "1111111111111111111111111111111111111111111111111111111111111111",
+          "current": true,
+          "cutoff": "2026-07-15T00:00:00Z"
+        },
+        "created_at": "2026-07-15T00:00:00Z",
+        "current_admission": [
+          {
+            "admission_disposition": "admitted",
+            "decision_basis_eligible": false,
+            "derived_from_event_id": "admission-event-1",
+            "evidence_item_id": "evidence-required-1"
+          }
+        ],
+        "evidence_items": [
+          {
+            "claim_id": "claim-1",
+            "conflict_state": "none",
+            "evidence_item_id": "evidence-required-1",
+            "grounding_state": "grounded",
+            "requirement_class": "required",
+            "safe_statement": "Formal source supports the bounded claim.",
+            "source_checksum": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "source_id": "source-formal-1",
+            "statement_type": "source_report"
+          }
+        ],
+        "interpretations": [
+          {
+            "assumptions": [
+              "scope remains current"
+            ],
+            "claim_id": "claim-1",
+            "confidence_state": "high",
+            "contradicting_evidence_ids": [],
+            "interpretation_id": "interpretation-1",
+            "limitations": [],
+            "limiting_evidence_ids": [],
+            "supporting_evidence_ids": [
+              "evidence-required-1"
+            ]
+          }
+        ],
+        "limitations": [],
+        "protocol_run": {
+          "downstream_started": false,
+          "failure_envelope": null,
+          "outcome": "success",
+          "protocol_id": "COS-P02",
+          "stages": [
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "accepted_context_binding",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "source_inventory_integrity",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "evidence_interpretation_classification",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "admission_grounding_evaluation",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "conflict_unknown_limitation_recording",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "independent_admission_review",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "a02_acceptance",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "archive_lineage",
+              "status": "completed"
+            },
+            {
+              "invoked": false,
+              "reason": "fixed disabled in M5-B",
+              "stage_id": "automated_external_verification",
+              "status": "disabled"
+            }
+          ]
+        },
+        "reviewer_binding": {
+          "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+          "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+          "accepted_a03_binding_id": "binding-evidence-review",
+          "actor_id": "human-evidence-reviewer",
+          "actor_kind": "human",
+          "authority_source_checksum": "9999999999999999999999999999999999999999999999999999999999999999",
+          "authority_source_ref": "cos:decision/COS-019",
+          "scope": "M5-B evidence and decision packet"
+        },
+        "schema_version": "0.1",
+        "source_register": [
+          {
+            "authority_class": "formal",
+            "availability_state": "observed",
+            "checksum_state": "observed",
+            "freshness_state": "fresh",
+            "observed_at": "2026-07-15T00:00:00Z",
+            "observed_checksum": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "requirement_class": "required",
+            "safe_ref": "cos:source/formal-1",
+            "source_id": "source-formal-1"
+          }
+        ],
+        "submitter_actor_id": "ai-preparer",
+        "support_links": [
+          {
+            "claim_id": "claim-1",
+            "evidence_item_id": "evidence-required-1",
+            "relation": "supporting",
+            "support_link_id": "support-link-1"
+          }
+        ],
+        "unknowns": []
+      },
+      "expected_schema_valid": true,
+      "expected_semantic_valid": false,
+      "target_schema": "COS-A02",
+      "variant_id": "M5B-N22N-STORED-BASIS-MISMATCH"
+    },
+    {
+      "artifact": {
+        "acceptance_event": {
+          "acceptance_event_id": "accept-cos-a02-candidate-base",
+          "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+          "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+          "accepted_a03_binding_id": "binding-evidence-review",
+          "accepted_at": "2026-07-15T01:00:00Z",
+          "accepted_by_actor_id": "human-evidence-reviewer",
+          "artifact_checksum": "6cd87754057e55b6df0f0f1bf5de9f2e0b8359e3c05b0b855b91674880cf6864",
+          "artifact_id": "COS-A02-CANDIDATE-BASE",
+          "assertions": [
+            "M5B-AST-P02-POS-01"
+          ],
+          "authority_source_checksum": "9999999999999999999999999999999999999999999999999999999999999999",
+          "authority_source_ref": "cos:decision/COS-019",
+          "result": "pass",
+          "scope": "M5-B manual static acceptance"
+        },
+        "admission_events": [
+          {
+            "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+            "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+            "accepted_a03_binding_id": "binding-evidence-review",
+            "admission_event_id": "admission-event-1",
+            "event_sequence": 1,
+            "evidence_item_id": "evidence-required-1",
+            "prior_admission_disposition": "none",
+            "prior_admission_event_id": "none",
+            "reason": "Required evidence grounded and independently reviewed.",
+            "result_admission_disposition": "admitted",
+            "reviewed_at": "2026-07-15T01:00:00Z",
+            "reviewer_actor_id": "human-evidence-reviewer"
+          },
+          {
+            "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+            "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+            "accepted_a03_binding_id": "binding-evidence-review",
+            "admission_event_id": "admission-event-2",
+            "event_sequence": 1,
+            "evidence_item_id": "evidence-required-2",
+            "prior_admission_disposition": "none",
+            "prior_admission_event_id": "none",
+            "reason": "Required evidence grounded and independently reviewed.",
+            "result_admission_disposition": "admitted",
+            "reviewed_at": "2026-07-15T01:00:00Z",
+            "reviewer_actor_id": "human-evidence-reviewer"
+          }
+        ],
+        "artifact_id": "COS-A02-CANDIDATE-BASE",
+        "artifact_lifecycle": "accepted",
+        "artifact_type": "COS-A02",
+        "context_ref": {
+          "artifact_id": "COS-A01-M5A-ACCEPTED",
+          "artifact_lifecycle": "accepted",
+          "checksum": "1111111111111111111111111111111111111111111111111111111111111111",
+          "current": true,
+          "cutoff": "2026-07-15T00:00:00Z"
+        },
+        "created_at": "2026-07-15T00:00:00Z",
+        "current_admission": [
+          {
+            "admission_disposition": "admitted",
+            "decision_basis_eligible": true,
+            "derived_from_event_id": "admission-event-1",
+            "evidence_item_id": "evidence-required-1"
+          },
+          {
+            "admission_disposition": "admitted",
+            "decision_basis_eligible": true,
+            "derived_from_event_id": "admission-event-2",
+            "evidence_item_id": "evidence-required-2"
+          }
+        ],
+        "evidence_items": [
+          {
+            "claim_id": "claim-1",
+            "conflict_state": "none",
+            "evidence_item_id": "evidence-required-1",
+            "grounding_state": "grounded",
+            "requirement_class": "required",
+            "safe_statement": "Formal source supports the bounded claim.",
+            "source_checksum": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "source_id": "source-formal-1",
+            "statement_type": "source_report"
+          },
+          {
+            "claim_id": "claim-2",
+            "conflict_state": "none",
+            "evidence_item_id": "evidence-required-2",
+            "grounding_state": "grounded",
+            "requirement_class": "required",
+            "safe_statement": "A second formal source supports a separate claim.",
+            "source_checksum": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "source_id": "source-formal-1",
+            "statement_type": "source_report"
+          }
+        ],
+        "interpretations": [
+          {
+            "assumptions": [
+              "scope remains current"
+            ],
+            "claim_id": "claim-1",
+            "confidence_state": "high",
+            "contradicting_evidence_ids": [],
+            "interpretation_id": "interpretation-1",
+            "limitations": [],
+            "limiting_evidence_ids": [],
+            "supporting_evidence_ids": [
+              "evidence-required-2"
+            ]
+          }
+        ],
+        "limitations": [],
+        "protocol_run": {
+          "downstream_started": false,
+          "failure_envelope": null,
+          "outcome": "success",
+          "protocol_id": "COS-P02",
+          "stages": [
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "accepted_context_binding",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "source_inventory_integrity",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "evidence_interpretation_classification",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "admission_grounding_evaluation",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "conflict_unknown_limitation_recording",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "independent_admission_review",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "a02_acceptance",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "archive_lineage",
+              "status": "completed"
+            },
+            {
+              "invoked": false,
+              "reason": "fixed disabled in M5-B",
+              "stage_id": "automated_external_verification",
+              "status": "disabled"
+            }
+          ]
+        },
+        "reviewer_binding": {
+          "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+          "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+          "accepted_a03_binding_id": "binding-evidence-review",
+          "actor_id": "human-evidence-reviewer",
+          "actor_kind": "human",
+          "authority_source_checksum": "9999999999999999999999999999999999999999999999999999999999999999",
+          "authority_source_ref": "cos:decision/COS-019",
+          "scope": "M5-B evidence and decision packet"
+        },
+        "schema_version": "0.1",
+        "source_register": [
+          {
+            "authority_class": "formal",
+            "availability_state": "observed",
+            "checksum_state": "observed",
+            "freshness_state": "fresh",
+            "observed_at": "2026-07-15T00:00:00Z",
+            "observed_checksum": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "requirement_class": "required",
+            "safe_ref": "cos:source/formal-1",
+            "source_id": "source-formal-1"
+          }
+        ],
+        "submitter_actor_id": "ai-preparer",
+        "support_links": [
+          {
+            "claim_id": "claim-1",
+            "evidence_item_id": "evidence-required-1",
+            "relation": "supporting",
+            "support_link_id": "support-link-1"
+          }
+        ],
+        "unknowns": []
+      },
+      "expected_schema_valid": true,
+      "expected_semantic_valid": false,
+      "target_schema": "COS-A02",
+      "variant_id": "M5B-N22O-CROSS-CLAIM-INTERPRETATION-EVIDENCE"
+    },
+    {
+      "artifact": {
+        "acceptance_event": {
+          "acceptance_event_id": "accept-cos-a02-candidate-base",
+          "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+          "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+          "accepted_a03_binding_id": "binding-evidence-review",
+          "accepted_at": "2026-07-15T01:00:00Z",
+          "accepted_by_actor_id": "human-evidence-reviewer",
+          "artifact_checksum": "41130f1f0204a25ef44648d3b3510da125f7c4807143528e788a20c418660ea9",
+          "artifact_id": "COS-A02-CANDIDATE-BASE",
+          "assertions": [
+            "M5B-AST-P02-POS-01"
+          ],
+          "authority_source_checksum": "9999999999999999999999999999999999999999999999999999999999999999",
+          "authority_source_ref": "cos:decision/COS-019",
+          "result": "pass",
+          "scope": "M5-B manual static acceptance"
+        },
+        "admission_events": [
+          {
+            "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+            "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+            "accepted_a03_binding_id": "binding-evidence-review",
+            "admission_event_id": "admission-event-1",
+            "event_sequence": 1,
+            "evidence_item_id": "evidence-required-1",
+            "prior_admission_disposition": "none",
+            "prior_admission_event_id": "none",
+            "reason": "Required evidence grounded and independently reviewed.",
+            "result_admission_disposition": "admitted",
+            "reviewed_at": "2026-07-15T01:00:00Z",
+            "reviewer_actor_id": "human-evidence-reviewer"
+          },
+          {
+            "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+            "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+            "accepted_a03_binding_id": "binding-evidence-review",
+            "admission_event_id": "admission-event-2",
+            "event_sequence": 1,
+            "evidence_item_id": "evidence-required-2",
+            "prior_admission_disposition": "none",
+            "prior_admission_event_id": "none",
+            "reason": "Required evidence grounded and independently reviewed.",
+            "result_admission_disposition": "admitted",
+            "reviewed_at": "2026-07-15T01:00:00Z",
+            "reviewer_actor_id": "human-evidence-reviewer"
+          }
+        ],
+        "artifact_id": "COS-A02-CANDIDATE-BASE",
+        "artifact_lifecycle": "accepted",
+        "artifact_type": "COS-A02",
+        "context_ref": {
+          "artifact_id": "COS-A01-M5A-ACCEPTED",
+          "artifact_lifecycle": "accepted",
+          "checksum": "1111111111111111111111111111111111111111111111111111111111111111",
+          "current": true,
+          "cutoff": "2026-07-15T00:00:00Z"
+        },
+        "created_at": "2026-07-15T00:00:00Z",
+        "current_admission": [
+          {
+            "admission_disposition": "admitted",
+            "decision_basis_eligible": true,
+            "derived_from_event_id": "admission-event-1",
+            "evidence_item_id": "evidence-required-1"
+          },
+          {
+            "admission_disposition": "admitted",
+            "decision_basis_eligible": true,
+            "derived_from_event_id": "admission-event-2",
+            "evidence_item_id": "evidence-required-2"
+          }
+        ],
+        "evidence_items": [
+          {
+            "claim_id": "claim-1",
+            "conflict_state": "none",
+            "evidence_item_id": "evidence-required-1",
+            "grounding_state": "grounded",
+            "requirement_class": "required",
+            "safe_statement": "Formal source supports the bounded claim.",
+            "source_checksum": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "source_id": "source-formal-1",
+            "statement_type": "source_report"
+          },
+          {
+            "claim_id": "claim-2",
+            "conflict_state": "none",
+            "evidence_item_id": "evidence-required-2",
+            "grounding_state": "grounded",
+            "requirement_class": "required",
+            "safe_statement": "A second formal source supports a separate claim.",
+            "source_checksum": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "source_id": "source-formal-1",
+            "statement_type": "source_report"
+          }
+        ],
+        "interpretations": [
+          {
+            "assumptions": [
+              "scope remains current"
+            ],
+            "claim_id": "claim-1",
+            "confidence_state": "high",
+            "contradicting_evidence_ids": [],
+            "interpretation_id": "interpretation-1",
+            "limitations": [],
+            "limiting_evidence_ids": [],
+            "supporting_evidence_ids": [
+              "evidence-required-1"
+            ]
+          }
+        ],
+        "limitations": [],
+        "protocol_run": {
+          "downstream_started": false,
+          "failure_envelope": null,
+          "outcome": "success",
+          "protocol_id": "COS-P02",
+          "stages": [
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "accepted_context_binding",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "source_inventory_integrity",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "evidence_interpretation_classification",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "admission_grounding_evaluation",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "conflict_unknown_limitation_recording",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "independent_admission_review",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "a02_acceptance",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "archive_lineage",
+              "status": "completed"
+            },
+            {
+              "invoked": false,
+              "reason": "fixed disabled in M5-B",
+              "stage_id": "automated_external_verification",
+              "status": "disabled"
+            }
+          ]
+        },
+        "reviewer_binding": {
+          "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+          "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+          "accepted_a03_binding_id": "binding-evidence-review",
+          "actor_id": "human-evidence-reviewer",
+          "actor_kind": "human",
+          "authority_source_checksum": "9999999999999999999999999999999999999999999999999999999999999999",
+          "authority_source_ref": "cos:decision/COS-019",
+          "scope": "M5-B evidence and decision packet"
+        },
+        "schema_version": "0.1",
+        "source_register": [
+          {
+            "authority_class": "formal",
+            "availability_state": "observed",
+            "checksum_state": "observed",
+            "freshness_state": "fresh",
+            "observed_at": "2026-07-15T00:00:00Z",
+            "observed_checksum": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "requirement_class": "required",
+            "safe_ref": "cos:source/formal-1",
+            "source_id": "source-formal-1"
+          }
+        ],
+        "submitter_actor_id": "ai-preparer",
+        "support_links": [
+          {
+            "claim_id": "claim-1",
+            "evidence_item_id": "evidence-required-2",
+            "relation": "supporting",
+            "support_link_id": "support-link-1"
+          }
+        ],
+        "unknowns": []
+      },
+      "expected_schema_valid": true,
+      "expected_semantic_valid": false,
+      "target_schema": "COS-A02",
+      "variant_id": "M5B-N22P-CROSS-CLAIM-SUPPORT-LINK"
+    },
+    {
+      "artifact": {
+        "acceptance_event": {
+          "acceptance_event_id": "accept-cos-a02-candidate-base",
+          "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+          "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+          "accepted_a03_binding_id": "binding-evidence-review",
+          "accepted_at": "2026-07-15T01:00:00Z",
+          "accepted_by_actor_id": "human-evidence-reviewer",
+          "artifact_checksum": "15d19645cfdf711db256877136d9479390af6b39b684926d1be2c802f70cd387",
+          "artifact_id": "COS-A02-CANDIDATE-BASE",
+          "assertions": [
+            "M5B-AST-P02-POS-01"
+          ],
+          "authority_source_checksum": "9999999999999999999999999999999999999999999999999999999999999999",
+          "authority_source_ref": "cos:decision/COS-019",
+          "result": "pass",
+          "scope": "M5-B manual static acceptance"
+        },
+        "admission_events": [
+          {
+            "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+            "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+            "accepted_a03_binding_id": "binding-evidence-review",
+            "admission_event_id": "admission-event-1",
+            "event_sequence": 1,
+            "evidence_item_id": "evidence-required-1",
+            "prior_admission_disposition": "none",
+            "prior_admission_event_id": "none",
+            "reason": "Required evidence grounded and independently reviewed.",
+            "result_admission_disposition": "admitted",
+            "reviewed_at": "2026-07-15T01:00:00Z",
+            "reviewer_actor_id": "human-evidence-reviewer"
+          }
+        ],
+        "artifact_id": "COS-A02-CANDIDATE-BASE",
+        "artifact_lifecycle": "accepted",
+        "artifact_type": "COS-A02",
+        "context_ref": {
+          "artifact_id": "COS-A01-M5A-ACCEPTED",
+          "artifact_lifecycle": "accepted",
+          "checksum": "1111111111111111111111111111111111111111111111111111111111111111",
+          "current": true,
+          "cutoff": "2026-07-15T00:00:00Z"
+        },
+        "created_at": "2026-07-15T00:00:00Z",
+        "current_admission": [
+          {
+            "admission_disposition": "admitted",
+            "decision_basis_eligible": true,
+            "derived_from_event_id": "admission-event-1",
+            "evidence_item_id": "evidence-required-1"
+          }
+        ],
+        "evidence_items": [
+          {
+            "claim_id": "claim-1",
+            "conflict_state": "none",
+            "evidence_item_id": "evidence-required-1",
+            "grounding_state": "grounded",
+            "requirement_class": "required",
+            "safe_statement": "Formal source supports the bounded claim.",
+            "source_checksum": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "source_id": "source-formal-1",
+            "statement_type": "source_report"
+          }
+        ],
+        "interpretations": [
+          {
+            "assumptions": [
+              "scope remains current"
+            ],
+            "claim_id": "claim-1",
+            "confidence_state": "high",
+            "contradicting_evidence_ids": [],
+            "interpretation_id": "interpretation-1",
+            "limitations": [],
+            "limiting_evidence_ids": [],
+            "supporting_evidence_ids": []
+          }
+        ],
+        "limitations": [],
+        "protocol_run": {
+          "downstream_started": false,
+          "failure_envelope": null,
+          "outcome": "success",
+          "protocol_id": "COS-P02",
+          "stages": [
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "accepted_context_binding",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "source_inventory_integrity",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "evidence_interpretation_classification",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "admission_grounding_evaluation",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "conflict_unknown_limitation_recording",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "independent_admission_review",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "a02_acceptance",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "archive_lineage",
+              "status": "completed"
+            },
+            {
+              "invoked": false,
+              "reason": "fixed disabled in M5-B",
+              "stage_id": "automated_external_verification",
+              "status": "disabled"
+            }
+          ]
+        },
+        "reviewer_binding": {
+          "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+          "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+          "accepted_a03_binding_id": "binding-evidence-review",
+          "actor_id": "human-evidence-reviewer",
+          "actor_kind": "human",
+          "authority_source_checksum": "9999999999999999999999999999999999999999999999999999999999999999",
+          "authority_source_ref": "cos:decision/COS-019",
+          "scope": "M5-B evidence and decision packet"
+        },
+        "schema_version": "0.1",
+        "source_register": [
+          {
+            "authority_class": "formal",
+            "availability_state": "observed",
+            "checksum_state": "observed",
+            "freshness_state": "fresh",
+            "observed_at": "2026-07-15T00:00:00Z",
+            "observed_checksum": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "requirement_class": "required",
+            "safe_ref": "cos:source/formal-1",
+            "source_id": "source-formal-1"
+          }
+        ],
+        "submitter_actor_id": "ai-preparer",
+        "support_links": [
+          {
+            "claim_id": "claim-1",
+            "evidence_item_id": "evidence-required-1",
+            "relation": "supporting",
+            "support_link_id": "support-link-1"
+          }
+        ],
+        "unknowns": []
+      },
+      "expected_schema_valid": true,
+      "expected_semantic_valid": false,
+      "target_schema": "COS-A02",
+      "variant_id": "M5B-N22Q-EMPTY-TYPED-RELATION-UNION"
+    },
+    {
+      "artifact": {
+        "acceptance_event": {
+          "acceptance_event_id": "accept-cos-a02-candidate-base",
+          "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+          "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+          "accepted_a03_binding_id": "binding-evidence-review",
+          "accepted_at": "2026-07-15T01:00:00Z",
+          "accepted_by_actor_id": "human-evidence-reviewer",
+          "artifact_checksum": "f83b2eb5d814148ee818def9818cc923b4fdfaf0f5bc65906035603eca216a88",
+          "artifact_id": "COS-A02-CANDIDATE-BASE",
+          "assertions": [
+            "M5B-AST-P02-POS-01"
+          ],
+          "authority_source_checksum": "9999999999999999999999999999999999999999999999999999999999999999",
+          "authority_source_ref": "cos:decision/COS-019",
+          "result": "pass",
+          "scope": "M5-B manual static acceptance"
+        },
+        "admission_events": [
+          {
+            "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+            "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+            "accepted_a03_binding_id": "binding-evidence-review",
+            "admission_event_id": "admission-event-1",
+            "event_sequence": 1,
+            "evidence_item_id": "evidence-required-1",
+            "prior_admission_disposition": "none",
+            "prior_admission_event_id": "none",
+            "reason": "Required evidence grounded and independently reviewed.",
+            "result_admission_disposition": "admitted",
+            "reviewed_at": "2026-07-15T01:00:00Z",
+            "reviewer_actor_id": "human-evidence-reviewer"
+          }
+        ],
+        "artifact_id": "COS-A02-CANDIDATE-BASE",
+        "artifact_lifecycle": "accepted",
+        "artifact_type": "COS-A02",
+        "context_ref": {
+          "artifact_id": "COS-A01-M5A-ACCEPTED",
+          "artifact_lifecycle": "accepted",
+          "checksum": "1111111111111111111111111111111111111111111111111111111111111111",
+          "current": true,
+          "cutoff": "2026-07-15T00:00:00Z"
+        },
+        "created_at": "2026-07-15T00:00:00Z",
+        "current_admission": [
+          {
+            "admission_disposition": "admitted",
+            "decision_basis_eligible": true,
+            "derived_from_event_id": "admission-event-1",
+            "evidence_item_id": "evidence-required-1"
+          }
+        ],
+        "evidence_items": [
+          {
+            "claim_id": "claim-1",
+            "conflict_state": "none",
+            "evidence_item_id": "evidence-required-1",
+            "grounding_state": "grounded",
+            "requirement_class": "required",
+            "safe_statement": "Formal source supports the bounded claim.",
+            "source_checksum": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "source_id": "source-formal-1",
+            "statement_type": "source_report"
+          }
+        ],
+        "interpretations": [
+          {
+            "assumptions": [
+              "scope remains current"
+            ],
+            "claim_id": "claim-1",
+            "confidence_state": "high",
+            "contradicting_evidence_ids": [
+              "evidence-required-1"
+            ],
+            "interpretation_id": "interpretation-1",
+            "limitations": [],
+            "limiting_evidence_ids": [],
+            "supporting_evidence_ids": [
+              "evidence-required-1"
+            ]
+          }
+        ],
+        "limitations": [],
+        "protocol_run": {
+          "downstream_started": false,
+          "failure_envelope": null,
+          "outcome": "success",
+          "protocol_id": "COS-P02",
+          "stages": [
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "accepted_context_binding",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "source_inventory_integrity",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "evidence_interpretation_classification",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "admission_grounding_evaluation",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "conflict_unknown_limitation_recording",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "independent_admission_review",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "a02_acceptance",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "archive_lineage",
+              "status": "completed"
+            },
+            {
+              "invoked": false,
+              "reason": "fixed disabled in M5-B",
+              "stage_id": "automated_external_verification",
+              "status": "disabled"
+            }
+          ]
+        },
+        "reviewer_binding": {
+          "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+          "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+          "accepted_a03_binding_id": "binding-evidence-review",
+          "actor_id": "human-evidence-reviewer",
+          "actor_kind": "human",
+          "authority_source_checksum": "9999999999999999999999999999999999999999999999999999999999999999",
+          "authority_source_ref": "cos:decision/COS-019",
+          "scope": "M5-B evidence and decision packet"
+        },
+        "schema_version": "0.1",
+        "source_register": [
+          {
+            "authority_class": "formal",
+            "availability_state": "observed",
+            "checksum_state": "observed",
+            "freshness_state": "fresh",
+            "observed_at": "2026-07-15T00:00:00Z",
+            "observed_checksum": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "requirement_class": "required",
+            "safe_ref": "cos:source/formal-1",
+            "source_id": "source-formal-1"
+          }
+        ],
+        "submitter_actor_id": "ai-preparer",
+        "support_links": [
+          {
+            "claim_id": "claim-1",
+            "evidence_item_id": "evidence-required-1",
+            "relation": "supporting",
+            "support_link_id": "support-link-1"
+          }
+        ],
+        "unknowns": []
+      },
+      "expected_schema_valid": true,
+      "expected_semantic_valid": false,
+      "target_schema": "COS-A02",
+      "variant_id": "M5B-N22R-SUPPORTING-CONTRADICTING-OVERLAP"
+    },
+    {
+      "artifact": {
+        "acceptance_event": {
+          "acceptance_event_id": "accept-cos-a02-candidate-base",
+          "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+          "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+          "accepted_a03_binding_id": "binding-evidence-review",
+          "accepted_at": "2026-07-15T01:00:00Z",
+          "accepted_by_actor_id": "human-evidence-reviewer",
+          "artifact_checksum": "eafada0cd60f1147563b84f27eb91efbf536b43fa83c9df2fbc7ca5fdb2c92ab",
+          "artifact_id": "COS-A02-CANDIDATE-BASE",
+          "assertions": [
+            "M5B-AST-P02-POS-01"
+          ],
+          "authority_source_checksum": "9999999999999999999999999999999999999999999999999999999999999999",
+          "authority_source_ref": "cos:decision/COS-019",
+          "result": "pass",
+          "scope": "M5-B manual static acceptance"
+        },
+        "admission_events": [
+          {
+            "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+            "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+            "accepted_a03_binding_id": "binding-evidence-review",
+            "admission_event_id": "admission-event-1",
+            "event_sequence": 1,
+            "evidence_item_id": "evidence-required-1",
+            "prior_admission_disposition": "none",
+            "prior_admission_event_id": "none",
+            "reason": "Required evidence grounded and independently reviewed.",
+            "result_admission_disposition": "admitted",
+            "reviewed_at": "2026-07-15T01:00:00Z",
+            "reviewer_actor_id": "human-evidence-reviewer"
+          }
+        ],
+        "artifact_id": "COS-A02-CANDIDATE-BASE",
+        "artifact_lifecycle": "accepted",
+        "artifact_type": "COS-A02",
+        "context_ref": {
+          "artifact_id": "COS-A01-M5A-ACCEPTED",
+          "artifact_lifecycle": "accepted",
+          "checksum": "1111111111111111111111111111111111111111111111111111111111111111",
+          "current": true,
+          "cutoff": "2026-07-15T00:00:00Z"
+        },
+        "created_at": "2026-07-15T00:00:00Z",
+        "current_admission": [
+          {
+            "admission_disposition": "admitted",
+            "decision_basis_eligible": true,
+            "derived_from_event_id": "admission-event-1",
+            "evidence_item_id": "evidence-required-1"
+          }
+        ],
+        "evidence_items": [
+          {
+            "claim_id": "claim-1",
+            "conflict_state": "none",
+            "evidence_item_id": "evidence-required-1",
+            "grounding_state": "grounded",
+            "requirement_class": "required",
+            "safe_statement": "Formal source supports the bounded claim.",
+            "source_checksum": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "source_id": "source-formal-1",
+            "statement_type": "source_report"
+          }
+        ],
+        "interpretations": [
+          {
+            "assumptions": [
+              "scope remains current"
+            ],
+            "claim_id": "claim-1",
+            "confidence_state": "high",
+            "contradicting_evidence_ids": [],
+            "interpretation_id": "interpretation-1",
+            "limitations": [],
+            "limiting_evidence_ids": [
+              "evidence-required-1"
+            ],
+            "supporting_evidence_ids": [
+              "evidence-required-1"
+            ]
+          }
+        ],
+        "limitations": [],
+        "protocol_run": {
+          "downstream_started": false,
+          "failure_envelope": null,
+          "outcome": "success",
+          "protocol_id": "COS-P02",
+          "stages": [
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "accepted_context_binding",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "source_inventory_integrity",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "evidence_interpretation_classification",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "admission_grounding_evaluation",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "conflict_unknown_limitation_recording",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "independent_admission_review",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "a02_acceptance",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "archive_lineage",
+              "status": "completed"
+            },
+            {
+              "invoked": false,
+              "reason": "fixed disabled in M5-B",
+              "stage_id": "automated_external_verification",
+              "status": "disabled"
+            }
+          ]
+        },
+        "reviewer_binding": {
+          "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+          "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+          "accepted_a03_binding_id": "binding-evidence-review",
+          "actor_id": "human-evidence-reviewer",
+          "actor_kind": "human",
+          "authority_source_checksum": "9999999999999999999999999999999999999999999999999999999999999999",
+          "authority_source_ref": "cos:decision/COS-019",
+          "scope": "M5-B evidence and decision packet"
+        },
+        "schema_version": "0.1",
+        "source_register": [
+          {
+            "authority_class": "formal",
+            "availability_state": "observed",
+            "checksum_state": "observed",
+            "freshness_state": "fresh",
+            "observed_at": "2026-07-15T00:00:00Z",
+            "observed_checksum": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "requirement_class": "required",
+            "safe_ref": "cos:source/formal-1",
+            "source_id": "source-formal-1"
+          }
+        ],
+        "submitter_actor_id": "ai-preparer",
+        "support_links": [
+          {
+            "claim_id": "claim-1",
+            "evidence_item_id": "evidence-required-1",
+            "relation": "supporting",
+            "support_link_id": "support-link-1"
+          }
+        ],
+        "unknowns": []
+      },
+      "expected_schema_valid": true,
+      "expected_semantic_valid": false,
+      "target_schema": "COS-A02",
+      "variant_id": "M5B-N22S-SUPPORTING-LIMITING-OVERLAP"
+    },
+    {
+      "artifact": {
+        "acceptance_event": {
+          "acceptance_event_id": "accept-cos-a02-candidate-base",
+          "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+          "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+          "accepted_a03_binding_id": "binding-evidence-review",
+          "accepted_at": "2026-07-15T01:00:00Z",
+          "accepted_by_actor_id": "human-evidence-reviewer",
+          "artifact_checksum": "f27cf3d592e7d43c981468764a6478e021de5b7cb0000bca6e7fc09d4882c742",
+          "artifact_id": "COS-A02-CANDIDATE-BASE",
+          "assertions": [
+            "M5B-AST-P02-POS-01"
+          ],
+          "authority_source_checksum": "9999999999999999999999999999999999999999999999999999999999999999",
+          "authority_source_ref": "cos:decision/COS-019",
+          "result": "pass",
+          "scope": "M5-B manual static acceptance"
+        },
+        "admission_events": [
+          {
+            "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+            "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+            "accepted_a03_binding_id": "binding-evidence-review",
+            "admission_event_id": "admission-event-1",
+            "event_sequence": 1,
+            "evidence_item_id": "evidence-required-1",
+            "prior_admission_disposition": "none",
+            "prior_admission_event_id": "none",
+            "reason": "Required evidence grounded and independently reviewed.",
+            "result_admission_disposition": "admitted",
+            "reviewed_at": "2026-07-15T01:00:00Z",
+            "reviewer_actor_id": "human-evidence-reviewer"
+          }
+        ],
+        "artifact_id": "COS-A02-CANDIDATE-BASE",
+        "artifact_lifecycle": "accepted",
+        "artifact_type": "COS-A02",
+        "context_ref": {
+          "artifact_id": "COS-A01-M5A-ACCEPTED",
+          "artifact_lifecycle": "accepted",
+          "checksum": "1111111111111111111111111111111111111111111111111111111111111111",
+          "current": true,
+          "cutoff": "2026-07-15T00:00:00Z"
+        },
+        "created_at": "2026-07-15T00:00:00Z",
+        "current_admission": [
+          {
+            "admission_disposition": "admitted",
+            "decision_basis_eligible": true,
+            "derived_from_event_id": "admission-event-1",
+            "evidence_item_id": "evidence-required-1"
+          }
+        ],
+        "evidence_items": [
+          {
+            "claim_id": "claim-1",
+            "conflict_state": "none",
+            "evidence_item_id": "evidence-required-1",
+            "grounding_state": "grounded",
+            "requirement_class": "required",
+            "safe_statement": "Formal source supports the bounded claim.",
+            "source_checksum": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "source_id": "source-formal-1",
+            "statement_type": "source_report"
+          }
+        ],
+        "interpretations": [
+          {
+            "assumptions": [
+              "scope remains current"
+            ],
+            "claim_id": "claim-1",
+            "confidence_state": "high",
+            "contradicting_evidence_ids": [
+              "evidence-required-1"
+            ],
+            "interpretation_id": "interpretation-1",
+            "limitations": [],
+            "limiting_evidence_ids": [
+              "evidence-required-1"
+            ],
+            "supporting_evidence_ids": []
+          }
+        ],
+        "limitations": [],
+        "protocol_run": {
+          "downstream_started": false,
+          "failure_envelope": null,
+          "outcome": "success",
+          "protocol_id": "COS-P02",
+          "stages": [
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "accepted_context_binding",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "source_inventory_integrity",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "evidence_interpretation_classification",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "admission_grounding_evaluation",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "conflict_unknown_limitation_recording",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "independent_admission_review",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "a02_acceptance",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "archive_lineage",
+              "status": "completed"
+            },
+            {
+              "invoked": false,
+              "reason": "fixed disabled in M5-B",
+              "stage_id": "automated_external_verification",
+              "status": "disabled"
+            }
+          ]
+        },
+        "reviewer_binding": {
+          "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+          "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+          "accepted_a03_binding_id": "binding-evidence-review",
+          "actor_id": "human-evidence-reviewer",
+          "actor_kind": "human",
+          "authority_source_checksum": "9999999999999999999999999999999999999999999999999999999999999999",
+          "authority_source_ref": "cos:decision/COS-019",
+          "scope": "M5-B evidence and decision packet"
+        },
+        "schema_version": "0.1",
+        "source_register": [
+          {
+            "authority_class": "formal",
+            "availability_state": "observed",
+            "checksum_state": "observed",
+            "freshness_state": "fresh",
+            "observed_at": "2026-07-15T00:00:00Z",
+            "observed_checksum": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "requirement_class": "required",
+            "safe_ref": "cos:source/formal-1",
+            "source_id": "source-formal-1"
+          }
+        ],
+        "submitter_actor_id": "ai-preparer",
+        "support_links": [
+          {
+            "claim_id": "claim-1",
+            "evidence_item_id": "evidence-required-1",
+            "relation": "supporting",
+            "support_link_id": "support-link-1"
+          }
+        ],
+        "unknowns": []
+      },
+      "expected_schema_valid": true,
+      "expected_semantic_valid": false,
+      "target_schema": "COS-A02",
+      "variant_id": "M5B-N22T-CONTRADICTING-LIMITING-OVERLAP"
+    },
+    {
+      "artifact": {
+        "acceptance_event": {
+          "acceptance_event_id": "accept-cos-a02-candidate-base",
+          "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+          "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+          "accepted_a03_binding_id": "binding-evidence-review",
+          "accepted_at": "2026-07-15T01:00:00Z",
+          "accepted_by_actor_id": "human-evidence-reviewer",
+          "artifact_checksum": "3d517b529c212679fb1241bc8c0771c2fabb412631341329b0efa3f2d900ddca",
+          "artifact_id": "COS-A02-CANDIDATE-BASE",
+          "assertions": [
+            "M5B-AST-P02-POS-01"
+          ],
+          "authority_source_checksum": "9999999999999999999999999999999999999999999999999999999999999999",
+          "authority_source_ref": "cos:decision/COS-019",
+          "result": "pass",
+          "scope": "M5-B manual static acceptance"
+        },
+        "admission_events": [
+          {
+            "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+            "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+            "accepted_a03_binding_id": "binding-evidence-review",
+            "admission_event_id": "admission-event-1",
+            "event_sequence": 1,
+            "evidence_item_id": "evidence-required-1",
+            "prior_admission_disposition": "none",
+            "prior_admission_event_id": "none",
+            "reason": "Required evidence grounded and independently reviewed.",
+            "result_admission_disposition": "admitted",
+            "reviewed_at": "2026-07-15T01:00:00Z",
+            "reviewer_actor_id": "human-evidence-reviewer"
+          }
+        ],
+        "artifact_id": "COS-A02-CANDIDATE-BASE",
+        "artifact_lifecycle": "accepted",
+        "artifact_type": "COS-A02",
+        "context_ref": {
+          "artifact_id": "COS-A01-M5A-ACCEPTED",
+          "artifact_lifecycle": "accepted",
+          "checksum": "1111111111111111111111111111111111111111111111111111111111111111",
+          "current": true,
+          "cutoff": "2026-07-15T00:00:00Z"
+        },
+        "created_at": "2026-07-15T00:00:00Z",
+        "current_admission": [
+          {
+            "admission_disposition": "admitted",
+            "decision_basis_eligible": true,
+            "derived_from_event_id": "admission-event-1",
+            "evidence_item_id": "evidence-required-1"
+          }
+        ],
+        "evidence_items": [
+          {
+            "claim_id": "claim-1",
+            "conflict_state": "none",
+            "evidence_item_id": "evidence-required-1",
+            "grounding_state": "grounded",
+            "requirement_class": "required",
+            "safe_statement": "Formal source supports the bounded claim.",
+            "source_checksum": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "source_id": "source-formal-1",
+            "statement_type": "source_report"
+          }
+        ],
+        "interpretations": [
+          {
+            "assumptions": [
+              "scope remains current"
+            ],
+            "claim_id": "claim-1",
+            "confidence_state": "high",
+            "contradicting_evidence_ids": [],
+            "interpretation_id": "interpretation-1",
+            "limitations": [],
+            "limiting_evidence_ids": [],
+            "supporting_evidence_ids": [
+              "evidence-required-1"
+            ]
+          }
+        ],
+        "limitations": [],
+        "protocol_run": {
+          "downstream_started": false,
+          "failure_envelope": null,
+          "outcome": "success",
+          "protocol_id": "COS-P02",
+          "stages": [
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "accepted_context_binding",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "source_inventory_integrity",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "evidence_interpretation_classification",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "admission_grounding_evaluation",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "conflict_unknown_limitation_recording",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "independent_admission_review",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "a02_acceptance",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "archive_lineage",
+              "status": "completed"
+            },
+            {
+              "invoked": false,
+              "reason": "fixed disabled in M5-B",
+              "stage_id": "automated_external_verification",
+              "status": "disabled"
+            }
+          ]
+        },
+        "reviewer_binding": {
+          "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+          "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+          "accepted_a03_binding_id": "binding-evidence-review",
+          "actor_id": "human-evidence-reviewer",
+          "actor_kind": "human",
+          "authority_source_checksum": "9999999999999999999999999999999999999999999999999999999999999999",
+          "authority_source_ref": "cos:decision/COS-019",
+          "scope": "M5-B evidence and decision packet"
+        },
+        "schema_version": "0.1",
+        "source_register": [
+          {
+            "authority_class": "formal",
+            "availability_state": "observed",
+            "checksum_state": "observed",
+            "freshness_state": "fresh",
+            "observed_at": "2026-07-15T00:00:00Z",
+            "observed_checksum": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "requirement_class": "required",
+            "safe_ref": "cos:source/formal-1",
+            "source_id": "source-formal-1"
+          }
+        ],
+        "submitter_actor_id": "ai-preparer",
+        "support_links": [
+          {
+            "claim_id": "claim-1",
+            "evidence_item_id": "evidence-required-1",
+            "relation": "contradicting",
+            "support_link_id": "support-link-1"
+          }
+        ],
+        "unknowns": []
+      },
+      "expected_schema_valid": true,
+      "expected_semantic_valid": false,
+      "target_schema": "COS-A02",
+      "variant_id": "M5B-N22U-SUPPORTING-EDGE-RELATION-MISMATCH"
+    },
+    {
+      "artifact": {
+        "acceptance_event": {
+          "acceptance_event_id": "accept-cos-a02-candidate-base",
+          "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+          "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+          "accepted_a03_binding_id": "binding-evidence-review",
+          "accepted_at": "2026-07-15T01:00:00Z",
+          "accepted_by_actor_id": "human-evidence-reviewer",
+          "artifact_checksum": "6cc5e41d30659aa44c7c21f0e0f6b4c06503bbedbe2141c9da0e5e0cd3a82f7a",
+          "artifact_id": "COS-A02-CANDIDATE-BASE",
+          "assertions": [
+            "M5B-AST-P02-POS-01"
+          ],
+          "authority_source_checksum": "9999999999999999999999999999999999999999999999999999999999999999",
+          "authority_source_ref": "cos:decision/COS-019",
+          "result": "pass",
+          "scope": "M5-B manual static acceptance"
+        },
+        "admission_events": [
+          {
+            "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+            "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+            "accepted_a03_binding_id": "binding-evidence-review",
+            "admission_event_id": "admission-event-1",
+            "event_sequence": 1,
+            "evidence_item_id": "evidence-required-1",
+            "prior_admission_disposition": "none",
+            "prior_admission_event_id": "none",
+            "reason": "Required evidence grounded and independently reviewed.",
+            "result_admission_disposition": "admitted",
+            "reviewed_at": "2026-07-15T01:00:00Z",
+            "reviewer_actor_id": "human-evidence-reviewer"
+          }
+        ],
+        "artifact_id": "COS-A02-CANDIDATE-BASE",
+        "artifact_lifecycle": "accepted",
+        "artifact_type": "COS-A02",
+        "context_ref": {
+          "artifact_id": "COS-A01-M5A-ACCEPTED",
+          "artifact_lifecycle": "accepted",
+          "checksum": "1111111111111111111111111111111111111111111111111111111111111111",
+          "current": true,
+          "cutoff": "2026-07-15T00:00:00Z"
+        },
+        "created_at": "2026-07-15T00:00:00Z",
+        "current_admission": [
+          {
+            "admission_disposition": "admitted",
+            "decision_basis_eligible": true,
+            "derived_from_event_id": "admission-event-1",
+            "evidence_item_id": "evidence-required-1"
+          }
+        ],
+        "evidence_items": [
+          {
+            "claim_id": "claim-1",
+            "conflict_state": "none",
+            "evidence_item_id": "evidence-required-1",
+            "grounding_state": "grounded",
+            "requirement_class": "required",
+            "safe_statement": "Formal source supports the bounded claim.",
+            "source_checksum": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "source_id": "source-formal-1",
+            "statement_type": "source_report"
+          }
+        ],
+        "interpretations": [
+          {
+            "assumptions": [
+              "scope remains current"
+            ],
+            "claim_id": "claim-1",
+            "confidence_state": "high",
+            "contradicting_evidence_ids": [
+              "evidence-required-1"
+            ],
+            "interpretation_id": "interpretation-1",
+            "limitations": [],
+            "limiting_evidence_ids": [],
+            "supporting_evidence_ids": []
+          }
+        ],
+        "limitations": [],
+        "protocol_run": {
+          "downstream_started": false,
+          "failure_envelope": null,
+          "outcome": "success",
+          "protocol_id": "COS-P02",
+          "stages": [
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "accepted_context_binding",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "source_inventory_integrity",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "evidence_interpretation_classification",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "admission_grounding_evaluation",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "conflict_unknown_limitation_recording",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "independent_admission_review",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "a02_acceptance",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "archive_lineage",
+              "status": "completed"
+            },
+            {
+              "invoked": false,
+              "reason": "fixed disabled in M5-B",
+              "stage_id": "automated_external_verification",
+              "status": "disabled"
+            }
+          ]
+        },
+        "reviewer_binding": {
+          "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+          "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+          "accepted_a03_binding_id": "binding-evidence-review",
+          "actor_id": "human-evidence-reviewer",
+          "actor_kind": "human",
+          "authority_source_checksum": "9999999999999999999999999999999999999999999999999999999999999999",
+          "authority_source_ref": "cos:decision/COS-019",
+          "scope": "M5-B evidence and decision packet"
+        },
+        "schema_version": "0.1",
+        "source_register": [
+          {
+            "authority_class": "formal",
+            "availability_state": "observed",
+            "checksum_state": "observed",
+            "freshness_state": "fresh",
+            "observed_at": "2026-07-15T00:00:00Z",
+            "observed_checksum": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "requirement_class": "required",
+            "safe_ref": "cos:source/formal-1",
+            "source_id": "source-formal-1"
+          }
+        ],
+        "submitter_actor_id": "ai-preparer",
+        "support_links": [
+          {
+            "claim_id": "claim-1",
+            "evidence_item_id": "evidence-required-1",
+            "relation": "supporting",
+            "support_link_id": "support-link-1"
+          }
+        ],
+        "unknowns": []
+      },
+      "expected_schema_valid": true,
+      "expected_semantic_valid": false,
+      "target_schema": "COS-A02",
+      "variant_id": "M5B-N22V-CONTRADICTING-EDGE-RELATION-MISMATCH"
+    },
+    {
+      "artifact": {
+        "acceptance_event": {
+          "acceptance_event_id": "accept-cos-a02-candidate-base",
+          "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+          "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+          "accepted_a03_binding_id": "binding-evidence-review",
+          "accepted_at": "2026-07-15T01:00:00Z",
+          "accepted_by_actor_id": "human-evidence-reviewer",
+          "artifact_checksum": "8077f936c073e70a5e7afabf821c382e2908dd44a2837c9179f14e1abf2035cd",
+          "artifact_id": "COS-A02-CANDIDATE-BASE",
+          "assertions": [
+            "M5B-AST-P02-POS-01"
+          ],
+          "authority_source_checksum": "9999999999999999999999999999999999999999999999999999999999999999",
+          "authority_source_ref": "cos:decision/COS-019",
+          "result": "pass",
+          "scope": "M5-B manual static acceptance"
+        },
+        "admission_events": [
+          {
+            "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+            "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+            "accepted_a03_binding_id": "binding-evidence-review",
+            "admission_event_id": "admission-event-1",
+            "event_sequence": 1,
+            "evidence_item_id": "evidence-required-1",
+            "prior_admission_disposition": "none",
+            "prior_admission_event_id": "none",
+            "reason": "Required evidence grounded and independently reviewed.",
+            "result_admission_disposition": "admitted",
+            "reviewed_at": "2026-07-15T01:00:00Z",
+            "reviewer_actor_id": "human-evidence-reviewer"
+          }
+        ],
+        "artifact_id": "COS-A02-CANDIDATE-BASE",
+        "artifact_lifecycle": "accepted",
+        "artifact_type": "COS-A02",
+        "context_ref": {
+          "artifact_id": "COS-A01-M5A-ACCEPTED",
+          "artifact_lifecycle": "accepted",
+          "checksum": "1111111111111111111111111111111111111111111111111111111111111111",
+          "current": true,
+          "cutoff": "2026-07-15T00:00:00Z"
+        },
+        "created_at": "2026-07-15T00:00:00Z",
+        "current_admission": [
+          {
+            "admission_disposition": "admitted",
+            "decision_basis_eligible": true,
+            "derived_from_event_id": "admission-event-1",
+            "evidence_item_id": "evidence-required-1"
+          }
+        ],
+        "evidence_items": [
+          {
+            "claim_id": "claim-1",
+            "conflict_state": "none",
+            "evidence_item_id": "evidence-required-1",
+            "grounding_state": "grounded",
+            "requirement_class": "required",
+            "safe_statement": "Formal source supports the bounded claim.",
+            "source_checksum": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "source_id": "source-formal-1",
+            "statement_type": "source_report"
+          }
+        ],
+        "interpretations": [
+          {
+            "assumptions": [
+              "scope remains current"
+            ],
+            "claim_id": "claim-1",
+            "confidence_state": "high",
+            "contradicting_evidence_ids": [],
+            "interpretation_id": "interpretation-1",
+            "limitations": [],
+            "limiting_evidence_ids": [
+              "evidence-required-1"
+            ],
+            "supporting_evidence_ids": []
+          }
+        ],
+        "limitations": [],
+        "protocol_run": {
+          "downstream_started": false,
+          "failure_envelope": null,
+          "outcome": "success",
+          "protocol_id": "COS-P02",
+          "stages": [
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "accepted_context_binding",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "source_inventory_integrity",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "evidence_interpretation_classification",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "admission_grounding_evaluation",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "conflict_unknown_limitation_recording",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "independent_admission_review",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "a02_acceptance",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "archive_lineage",
+              "status": "completed"
+            },
+            {
+              "invoked": false,
+              "reason": "fixed disabled in M5-B",
+              "stage_id": "automated_external_verification",
+              "status": "disabled"
+            }
+          ]
+        },
+        "reviewer_binding": {
+          "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+          "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+          "accepted_a03_binding_id": "binding-evidence-review",
+          "actor_id": "human-evidence-reviewer",
+          "actor_kind": "human",
+          "authority_source_checksum": "9999999999999999999999999999999999999999999999999999999999999999",
+          "authority_source_ref": "cos:decision/COS-019",
+          "scope": "M5-B evidence and decision packet"
+        },
+        "schema_version": "0.1",
+        "source_register": [
+          {
+            "authority_class": "formal",
+            "availability_state": "observed",
+            "checksum_state": "observed",
+            "freshness_state": "fresh",
+            "observed_at": "2026-07-15T00:00:00Z",
+            "observed_checksum": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "requirement_class": "required",
+            "safe_ref": "cos:source/formal-1",
+            "source_id": "source-formal-1"
+          }
+        ],
+        "submitter_actor_id": "ai-preparer",
+        "support_links": [
+          {
+            "claim_id": "claim-1",
+            "evidence_item_id": "evidence-required-1",
+            "relation": "supporting",
+            "support_link_id": "support-link-1"
+          }
+        ],
+        "unknowns": []
+      },
+      "expected_schema_valid": true,
+      "expected_semantic_valid": false,
+      "target_schema": "COS-A02",
+      "variant_id": "M5B-N22W-LIMITING-EDGE-RELATION-MISMATCH"
+    },
+    {
+      "artifact": {
+        "acceptance_event": {
+          "acceptance_event_id": "accept-cos-a02-candidate-base",
+          "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+          "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+          "accepted_a03_binding_id": "binding-evidence-review",
+          "accepted_at": "2026-07-15T01:00:00Z",
+          "accepted_by_actor_id": "human-evidence-reviewer",
+          "artifact_checksum": "37a0032f841d204475dcb020fd0353a23c9ea6adfd0a5a3d5c1497fc9d92c3f8",
+          "artifact_id": "COS-A02-CANDIDATE-BASE",
+          "assertions": [
+            "M5B-AST-P02-POS-01"
+          ],
+          "authority_source_checksum": "9999999999999999999999999999999999999999999999999999999999999999",
+          "authority_source_ref": "cos:decision/COS-019",
+          "result": "pass",
+          "scope": "M5-B manual static acceptance"
+        },
+        "admission_events": [
+          {
+            "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+            "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+            "accepted_a03_binding_id": "binding-evidence-review",
+            "admission_event_id": "admission-event-1",
+            "event_sequence": 1,
+            "evidence_item_id": "evidence-required-1",
+            "prior_admission_disposition": "none",
+            "prior_admission_event_id": "none",
+            "reason": "Required evidence grounded and independently reviewed.",
+            "result_admission_disposition": "admitted",
+            "reviewed_at": "2026-07-15T01:00:00Z",
+            "reviewer_actor_id": "human-evidence-reviewer"
+          }
+        ],
+        "artifact_id": "COS-A02-CANDIDATE-BASE",
+        "artifact_lifecycle": "accepted",
+        "artifact_type": "COS-A02",
+        "context_ref": {
+          "artifact_id": "COS-A01-M5A-ACCEPTED",
+          "artifact_lifecycle": "accepted",
+          "checksum": "1111111111111111111111111111111111111111111111111111111111111111",
+          "current": true,
+          "cutoff": "2026-07-15T00:00:00Z"
+        },
+        "created_at": "2026-07-15T00:00:00Z",
+        "current_admission": [
+          {
+            "admission_disposition": "admitted",
+            "decision_basis_eligible": true,
+            "derived_from_event_id": "admission-event-1",
+            "evidence_item_id": "evidence-required-1"
+          }
+        ],
+        "evidence_items": [
+          {
+            "claim_id": "claim-1",
+            "conflict_state": "none",
+            "evidence_item_id": "evidence-required-1",
+            "grounding_state": "grounded",
+            "requirement_class": "required",
+            "safe_statement": "Formal source supports the bounded claim.",
+            "source_checksum": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "source_id": "source-formal-1",
+            "statement_type": "source_report"
+          }
+        ],
+        "interpretations": [
+          {
+            "assumptions": [
+              "scope remains current"
+            ],
+            "claim_id": "claim-1",
+            "confidence_state": "high",
+            "contradicting_evidence_ids": [],
+            "interpretation_id": "interpretation-1",
+            "limitations": [],
+            "limiting_evidence_ids": [],
+            "supporting_evidence_ids": [
+              "evidence-required-1"
+            ]
+          }
+        ],
+        "limitations": [],
+        "protocol_run": {
+          "downstream_started": false,
+          "failure_envelope": null,
+          "outcome": "success",
+          "protocol_id": "COS-P02",
+          "stages": [
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "accepted_context_binding",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "source_inventory_integrity",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "evidence_interpretation_classification",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "admission_grounding_evaluation",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "conflict_unknown_limitation_recording",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "independent_admission_review",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "a02_acceptance",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "archive_lineage",
+              "status": "completed"
+            },
+            {
+              "invoked": false,
+              "reason": "fixed disabled in M5-B",
+              "stage_id": "automated_external_verification",
+              "status": "disabled"
+            }
+          ]
+        },
+        "reviewer_binding": {
+          "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+          "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+          "accepted_a03_binding_id": "binding-evidence-review",
+          "actor_id": "human-evidence-reviewer",
+          "actor_kind": "human",
+          "authority_source_checksum": "9999999999999999999999999999999999999999999999999999999999999999",
+          "authority_source_ref": "cos:decision/COS-019",
+          "scope": "M5-B evidence and decision packet"
+        },
+        "schema_version": "0.1",
+        "source_register": [
+          {
+            "authority_class": "formal",
+            "availability_state": "observed",
+            "checksum_state": "observed",
+            "freshness_state": "fresh",
+            "observed_at": "2026-07-15T00:00:00Z",
+            "observed_checksum": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "requirement_class": "required",
+            "safe_ref": "cos:source/formal-1",
+            "source_id": "source-formal-1"
+          }
+        ],
+        "submitter_actor_id": "ai-preparer",
+        "support_links": [
+          {
+            "claim_id": "claim-1",
+            "evidence_item_id": "evidence-required-1",
+            "relation": "supporting",
+            "support_link_id": "support-link-1"
+          },
+          {
+            "claim_id": "claim-1",
+            "evidence_item_id": "evidence-required-1",
+            "relation": "supporting",
+            "support_link_id": "support-link-duplicate-semantic-edge"
+          }
+        ],
+        "unknowns": []
+      },
+      "expected_schema_valid": true,
+      "expected_semantic_valid": false,
+      "target_schema": "COS-A02",
+      "variant_id": "M5B-N22X-DUPLICATE-SEMANTIC-EDGE"
+    }
+  ]
+}

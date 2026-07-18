@@ -1,0 +1,710 @@
+{
+  "artifact": {
+    "artifact_id": "COS-A01-M5A-POS-001",
+    "artifact_lifecycle": "accepted",
+    "artifact_type": "COS-A01",
+    "bootstrap_authority_ref": {
+      "allowed_action": "accept_COS-A01_only",
+      "authority_source_id": "source-governance",
+      "checksum": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "effective_at": "2026-07-14T08:00:00Z",
+      "expires_at": "2026-12-31T23:59:59Z",
+      "governed_scope": "accept this A01 only",
+      "grant_basis": "cos:decision/COS-011",
+      "human_actor_ref": "cos:actor/human-final",
+      "safe_ref": "cos:decision/COS-011",
+      "supersede_condition": "accepted A03 exists"
+    },
+    "conflicts": [],
+    "created_at": "2026-07-14T08:00:00Z",
+    "decision_refs": [
+      "cos:decision/COS-011"
+    ],
+    "host_ref": "host:generic/example",
+    "known_limitations": [],
+    "lineage": {
+      "superseded_by": "not_applicable",
+      "supersedes": "not_applicable"
+    },
+    "not_attempted": [
+      "external resolution not authorized"
+    ],
+    "not_observed": [],
+    "preparer": {
+      "actor_id": "actor-ai-preparer",
+      "actor_kind": "ai_agent",
+      "run_participation_only": true,
+      "safe_identity_ref": "cos:actor/ai-preparer"
+    },
+    "project_ref": "project:collaboration-os",
+    "protocol_run": {
+      "failure_envelope": null,
+      "outcome": "success",
+      "protocol_id": "COS-P01",
+      "stages": [
+        {
+          "invoked": true,
+          "reason": "assertions satisfied",
+          "stage_id": "scope_and_cutoff",
+          "status": "completed"
+        },
+        {
+          "invoked": true,
+          "reason": "assertions satisfied",
+          "stage_id": "required_source_inventory",
+          "status": "completed"
+        },
+        {
+          "invoked": true,
+          "reason": "assertions satisfied",
+          "stage_id": "source_integrity_verification",
+          "status": "completed"
+        },
+        {
+          "invoked": true,
+          "reason": "assertions satisfied",
+          "stage_id": "state_classification",
+          "status": "completed"
+        },
+        {
+          "invoked": true,
+          "reason": "assertions satisfied",
+          "stage_id": "staleness_and_conflict_check",
+          "status": "completed"
+        },
+        {
+          "invoked": true,
+          "reason": "assertions satisfied",
+          "stage_id": "packet_assembly",
+          "status": "completed"
+        },
+        {
+          "invoked": true,
+          "reason": "assertions satisfied",
+          "stage_id": "independent_context_review",
+          "status": "completed"
+        },
+        {
+          "invoked": false,
+          "reason": "optional class not applicable; no candidate source",
+          "stage_id": "supplemental_context_collection",
+          "status": "skipped"
+        },
+        {
+          "invoked": false,
+          "reason": "not authorized in M5-A",
+          "stage_id": "external_resolution",
+          "status": "disabled"
+        }
+      ]
+    },
+    "recovery_scope": {
+      "as_of": "2026-07-14T08:00:00Z",
+      "freshness_rule": "host declares current at cutoff",
+      "in_scope": [
+        "M5-A context and authority"
+      ],
+      "out_of_scope": [
+        "runtime",
+        "production"
+      ],
+      "purpose": "qualify M5-A context recovery"
+    },
+    "review": {
+      "accepted_limitations": [],
+      "assertions": [
+        {
+          "assertion_id": "M5A-AST-P01-POS",
+          "evidence_refs": [
+            "fixture:M5A-P01-POS-01"
+          ],
+          "result": "pass"
+        }
+      ],
+      "result": "accepted",
+      "reviewed_at": "2026-07-14T08:00:00Z",
+      "reviewer_actor_id": "actor-human-reviewer"
+    },
+    "reviewer": {
+      "actor_id": "actor-human-reviewer",
+      "actor_kind": "human",
+      "run_participation_only": true,
+      "safe_identity_ref": "cos:actor/human-reviewer"
+    },
+    "schema_version": "0.1",
+    "source_authority": "cos:authority/independent",
+    "source_register": [
+      {
+        "authority_class": "formal_governance",
+        "checksum": {
+          "algorithm": "sha256",
+          "reason": "",
+          "status": "observed",
+          "value": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "freshness_status": "current",
+        "lineage_ref": "cos:lineage/source-governance",
+        "observed_at": "2026-07-14T08:00:00Z",
+        "requirement": "required",
+        "safe_ref": "cos:source/source-governance",
+        "source_disposition": "authoritative_current",
+        "source_id": "source-governance"
+      }
+    ],
+    "stale_sources": [],
+    "state_items": {
+      "blocked": [],
+      "current": [
+        {
+          "classification": "current",
+          "decision_ref": "cos:decision/COS-011",
+          "item_checksum": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+          "item_id": "state-current",
+          "owner_ref": "cos:actor/human-final",
+          "source_ids": [
+            "source-governance"
+          ],
+          "statement_or_safe_summary": "M5-A packet-only candidate construction is authorized.",
+          "superseded_by": "not_applicable",
+          "supersedes": "not_applicable",
+          "valid_at_cutoff": true
+        }
+      ],
+      "decided": [],
+      "pending": [],
+      "superseded": []
+    },
+    "unknowns": []
+  },
+  "expected": {
+    "artifact_lifecycle": "accepted",
+    "assertion_ids": [
+      "M5A-AST-19A",
+      "M5A-AST-19B"
+    ],
+    "protocol_outcome": "success",
+    "schema_valid": true
+  },
+  "fixture_version": "0.1",
+  "related_artifacts": [
+    {
+      "artifact": {
+        "acceptance": {
+          "accepted_at": "2026-07-14T08:00:00Z",
+          "accepted_by_actor_id": "actor-human-final",
+          "assertions": [
+            {
+              "assertion_id": "M5A-AST-P03-POS",
+              "evidence_refs": [
+                "fixture:M5A-P03-POS-01"
+              ],
+              "result": "pass"
+            }
+          ],
+          "authority_source_ref": "cos:decision/COS-011",
+          "result": "accepted"
+        },
+        "actors": [
+          {
+            "accountability_owner_actor_id": "actor-human-final",
+            "actor_id": "actor-human-final",
+            "actor_kind": "human",
+            "safe_identity_ref": "cos:actor/human-final"
+          },
+          {
+            "accountability_owner_actor_id": "actor-human-reviewer",
+            "actor_id": "actor-human-reviewer",
+            "actor_kind": "human",
+            "safe_identity_ref": "cos:actor/human-reviewer"
+          },
+          {
+            "accountability_owner_actor_id": "actor-human-final",
+            "actor_id": "actor-ai-builder",
+            "actor_kind": "ai_agent",
+            "safe_identity_ref": "cos:actor/ai-builder"
+          }
+        ],
+        "artifact_id": "COS-A03-M5A-POS-001",
+        "artifact_lifecycle": "accepted",
+        "artifact_type": "COS-A03",
+        "authority_domains": {
+          "acceptance": {
+            "authority_source_ref": "cos:decision/COS-011",
+            "domain": "acceptance",
+            "human_required": true,
+            "owner_actor_id": "actor-human-final",
+            "scope": "M5-A packet-only candidate"
+          },
+          "canonical_release": {
+            "authority_source_ref": "cos:decision/COS-011",
+            "domain": "canonical_release",
+            "human_required": true,
+            "owner_actor_id": "actor-human-final",
+            "scope": "M5-A packet-only candidate"
+          },
+          "cost": {
+            "authority_source_ref": "cos:decision/COS-011",
+            "domain": "cost",
+            "human_required": true,
+            "owner_actor_id": "actor-human-final",
+            "scope": "M5-A packet-only candidate"
+          },
+          "decision": {
+            "authority_source_ref": "cos:decision/COS-011",
+            "domain": "decision",
+            "human_required": true,
+            "owner_actor_id": "actor-human-final",
+            "scope": "M5-A packet-only candidate"
+          },
+          "execution": {
+            "authority_source_ref": "cos:decision/COS-011",
+            "domain": "execution",
+            "human_required": true,
+            "owner_actor_id": "actor-human-final",
+            "scope": "M5-A packet-only candidate"
+          },
+          "final_direction": {
+            "authority_source_ref": "cos:decision/COS-011",
+            "domain": "final_direction",
+            "human_required": true,
+            "owner_actor_id": "actor-human-final",
+            "scope": "M5-A packet-only candidate"
+          },
+          "promotion": {
+            "authority_source_ref": "cos:decision/COS-011",
+            "domain": "promotion",
+            "human_required": true,
+            "owner_actor_id": "actor-human-final",
+            "scope": "M5-A packet-only candidate"
+          },
+          "takeover": {
+            "authority_source_ref": "cos:decision/COS-011",
+            "domain": "takeover",
+            "human_required": true,
+            "owner_actor_id": "actor-human-final",
+            "scope": "M5-A packet-only candidate"
+          }
+        },
+        "context_ref": {
+          "artifact_id": "COS-A01-M5A-POS-001",
+          "artifact_lifecycle": "accepted",
+          "checksum": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "cutoff": "2026-07-14T08:00:00Z",
+          "limitations_accepted": false,
+          "verified_current": true
+        },
+        "created_at": "2026-07-14T08:00:00Z",
+        "escalation_routes": [
+          {
+            "effect": "legal_stop_pending_human_decision",
+            "owner_actor_id": "actor-human-final",
+            "route_id": "route-permission",
+            "trigger": "permission escalation requested"
+          }
+        ],
+        "governed_scope": "M5-A packet-only candidate",
+        "known_limitations": [
+          "manual static candidate only"
+        ],
+        "lineage": {
+          "superseded_by": "not_applicable",
+          "supersedes": "not_applicable"
+        },
+        "mismatches": [],
+        "missing_owners": [],
+        "permission_matrix": {
+          "accept_result": {
+            "actor_ids": [
+              "actor-human-final"
+            ],
+            "constraints": [
+              "no repo copy",
+              "no external call"
+            ],
+            "declared_allowed": true,
+            "effective_allowed": true,
+            "effective_at": "2026-07-14T08:00:00Z",
+            "expires_at": "2026-12-31T23:59:59Z",
+            "grant_status": "valid",
+            "granting_authority_ref": "cos:decision/COS-011",
+            "permission_id": "accept_result",
+            "revocation_ref": "not_applicable",
+            "scope": "M5-A packet-only candidate"
+          },
+          "canonical_write": {
+            "actor_ids": [
+              "actor-ai-builder"
+            ],
+            "constraints": [
+              "no repo copy",
+              "no external call"
+            ],
+            "declared_allowed": false,
+            "effective_allowed": false,
+            "effective_at": "2026-07-14T08:00:00Z",
+            "expires_at": "2026-12-31T23:59:59Z",
+            "grant_status": "valid",
+            "granting_authority_ref": "cos:decision/COS-011",
+            "permission_id": "canonical_write",
+            "revocation_ref": "not_applicable",
+            "scope": "M5-A packet-only candidate"
+          },
+          "challenge": {
+            "actor_ids": [
+              "actor-ai-builder"
+            ],
+            "constraints": [
+              "no repo copy",
+              "no external call"
+            ],
+            "declared_allowed": true,
+            "effective_allowed": true,
+            "effective_at": "2026-07-14T08:00:00Z",
+            "expires_at": "2026-12-31T23:59:59Z",
+            "grant_status": "valid",
+            "granting_authority_ref": "cos:decision/COS-011",
+            "permission_id": "challenge",
+            "revocation_ref": "not_applicable",
+            "scope": "M5-A packet-only candidate"
+          },
+          "edit_authorized_scope": {
+            "actor_ids": [
+              "actor-ai-builder"
+            ],
+            "constraints": [
+              "no repo copy",
+              "no external call"
+            ],
+            "declared_allowed": false,
+            "effective_allowed": false,
+            "effective_at": "2026-07-14T08:00:00Z",
+            "expires_at": "2026-12-31T23:59:59Z",
+            "grant_status": "valid",
+            "granting_authority_ref": "cos:decision/COS-011",
+            "permission_id": "edit_authorized_scope",
+            "revocation_ref": "not_applicable",
+            "scope": "M5-A packet-only candidate"
+          },
+          "external_call": {
+            "actor_ids": [
+              "actor-ai-builder"
+            ],
+            "constraints": [
+              "no repo copy",
+              "no external call"
+            ],
+            "declared_allowed": false,
+            "effective_allowed": false,
+            "effective_at": "2026-07-14T08:00:00Z",
+            "expires_at": "2026-12-31T23:59:59Z",
+            "grant_status": "valid",
+            "granting_authority_ref": "cos:decision/COS-011",
+            "permission_id": "external_call",
+            "revocation_ref": "not_applicable",
+            "scope": "M5-A packet-only candidate"
+          },
+          "incur_cost": {
+            "actor_ids": [
+              "actor-ai-builder"
+            ],
+            "constraints": [
+              "no repo copy",
+              "no external call"
+            ],
+            "declared_allowed": false,
+            "effective_allowed": false,
+            "effective_at": "2026-07-14T08:00:00Z",
+            "expires_at": "2026-12-31T23:59:59Z",
+            "grant_status": "valid",
+            "granting_authority_ref": "cos:decision/COS-011",
+            "permission_id": "incur_cost",
+            "revocation_ref": "not_applicable",
+            "scope": "M5-A packet-only candidate"
+          },
+          "make_decision": {
+            "actor_ids": [
+              "actor-ai-builder"
+            ],
+            "constraints": [
+              "no repo copy",
+              "no external call"
+            ],
+            "declared_allowed": false,
+            "effective_allowed": false,
+            "effective_at": "2026-07-14T08:00:00Z",
+            "expires_at": "2026-12-31T23:59:59Z",
+            "grant_status": "valid",
+            "granting_authority_ref": "cos:decision/COS-011",
+            "permission_id": "make_decision",
+            "revocation_ref": "not_applicable",
+            "scope": "M5-A packet-only candidate"
+          },
+          "perform_irreversible_action": {
+            "actor_ids": [
+              "actor-ai-builder"
+            ],
+            "constraints": [
+              "no repo copy",
+              "no external call"
+            ],
+            "declared_allowed": false,
+            "effective_allowed": false,
+            "effective_at": "2026-07-14T08:00:00Z",
+            "expires_at": "2026-12-31T23:59:59Z",
+            "grant_status": "valid",
+            "granting_authority_ref": "cos:decision/COS-011",
+            "permission_id": "perform_irreversible_action",
+            "revocation_ref": "not_applicable",
+            "scope": "M5-A packet-only candidate"
+          },
+          "prepare_artifact": {
+            "actor_ids": [
+              "actor-ai-builder"
+            ],
+            "constraints": [
+              "no repo copy",
+              "no external call"
+            ],
+            "declared_allowed": true,
+            "effective_allowed": true,
+            "effective_at": "2026-07-14T08:00:00Z",
+            "expires_at": "2026-12-31T23:59:59Z",
+            "grant_status": "valid",
+            "granting_authority_ref": "cos:decision/COS-011",
+            "permission_id": "prepare_artifact",
+            "revocation_ref": "not_applicable",
+            "scope": "M5-A packet-only candidate"
+          },
+          "promote_core": {
+            "actor_ids": [
+              "actor-ai-builder"
+            ],
+            "constraints": [
+              "no repo copy",
+              "no external call"
+            ],
+            "declared_allowed": false,
+            "effective_allowed": false,
+            "effective_at": "2026-07-14T08:00:00Z",
+            "expires_at": "2026-12-31T23:59:59Z",
+            "grant_status": "valid",
+            "granting_authority_ref": "cos:decision/COS-011",
+            "permission_id": "promote_core",
+            "revocation_ref": "not_applicable",
+            "scope": "M5-A packet-only candidate"
+          },
+          "propose": {
+            "actor_ids": [
+              "actor-ai-builder"
+            ],
+            "constraints": [
+              "no repo copy",
+              "no external call"
+            ],
+            "declared_allowed": true,
+            "effective_allowed": true,
+            "effective_at": "2026-07-14T08:00:00Z",
+            "expires_at": "2026-12-31T23:59:59Z",
+            "grant_status": "valid",
+            "granting_authority_ref": "cos:decision/COS-011",
+            "permission_id": "propose",
+            "revocation_ref": "not_applicable",
+            "scope": "M5-A packet-only candidate"
+          },
+          "read_context": {
+            "actor_ids": [
+              "actor-ai-builder"
+            ],
+            "constraints": [
+              "no repo copy",
+              "no external call"
+            ],
+            "declared_allowed": true,
+            "effective_allowed": true,
+            "effective_at": "2026-07-14T08:00:00Z",
+            "expires_at": "2026-12-31T23:59:59Z",
+            "grant_status": "valid",
+            "granting_authority_ref": "cos:decision/COS-011",
+            "permission_id": "read_context",
+            "revocation_ref": "not_applicable",
+            "scope": "M5-A packet-only candidate"
+          },
+          "release_product": {
+            "actor_ids": [
+              "actor-ai-builder"
+            ],
+            "constraints": [
+              "no repo copy",
+              "no external call"
+            ],
+            "declared_allowed": false,
+            "effective_allowed": false,
+            "effective_at": "2026-07-14T08:00:00Z",
+            "expires_at": "2026-12-31T23:59:59Z",
+            "grant_status": "valid",
+            "granting_authority_ref": "cos:decision/COS-011",
+            "permission_id": "release_product",
+            "revocation_ref": "not_applicable",
+            "scope": "M5-A packet-only candidate"
+          },
+          "takeover": {
+            "actor_ids": [
+              "actor-human-final"
+            ],
+            "constraints": [
+              "no repo copy",
+              "no external call"
+            ],
+            "declared_allowed": true,
+            "effective_allowed": true,
+            "effective_at": "2026-07-14T08:00:00Z",
+            "expires_at": "2026-12-31T23:59:59Z",
+            "grant_status": "valid",
+            "granting_authority_ref": "cos:decision/COS-011",
+            "permission_id": "takeover",
+            "revocation_ref": "not_applicable",
+            "scope": "M5-A packet-only candidate"
+          }
+        },
+        "protocol_run": {
+          "downstream_started": false,
+          "failure_envelope": null,
+          "outcome": "success",
+          "protocol_id": "COS-P03",
+          "stages": [
+            {
+              "invoked": true,
+              "reason": "assertions satisfied",
+              "stage_id": "accepted_context_consumption",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "assertions satisfied",
+              "stage_id": "authority_domain_inventory",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "assertions satisfied",
+              "stage_id": "actor_registry",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "assertions satisfied",
+              "stage_id": "functional_role_binding",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "assertions satisfied",
+              "stage_id": "permission_binding",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "assertions satisfied",
+              "stage_id": "separation_of_duty_check",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "assertions satisfied",
+              "stage_id": "takeover_chain_binding",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "assertions satisfied",
+              "stage_id": "authority_mismatch_check",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "assertions satisfied",
+              "stage_id": "human_authority_acceptance",
+              "status": "completed"
+            },
+            {
+              "invoked": false,
+              "reason": "not authorized in M5-A",
+              "stage_id": "automated_permission_enforcement",
+              "status": "disabled"
+            }
+          ]
+        },
+        "role_bindings": [
+          {
+            "actor_id": "actor-human-final",
+            "authority_source_ref": "cos:decision/COS-011",
+            "binding_id": "binding-vision",
+            "effective_at": "2026-07-14T08:00:00Z",
+            "expires_at": "2026-12-31T23:59:59Z",
+            "functional_role": "vision_owner",
+            "scope": "M5-A"
+          },
+          {
+            "actor_id": "actor-ai-builder",
+            "authority_source_ref": "cos:decision/COS-011",
+            "binding_id": "binding-builder",
+            "effective_at": "2026-07-14T08:00:00Z",
+            "expires_at": "2026-12-31T23:59:59Z",
+            "functional_role": "builder",
+            "scope": "packet-only"
+          },
+          {
+            "actor_id": "actor-human-reviewer",
+            "authority_source_ref": "cos:decision/COS-011",
+            "binding_id": "binding-evaluator",
+            "effective_at": "2026-07-14T08:00:00Z",
+            "expires_at": "2026-12-31T23:59:59Z",
+            "functional_role": "evaluator",
+            "scope": "static qualification"
+          },
+          {
+            "actor_id": "actor-human-final",
+            "authority_source_ref": "cos:decision/COS-011",
+            "binding_id": "binding-acceptor",
+            "effective_at": "2026-07-14T08:00:00Z",
+            "expires_at": "2026-12-31T23:59:59Z",
+            "functional_role": "acceptor",
+            "scope": "future decision only"
+          },
+          {
+            "actor_id": "actor-human-final",
+            "authority_source_ref": "cos:decision/COS-011",
+            "binding_id": "binding-takeover",
+            "effective_at": "2026-07-14T08:00:00Z",
+            "expires_at": "2026-12-31T23:59:59Z",
+            "functional_role": "takeover_owner",
+            "scope": "failure and legal stop"
+          }
+        ],
+        "schema_version": "0.1",
+        "separation_of_duty": {
+          "approved_human_exceptions": [],
+          "conflicts": [],
+          "self_acceptance_allowed": false
+        },
+        "source_authority": "cos:authority/independent",
+        "takeover_chains": [
+          {
+            "acknowledgement_owner_actor_id": "actor-human-final",
+            "capability": "packet construction",
+            "final_human_actor_id": "actor-human-final",
+            "ordered_actor_ids": [
+              "actor-ai-builder",
+              "actor-human-final"
+            ],
+            "trigger": "legal stop or failure"
+          }
+        ],
+        "unknowns": []
+      },
+      "target_schema": "COS-A03"
+    }
+  ],
+  "scenario_id": "M5A-N19",
+  "target_schema": "COS-A01"
+}

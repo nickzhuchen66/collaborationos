@@ -1,0 +1,34 @@
+{
+  "schema_version": "COS_PUBLIC_PACKAGE_MANIFEST_v0.1",
+  "package_id": "COS_PUBLIC_HOST_ADOPTION_KIT_v0.1",
+  "release": "v0.1.0-public-refreeze01",
+  "non_self": true,
+  "member_count": 5,
+  "members": [
+    {
+      "path": "docs/adoption-kit-v0.1/COS_NEW_HOST_PROJECT_ADOPTION_MANUAL_v0.1.md",
+      "bytes": 14519,
+      "sha256": "6be7db885e58974f8eb2f8cc14b072c62ed425498ee7620eab21c08d61c2b801"
+    },
+    {
+      "path": "docs/adoption-kit-v0.1/README.md",
+      "bytes": 1446,
+      "sha256": "30e59abd045e8f896ba17667fc4ff6eef19000c46a4f021b9d9fb313cf3703ac"
+    },
+    {
+      "path": "docs/adoption-kit-v0.1/templates/COS_HOST_ADAPTER_TEMPLATE_v0.1.md",
+      "bytes": 3943,
+      "sha256": "b0b755ecca57c34527060ba4d9d993cd462a1230391f235b31310e22732cb523"
+    },
+    {
+      "path": "docs/adoption-kit-v0.1/templates/COS_HOST_ADOPTION_RECORD_TEMPLATE_v0.1.md",
+      "bytes": 2588,
+      "sha256": "ee94f00131b26a53c8afc21e7c703a2a34dbfd8d6f805f1d1b088e975e694368"
+    },
+    {
+      "path": "docs/adoption-kit-v0.1/templates/COS_HOST_ENTRY_POINTER_TEMPLATE_v0.1.md",
+      "bytes": 1150,
+      "sha256": "69b5852d499562b332626a45e6c2e901d13d6a652aaae91f2475c1b99b4b6e0b"
+    }
+  ]
+}

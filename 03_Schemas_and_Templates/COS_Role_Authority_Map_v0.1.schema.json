@@ -1,0 +1,290 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://collaborationos.local/schemas/COS_Role_Authority_Map_v0.1.schema.json",
+  "title": "COS A03 Role and Authority Map v0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "artifact_type",
+    "artifact_id",
+    "created_at",
+    "source_authority",
+    "governed_scope",
+    "context_ref",
+    "actors",
+    "role_bindings",
+    "authority_domains",
+    "permission_matrix",
+    "separation_of_duty",
+    "takeover_chains",
+    "escalation_routes",
+    "missing_owners",
+    "mismatches",
+    "unknowns",
+    "known_limitations",
+    "lineage",
+    "protocol_run",
+    "acceptance",
+    "artifact_lifecycle"
+  ],
+  "properties": {
+    "schema_version": {"const": "0.1"},
+    "artifact_type": {"const": "COS-A03"},
+    "artifact_id": {"$ref": "#/$defs/stable_id"},
+    "created_at": {"type": "string", "format": "date-time"},
+    "source_authority": {"$ref": "#/$defs/safe_ref"},
+    "governed_scope": {"type": "string", "minLength": 1},
+    "context_ref": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["artifact_id", "checksum", "cutoff", "artifact_lifecycle", "limitations_accepted", "verified_current"],
+      "properties": {
+        "artifact_id": {"$ref": "#/$defs/stable_id"},
+        "checksum": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+        "cutoff": {"type": "string", "format": "date-time"},
+        "artifact_lifecycle": {"const": "accepted"},
+        "limitations_accepted": {"type": "boolean"},
+        "verified_current": {"const": true}
+      }
+    },
+    "actors": {"type": "array", "items": {"$ref": "#/$defs/actor"}, "minItems": 1},
+    "role_bindings": {"type": "array", "items": {"$ref": "#/$defs/role_binding"}, "minItems": 1},
+    "authority_domains": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["final_direction", "decision", "cost", "execution", "acceptance", "takeover", "promotion", "canonical_release"],
+      "properties": {
+        "final_direction": {"allOf": [{"$ref": "#/$defs/authority_domain"}, {"properties": {"domain": {"const": "final_direction"}, "human_required": {"const": true}}}]},
+        "decision": {"allOf": [{"$ref": "#/$defs/authority_domain"}, {"properties": {"domain": {"const": "decision"}}}]},
+        "cost": {"allOf": [{"$ref": "#/$defs/authority_domain"}, {"properties": {"domain": {"const": "cost"}}}]},
+        "execution": {"allOf": [{"$ref": "#/$defs/authority_domain"}, {"properties": {"domain": {"const": "execution"}}}]},
+        "acceptance": {"allOf": [{"$ref": "#/$defs/authority_domain"}, {"properties": {"domain": {"const": "acceptance"}}}]},
+        "takeover": {"allOf": [{"$ref": "#/$defs/authority_domain"}, {"properties": {"domain": {"const": "takeover"}, "human_required": {"const": true}}}]},
+        "promotion": {"allOf": [{"$ref": "#/$defs/authority_domain"}, {"properties": {"domain": {"const": "promotion"}, "human_required": {"const": true}}}]},
+        "canonical_release": {"allOf": [{"$ref": "#/$defs/authority_domain"}, {"properties": {"domain": {"const": "canonical_release"}, "human_required": {"const": true}}}]}
+      }
+    },
+    "permission_matrix": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["read_context", "prepare_artifact", "propose", "challenge", "edit_authorized_scope", "external_call", "incur_cost", "perform_irreversible_action", "make_decision", "accept_result", "takeover", "promote_core", "canonical_write", "release_product"],
+      "properties": {
+        "read_context": {"allOf": [{"$ref": "#/$defs/permission"}, {"properties": {"permission_id": {"const": "read_context"}}}]},
+        "prepare_artifact": {"allOf": [{"$ref": "#/$defs/permission"}, {"properties": {"permission_id": {"const": "prepare_artifact"}}}]},
+        "propose": {"allOf": [{"$ref": "#/$defs/permission"}, {"properties": {"permission_id": {"const": "propose"}}}]},
+        "challenge": {"allOf": [{"$ref": "#/$defs/permission"}, {"properties": {"permission_id": {"const": "challenge"}}}]},
+        "edit_authorized_scope": {"allOf": [{"$ref": "#/$defs/permission"}, {"properties": {"permission_id": {"const": "edit_authorized_scope"}}}]},
+        "external_call": {"allOf": [{"$ref": "#/$defs/permission"}, {"properties": {"permission_id": {"const": "external_call"}}}]},
+        "incur_cost": {"allOf": [{"$ref": "#/$defs/permission"}, {"properties": {"permission_id": {"const": "incur_cost"}}}]},
+        "perform_irreversible_action": {"allOf": [{"$ref": "#/$defs/permission"}, {"properties": {"permission_id": {"const": "perform_irreversible_action"}}}]},
+        "make_decision": {"allOf": [{"$ref": "#/$defs/permission"}, {"properties": {"permission_id": {"const": "make_decision"}}}]},
+        "accept_result": {"allOf": [{"$ref": "#/$defs/permission"}, {"properties": {"permission_id": {"const": "accept_result"}}}]},
+        "takeover": {"allOf": [{"$ref": "#/$defs/permission"}, {"properties": {"permission_id": {"const": "takeover"}}}]},
+        "promote_core": {"allOf": [{"$ref": "#/$defs/permission"}, {"properties": {"permission_id": {"const": "promote_core"}}}]},
+        "canonical_write": {"allOf": [{"$ref": "#/$defs/permission"}, {"properties": {"permission_id": {"const": "canonical_write"}}}]},
+        "release_product": {"allOf": [{"$ref": "#/$defs/permission"}, {"properties": {"permission_id": {"const": "release_product"}}}]}
+      }
+    },
+    "separation_of_duty": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["conflicts", "approved_human_exceptions", "self_acceptance_allowed"],
+      "properties": {
+        "conflicts": {"type": "array", "items": {"$ref": "#/$defs/sod_record"}},
+        "approved_human_exceptions": {"type": "array", "items": {"$ref": "#/$defs/exception_record"}},
+        "self_acceptance_allowed": {"type": "boolean"}
+      }
+    },
+    "takeover_chains": {"type": "array", "items": {"$ref": "#/$defs/takeover_chain"}, "minItems": 1},
+    "escalation_routes": {"type": "array", "items": {"$ref": "#/$defs/escalation_route"}, "minItems": 1},
+    "missing_owners": {"$ref": "#/$defs/string_list"},
+    "mismatches": {"$ref": "#/$defs/string_list"},
+    "unknowns": {"$ref": "#/$defs/string_list"},
+    "known_limitations": {"$ref": "#/$defs/string_list"},
+    "lineage": {"$ref": "#/$defs/lineage"},
+    "protocol_run": {"$ref": "#/$defs/protocol_run"},
+    "acceptance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["accepted_by_actor_id", "authority_source_ref", "accepted_at", "assertions", "result"],
+      "properties": {
+        "accepted_by_actor_id": {"$ref": "#/$defs/stable_id"},
+        "authority_source_ref": {"$ref": "#/$defs/safe_ref"},
+        "accepted_at": {"type": "string", "format": "date-time"},
+        "assertions": {"type": "array", "items": {"$ref": "#/$defs/assertion_result"}, "minItems": 1},
+        "result": {"enum": ["accepted", "rejected"]}
+      }
+    },
+    "artifact_lifecycle": {"enum": ["draft", "under_review", "accepted", "rejected", "superseded"]}
+  },
+  "$defs": {
+    "stable_id": {"type": "string", "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{2,127}$", "not": {"enum": ["not_applicable", "not_decided", "not_observed"]}},
+    "safe_ref": {"type": "string", "pattern": "^[A-Za-z0-9][A-Za-z0-9._:/#-]{2,255}$", "not": {"enum": ["not_applicable", "not_decided", "not_observed"]}},
+    "string_list": {"type": "array", "items": {"type": "string", "minLength": 1}, "uniqueItems": true},
+    "actor": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["actor_id", "actor_kind", "safe_identity_ref", "accountability_owner_actor_id"],
+      "properties": {
+        "actor_id": {"$ref": "#/$defs/stable_id"},
+        "actor_kind": {"enum": ["human", "ai_agent", "deterministic_system", "organization_ref"]},
+        "safe_identity_ref": {"$ref": "#/$defs/safe_ref"},
+        "accountability_owner_actor_id": {"$ref": "#/$defs/stable_id"}
+      }
+    },
+    "role_binding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["binding_id", "functional_role", "actor_id", "scope", "authority_source_ref", "effective_at", "expires_at"],
+      "properties": {
+        "binding_id": {"$ref": "#/$defs/stable_id"},
+        "functional_role": {"enum": ["vision_owner", "authority_owner", "decision_owner", "context_preparer", "context_reviewer", "architect_reviewer", "proposer", "builder", "executor", "evaluator", "reviewer", "acceptor", "takeover_owner", "domain_expert", "external_mirror", "host_adapter_maintainer", "cos_cpo"]},
+        "actor_id": {"$ref": "#/$defs/stable_id"},
+        "scope": {"type": "string", "minLength": 1},
+        "authority_source_ref": {"$ref": "#/$defs/safe_ref"},
+        "effective_at": {"type": "string", "format": "date-time"},
+        "expires_at": {"oneOf": [{"type": "string", "format": "date-time"}, {"const": "not_applicable"}]}
+      }
+    },
+    "authority_domain": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["domain", "owner_actor_id", "scope", "authority_source_ref", "human_required"],
+      "properties": {
+        "domain": {"enum": ["final_direction", "decision", "cost", "execution", "acceptance", "takeover", "promotion", "canonical_release"]},
+        "owner_actor_id": {"$ref": "#/$defs/stable_id"},
+        "scope": {"type": "string", "minLength": 1},
+        "authority_source_ref": {"$ref": "#/$defs/safe_ref"},
+        "human_required": {"type": "boolean"}
+      }
+    },
+    "permission": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["permission_id", "actor_ids", "scope", "granting_authority_ref", "grant_status", "declared_allowed", "effective_allowed", "effective_at", "expires_at", "revocation_ref", "constraints"],
+      "properties": {
+        "permission_id": {"enum": ["read_context", "prepare_artifact", "propose", "challenge", "edit_authorized_scope", "external_call", "incur_cost", "perform_irreversible_action", "make_decision", "accept_result", "takeover", "promote_core", "canonical_write", "release_product"]},
+        "actor_ids": {"type": "array", "items": {"$ref": "#/$defs/stable_id"}, "minItems": 1, "uniqueItems": true},
+        "scope": {"type": "string", "minLength": 1},
+        "granting_authority_ref": {"$ref": "#/$defs/safe_ref"},
+        "grant_status": {"enum": ["valid", "expired", "revoked", "unknown", "malformed"]},
+        "declared_allowed": {"enum": [true, false, "not_observed"]},
+        "effective_allowed": {"type": "boolean"},
+        "effective_at": {"oneOf": [{"type": "string", "format": "date-time"}, {"const": "not_observed"}]},
+        "expires_at": {"oneOf": [{"type": "string", "format": "date-time"}, {"const": "not_applicable"}, {"const": "not_observed"}]},
+        "revocation_ref": {"oneOf": [{"$ref": "#/$defs/safe_ref"}, {"const": "not_applicable"}, {"const": "not_observed"}]},
+        "constraints": {"type": "array", "items": {"type": "string", "minLength": 1}, "minItems": 1, "uniqueItems": true}
+      },
+      "oneOf": [
+        {"properties": {"grant_status": {"const": "valid"}, "declared_allowed": {"const": true}, "effective_allowed": {"const": true}}},
+        {"properties": {"grant_status": {"const": "valid"}, "declared_allowed": {"const": false}, "effective_allowed": {"const": false}}},
+        {"properties": {"grant_status": {"enum": ["expired", "revoked"]}, "declared_allowed": {"type": "boolean"}, "effective_allowed": {"const": false}}},
+        {"properties": {"grant_status": {"enum": ["unknown", "malformed"]}, "declared_allowed": {"const": "not_observed"}, "effective_allowed": {"const": false}}}
+      ]
+    },
+    "sod_record": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["conflict_id", "actor_id", "roles", "status", "resolution_ref"],
+      "properties": {
+        "conflict_id": {"$ref": "#/$defs/stable_id"},
+        "actor_id": {"$ref": "#/$defs/stable_id"},
+        "roles": {"type": "array", "items": {"$ref": "#/$defs/stable_id"}, "minItems": 2, "uniqueItems": true},
+        "status": {"enum": ["open", "resolved", "exception_requested"]},
+        "resolution_ref": {"oneOf": [{"$ref": "#/$defs/safe_ref"}, {"const": "not_decided"}]}
+      }
+    },
+    "exception_record": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["exception_id", "decision_ref", "approved_by_actor_id", "scope"],
+      "properties": {
+        "exception_id": {"$ref": "#/$defs/stable_id"},
+        "decision_ref": {"$ref": "#/$defs/safe_ref"},
+        "approved_by_actor_id": {"$ref": "#/$defs/stable_id"},
+        "scope": {"type": "string", "minLength": 1}
+      }
+    },
+    "takeover_chain": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["capability", "trigger", "ordered_actor_ids", "acknowledgement_owner_actor_id", "final_human_actor_id"],
+      "properties": {
+        "capability": {"type": "string", "minLength": 1},
+        "trigger": {"type": "string", "minLength": 1},
+        "ordered_actor_ids": {"type": "array", "items": {"$ref": "#/$defs/stable_id"}, "minItems": 1},
+        "acknowledgement_owner_actor_id": {"$ref": "#/$defs/stable_id"},
+        "final_human_actor_id": {"$ref": "#/$defs/stable_id"}
+      }
+    },
+    "escalation_route": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["route_id", "trigger", "owner_actor_id", "effect"],
+      "properties": {
+        "route_id": {"$ref": "#/$defs/stable_id"},
+        "trigger": {"type": "string", "minLength": 1},
+        "owner_actor_id": {"$ref": "#/$defs/stable_id"},
+        "effect": {"const": "legal_stop_pending_human_decision"}
+      }
+    },
+    "lineage": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["supersedes", "superseded_by"],
+      "properties": {
+        "supersedes": {"oneOf": [{"$ref": "#/$defs/stable_id"}, {"const": "not_applicable"}]},
+        "superseded_by": {"oneOf": [{"$ref": "#/$defs/stable_id"}, {"const": "not_applicable"}]}
+      }
+    },
+    "stage": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["stage_id", "status", "invoked", "reason"],
+      "properties": {
+        "stage_id": {"enum": ["accepted_context_consumption", "authority_domain_inventory", "actor_registry", "functional_role_binding", "permission_binding", "separation_of_duty_check", "takeover_chain_binding", "authority_mismatch_check", "human_authority_acceptance", "automated_permission_enforcement"]},
+        "status": {"enum": ["completed", "skipped", "disabled", "not_attempted", "legal_stop", "failed"]},
+        "invoked": {"type": "boolean"},
+        "reason": {"type": "string"}
+      }
+    },
+    "failure_envelope": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["code", "public_message", "retryable", "side_effect_occurred", "last_safe_checkpoint", "manual_takeover_required", "owner_role", "evidence_refs"],
+      "properties": {
+        "code": {"$ref": "#/$defs/stable_id"},
+        "public_message": {"type": "string", "minLength": 1},
+        "retryable": {"type": "boolean"},
+        "side_effect_occurred": {"type": "boolean"},
+        "last_safe_checkpoint": {"type": "string", "minLength": 1},
+        "manual_takeover_required": {"type": "boolean"},
+        "owner_role": {"$ref": "#/$defs/stable_id"},
+        "evidence_refs": {"type": "array", "items": {"$ref": "#/$defs/safe_ref"}, "uniqueItems": true}
+      }
+    },
+    "protocol_run": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["protocol_id", "stages", "outcome", "failure_envelope", "downstream_started"],
+      "properties": {
+        "protocol_id": {"const": "COS-P03"},
+        "stages": {"type": "array", "items": {"$ref": "#/$defs/stage"}, "minItems": 10, "maxItems": 10},
+        "outcome": {"enum": ["success", "legal_stop", "failed"]},
+        "failure_envelope": {"oneOf": [{"type": "null"}, {"$ref": "#/$defs/failure_envelope"}]},
+        "downstream_started": {"const": false}
+      }
+    },
+    "assertion_result": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["assertion_id", "result", "evidence_refs"],
+      "properties": {
+        "assertion_id": {"$ref": "#/$defs/stable_id"},
+        "result": {"enum": ["pass", "fail", "not_observed", "not_attempted"]},
+        "evidence_refs": {"type": "array", "items": {"$ref": "#/$defs/safe_ref"}, "uniqueItems": true}
+      }
+    }
+  }
+}

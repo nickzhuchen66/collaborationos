@@ -1,0 +1,4107 @@
+{
+  "artifact": {
+    "acceptance_event": {
+      "acceptance_event_id": "accept-cos-a04-approved",
+      "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+      "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+      "accepted_a03_binding_id": "binding-decision-owner",
+      "accepted_at": "2026-07-15T01:00:00Z",
+      "accepted_by_actor_id": "human-decision-owner",
+      "artifact_checksum": "af4b6b70364ec89f8cf382918f0c5bd99e2d84f63770c421329c6cd345a2cfd8",
+      "artifact_id": "COS-A04-APPROVED",
+      "assertions": [
+        "M5B-AST-P04-APPROVED"
+      ],
+      "authority_source_checksum": "9999999999999999999999999999999999999999999999999999999999999999",
+      "authority_source_ref": "cos:decision/COS-019",
+      "result": "pass",
+      "scope": "M5-B manual static acceptance"
+    },
+    "accepted_limitations": [],
+    "artifact_id": "COS-A04-APPROVED",
+    "artifact_lifecycle": "accepted",
+    "artifact_type": "COS-A04",
+    "chosen_option": "option-approve",
+    "common_lineage": {
+      "a01": {
+        "artifact_id": "COS-A01-M5A-ACCEPTED",
+        "artifact_lifecycle": "accepted",
+        "checksum": "1111111111111111111111111111111111111111111111111111111111111111",
+        "current": true,
+        "cutoff": "2026-07-15T00:00:00Z"
+      },
+      "a02": {
+        "artifact_id": "COS-A02-CANDIDATE-BASE",
+        "artifact_lifecycle": "accepted",
+        "checksum": "2222222222222222222222222222222222222222222222222222222222222222",
+        "current": true,
+        "cutoff": "2026-07-15T00:00:00Z"
+      },
+      "a03": {
+        "artifact_id": "COS-A03-M5A-ACCEPTED",
+        "artifact_lifecycle": "accepted",
+        "checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+        "current": true,
+        "cutoff": "2026-07-15T00:00:00Z"
+      },
+      "authority_source_checksum": "9999999999999999999999999999999999999999999999999999999999999999"
+    },
+    "cost_gate": {
+      "a05_artifact_checksum": "56ac2c83f2da0f85c6af05c81c6faed1055a2965c8ebfc0980c652cdb7f53a30",
+      "a05_artifact_id": "COS-A05-CANDIDATE-BASE",
+      "cost_gate_result": "approved_within_ceiling",
+      "effective_cost_allow": true,
+      "required_unknown_cost_count": 0,
+      "triggered": true
+    },
+    "counterevidence": [],
+    "created_at": "2026-07-15T00:00:00Z",
+    "decision_disposition": "approved",
+    "decision_frame": {
+      "alternatives": [
+        "option-approve",
+        "option-reject"
+      ],
+      "baseline_option": "option-reject",
+      "deadline": "2026-07-16T00:00:00Z",
+      "decision_frame_checksum": "4444444444444444444444444444444444444444444444444444444444444444",
+      "decision_frame_id": "decision-frame-1",
+      "in_scope": [
+        "bounded M5-B decision"
+      ],
+      "out_of_scope": [
+        "P05 execution"
+      ],
+      "question": "Approve the bounded option?"
+    },
+    "decision_owner_binding": {
+      "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+      "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+      "accepted_a03_binding_id": "binding-decision-owner",
+      "actor_id": "human-decision-owner",
+      "actor_kind": "human",
+      "authority_source_checksum": "9999999999999999999999999999999999999999999999999999999999999999",
+      "authority_source_ref": "cos:decision/COS-019",
+      "scope": "M5-B evidence and decision packet"
+    },
+    "eligible_for_p05_evaluation": true,
+    "evidence_basis": [
+      {
+        "admission_disposition": "admitted",
+        "decision_basis_eligible": true,
+        "evidence_item_id": "evidence-required-1"
+      }
+    ],
+    "expiry_condition": "Expires when common lineage is superseded.",
+    "is_current": true,
+    "known_consequences": [
+      "A future P05 evaluation may be requested."
+    ],
+    "non_goals": [
+      "No execution is authorized."
+    ],
+    "p05_started": false,
+    "preparer_actor_id": "ai-preparer",
+    "protocol_run": {
+      "downstream_started": false,
+      "failure_envelope": null,
+      "outcome": "success",
+      "protocol_id": "COS-P04",
+      "stages": [
+        {
+          "invoked": true,
+          "reason": "static assertion completed",
+          "stage_id": "prerequisite_common_lineage",
+          "status": "completed"
+        },
+        {
+          "invoked": true,
+          "reason": "static assertion completed",
+          "stage_id": "decision_frame",
+          "status": "completed"
+        },
+        {
+          "invoked": true,
+          "reason": "static assertion completed",
+          "stage_id": "qualified_evidence_basis",
+          "status": "completed"
+        },
+        {
+          "invoked": true,
+          "reason": "static assertion completed",
+          "stage_id": "authority_separation",
+          "status": "completed"
+        },
+        {
+          "invoked": true,
+          "reason": "static assertion completed",
+          "stage_id": "cost_gate",
+          "status": "completed"
+        },
+        {
+          "invoked": true,
+          "reason": "static assertion completed",
+          "stage_id": "human_decision",
+          "status": "completed"
+        },
+        {
+          "invoked": true,
+          "reason": "static assertion completed",
+          "stage_id": "independent_record_review",
+          "status": "completed"
+        },
+        {
+          "invoked": true,
+          "reason": "static assertion completed",
+          "stage_id": "a04_a05_acceptance",
+          "status": "completed"
+        },
+        {
+          "invoked": true,
+          "reason": "static assertion completed",
+          "stage_id": "downstream_eligibility_archive",
+          "status": "completed"
+        },
+        {
+          "invoked": false,
+          "reason": "fixed disabled in M5-B",
+          "stage_id": "automated_instruction_generation",
+          "status": "disabled"
+        }
+      ]
+    },
+    "rationale": "Human owner explicitly recorded approved.",
+    "reversal_condition": "Revisit on changed evidence.",
+    "schema_version": "0.1",
+    "supersedes": "none",
+    "unknowns": []
+  },
+  "expected_artifact_lifecycle": "accepted",
+  "expected_assertions": [
+    "M5B-AST-P04-POS-01"
+  ],
+  "expected_protocol_outcome": "success",
+  "expected_schema_valid": true,
+  "fixture_version": "0.1",
+  "related_artifacts": [
+    {
+      "artifact": {
+        "acceptance_event": {
+          "acceptance_event_id": "accept-cos-a05-candidate-base",
+          "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+          "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+          "accepted_a03_binding_id": "binding-cost-owner",
+          "accepted_at": "2026-07-15T01:00:00Z",
+          "accepted_by_actor_id": "human-cost-owner",
+          "artifact_checksum": "56ac2c83f2da0f85c6af05c81c6faed1055a2965c8ebfc0980c652cdb7f53a30",
+          "artifact_id": "COS-A05-CANDIDATE-BASE",
+          "assertions": [
+            "M5B-AST-A05-POS-01"
+          ],
+          "authority_source_checksum": "9999999999999999999999999999999999999999999999999999999999999999",
+          "authority_source_ref": "cos:decision/COS-019",
+          "result": "pass",
+          "scope": "M5-B manual static acceptance"
+        },
+        "approval_ceiling": 150,
+        "artifact_id": "COS-A05-CANDIDATE-BASE",
+        "artifact_lifecycle": "accepted",
+        "artifact_type": "COS-A05",
+        "cost_gate_result": "approved_within_ceiling",
+        "cost_owner_binding": {
+          "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+          "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+          "accepted_a03_binding_id": "binding-cost-owner",
+          "actor_id": "human-cost-owner",
+          "actor_kind": "human",
+          "authority_source_checksum": "9999999999999999999999999999999999999999999999999999999999999999",
+          "authority_source_ref": "cos:decision/COS-019",
+          "scope": "M5-B evidence and decision packet"
+        },
+        "created_at": "2026-07-15T00:00:00Z",
+        "currency": "USD",
+        "effective_cost_allow": true,
+        "estimates": [
+          {
+            "amount": 100,
+            "assumptions": [
+              "bounded usage"
+            ],
+            "cost_class": "usage",
+            "currency": "USD",
+            "horizon_months": 12
+          }
+        ],
+        "exit_trigger": "Exit before vendor lock-in.",
+        "parent_decision_frame_checksum": "4444444444444444444444444444444444444444444444444444444444444444",
+        "parent_decision_frame_id": "decision-frame-1",
+        "preparer_actor_id": "ai-preparer",
+        "protocol_run": {
+          "downstream_started": false,
+          "failure_envelope": null,
+          "outcome": "success",
+          "protocol_id": "COS-P04-COST-GATE",
+          "stages": [
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "cost_trigger_analysis",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "cost_inventory",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "unknown_cost_check",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "cost_owner_review",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "a05_acceptance",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "archive_lineage",
+              "status": "completed"
+            }
+          ]
+        },
+        "revisit_trigger": "Revisit if estimate exceeds ceiling.",
+        "schema_version": "0.1",
+        "time_horizon_months": 12,
+        "trigger_analysis": "A paid external capability would be required.",
+        "trigger_applicable": true,
+        "trigger_classes": [
+          "paid_or_potentially_paid"
+        ],
+        "unknown_costs": []
+      },
+      "relation": "accepted_cost_gate",
+      "target_schema": "COS-A05"
+    }
+  ],
+  "scenario_id": "M5B-P04-POS-01",
+  "target_schema": "COS-A04",
+  "variants": [
+    {
+      "artifact": {
+        "acceptance_event": {
+          "acceptance_event_id": "accept-cos-a04-approved",
+          "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+          "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+          "accepted_a03_binding_id": "binding-decision-owner",
+          "accepted_at": "2026-07-15T01:00:00Z",
+          "accepted_by_actor_id": "human-decision-owner",
+          "artifact_checksum": "ae45e4d9be1cd64295047f000b44b5e8d8d861dc14e850565c0ed22b6ff8afb1",
+          "artifact_id": "COS-A04-APPROVED",
+          "assertions": [
+            "M5B-AST-P04-APPROVED"
+          ],
+          "authority_source_checksum": "9999999999999999999999999999999999999999999999999999999999999999",
+          "authority_source_ref": "cos:decision/COS-019",
+          "result": "pass",
+          "scope": "M5-B manual static acceptance"
+        },
+        "accepted_limitations": [],
+        "artifact_id": "COS-A04-APPROVED",
+        "artifact_lifecycle": "accepted",
+        "artifact_type": "COS-A04",
+        "chosen_option": "option-approve",
+        "common_lineage": {
+          "a01": {
+            "artifact_id": "COS-A01-M5A-ACCEPTED",
+            "artifact_lifecycle": "accepted",
+            "checksum": "1111111111111111111111111111111111111111111111111111111111111111",
+            "current": true,
+            "cutoff": "2026-07-15T00:00:00Z"
+          },
+          "a02": {
+            "artifact_id": "COS-A02-CANDIDATE-BASE",
+            "artifact_lifecycle": "accepted",
+            "checksum": "2222222222222222222222222222222222222222222222222222222222222222",
+            "current": true,
+            "cutoff": "2026-07-15T00:00:00Z"
+          },
+          "a03": {
+            "artifact_id": "COS-A03-M5A-ACCEPTED",
+            "artifact_lifecycle": "accepted",
+            "checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+            "current": true,
+            "cutoff": "2026-07-15T00:00:00Z"
+          },
+          "authority_source_checksum": "9999999999999999999999999999999999999999999999999999999999999999"
+        },
+        "cost_gate": {
+          "a05_artifact_checksum": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+          "a05_artifact_id": "COS-A05-FAKE",
+          "cost_gate_result": "approved_within_ceiling",
+          "effective_cost_allow": true,
+          "required_unknown_cost_count": 0,
+          "triggered": true
+        },
+        "counterevidence": [],
+        "created_at": "2026-07-15T00:00:00Z",
+        "decision_disposition": "approved",
+        "decision_frame": {
+          "alternatives": [
+            "option-approve",
+            "option-reject"
+          ],
+          "baseline_option": "option-reject",
+          "deadline": "2026-07-16T00:00:00Z",
+          "decision_frame_checksum": "4444444444444444444444444444444444444444444444444444444444444444",
+          "decision_frame_id": "decision-frame-1",
+          "in_scope": [
+            "bounded M5-B decision"
+          ],
+          "out_of_scope": [
+            "P05 execution"
+          ],
+          "question": "Approve the bounded option?"
+        },
+        "decision_owner_binding": {
+          "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+          "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+          "accepted_a03_binding_id": "binding-decision-owner",
+          "actor_id": "human-decision-owner",
+          "actor_kind": "human",
+          "authority_source_checksum": "9999999999999999999999999999999999999999999999999999999999999999",
+          "authority_source_ref": "cos:decision/COS-019",
+          "scope": "M5-B evidence and decision packet"
+        },
+        "eligible_for_p05_evaluation": true,
+        "evidence_basis": [
+          {
+            "admission_disposition": "admitted",
+            "decision_basis_eligible": true,
+            "evidence_item_id": "evidence-required-1"
+          }
+        ],
+        "expiry_condition": "Expires when common lineage is superseded.",
+        "is_current": true,
+        "known_consequences": [
+          "A future P05 evaluation may be requested."
+        ],
+        "non_goals": [
+          "No execution is authorized."
+        ],
+        "p05_started": false,
+        "preparer_actor_id": "ai-preparer",
+        "protocol_run": {
+          "downstream_started": false,
+          "failure_envelope": null,
+          "outcome": "success",
+          "protocol_id": "COS-P04",
+          "stages": [
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "prerequisite_common_lineage",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "decision_frame",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "qualified_evidence_basis",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "authority_separation",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "cost_gate",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "human_decision",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "independent_record_review",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "a04_a05_acceptance",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "downstream_eligibility_archive",
+              "status": "completed"
+            },
+            {
+              "invoked": false,
+              "reason": "fixed disabled in M5-B",
+              "stage_id": "automated_instruction_generation",
+              "status": "disabled"
+            }
+          ]
+        },
+        "rationale": "Human owner explicitly recorded approved.",
+        "reversal_condition": "Revisit on changed evidence.",
+        "schema_version": "0.1",
+        "supersedes": "none",
+        "unknowns": []
+      },
+      "expected_schema_valid": true,
+      "expected_semantic_valid": false,
+      "related_artifacts": [],
+      "target_schema": "COS-A04",
+      "variant_id": "M5B-P04-POS-01A-FABRICATED-A05"
+    },
+    {
+      "artifact": {
+        "acceptance_event": {
+          "acceptance_event_id": "accept-cos-a04-approved",
+          "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+          "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+          "accepted_a03_binding_id": "binding-decision-owner",
+          "accepted_at": "2026-07-15T01:00:00Z",
+          "accepted_by_actor_id": "human-decision-owner",
+          "artifact_checksum": "7d14afdb921c5e161b9404686032ca6ca0e5c620ddb5dc55324444a51f717553",
+          "artifact_id": "COS-A04-APPROVED",
+          "assertions": [
+            "M5B-AST-P04-APPROVED"
+          ],
+          "authority_source_checksum": "9999999999999999999999999999999999999999999999999999999999999999",
+          "authority_source_ref": "cos:decision/COS-019",
+          "result": "pass",
+          "scope": "M5-B manual static acceptance"
+        },
+        "accepted_limitations": [],
+        "artifact_id": "COS-A04-APPROVED",
+        "artifact_lifecycle": "accepted",
+        "artifact_type": "COS-A04",
+        "chosen_option": "option-approve",
+        "common_lineage": {
+          "a01": {
+            "artifact_id": "COS-A01-M5A-ACCEPTED",
+            "artifact_lifecycle": "accepted",
+            "checksum": "1111111111111111111111111111111111111111111111111111111111111111",
+            "current": true,
+            "cutoff": "2026-07-15T00:00:00Z"
+          },
+          "a02": {
+            "artifact_id": "COS-A02-CANDIDATE-BASE",
+            "artifact_lifecycle": "accepted",
+            "checksum": "2222222222222222222222222222222222222222222222222222222222222222",
+            "current": true,
+            "cutoff": "2026-07-15T00:00:00Z"
+          },
+          "a03": {
+            "artifact_id": "COS-A03-M5A-ACCEPTED",
+            "artifact_lifecycle": "accepted",
+            "checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+            "current": true,
+            "cutoff": "2026-07-15T00:00:00Z"
+          },
+          "authority_source_checksum": "9999999999999999999999999999999999999999999999999999999999999999"
+        },
+        "cost_gate": {
+          "a05_artifact_checksum": "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+          "a05_artifact_id": "COS-A05-CANDIDATE-BASE",
+          "cost_gate_result": "approved_within_ceiling",
+          "effective_cost_allow": true,
+          "required_unknown_cost_count": 0,
+          "triggered": true
+        },
+        "counterevidence": [],
+        "created_at": "2026-07-15T00:00:00Z",
+        "decision_disposition": "approved",
+        "decision_frame": {
+          "alternatives": [
+            "option-approve",
+            "option-reject"
+          ],
+          "baseline_option": "option-reject",
+          "deadline": "2026-07-16T00:00:00Z",
+          "decision_frame_checksum": "4444444444444444444444444444444444444444444444444444444444444444",
+          "decision_frame_id": "decision-frame-1",
+          "in_scope": [
+            "bounded M5-B decision"
+          ],
+          "out_of_scope": [
+            "P05 execution"
+          ],
+          "question": "Approve the bounded option?"
+        },
+        "decision_owner_binding": {
+          "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+          "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+          "accepted_a03_binding_id": "binding-decision-owner",
+          "actor_id": "human-decision-owner",
+          "actor_kind": "human",
+          "authority_source_checksum": "9999999999999999999999999999999999999999999999999999999999999999",
+          "authority_source_ref": "cos:decision/COS-019",
+          "scope": "M5-B evidence and decision packet"
+        },
+        "eligible_for_p05_evaluation": true,
+        "evidence_basis": [
+          {
+            "admission_disposition": "admitted",
+            "decision_basis_eligible": true,
+            "evidence_item_id": "evidence-required-1"
+          }
+        ],
+        "expiry_condition": "Expires when common lineage is superseded.",
+        "is_current": true,
+        "known_consequences": [
+          "A future P05 evaluation may be requested."
+        ],
+        "non_goals": [
+          "No execution is authorized."
+        ],
+        "p05_started": false,
+        "preparer_actor_id": "ai-preparer",
+        "protocol_run": {
+          "downstream_started": false,
+          "failure_envelope": null,
+          "outcome": "success",
+          "protocol_id": "COS-P04",
+          "stages": [
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "prerequisite_common_lineage",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "decision_frame",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "qualified_evidence_basis",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "authority_separation",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "cost_gate",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "human_decision",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "independent_record_review",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "a04_a05_acceptance",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "downstream_eligibility_archive",
+              "status": "completed"
+            },
+            {
+              "invoked": false,
+              "reason": "fixed disabled in M5-B",
+              "stage_id": "automated_instruction_generation",
+              "status": "disabled"
+            }
+          ]
+        },
+        "rationale": "Human owner explicitly recorded approved.",
+        "reversal_condition": "Revisit on changed evidence.",
+        "schema_version": "0.1",
+        "supersedes": "none",
+        "unknowns": []
+      },
+      "expected_schema_valid": true,
+      "expected_semantic_valid": false,
+      "related_artifacts": [
+        {
+          "artifact": {
+            "acceptance_event": {
+              "acceptance_event_id": "accept-cos-a05-candidate-base",
+              "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+              "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+              "accepted_a03_binding_id": "binding-cost-owner",
+              "accepted_at": "2026-07-15T01:00:00Z",
+              "accepted_by_actor_id": "human-cost-owner",
+              "artifact_checksum": "56ac2c83f2da0f85c6af05c81c6faed1055a2965c8ebfc0980c652cdb7f53a30",
+              "artifact_id": "COS-A05-CANDIDATE-BASE",
+              "assertions": [
+                "M5B-AST-A05-POS-01"
+              ],
+              "authority_source_checksum": "9999999999999999999999999999999999999999999999999999999999999999",
+              "authority_source_ref": "cos:decision/COS-019",
+              "result": "pass",
+              "scope": "M5-B manual static acceptance"
+            },
+            "approval_ceiling": 150,
+            "artifact_id": "COS-A05-CANDIDATE-BASE",
+            "artifact_lifecycle": "accepted",
+            "artifact_type": "COS-A05",
+            "cost_gate_result": "approved_within_ceiling",
+            "cost_owner_binding": {
+              "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+              "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+              "accepted_a03_binding_id": "binding-cost-owner",
+              "actor_id": "human-cost-owner",
+              "actor_kind": "human",
+              "authority_source_checksum": "9999999999999999999999999999999999999999999999999999999999999999",
+              "authority_source_ref": "cos:decision/COS-019",
+              "scope": "M5-B evidence and decision packet"
+            },
+            "created_at": "2026-07-15T00:00:00Z",
+            "currency": "USD",
+            "effective_cost_allow": true,
+            "estimates": [
+              {
+                "amount": 100,
+                "assumptions": [
+                  "bounded usage"
+                ],
+                "cost_class": "usage",
+                "currency": "USD",
+                "horizon_months": 12
+              }
+            ],
+            "exit_trigger": "Exit before vendor lock-in.",
+            "parent_decision_frame_checksum": "4444444444444444444444444444444444444444444444444444444444444444",
+            "parent_decision_frame_id": "decision-frame-1",
+            "preparer_actor_id": "ai-preparer",
+            "protocol_run": {
+              "downstream_started": false,
+              "failure_envelope": null,
+              "outcome": "success",
+              "protocol_id": "COS-P04-COST-GATE",
+              "stages": [
+                {
+                  "invoked": true,
+                  "reason": "static assertion completed",
+                  "stage_id": "cost_trigger_analysis",
+                  "status": "completed"
+                },
+                {
+                  "invoked": true,
+                  "reason": "static assertion completed",
+                  "stage_id": "cost_inventory",
+                  "status": "completed"
+                },
+                {
+                  "invoked": true,
+                  "reason": "static assertion completed",
+                  "stage_id": "unknown_cost_check",
+                  "status": "completed"
+                },
+                {
+                  "invoked": true,
+                  "reason": "static assertion completed",
+                  "stage_id": "cost_owner_review",
+                  "status": "completed"
+                },
+                {
+                  "invoked": true,
+                  "reason": "static assertion completed",
+                  "stage_id": "a05_acceptance",
+                  "status": "completed"
+                },
+                {
+                  "invoked": true,
+                  "reason": "static assertion completed",
+                  "stage_id": "archive_lineage",
+                  "status": "completed"
+                }
+              ]
+            },
+            "revisit_trigger": "Revisit if estimate exceeds ceiling.",
+            "schema_version": "0.1",
+            "time_horizon_months": 12,
+            "trigger_analysis": "A paid external capability would be required.",
+            "trigger_applicable": true,
+            "trigger_classes": [
+              "paid_or_potentially_paid"
+            ],
+            "unknown_costs": []
+          },
+          "relation": "accepted_cost_gate",
+          "target_schema": "COS-A05"
+        }
+      ],
+      "target_schema": "COS-A04",
+      "variant_id": "M5B-P04-POS-01B-A05-CHECKSUM-MISMATCH"
+    },
+    {
+      "artifact": {
+        "acceptance_event": {
+          "acceptance_event_id": "accept-cos-a04-approved",
+          "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+          "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+          "accepted_a03_binding_id": "binding-decision-owner",
+          "accepted_at": "2026-07-15T01:00:00Z",
+          "accepted_by_actor_id": "human-decision-owner",
+          "artifact_checksum": "274b7666919438d14317f1a96ccc2b377ddb99b23770da286bae661366d20470",
+          "artifact_id": "COS-A04-APPROVED",
+          "assertions": [
+            "M5B-AST-P04-APPROVED"
+          ],
+          "authority_source_checksum": "9999999999999999999999999999999999999999999999999999999999999999",
+          "authority_source_ref": "cos:decision/COS-019",
+          "result": "pass",
+          "scope": "M5-B manual static acceptance"
+        },
+        "accepted_limitations": [],
+        "artifact_id": "COS-A04-APPROVED",
+        "artifact_lifecycle": "accepted",
+        "artifact_type": "COS-A04",
+        "chosen_option": "option-approve",
+        "common_lineage": {
+          "a01": {
+            "artifact_id": "COS-A01-M5A-ACCEPTED",
+            "artifact_lifecycle": "accepted",
+            "checksum": "1111111111111111111111111111111111111111111111111111111111111111",
+            "current": true,
+            "cutoff": "2026-07-15T00:00:00Z"
+          },
+          "a02": {
+            "artifact_id": "COS-A02-CANDIDATE-BASE",
+            "artifact_lifecycle": "accepted",
+            "checksum": "2222222222222222222222222222222222222222222222222222222222222222",
+            "current": true,
+            "cutoff": "2026-07-15T00:00:00Z"
+          },
+          "a03": {
+            "artifact_id": "COS-A03-M5A-ACCEPTED",
+            "artifact_lifecycle": "accepted",
+            "checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+            "current": true,
+            "cutoff": "2026-07-15T00:00:00Z"
+          },
+          "authority_source_checksum": "9999999999999999999999999999999999999999999999999999999999999999"
+        },
+        "cost_gate": {
+          "a05_artifact_checksum": "7bea6f64a2164c47feaaad2cb262f02498aa59b6d8e3322e5f3e8b1c93f1080f",
+          "a05_artifact_id": "COS-A05-CANDIDATE-BASE",
+          "cost_gate_result": "approved_within_ceiling",
+          "effective_cost_allow": true,
+          "required_unknown_cost_count": 0,
+          "triggered": true
+        },
+        "counterevidence": [],
+        "created_at": "2026-07-15T00:00:00Z",
+        "decision_disposition": "approved",
+        "decision_frame": {
+          "alternatives": [
+            "option-approve",
+            "option-reject"
+          ],
+          "baseline_option": "option-reject",
+          "deadline": "2026-07-16T00:00:00Z",
+          "decision_frame_checksum": "4444444444444444444444444444444444444444444444444444444444444444",
+          "decision_frame_id": "decision-frame-1",
+          "in_scope": [
+            "bounded M5-B decision"
+          ],
+          "out_of_scope": [
+            "P05 execution"
+          ],
+          "question": "Approve the bounded option?"
+        },
+        "decision_owner_binding": {
+          "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+          "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+          "accepted_a03_binding_id": "binding-decision-owner",
+          "actor_id": "human-decision-owner",
+          "actor_kind": "human",
+          "authority_source_checksum": "9999999999999999999999999999999999999999999999999999999999999999",
+          "authority_source_ref": "cos:decision/COS-019",
+          "scope": "M5-B evidence and decision packet"
+        },
+        "eligible_for_p05_evaluation": true,
+        "evidence_basis": [
+          {
+            "admission_disposition": "admitted",
+            "decision_basis_eligible": true,
+            "evidence_item_id": "evidence-required-1"
+          }
+        ],
+        "expiry_condition": "Expires when common lineage is superseded.",
+        "is_current": true,
+        "known_consequences": [
+          "A future P05 evaluation may be requested."
+        ],
+        "non_goals": [
+          "No execution is authorized."
+        ],
+        "p05_started": false,
+        "preparer_actor_id": "ai-preparer",
+        "protocol_run": {
+          "downstream_started": false,
+          "failure_envelope": null,
+          "outcome": "success",
+          "protocol_id": "COS-P04",
+          "stages": [
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "prerequisite_common_lineage",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "decision_frame",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "qualified_evidence_basis",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "authority_separation",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "cost_gate",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "human_decision",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "independent_record_review",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "a04_a05_acceptance",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "downstream_eligibility_archive",
+              "status": "completed"
+            },
+            {
+              "invoked": false,
+              "reason": "fixed disabled in M5-B",
+              "stage_id": "automated_instruction_generation",
+              "status": "disabled"
+            }
+          ]
+        },
+        "rationale": "Human owner explicitly recorded approved.",
+        "reversal_condition": "Revisit on changed evidence.",
+        "schema_version": "0.1",
+        "supersedes": "none",
+        "unknowns": []
+      },
+      "expected_schema_valid": true,
+      "expected_semantic_valid": false,
+      "related_artifacts": [
+        {
+          "artifact": {
+            "acceptance_event": null,
+            "approval_ceiling": 150,
+            "artifact_id": "COS-A05-CANDIDATE-BASE",
+            "artifact_lifecycle": "rejected",
+            "artifact_type": "COS-A05",
+            "cost_gate_result": "approved_within_ceiling",
+            "cost_owner_binding": {
+              "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+              "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+              "accepted_a03_binding_id": "binding-cost-owner",
+              "actor_id": "human-cost-owner",
+              "actor_kind": "human",
+              "authority_source_checksum": "9999999999999999999999999999999999999999999999999999999999999999",
+              "authority_source_ref": "cos:decision/COS-019",
+              "scope": "M5-B evidence and decision packet"
+            },
+            "created_at": "2026-07-15T00:00:00Z",
+            "currency": "USD",
+            "effective_cost_allow": true,
+            "estimates": [
+              {
+                "amount": 100,
+                "assumptions": [
+                  "bounded usage"
+                ],
+                "cost_class": "usage",
+                "currency": "USD",
+                "horizon_months": 12
+              }
+            ],
+            "exit_trigger": "Exit before vendor lock-in.",
+            "parent_decision_frame_checksum": "4444444444444444444444444444444444444444444444444444444444444444",
+            "parent_decision_frame_id": "decision-frame-1",
+            "preparer_actor_id": "ai-preparer",
+            "protocol_run": {
+              "downstream_started": false,
+              "failure_envelope": null,
+              "outcome": "success",
+              "protocol_id": "COS-P04-COST-GATE",
+              "stages": [
+                {
+                  "invoked": true,
+                  "reason": "static assertion completed",
+                  "stage_id": "cost_trigger_analysis",
+                  "status": "completed"
+                },
+                {
+                  "invoked": true,
+                  "reason": "static assertion completed",
+                  "stage_id": "cost_inventory",
+                  "status": "completed"
+                },
+                {
+                  "invoked": true,
+                  "reason": "static assertion completed",
+                  "stage_id": "unknown_cost_check",
+                  "status": "completed"
+                },
+                {
+                  "invoked": true,
+                  "reason": "static assertion completed",
+                  "stage_id": "cost_owner_review",
+                  "status": "completed"
+                },
+                {
+                  "invoked": true,
+                  "reason": "static assertion completed",
+                  "stage_id": "a05_acceptance",
+                  "status": "completed"
+                },
+                {
+                  "invoked": true,
+                  "reason": "static assertion completed",
+                  "stage_id": "archive_lineage",
+                  "status": "completed"
+                }
+              ]
+            },
+            "revisit_trigger": "Revisit if estimate exceeds ceiling.",
+            "schema_version": "0.1",
+            "time_horizon_months": 12,
+            "trigger_analysis": "A paid external capability would be required.",
+            "trigger_applicable": true,
+            "trigger_classes": [
+              "paid_or_potentially_paid"
+            ],
+            "unknown_costs": []
+          },
+          "relation": "accepted_cost_gate",
+          "target_schema": "COS-A05"
+        }
+      ],
+      "target_schema": "COS-A04",
+      "variant_id": "M5B-P04-POS-01C-A05-NOT-ACCEPTED"
+    },
+    {
+      "artifact": {
+        "acceptance_event": {
+          "acceptance_event_id": "accept-cos-a04-approved",
+          "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+          "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+          "accepted_a03_binding_id": "binding-decision-owner",
+          "accepted_at": "2026-07-15T01:00:00Z",
+          "accepted_by_actor_id": "human-decision-owner",
+          "artifact_checksum": "297c4d7df09907235924f89a1e661b24da4f38f824459fcdfe4619397037e0da",
+          "artifact_id": "COS-A04-APPROVED",
+          "assertions": [
+            "M5B-AST-P04-APPROVED"
+          ],
+          "authority_source_checksum": "9999999999999999999999999999999999999999999999999999999999999999",
+          "authority_source_ref": "cos:decision/COS-019",
+          "result": "pass",
+          "scope": "M5-B manual static acceptance"
+        },
+        "accepted_limitations": [],
+        "artifact_id": "COS-A04-APPROVED",
+        "artifact_lifecycle": "accepted",
+        "artifact_type": "COS-A04",
+        "chosen_option": "option-approve",
+        "common_lineage": {
+          "a01": {
+            "artifact_id": "COS-A01-M5A-ACCEPTED",
+            "artifact_lifecycle": "accepted",
+            "checksum": "1111111111111111111111111111111111111111111111111111111111111111",
+            "current": true,
+            "cutoff": "2026-07-15T00:00:00Z"
+          },
+          "a02": {
+            "artifact_id": "COS-A02-CANDIDATE-BASE",
+            "artifact_lifecycle": "accepted",
+            "checksum": "2222222222222222222222222222222222222222222222222222222222222222",
+            "current": true,
+            "cutoff": "2026-07-15T00:00:00Z"
+          },
+          "a03": {
+            "artifact_id": "COS-A03-M5A-ACCEPTED",
+            "artifact_lifecycle": "accepted",
+            "checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+            "current": true,
+            "cutoff": "2026-07-15T00:00:00Z"
+          },
+          "authority_source_checksum": "9999999999999999999999999999999999999999999999999999999999999999"
+        },
+        "cost_gate": {
+          "a05_artifact_checksum": "858a7b5ac8a9dcc7b4863f39d5e6eb55e4d2aa74b16463d3aea500a0f5f9c5ac",
+          "a05_artifact_id": "COS-A05-CANDIDATE-BASE",
+          "cost_gate_result": "approved_within_ceiling",
+          "effective_cost_allow": true,
+          "required_unknown_cost_count": 0,
+          "triggered": true
+        },
+        "counterevidence": [],
+        "created_at": "2026-07-15T00:00:00Z",
+        "decision_disposition": "approved",
+        "decision_frame": {
+          "alternatives": [
+            "option-approve",
+            "option-reject"
+          ],
+          "baseline_option": "option-reject",
+          "deadline": "2026-07-16T00:00:00Z",
+          "decision_frame_checksum": "4444444444444444444444444444444444444444444444444444444444444444",
+          "decision_frame_id": "decision-frame-1",
+          "in_scope": [
+            "bounded M5-B decision"
+          ],
+          "out_of_scope": [
+            "P05 execution"
+          ],
+          "question": "Approve the bounded option?"
+        },
+        "decision_owner_binding": {
+          "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+          "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+          "accepted_a03_binding_id": "binding-decision-owner",
+          "actor_id": "human-decision-owner",
+          "actor_kind": "human",
+          "authority_source_checksum": "9999999999999999999999999999999999999999999999999999999999999999",
+          "authority_source_ref": "cos:decision/COS-019",
+          "scope": "M5-B evidence and decision packet"
+        },
+        "eligible_for_p05_evaluation": true,
+        "evidence_basis": [
+          {
+            "admission_disposition": "admitted",
+            "decision_basis_eligible": true,
+            "evidence_item_id": "evidence-required-1"
+          }
+        ],
+        "expiry_condition": "Expires when common lineage is superseded.",
+        "is_current": true,
+        "known_consequences": [
+          "A future P05 evaluation may be requested."
+        ],
+        "non_goals": [
+          "No execution is authorized."
+        ],
+        "p05_started": false,
+        "preparer_actor_id": "ai-preparer",
+        "protocol_run": {
+          "downstream_started": false,
+          "failure_envelope": null,
+          "outcome": "success",
+          "protocol_id": "COS-P04",
+          "stages": [
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "prerequisite_common_lineage",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "decision_frame",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "qualified_evidence_basis",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "authority_separation",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "cost_gate",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "human_decision",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "independent_record_review",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "a04_a05_acceptance",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "downstream_eligibility_archive",
+              "status": "completed"
+            },
+            {
+              "invoked": false,
+              "reason": "fixed disabled in M5-B",
+              "stage_id": "automated_instruction_generation",
+              "status": "disabled"
+            }
+          ]
+        },
+        "rationale": "Human owner explicitly recorded approved.",
+        "reversal_condition": "Revisit on changed evidence.",
+        "schema_version": "0.1",
+        "supersedes": "none",
+        "unknowns": []
+      },
+      "expected_schema_valid": true,
+      "expected_semantic_valid": false,
+      "related_artifacts": [
+        {
+          "artifact": {
+            "acceptance_event": {
+              "acceptance_event_id": "accept-cos-a05-candidate-base",
+              "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+              "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+              "accepted_a03_binding_id": "binding-cost-owner",
+              "accepted_at": "2026-07-15T01:00:00Z",
+              "accepted_by_actor_id": "human-cost-owner",
+              "artifact_checksum": "858a7b5ac8a9dcc7b4863f39d5e6eb55e4d2aa74b16463d3aea500a0f5f9c5ac",
+              "artifact_id": "COS-A05-CANDIDATE-BASE",
+              "assertions": [
+                "M5B-AST-A05-POS-01"
+              ],
+              "authority_source_checksum": "9999999999999999999999999999999999999999999999999999999999999999",
+              "authority_source_ref": "cos:decision/COS-019",
+              "result": "pass",
+              "scope": "M5-B manual static acceptance"
+            },
+            "approval_ceiling": 150,
+            "artifact_id": "COS-A05-CANDIDATE-BASE",
+            "artifact_lifecycle": "accepted",
+            "artifact_type": "COS-A05",
+            "cost_gate_result": "approved_within_ceiling",
+            "cost_owner_binding": {
+              "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+              "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+              "accepted_a03_binding_id": "binding-cost-owner",
+              "actor_id": "human-cost-owner",
+              "actor_kind": "human",
+              "authority_source_checksum": "9999999999999999999999999999999999999999999999999999999999999999",
+              "authority_source_ref": "cos:decision/COS-019",
+              "scope": "M5-B evidence and decision packet"
+            },
+            "created_at": "2026-07-15T00:00:00Z",
+            "currency": "USD",
+            "effective_cost_allow": true,
+            "estimates": [
+              {
+                "amount": 100,
+                "assumptions": [
+                  "bounded usage"
+                ],
+                "cost_class": "usage",
+                "currency": "USD",
+                "horizon_months": 12
+              }
+            ],
+            "exit_trigger": "Exit before vendor lock-in.",
+            "parent_decision_frame_checksum": "4444444444444444444444444444444444444444444444444444444444444444",
+            "parent_decision_frame_id": "decision-frame-wrong",
+            "preparer_actor_id": "ai-preparer",
+            "protocol_run": {
+              "downstream_started": false,
+              "failure_envelope": null,
+              "outcome": "success",
+              "protocol_id": "COS-P04-COST-GATE",
+              "stages": [
+                {
+                  "invoked": true,
+                  "reason": "static assertion completed",
+                  "stage_id": "cost_trigger_analysis",
+                  "status": "completed"
+                },
+                {
+                  "invoked": true,
+                  "reason": "static assertion completed",
+                  "stage_id": "cost_inventory",
+                  "status": "completed"
+                },
+                {
+                  "invoked": true,
+                  "reason": "static assertion completed",
+                  "stage_id": "unknown_cost_check",
+                  "status": "completed"
+                },
+                {
+                  "invoked": true,
+                  "reason": "static assertion completed",
+                  "stage_id": "cost_owner_review",
+                  "status": "completed"
+                },
+                {
+                  "invoked": true,
+                  "reason": "static assertion completed",
+                  "stage_id": "a05_acceptance",
+                  "status": "completed"
+                },
+                {
+                  "invoked": true,
+                  "reason": "static assertion completed",
+                  "stage_id": "archive_lineage",
+                  "status": "completed"
+                }
+              ]
+            },
+            "revisit_trigger": "Revisit if estimate exceeds ceiling.",
+            "schema_version": "0.1",
+            "time_horizon_months": 12,
+            "trigger_analysis": "A paid external capability would be required.",
+            "trigger_applicable": true,
+            "trigger_classes": [
+              "paid_or_potentially_paid"
+            ],
+            "unknown_costs": []
+          },
+          "relation": "accepted_cost_gate",
+          "target_schema": "COS-A05"
+        }
+      ],
+      "target_schema": "COS-A04",
+      "variant_id": "M5B-P04-POS-01D-A05-WRONG-FRAME"
+    },
+    {
+      "artifact": {
+        "acceptance_event": {
+          "acceptance_event_id": "accept-cos-a04-approved",
+          "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+          "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+          "accepted_a03_binding_id": "binding-decision-owner",
+          "accepted_at": "2026-07-15T01:00:00Z",
+          "accepted_by_actor_id": "human-decision-owner",
+          "artifact_checksum": "af4b6b70364ec89f8cf382918f0c5bd99e2d84f63770c421329c6cd345a2cfd8",
+          "artifact_id": "COS-A04-APPROVED",
+          "assertions": [
+            "M5B-AST-P04-APPROVED"
+          ],
+          "authority_source_checksum": "9999999999999999999999999999999999999999999999999999999999999999",
+          "authority_source_ref": "cos:decision/COS-019",
+          "result": "pass",
+          "scope": "M5-B manual static acceptance"
+        },
+        "accepted_limitations": [],
+        "artifact_id": "COS-A04-APPROVED",
+        "artifact_lifecycle": "accepted",
+        "artifact_type": "COS-A04",
+        "chosen_option": "option-approve",
+        "common_lineage": {
+          "a01": {
+            "artifact_id": "COS-A01-M5A-ACCEPTED",
+            "artifact_lifecycle": "accepted",
+            "checksum": "1111111111111111111111111111111111111111111111111111111111111111",
+            "current": true,
+            "cutoff": "2026-07-15T00:00:00Z"
+          },
+          "a02": {
+            "artifact_id": "COS-A02-CANDIDATE-BASE",
+            "artifact_lifecycle": "accepted",
+            "checksum": "2222222222222222222222222222222222222222222222222222222222222222",
+            "current": true,
+            "cutoff": "2026-07-15T00:00:00Z"
+          },
+          "a03": {
+            "artifact_id": "COS-A03-M5A-ACCEPTED",
+            "artifact_lifecycle": "accepted",
+            "checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+            "current": true,
+            "cutoff": "2026-07-15T00:00:00Z"
+          },
+          "authority_source_checksum": "9999999999999999999999999999999999999999999999999999999999999999"
+        },
+        "cost_gate": {
+          "a05_artifact_checksum": "56ac2c83f2da0f85c6af05c81c6faed1055a2965c8ebfc0980c652cdb7f53a30",
+          "a05_artifact_id": "COS-A05-CANDIDATE-BASE",
+          "cost_gate_result": "approved_within_ceiling",
+          "effective_cost_allow": true,
+          "required_unknown_cost_count": 0,
+          "triggered": true
+        },
+        "counterevidence": [],
+        "created_at": "2026-07-15T00:00:00Z",
+        "decision_disposition": "approved",
+        "decision_frame": {
+          "alternatives": [
+            "option-approve",
+            "option-reject"
+          ],
+          "baseline_option": "option-reject",
+          "deadline": "2026-07-16T00:00:00Z",
+          "decision_frame_checksum": "4444444444444444444444444444444444444444444444444444444444444444",
+          "decision_frame_id": "decision-frame-1",
+          "in_scope": [
+            "bounded M5-B decision"
+          ],
+          "out_of_scope": [
+            "P05 execution"
+          ],
+          "question": "Approve the bounded option?"
+        },
+        "decision_owner_binding": {
+          "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+          "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+          "accepted_a03_binding_id": "binding-decision-owner",
+          "actor_id": "human-decision-owner",
+          "actor_kind": "human",
+          "authority_source_checksum": "9999999999999999999999999999999999999999999999999999999999999999",
+          "authority_source_ref": "cos:decision/COS-019",
+          "scope": "M5-B evidence and decision packet"
+        },
+        "eligible_for_p05_evaluation": true,
+        "evidence_basis": [
+          {
+            "admission_disposition": "admitted",
+            "decision_basis_eligible": true,
+            "evidence_item_id": "evidence-required-1"
+          }
+        ],
+        "expiry_condition": "Expires when common lineage is superseded.",
+        "is_current": true,
+        "known_consequences": [
+          "A future P05 evaluation may be requested."
+        ],
+        "non_goals": [
+          "No execution is authorized."
+        ],
+        "p05_started": false,
+        "preparer_actor_id": "ai-preparer",
+        "protocol_run": {
+          "downstream_started": false,
+          "failure_envelope": null,
+          "outcome": "success",
+          "protocol_id": "COS-P04",
+          "stages": [
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "prerequisite_common_lineage",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "decision_frame",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "qualified_evidence_basis",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "authority_separation",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "cost_gate",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "human_decision",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "independent_record_review",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "a04_a05_acceptance",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "downstream_eligibility_archive",
+              "status": "completed"
+            },
+            {
+              "invoked": false,
+              "reason": "fixed disabled in M5-B",
+              "stage_id": "automated_instruction_generation",
+              "status": "disabled"
+            }
+          ]
+        },
+        "rationale": "Human owner explicitly recorded approved.",
+        "reversal_condition": "Revisit on changed evidence.",
+        "schema_version": "0.1",
+        "supersedes": "none",
+        "unknowns": []
+      },
+      "expected_schema_valid": true,
+      "expected_semantic_valid": false,
+      "related_artifacts": [
+        {
+          "artifact": {
+            "acceptance_event": {
+              "acceptance_event_id": "accept-cos-a05-candidate-base",
+              "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+              "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+              "accepted_a03_binding_id": "binding-wrong",
+              "accepted_at": "2026-07-15T01:00:00Z",
+              "accepted_by_actor_id": "human-cost-owner",
+              "artifact_checksum": "56ac2c83f2da0f85c6af05c81c6faed1055a2965c8ebfc0980c652cdb7f53a30",
+              "artifact_id": "COS-A05-CANDIDATE-BASE",
+              "assertions": [
+                "M5B-AST-A05-POS-01"
+              ],
+              "authority_source_checksum": "9999999999999999999999999999999999999999999999999999999999999999",
+              "authority_source_ref": "cos:decision/COS-019",
+              "result": "pass",
+              "scope": "M5-B manual static acceptance"
+            },
+            "approval_ceiling": 150,
+            "artifact_id": "COS-A05-CANDIDATE-BASE",
+            "artifact_lifecycle": "accepted",
+            "artifact_type": "COS-A05",
+            "cost_gate_result": "approved_within_ceiling",
+            "cost_owner_binding": {
+              "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+              "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+              "accepted_a03_binding_id": "binding-cost-owner",
+              "actor_id": "human-cost-owner",
+              "actor_kind": "human",
+              "authority_source_checksum": "9999999999999999999999999999999999999999999999999999999999999999",
+              "authority_source_ref": "cos:decision/COS-019",
+              "scope": "M5-B evidence and decision packet"
+            },
+            "created_at": "2026-07-15T00:00:00Z",
+            "currency": "USD",
+            "effective_cost_allow": true,
+            "estimates": [
+              {
+                "amount": 100,
+                "assumptions": [
+                  "bounded usage"
+                ],
+                "cost_class": "usage",
+                "currency": "USD",
+                "horizon_months": 12
+              }
+            ],
+            "exit_trigger": "Exit before vendor lock-in.",
+            "parent_decision_frame_checksum": "4444444444444444444444444444444444444444444444444444444444444444",
+            "parent_decision_frame_id": "decision-frame-1",
+            "preparer_actor_id": "ai-preparer",
+            "protocol_run": {
+              "downstream_started": false,
+              "failure_envelope": null,
+              "outcome": "success",
+              "protocol_id": "COS-P04-COST-GATE",
+              "stages": [
+                {
+                  "invoked": true,
+                  "reason": "static assertion completed",
+                  "stage_id": "cost_trigger_analysis",
+                  "status": "completed"
+                },
+                {
+                  "invoked": true,
+                  "reason": "static assertion completed",
+                  "stage_id": "cost_inventory",
+                  "status": "completed"
+                },
+                {
+                  "invoked": true,
+                  "reason": "static assertion completed",
+                  "stage_id": "unknown_cost_check",
+                  "status": "completed"
+                },
+                {
+                  "invoked": true,
+                  "reason": "static assertion completed",
+                  "stage_id": "cost_owner_review",
+                  "status": "completed"
+                },
+                {
+                  "invoked": true,
+                  "reason": "static assertion completed",
+                  "stage_id": "a05_acceptance",
+                  "status": "completed"
+                },
+                {
+                  "invoked": true,
+                  "reason": "static assertion completed",
+                  "stage_id": "archive_lineage",
+                  "status": "completed"
+                }
+              ]
+            },
+            "revisit_trigger": "Revisit if estimate exceeds ceiling.",
+            "schema_version": "0.1",
+            "time_horizon_months": 12,
+            "trigger_analysis": "A paid external capability would be required.",
+            "trigger_applicable": true,
+            "trigger_classes": [
+              "paid_or_potentially_paid"
+            ],
+            "unknown_costs": []
+          },
+          "relation": "accepted_cost_gate",
+          "target_schema": "COS-A05"
+        }
+      ],
+      "target_schema": "COS-A04",
+      "variant_id": "M5B-P04-POS-01E-A05-ACCEPTANCE-MISBIND"
+    },
+    {
+      "artifact": {
+        "acceptance_event": {
+          "acceptance_event_id": "accept-cos-a04-approved",
+          "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+          "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+          "accepted_a03_binding_id": "binding-decision-owner",
+          "accepted_at": "2026-07-15T01:00:00Z",
+          "accepted_by_actor_id": "human-decision-owner",
+          "artifact_checksum": "ef04a78f7a96fa9953e1e3b1348a08758b6b2c690e638b7e19e1c5af43c9dc5f",
+          "artifact_id": "COS-A04-APPROVED",
+          "assertions": [
+            "M5B-AST-P04-APPROVED"
+          ],
+          "authority_source_checksum": "9999999999999999999999999999999999999999999999999999999999999999",
+          "authority_source_ref": "cos:decision/COS-019",
+          "result": "pass",
+          "scope": "M5-B manual static acceptance"
+        },
+        "accepted_limitations": [],
+        "artifact_id": "COS-A04-APPROVED",
+        "artifact_lifecycle": "accepted",
+        "artifact_type": "COS-A04",
+        "chosen_option": "option-approve",
+        "common_lineage": {
+          "a01": {
+            "artifact_id": "COS-A01-M5A-ACCEPTED",
+            "artifact_lifecycle": "accepted",
+            "checksum": "1111111111111111111111111111111111111111111111111111111111111111",
+            "current": true,
+            "cutoff": "2026-07-15T00:00:00Z"
+          },
+          "a02": {
+            "artifact_id": "COS-A02-CANDIDATE-BASE",
+            "artifact_lifecycle": "accepted",
+            "checksum": "2222222222222222222222222222222222222222222222222222222222222222",
+            "current": true,
+            "cutoff": "2026-07-15T00:00:00Z"
+          },
+          "a03": {
+            "artifact_id": "COS-A03-M5A-ACCEPTED",
+            "artifact_lifecycle": "accepted",
+            "checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+            "current": true,
+            "cutoff": "2026-07-15T00:00:00Z"
+          },
+          "authority_source_checksum": "9999999999999999999999999999999999999999999999999999999999999999"
+        },
+        "cost_gate": {
+          "a05_artifact_checksum": "554c678fcbc71a96ff05dfdaae4b17401e01736ac3f1386b5e56b4e7431b71e4",
+          "a05_artifact_id": "COS-A05-CANDIDATE-BASE",
+          "cost_gate_result": "approved_within_ceiling",
+          "effective_cost_allow": true,
+          "required_unknown_cost_count": 0,
+          "triggered": true
+        },
+        "counterevidence": [],
+        "created_at": "2026-07-15T00:00:00Z",
+        "decision_disposition": "approved",
+        "decision_frame": {
+          "alternatives": [
+            "option-approve",
+            "option-reject"
+          ],
+          "baseline_option": "option-reject",
+          "deadline": "2026-07-16T00:00:00Z",
+          "decision_frame_checksum": "4444444444444444444444444444444444444444444444444444444444444444",
+          "decision_frame_id": "decision-frame-1",
+          "in_scope": [
+            "bounded M5-B decision"
+          ],
+          "out_of_scope": [
+            "P05 execution"
+          ],
+          "question": "Approve the bounded option?"
+        },
+        "decision_owner_binding": {
+          "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+          "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+          "accepted_a03_binding_id": "binding-decision-owner",
+          "actor_id": "human-decision-owner",
+          "actor_kind": "human",
+          "authority_source_checksum": "9999999999999999999999999999999999999999999999999999999999999999",
+          "authority_source_ref": "cos:decision/COS-019",
+          "scope": "M5-B evidence and decision packet"
+        },
+        "eligible_for_p05_evaluation": true,
+        "evidence_basis": [
+          {
+            "admission_disposition": "admitted",
+            "decision_basis_eligible": true,
+            "evidence_item_id": "evidence-required-1"
+          }
+        ],
+        "expiry_condition": "Expires when common lineage is superseded.",
+        "is_current": true,
+        "known_consequences": [
+          "A future P05 evaluation may be requested."
+        ],
+        "non_goals": [
+          "No execution is authorized."
+        ],
+        "p05_started": false,
+        "preparer_actor_id": "ai-preparer",
+        "protocol_run": {
+          "downstream_started": false,
+          "failure_envelope": null,
+          "outcome": "success",
+          "protocol_id": "COS-P04",
+          "stages": [
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "prerequisite_common_lineage",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "decision_frame",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "qualified_evidence_basis",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "authority_separation",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "cost_gate",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "human_decision",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "independent_record_review",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "a04_a05_acceptance",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "downstream_eligibility_archive",
+              "status": "completed"
+            },
+            {
+              "invoked": false,
+              "reason": "fixed disabled in M5-B",
+              "stage_id": "automated_instruction_generation",
+              "status": "disabled"
+            }
+          ]
+        },
+        "rationale": "Human owner explicitly recorded approved.",
+        "reversal_condition": "Revisit on changed evidence.",
+        "schema_version": "0.1",
+        "supersedes": "none",
+        "unknowns": []
+      },
+      "expected_schema_valid": true,
+      "expected_semantic_valid": false,
+      "related_artifacts": [
+        {
+          "artifact": {
+            "acceptance_event": {
+              "acceptance_event_id": "accept-cos-a05-candidate-base",
+              "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+              "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+              "accepted_a03_binding_id": "binding-cost-owner",
+              "accepted_at": "2026-07-15T01:00:00Z",
+              "accepted_by_actor_id": "human-cost-owner",
+              "artifact_checksum": "554c678fcbc71a96ff05dfdaae4b17401e01736ac3f1386b5e56b4e7431b71e4",
+              "artifact_id": "COS-A05-CANDIDATE-BASE",
+              "assertions": [
+                "M5B-AST-A05-POS-01"
+              ],
+              "authority_source_checksum": "9999999999999999999999999999999999999999999999999999999999999999",
+              "authority_source_ref": "cos:decision/COS-019",
+              "result": "pass",
+              "scope": "M5-B manual static acceptance"
+            },
+            "approval_ceiling": 150,
+            "artifact_id": "COS-A05-CANDIDATE-BASE",
+            "artifact_lifecycle": "accepted",
+            "artifact_type": "COS-A05",
+            "cost_gate_result": "approved_within_ceiling",
+            "cost_owner_binding": {
+              "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+              "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+              "accepted_a03_binding_id": "binding-cost-owner",
+              "actor_id": "ai-preparer",
+              "actor_kind": "ai_agent",
+              "authority_source_checksum": "9999999999999999999999999999999999999999999999999999999999999999",
+              "authority_source_ref": "cos:decision/COS-019",
+              "scope": "M5-B evidence and decision packet"
+            },
+            "created_at": "2026-07-15T00:00:00Z",
+            "currency": "USD",
+            "effective_cost_allow": true,
+            "estimates": [
+              {
+                "amount": 100,
+                "assumptions": [
+                  "bounded usage"
+                ],
+                "cost_class": "usage",
+                "currency": "USD",
+                "horizon_months": 12
+              }
+            ],
+            "exit_trigger": "Exit before vendor lock-in.",
+            "parent_decision_frame_checksum": "4444444444444444444444444444444444444444444444444444444444444444",
+            "parent_decision_frame_id": "decision-frame-1",
+            "preparer_actor_id": "ai-preparer",
+            "protocol_run": {
+              "downstream_started": false,
+              "failure_envelope": null,
+              "outcome": "success",
+              "protocol_id": "COS-P04-COST-GATE",
+              "stages": [
+                {
+                  "invoked": true,
+                  "reason": "static assertion completed",
+                  "stage_id": "cost_trigger_analysis",
+                  "status": "completed"
+                },
+                {
+                  "invoked": true,
+                  "reason": "static assertion completed",
+                  "stage_id": "cost_inventory",
+                  "status": "completed"
+                },
+                {
+                  "invoked": true,
+                  "reason": "static assertion completed",
+                  "stage_id": "unknown_cost_check",
+                  "status": "completed"
+                },
+                {
+                  "invoked": true,
+                  "reason": "static assertion completed",
+                  "stage_id": "cost_owner_review",
+                  "status": "completed"
+                },
+                {
+                  "invoked": true,
+                  "reason": "static assertion completed",
+                  "stage_id": "a05_acceptance",
+                  "status": "completed"
+                },
+                {
+                  "invoked": true,
+                  "reason": "static assertion completed",
+                  "stage_id": "archive_lineage",
+                  "status": "completed"
+                }
+              ]
+            },
+            "revisit_trigger": "Revisit if estimate exceeds ceiling.",
+            "schema_version": "0.1",
+            "time_horizon_months": 12,
+            "trigger_analysis": "A paid external capability would be required.",
+            "trigger_applicable": true,
+            "trigger_classes": [
+              "paid_or_potentially_paid"
+            ],
+            "unknown_costs": []
+          },
+          "relation": "accepted_cost_gate",
+          "target_schema": "COS-A05"
+        }
+      ],
+      "target_schema": "COS-A04",
+      "variant_id": "M5B-P04-POS-01F-A05-AUTHORITY-MISBIND"
+    },
+    {
+      "artifact": {
+        "acceptance_event": {
+          "acceptance_event_id": "accept-cos-a04-approved",
+          "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+          "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+          "accepted_a03_binding_id": "binding-decision-owner",
+          "accepted_at": "2026-07-15T01:00:00Z",
+          "accepted_by_actor_id": "human-decision-owner",
+          "artifact_checksum": "2f5623f57f3692f515900562db6a4ea59d18ffdd44d7374f478dfaac5caa88b7",
+          "artifact_id": "COS-A04-APPROVED",
+          "assertions": [
+            "M5B-AST-P04-APPROVED"
+          ],
+          "authority_source_checksum": "9999999999999999999999999999999999999999999999999999999999999999",
+          "authority_source_ref": "cos:decision/COS-019",
+          "result": "pass",
+          "scope": "M5-B manual static acceptance"
+        },
+        "accepted_limitations": [],
+        "artifact_id": "COS-A04-APPROVED",
+        "artifact_lifecycle": "accepted",
+        "artifact_type": "COS-A04",
+        "chosen_option": "option-approve",
+        "common_lineage": {
+          "a01": {
+            "artifact_id": "COS-A01-M5A-ACCEPTED",
+            "artifact_lifecycle": "accepted",
+            "checksum": "1111111111111111111111111111111111111111111111111111111111111111",
+            "current": true,
+            "cutoff": "2026-07-15T00:00:00Z"
+          },
+          "a02": {
+            "artifact_id": "COS-A02-CANDIDATE-BASE",
+            "artifact_lifecycle": "accepted",
+            "checksum": "2222222222222222222222222222222222222222222222222222222222222222",
+            "current": true,
+            "cutoff": "2026-07-15T00:00:00Z"
+          },
+          "a03": {
+            "artifact_id": "COS-A03-M5A-ACCEPTED",
+            "artifact_lifecycle": "accepted",
+            "checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+            "current": true,
+            "cutoff": "2026-07-15T00:00:00Z"
+          },
+          "authority_source_checksum": "9999999999999999999999999999999999999999999999999999999999999999"
+        },
+        "cost_gate": {
+          "a05_artifact_checksum": "2653bc574901d11c54a596f1c3e256d5eed0a7d98a69a34a66d1b344d4bb569b",
+          "a05_artifact_id": "COS-A05-CANDIDATE-BASE",
+          "cost_gate_result": "approved_within_ceiling",
+          "effective_cost_allow": true,
+          "required_unknown_cost_count": 0,
+          "triggered": true
+        },
+        "counterevidence": [],
+        "created_at": "2026-07-15T00:00:00Z",
+        "decision_disposition": "approved",
+        "decision_frame": {
+          "alternatives": [
+            "option-approve",
+            "option-reject"
+          ],
+          "baseline_option": "option-reject",
+          "deadline": "2026-07-16T00:00:00Z",
+          "decision_frame_checksum": "4444444444444444444444444444444444444444444444444444444444444444",
+          "decision_frame_id": "decision-frame-1",
+          "in_scope": [
+            "bounded M5-B decision"
+          ],
+          "out_of_scope": [
+            "P05 execution"
+          ],
+          "question": "Approve the bounded option?"
+        },
+        "decision_owner_binding": {
+          "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+          "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+          "accepted_a03_binding_id": "binding-decision-owner",
+          "actor_id": "human-decision-owner",
+          "actor_kind": "human",
+          "authority_source_checksum": "9999999999999999999999999999999999999999999999999999999999999999",
+          "authority_source_ref": "cos:decision/COS-019",
+          "scope": "M5-B evidence and decision packet"
+        },
+        "eligible_for_p05_evaluation": true,
+        "evidence_basis": [
+          {
+            "admission_disposition": "admitted",
+            "decision_basis_eligible": true,
+            "evidence_item_id": "evidence-required-1"
+          }
+        ],
+        "expiry_condition": "Expires when common lineage is superseded.",
+        "is_current": true,
+        "known_consequences": [
+          "A future P05 evaluation may be requested."
+        ],
+        "non_goals": [
+          "No execution is authorized."
+        ],
+        "p05_started": false,
+        "preparer_actor_id": "ai-preparer",
+        "protocol_run": {
+          "downstream_started": false,
+          "failure_envelope": null,
+          "outcome": "success",
+          "protocol_id": "COS-P04",
+          "stages": [
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "prerequisite_common_lineage",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "decision_frame",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "qualified_evidence_basis",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "authority_separation",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "cost_gate",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "human_decision",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "independent_record_review",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "a04_a05_acceptance",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "downstream_eligibility_archive",
+              "status": "completed"
+            },
+            {
+              "invoked": false,
+              "reason": "fixed disabled in M5-B",
+              "stage_id": "automated_instruction_generation",
+              "status": "disabled"
+            }
+          ]
+        },
+        "rationale": "Human owner explicitly recorded approved.",
+        "reversal_condition": "Revisit on changed evidence.",
+        "schema_version": "0.1",
+        "supersedes": "none",
+        "unknowns": []
+      },
+      "expected_schema_valid": true,
+      "expected_semantic_valid": false,
+      "related_artifacts": [
+        {
+          "artifact": {
+            "acceptance_event": {
+              "acceptance_event_id": "accept-cos-a05-candidate-base",
+              "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+              "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+              "accepted_a03_binding_id": "binding-decision-owner",
+              "accepted_at": "2026-07-15T01:00:00Z",
+              "accepted_by_actor_id": "human-decision-owner",
+              "artifact_checksum": "2653bc574901d11c54a596f1c3e256d5eed0a7d98a69a34a66d1b344d4bb569b",
+              "artifact_id": "COS-A05-CANDIDATE-BASE",
+              "assertions": [
+                "M5B-AST-A05-POS-01"
+              ],
+              "authority_source_checksum": "9999999999999999999999999999999999999999999999999999999999999999",
+              "authority_source_ref": "cos:decision/COS-019",
+              "result": "pass",
+              "scope": "M5-B manual static acceptance"
+            },
+            "approval_ceiling": 150,
+            "artifact_id": "COS-A05-CANDIDATE-BASE",
+            "artifact_lifecycle": "accepted",
+            "artifact_type": "COS-A05",
+            "cost_gate_result": "approved_within_ceiling",
+            "cost_owner_binding": {
+              "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+              "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+              "accepted_a03_binding_id": "binding-decision-owner",
+              "actor_id": "human-decision-owner",
+              "actor_kind": "human",
+              "authority_source_checksum": "9999999999999999999999999999999999999999999999999999999999999999",
+              "authority_source_ref": "cos:decision/COS-019",
+              "scope": "M5-B evidence and decision packet"
+            },
+            "created_at": "2026-07-15T00:00:00Z",
+            "currency": "USD",
+            "effective_cost_allow": true,
+            "estimates": [
+              {
+                "amount": 100,
+                "assumptions": [
+                  "bounded usage"
+                ],
+                "cost_class": "usage",
+                "currency": "USD",
+                "horizon_months": 12
+              }
+            ],
+            "exit_trigger": "Exit before vendor lock-in.",
+            "parent_decision_frame_checksum": "4444444444444444444444444444444444444444444444444444444444444444",
+            "parent_decision_frame_id": "decision-frame-1",
+            "preparer_actor_id": "ai-preparer",
+            "protocol_run": {
+              "downstream_started": false,
+              "failure_envelope": null,
+              "outcome": "success",
+              "protocol_id": "COS-P04-COST-GATE",
+              "stages": [
+                {
+                  "invoked": true,
+                  "reason": "static assertion completed",
+                  "stage_id": "cost_trigger_analysis",
+                  "status": "completed"
+                },
+                {
+                  "invoked": true,
+                  "reason": "static assertion completed",
+                  "stage_id": "cost_inventory",
+                  "status": "completed"
+                },
+                {
+                  "invoked": true,
+                  "reason": "static assertion completed",
+                  "stage_id": "unknown_cost_check",
+                  "status": "completed"
+                },
+                {
+                  "invoked": true,
+                  "reason": "static assertion completed",
+                  "stage_id": "cost_owner_review",
+                  "status": "completed"
+                },
+                {
+                  "invoked": true,
+                  "reason": "static assertion completed",
+                  "stage_id": "a05_acceptance",
+                  "status": "completed"
+                },
+                {
+                  "invoked": true,
+                  "reason": "static assertion completed",
+                  "stage_id": "archive_lineage",
+                  "status": "completed"
+                }
+              ]
+            },
+            "revisit_trigger": "Revisit if estimate exceeds ceiling.",
+            "schema_version": "0.1",
+            "time_horizon_months": 12,
+            "trigger_analysis": "A paid external capability would be required.",
+            "trigger_applicable": true,
+            "trigger_classes": [
+              "paid_or_potentially_paid"
+            ],
+            "unknown_costs": []
+          },
+          "relation": "accepted_cost_gate",
+          "target_schema": "COS-A05"
+        }
+      ],
+      "target_schema": "COS-A04",
+      "variant_id": "M5B-P04-POS-01G-A05-DECISION-OWNER-LAUNDERING"
+    },
+    {
+      "artifact": {
+        "acceptance_event": {
+          "acceptance_event_id": "accept-cos-a04-approved",
+          "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+          "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+          "accepted_a03_binding_id": "binding-decision-owner",
+          "accepted_at": "2026-07-15T01:00:00Z",
+          "accepted_by_actor_id": "human-decision-owner",
+          "artifact_checksum": "fa523634f3a8db2e67836e5803ea936d8290adaaff180d06bcd52b08fc50447b",
+          "artifact_id": "COS-A04-APPROVED",
+          "assertions": [
+            "M5B-AST-P04-APPROVED"
+          ],
+          "authority_source_checksum": "9999999999999999999999999999999999999999999999999999999999999999",
+          "authority_source_ref": "cos:decision/COS-019",
+          "result": "pass",
+          "scope": "M5-B manual static acceptance"
+        },
+        "accepted_limitations": [],
+        "artifact_id": "COS-A04-APPROVED",
+        "artifact_lifecycle": "accepted",
+        "artifact_type": "COS-A04",
+        "chosen_option": "option-approve",
+        "common_lineage": {
+          "a01": {
+            "artifact_id": "COS-A01-M5A-ACCEPTED",
+            "artifact_lifecycle": "accepted",
+            "checksum": "1111111111111111111111111111111111111111111111111111111111111111",
+            "current": true,
+            "cutoff": "2026-07-15T00:00:00Z"
+          },
+          "a02": {
+            "artifact_id": "COS-A02-CANDIDATE-BASE",
+            "artifact_lifecycle": "accepted",
+            "checksum": "2222222222222222222222222222222222222222222222222222222222222222",
+            "current": true,
+            "cutoff": "2026-07-15T00:00:00Z"
+          },
+          "a03": {
+            "artifact_id": "COS-A03-M5A-ACCEPTED",
+            "artifact_lifecycle": "accepted",
+            "checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+            "current": true,
+            "cutoff": "2026-07-15T00:00:00Z"
+          },
+          "authority_source_checksum": "9999999999999999999999999999999999999999999999999999999999999999"
+        },
+        "cost_gate": {
+          "a05_artifact_checksum": "2c4b87e6172382d35380bb587803175dc82f7c62fa9c7d133eb292bef242a864",
+          "a05_artifact_id": "COS-A05-CANDIDATE-BASE",
+          "cost_gate_result": "approved_within_ceiling",
+          "effective_cost_allow": true,
+          "required_unknown_cost_count": 0,
+          "triggered": true
+        },
+        "counterevidence": [],
+        "created_at": "2026-07-15T00:00:00Z",
+        "decision_disposition": "approved",
+        "decision_frame": {
+          "alternatives": [
+            "option-approve",
+            "option-reject"
+          ],
+          "baseline_option": "option-reject",
+          "deadline": "2026-07-16T00:00:00Z",
+          "decision_frame_checksum": "4444444444444444444444444444444444444444444444444444444444444444",
+          "decision_frame_id": "decision-frame-1",
+          "in_scope": [
+            "bounded M5-B decision"
+          ],
+          "out_of_scope": [
+            "P05 execution"
+          ],
+          "question": "Approve the bounded option?"
+        },
+        "decision_owner_binding": {
+          "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+          "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+          "accepted_a03_binding_id": "binding-decision-owner",
+          "actor_id": "human-decision-owner",
+          "actor_kind": "human",
+          "authority_source_checksum": "9999999999999999999999999999999999999999999999999999999999999999",
+          "authority_source_ref": "cos:decision/COS-019",
+          "scope": "M5-B evidence and decision packet"
+        },
+        "eligible_for_p05_evaluation": true,
+        "evidence_basis": [
+          {
+            "admission_disposition": "admitted",
+            "decision_basis_eligible": true,
+            "evidence_item_id": "evidence-required-1"
+          }
+        ],
+        "expiry_condition": "Expires when common lineage is superseded.",
+        "is_current": true,
+        "known_consequences": [
+          "A future P05 evaluation may be requested."
+        ],
+        "non_goals": [
+          "No execution is authorized."
+        ],
+        "p05_started": false,
+        "preparer_actor_id": "ai-preparer",
+        "protocol_run": {
+          "downstream_started": false,
+          "failure_envelope": null,
+          "outcome": "success",
+          "protocol_id": "COS-P04",
+          "stages": [
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "prerequisite_common_lineage",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "decision_frame",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "qualified_evidence_basis",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "authority_separation",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "cost_gate",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "human_decision",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "independent_record_review",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "a04_a05_acceptance",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "downstream_eligibility_archive",
+              "status": "completed"
+            },
+            {
+              "invoked": false,
+              "reason": "fixed disabled in M5-B",
+              "stage_id": "automated_instruction_generation",
+              "status": "disabled"
+            }
+          ]
+        },
+        "rationale": "Human owner explicitly recorded approved.",
+        "reversal_condition": "Revisit on changed evidence.",
+        "schema_version": "0.1",
+        "supersedes": "none",
+        "unknowns": []
+      },
+      "expected_schema_valid": true,
+      "expected_semantic_valid": false,
+      "related_artifacts": [
+        {
+          "artifact": {
+            "acceptance_event": {
+              "acceptance_event_id": "accept-cos-a05-candidate-base",
+              "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+              "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+              "accepted_a03_binding_id": "binding-evidence-review",
+              "accepted_at": "2026-07-15T01:00:00Z",
+              "accepted_by_actor_id": "human-evidence-reviewer",
+              "artifact_checksum": "2c4b87e6172382d35380bb587803175dc82f7c62fa9c7d133eb292bef242a864",
+              "artifact_id": "COS-A05-CANDIDATE-BASE",
+              "assertions": [
+                "M5B-AST-A05-POS-01"
+              ],
+              "authority_source_checksum": "9999999999999999999999999999999999999999999999999999999999999999",
+              "authority_source_ref": "cos:decision/COS-019",
+              "result": "pass",
+              "scope": "M5-B manual static acceptance"
+            },
+            "approval_ceiling": 150,
+            "artifact_id": "COS-A05-CANDIDATE-BASE",
+            "artifact_lifecycle": "accepted",
+            "artifact_type": "COS-A05",
+            "cost_gate_result": "approved_within_ceiling",
+            "cost_owner_binding": {
+              "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+              "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+              "accepted_a03_binding_id": "binding-evidence-review",
+              "actor_id": "human-evidence-reviewer",
+              "actor_kind": "human",
+              "authority_source_checksum": "9999999999999999999999999999999999999999999999999999999999999999",
+              "authority_source_ref": "cos:decision/COS-019",
+              "scope": "M5-B evidence and decision packet"
+            },
+            "created_at": "2026-07-15T00:00:00Z",
+            "currency": "USD",
+            "effective_cost_allow": true,
+            "estimates": [
+              {
+                "amount": 100,
+                "assumptions": [
+                  "bounded usage"
+                ],
+                "cost_class": "usage",
+                "currency": "USD",
+                "horizon_months": 12
+              }
+            ],
+            "exit_trigger": "Exit before vendor lock-in.",
+            "parent_decision_frame_checksum": "4444444444444444444444444444444444444444444444444444444444444444",
+            "parent_decision_frame_id": "decision-frame-1",
+            "preparer_actor_id": "ai-preparer",
+            "protocol_run": {
+              "downstream_started": false,
+              "failure_envelope": null,
+              "outcome": "success",
+              "protocol_id": "COS-P04-COST-GATE",
+              "stages": [
+                {
+                  "invoked": true,
+                  "reason": "static assertion completed",
+                  "stage_id": "cost_trigger_analysis",
+                  "status": "completed"
+                },
+                {
+                  "invoked": true,
+                  "reason": "static assertion completed",
+                  "stage_id": "cost_inventory",
+                  "status": "completed"
+                },
+                {
+                  "invoked": true,
+                  "reason": "static assertion completed",
+                  "stage_id": "unknown_cost_check",
+                  "status": "completed"
+                },
+                {
+                  "invoked": true,
+                  "reason": "static assertion completed",
+                  "stage_id": "cost_owner_review",
+                  "status": "completed"
+                },
+                {
+                  "invoked": true,
+                  "reason": "static assertion completed",
+                  "stage_id": "a05_acceptance",
+                  "status": "completed"
+                },
+                {
+                  "invoked": true,
+                  "reason": "static assertion completed",
+                  "stage_id": "archive_lineage",
+                  "status": "completed"
+                }
+              ]
+            },
+            "revisit_trigger": "Revisit if estimate exceeds ceiling.",
+            "schema_version": "0.1",
+            "time_horizon_months": 12,
+            "trigger_analysis": "A paid external capability would be required.",
+            "trigger_applicable": true,
+            "trigger_classes": [
+              "paid_or_potentially_paid"
+            ],
+            "unknown_costs": []
+          },
+          "relation": "accepted_cost_gate",
+          "target_schema": "COS-A05"
+        }
+      ],
+      "target_schema": "COS-A04",
+      "variant_id": "M5B-P04-POS-01H-A05-EVIDENCE-REVIEWER-LAUNDERING"
+    },
+    {
+      "artifact": {
+        "acceptance_event": {
+          "acceptance_event_id": "accept-cos-a04-approved",
+          "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+          "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+          "accepted_a03_binding_id": "binding-decision-owner",
+          "accepted_at": "2026-07-15T01:00:00Z",
+          "accepted_by_actor_id": "human-decision-owner",
+          "artifact_checksum": "38f1f7c722a26b695ce8534f40a57cbb720d759194b7e7510d4dfa3644067e72",
+          "artifact_id": "COS-A04-APPROVED",
+          "assertions": [
+            "M5B-AST-P04-APPROVED"
+          ],
+          "authority_source_checksum": "9999999999999999999999999999999999999999999999999999999999999999",
+          "authority_source_ref": "cos:decision/COS-019",
+          "result": "pass",
+          "scope": "M5-B manual static acceptance"
+        },
+        "accepted_limitations": [],
+        "artifact_id": "COS-A04-APPROVED",
+        "artifact_lifecycle": "accepted",
+        "artifact_type": "COS-A04",
+        "chosen_option": "option-approve",
+        "common_lineage": {
+          "a01": {
+            "artifact_id": "COS-A01-M5A-ACCEPTED",
+            "artifact_lifecycle": "accepted",
+            "checksum": "1111111111111111111111111111111111111111111111111111111111111111",
+            "current": true,
+            "cutoff": "2026-07-15T00:00:00Z"
+          },
+          "a02": {
+            "artifact_id": "COS-A02-CANDIDATE-BASE",
+            "artifact_lifecycle": "accepted",
+            "checksum": "2222222222222222222222222222222222222222222222222222222222222222",
+            "current": true,
+            "cutoff": "2026-07-15T00:00:00Z"
+          },
+          "a03": {
+            "artifact_id": "COS-A03-M5A-ACCEPTED",
+            "artifact_lifecycle": "accepted",
+            "checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+            "current": true,
+            "cutoff": "2026-07-15T00:00:00Z"
+          },
+          "authority_source_checksum": "9999999999999999999999999999999999999999999999999999999999999999"
+        },
+        "cost_gate": {
+          "a05_artifact_checksum": "81177a009659172e9f6796745dd6bcc29d49dff777b929fbaec06af1d30bb6f9",
+          "a05_artifact_id": "COS-A05-CANDIDATE-BASE",
+          "cost_gate_result": "approved_within_ceiling",
+          "effective_cost_allow": true,
+          "required_unknown_cost_count": 0,
+          "triggered": true
+        },
+        "counterevidence": [],
+        "created_at": "2026-07-15T00:00:00Z",
+        "decision_disposition": "approved",
+        "decision_frame": {
+          "alternatives": [
+            "option-approve",
+            "option-reject"
+          ],
+          "baseline_option": "option-reject",
+          "deadline": "2026-07-16T00:00:00Z",
+          "decision_frame_checksum": "4444444444444444444444444444444444444444444444444444444444444444",
+          "decision_frame_id": "decision-frame-1",
+          "in_scope": [
+            "bounded M5-B decision"
+          ],
+          "out_of_scope": [
+            "P05 execution"
+          ],
+          "question": "Approve the bounded option?"
+        },
+        "decision_owner_binding": {
+          "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+          "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+          "accepted_a03_binding_id": "binding-decision-owner",
+          "actor_id": "human-decision-owner",
+          "actor_kind": "human",
+          "authority_source_checksum": "9999999999999999999999999999999999999999999999999999999999999999",
+          "authority_source_ref": "cos:decision/COS-019",
+          "scope": "M5-B evidence and decision packet"
+        },
+        "eligible_for_p05_evaluation": true,
+        "evidence_basis": [
+          {
+            "admission_disposition": "admitted",
+            "decision_basis_eligible": true,
+            "evidence_item_id": "evidence-required-1"
+          }
+        ],
+        "expiry_condition": "Expires when common lineage is superseded.",
+        "is_current": true,
+        "known_consequences": [
+          "A future P05 evaluation may be requested."
+        ],
+        "non_goals": [
+          "No execution is authorized."
+        ],
+        "p05_started": false,
+        "preparer_actor_id": "ai-preparer",
+        "protocol_run": {
+          "downstream_started": false,
+          "failure_envelope": null,
+          "outcome": "success",
+          "protocol_id": "COS-P04",
+          "stages": [
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "prerequisite_common_lineage",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "decision_frame",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "qualified_evidence_basis",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "authority_separation",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "cost_gate",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "human_decision",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "independent_record_review",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "a04_a05_acceptance",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "downstream_eligibility_archive",
+              "status": "completed"
+            },
+            {
+              "invoked": false,
+              "reason": "fixed disabled in M5-B",
+              "stage_id": "automated_instruction_generation",
+              "status": "disabled"
+            }
+          ]
+        },
+        "rationale": "Human owner explicitly recorded approved.",
+        "reversal_condition": "Revisit on changed evidence.",
+        "schema_version": "0.1",
+        "supersedes": "none",
+        "unknowns": []
+      },
+      "expected_schema_valid": true,
+      "expected_semantic_valid": false,
+      "related_artifacts": [
+        {
+          "artifact": {
+            "acceptance_event": {
+              "acceptance_event_id": "accept-cos-a05-candidate-base",
+              "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+              "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+              "accepted_a03_binding_id": "binding-decision-owner",
+              "accepted_at": "2026-07-15T01:00:00Z",
+              "accepted_by_actor_id": "human-cost-owner",
+              "artifact_checksum": "81177a009659172e9f6796745dd6bcc29d49dff777b929fbaec06af1d30bb6f9",
+              "artifact_id": "COS-A05-CANDIDATE-BASE",
+              "assertions": [
+                "M5B-AST-A05-POS-01"
+              ],
+              "authority_source_checksum": "9999999999999999999999999999999999999999999999999999999999999999",
+              "authority_source_ref": "cos:decision/COS-019",
+              "result": "pass",
+              "scope": "M5-B manual static acceptance"
+            },
+            "approval_ceiling": 150,
+            "artifact_id": "COS-A05-CANDIDATE-BASE",
+            "artifact_lifecycle": "accepted",
+            "artifact_type": "COS-A05",
+            "cost_gate_result": "approved_within_ceiling",
+            "cost_owner_binding": {
+              "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+              "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+              "accepted_a03_binding_id": "binding-decision-owner",
+              "actor_id": "human-cost-owner",
+              "actor_kind": "human",
+              "authority_source_checksum": "9999999999999999999999999999999999999999999999999999999999999999",
+              "authority_source_ref": "cos:decision/COS-019",
+              "scope": "M5-B evidence and decision packet"
+            },
+            "created_at": "2026-07-15T00:00:00Z",
+            "currency": "USD",
+            "effective_cost_allow": true,
+            "estimates": [
+              {
+                "amount": 100,
+                "assumptions": [
+                  "bounded usage"
+                ],
+                "cost_class": "usage",
+                "currency": "USD",
+                "horizon_months": 12
+              }
+            ],
+            "exit_trigger": "Exit before vendor lock-in.",
+            "parent_decision_frame_checksum": "4444444444444444444444444444444444444444444444444444444444444444",
+            "parent_decision_frame_id": "decision-frame-1",
+            "preparer_actor_id": "ai-preparer",
+            "protocol_run": {
+              "downstream_started": false,
+              "failure_envelope": null,
+              "outcome": "success",
+              "protocol_id": "COS-P04-COST-GATE",
+              "stages": [
+                {
+                  "invoked": true,
+                  "reason": "static assertion completed",
+                  "stage_id": "cost_trigger_analysis",
+                  "status": "completed"
+                },
+                {
+                  "invoked": true,
+                  "reason": "static assertion completed",
+                  "stage_id": "cost_inventory",
+                  "status": "completed"
+                },
+                {
+                  "invoked": true,
+                  "reason": "static assertion completed",
+                  "stage_id": "unknown_cost_check",
+                  "status": "completed"
+                },
+                {
+                  "invoked": true,
+                  "reason": "static assertion completed",
+                  "stage_id": "cost_owner_review",
+                  "status": "completed"
+                },
+                {
+                  "invoked": true,
+                  "reason": "static assertion completed",
+                  "stage_id": "a05_acceptance",
+                  "status": "completed"
+                },
+                {
+                  "invoked": true,
+                  "reason": "static assertion completed",
+                  "stage_id": "archive_lineage",
+                  "status": "completed"
+                }
+              ]
+            },
+            "revisit_trigger": "Revisit if estimate exceeds ceiling.",
+            "schema_version": "0.1",
+            "time_horizon_months": 12,
+            "trigger_analysis": "A paid external capability would be required.",
+            "trigger_applicable": true,
+            "trigger_classes": [
+              "paid_or_potentially_paid"
+            ],
+            "unknown_costs": []
+          },
+          "relation": "accepted_cost_gate",
+          "target_schema": "COS-A05"
+        }
+      ],
+      "target_schema": "COS-A04",
+      "variant_id": "M5B-P04-POS-01I-A05-SAME-ACTOR-WRONG-BINDING"
+    },
+    {
+      "artifact": {
+        "acceptance_event": {
+          "acceptance_event_id": "accept-cos-a04-approved",
+          "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+          "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+          "accepted_a03_binding_id": "binding-decision-owner",
+          "accepted_at": "2026-07-15T01:00:00Z",
+          "accepted_by_actor_id": "human-decision-owner",
+          "artifact_checksum": "cdc2a82b0d9a3a088c0598feb165a4e6b26be5641eb2e06e984d87a17d9e450f",
+          "artifact_id": "COS-A04-APPROVED",
+          "assertions": [
+            "M5B-AST-P04-APPROVED"
+          ],
+          "authority_source_checksum": "9999999999999999999999999999999999999999999999999999999999999999",
+          "authority_source_ref": "cos:decision/COS-019",
+          "result": "pass",
+          "scope": "M5-B manual static acceptance"
+        },
+        "accepted_limitations": [],
+        "artifact_id": "COS-A04-APPROVED",
+        "artifact_lifecycle": "accepted",
+        "artifact_type": "COS-A04",
+        "chosen_option": "option-approve",
+        "common_lineage": {
+          "a01": {
+            "artifact_id": "COS-A01-M5A-ACCEPTED",
+            "artifact_lifecycle": "accepted",
+            "checksum": "1111111111111111111111111111111111111111111111111111111111111111",
+            "current": true,
+            "cutoff": "2026-07-15T00:00:00Z"
+          },
+          "a02": {
+            "artifact_id": "COS-A02-CANDIDATE-BASE",
+            "artifact_lifecycle": "accepted",
+            "checksum": "2222222222222222222222222222222222222222222222222222222222222222",
+            "current": true,
+            "cutoff": "2026-07-15T00:00:00Z"
+          },
+          "a03": {
+            "artifact_id": "COS-A03-M5A-ACCEPTED",
+            "artifact_lifecycle": "accepted",
+            "checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+            "current": true,
+            "cutoff": "2026-07-15T00:00:00Z"
+          },
+          "authority_source_checksum": "9999999999999999999999999999999999999999999999999999999999999999"
+        },
+        "cost_gate": {
+          "a05_artifact_checksum": "64cf6766a6d9e8d03ffacb5aea49cc18726395dfc8a958fb0b64288719092ffe",
+          "a05_artifact_id": "COS-A05-CANDIDATE-BASE",
+          "cost_gate_result": "approved_within_ceiling",
+          "effective_cost_allow": true,
+          "required_unknown_cost_count": 0,
+          "triggered": true
+        },
+        "counterevidence": [],
+        "created_at": "2026-07-15T00:00:00Z",
+        "decision_disposition": "approved",
+        "decision_frame": {
+          "alternatives": [
+            "option-approve",
+            "option-reject"
+          ],
+          "baseline_option": "option-reject",
+          "deadline": "2026-07-16T00:00:00Z",
+          "decision_frame_checksum": "4444444444444444444444444444444444444444444444444444444444444444",
+          "decision_frame_id": "decision-frame-1",
+          "in_scope": [
+            "bounded M5-B decision"
+          ],
+          "out_of_scope": [
+            "P05 execution"
+          ],
+          "question": "Approve the bounded option?"
+        },
+        "decision_owner_binding": {
+          "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+          "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+          "accepted_a03_binding_id": "binding-decision-owner",
+          "actor_id": "human-decision-owner",
+          "actor_kind": "human",
+          "authority_source_checksum": "9999999999999999999999999999999999999999999999999999999999999999",
+          "authority_source_ref": "cos:decision/COS-019",
+          "scope": "M5-B evidence and decision packet"
+        },
+        "eligible_for_p05_evaluation": true,
+        "evidence_basis": [
+          {
+            "admission_disposition": "admitted",
+            "decision_basis_eligible": true,
+            "evidence_item_id": "evidence-required-1"
+          }
+        ],
+        "expiry_condition": "Expires when common lineage is superseded.",
+        "is_current": true,
+        "known_consequences": [
+          "A future P05 evaluation may be requested."
+        ],
+        "non_goals": [
+          "No execution is authorized."
+        ],
+        "p05_started": false,
+        "preparer_actor_id": "ai-preparer",
+        "protocol_run": {
+          "downstream_started": false,
+          "failure_envelope": null,
+          "outcome": "success",
+          "protocol_id": "COS-P04",
+          "stages": [
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "prerequisite_common_lineage",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "decision_frame",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "qualified_evidence_basis",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "authority_separation",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "cost_gate",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "human_decision",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "independent_record_review",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "a04_a05_acceptance",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "downstream_eligibility_archive",
+              "status": "completed"
+            },
+            {
+              "invoked": false,
+              "reason": "fixed disabled in M5-B",
+              "stage_id": "automated_instruction_generation",
+              "status": "disabled"
+            }
+          ]
+        },
+        "rationale": "Human owner explicitly recorded approved.",
+        "reversal_condition": "Revisit on changed evidence.",
+        "schema_version": "0.1",
+        "supersedes": "none",
+        "unknowns": []
+      },
+      "expected_schema_valid": true,
+      "expected_semantic_valid": false,
+      "related_artifacts": [
+        {
+          "artifact": {
+            "acceptance_event": {
+              "acceptance_event_id": "accept-cos-a05-candidate-base",
+              "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+              "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+              "accepted_a03_binding_id": "binding-cost-owner",
+              "accepted_at": "2026-07-15T01:00:00Z",
+              "accepted_by_actor_id": "human-cost-owner",
+              "artifact_checksum": "64cf6766a6d9e8d03ffacb5aea49cc18726395dfc8a958fb0b64288719092ffe",
+              "artifact_id": "COS-A05-CANDIDATE-BASE",
+              "assertions": [
+                "M5B-AST-A05-POS-01"
+              ],
+              "authority_source_checksum": "8888888888888888888888888888888888888888888888888888888888888888",
+              "authority_source_ref": "cos:decision/COS-FAKE",
+              "result": "pass",
+              "scope": "M5-B manual static acceptance"
+            },
+            "approval_ceiling": 150,
+            "artifact_id": "COS-A05-CANDIDATE-BASE",
+            "artifact_lifecycle": "accepted",
+            "artifact_type": "COS-A05",
+            "cost_gate_result": "approved_within_ceiling",
+            "cost_owner_binding": {
+              "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+              "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+              "accepted_a03_binding_id": "binding-cost-owner",
+              "actor_id": "human-cost-owner",
+              "actor_kind": "human",
+              "authority_source_checksum": "8888888888888888888888888888888888888888888888888888888888888888",
+              "authority_source_ref": "cos:decision/COS-FAKE",
+              "scope": "M5-B evidence and decision packet"
+            },
+            "created_at": "2026-07-15T00:00:00Z",
+            "currency": "USD",
+            "effective_cost_allow": true,
+            "estimates": [
+              {
+                "amount": 100,
+                "assumptions": [
+                  "bounded usage"
+                ],
+                "cost_class": "usage",
+                "currency": "USD",
+                "horizon_months": 12
+              }
+            ],
+            "exit_trigger": "Exit before vendor lock-in.",
+            "parent_decision_frame_checksum": "4444444444444444444444444444444444444444444444444444444444444444",
+            "parent_decision_frame_id": "decision-frame-1",
+            "preparer_actor_id": "ai-preparer",
+            "protocol_run": {
+              "downstream_started": false,
+              "failure_envelope": null,
+              "outcome": "success",
+              "protocol_id": "COS-P04-COST-GATE",
+              "stages": [
+                {
+                  "invoked": true,
+                  "reason": "static assertion completed",
+                  "stage_id": "cost_trigger_analysis",
+                  "status": "completed"
+                },
+                {
+                  "invoked": true,
+                  "reason": "static assertion completed",
+                  "stage_id": "cost_inventory",
+                  "status": "completed"
+                },
+                {
+                  "invoked": true,
+                  "reason": "static assertion completed",
+                  "stage_id": "unknown_cost_check",
+                  "status": "completed"
+                },
+                {
+                  "invoked": true,
+                  "reason": "static assertion completed",
+                  "stage_id": "cost_owner_review",
+                  "status": "completed"
+                },
+                {
+                  "invoked": true,
+                  "reason": "static assertion completed",
+                  "stage_id": "a05_acceptance",
+                  "status": "completed"
+                },
+                {
+                  "invoked": true,
+                  "reason": "static assertion completed",
+                  "stage_id": "archive_lineage",
+                  "status": "completed"
+                }
+              ]
+            },
+            "revisit_trigger": "Revisit if estimate exceeds ceiling.",
+            "schema_version": "0.1",
+            "time_horizon_months": 12,
+            "trigger_analysis": "A paid external capability would be required.",
+            "trigger_applicable": true,
+            "trigger_classes": [
+              "paid_or_potentially_paid"
+            ],
+            "unknown_costs": []
+          },
+          "relation": "accepted_cost_gate",
+          "target_schema": "COS-A05"
+        }
+      ],
+      "target_schema": "COS-A04",
+      "variant_id": "M5B-P04-POS-01J-A05-AUTHORITY-SOURCE-MISMATCH"
+    },
+    {
+      "artifact": {
+        "acceptance_event": {
+          "acceptance_event_id": "accept-cos-a04-approved",
+          "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+          "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+          "accepted_a03_binding_id": "binding-decision-owner",
+          "accepted_at": "2026-07-15T01:00:00Z",
+          "accepted_by_actor_id": "human-decision-owner",
+          "artifact_checksum": "dcc4bb2db88ab9e63ae73c4b2eca70c7acbcd33d8b504ee671a333d6d968a65c",
+          "artifact_id": "COS-A04-APPROVED",
+          "assertions": [
+            "M5B-AST-P04-APPROVED"
+          ],
+          "authority_source_checksum": "9999999999999999999999999999999999999999999999999999999999999999",
+          "authority_source_ref": "cos:decision/COS-019",
+          "result": "pass",
+          "scope": "M5-B manual static acceptance"
+        },
+        "accepted_limitations": [],
+        "artifact_id": "COS-A04-APPROVED",
+        "artifact_lifecycle": "accepted",
+        "artifact_type": "COS-A04",
+        "chosen_option": "option-approve",
+        "common_lineage": {
+          "a01": {
+            "artifact_id": "COS-A01-M5A-ACCEPTED",
+            "artifact_lifecycle": "accepted",
+            "checksum": "1111111111111111111111111111111111111111111111111111111111111111",
+            "current": true,
+            "cutoff": "2026-07-15T00:00:00Z"
+          },
+          "a02": {
+            "artifact_id": "COS-A02-CANDIDATE-BASE",
+            "artifact_lifecycle": "accepted",
+            "checksum": "2222222222222222222222222222222222222222222222222222222222222222",
+            "current": true,
+            "cutoff": "2026-07-15T00:00:00Z"
+          },
+          "a03": {
+            "artifact_id": "COS-A03-M5A-ACCEPTED",
+            "artifact_lifecycle": "accepted",
+            "checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+            "current": true,
+            "cutoff": "2026-07-15T00:00:00Z"
+          },
+          "authority_source_checksum": "9999999999999999999999999999999999999999999999999999999999999999"
+        },
+        "cost_gate": {
+          "a05_artifact_checksum": "2f1e77bc25ee849c0d9fc1a554ef677ce7fe1685216fab5f363d1c6d9a72c585",
+          "a05_artifact_id": "COS-A05-CANDIDATE-BASE",
+          "cost_gate_result": "approved_within_ceiling",
+          "effective_cost_allow": true,
+          "required_unknown_cost_count": 0,
+          "triggered": true
+        },
+        "counterevidence": [],
+        "created_at": "2026-07-15T00:00:00Z",
+        "decision_disposition": "approved",
+        "decision_frame": {
+          "alternatives": [
+            "option-approve",
+            "option-reject"
+          ],
+          "baseline_option": "option-reject",
+          "deadline": "2026-07-16T00:00:00Z",
+          "decision_frame_checksum": "4444444444444444444444444444444444444444444444444444444444444444",
+          "decision_frame_id": "decision-frame-1",
+          "in_scope": [
+            "bounded M5-B decision"
+          ],
+          "out_of_scope": [
+            "P05 execution"
+          ],
+          "question": "Approve the bounded option?"
+        },
+        "decision_owner_binding": {
+          "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+          "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+          "accepted_a03_binding_id": "binding-decision-owner",
+          "actor_id": "human-decision-owner",
+          "actor_kind": "human",
+          "authority_source_checksum": "9999999999999999999999999999999999999999999999999999999999999999",
+          "authority_source_ref": "cos:decision/COS-019",
+          "scope": "M5-B evidence and decision packet"
+        },
+        "eligible_for_p05_evaluation": true,
+        "evidence_basis": [
+          {
+            "admission_disposition": "admitted",
+            "decision_basis_eligible": true,
+            "evidence_item_id": "evidence-required-1"
+          }
+        ],
+        "expiry_condition": "Expires when common lineage is superseded.",
+        "is_current": true,
+        "known_consequences": [
+          "A future P05 evaluation may be requested."
+        ],
+        "non_goals": [
+          "No execution is authorized."
+        ],
+        "p05_started": false,
+        "preparer_actor_id": "ai-preparer",
+        "protocol_run": {
+          "downstream_started": false,
+          "failure_envelope": null,
+          "outcome": "success",
+          "protocol_id": "COS-P04",
+          "stages": [
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "prerequisite_common_lineage",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "decision_frame",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "qualified_evidence_basis",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "authority_separation",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "cost_gate",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "human_decision",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "independent_record_review",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "a04_a05_acceptance",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "downstream_eligibility_archive",
+              "status": "completed"
+            },
+            {
+              "invoked": false,
+              "reason": "fixed disabled in M5-B",
+              "stage_id": "automated_instruction_generation",
+              "status": "disabled"
+            }
+          ]
+        },
+        "rationale": "Human owner explicitly recorded approved.",
+        "reversal_condition": "Revisit on changed evidence.",
+        "schema_version": "0.1",
+        "supersedes": "none",
+        "unknowns": []
+      },
+      "expected_schema_valid": true,
+      "expected_semantic_valid": false,
+      "related_artifacts": [
+        {
+          "artifact": {
+            "acceptance_event": {
+              "acceptance_event_id": "accept-cos-a05-candidate-base",
+              "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+              "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+              "accepted_a03_binding_id": "binding-cost-owner-expired",
+              "accepted_at": "2026-07-15T01:00:00Z",
+              "accepted_by_actor_id": "human-cost-owner",
+              "artifact_checksum": "2f1e77bc25ee849c0d9fc1a554ef677ce7fe1685216fab5f363d1c6d9a72c585",
+              "artifact_id": "COS-A05-CANDIDATE-BASE",
+              "assertions": [
+                "M5B-AST-A05-POS-01"
+              ],
+              "authority_source_checksum": "9999999999999999999999999999999999999999999999999999999999999999",
+              "authority_source_ref": "cos:decision/COS-019",
+              "result": "pass",
+              "scope": "M5-B manual static acceptance"
+            },
+            "approval_ceiling": 150,
+            "artifact_id": "COS-A05-CANDIDATE-BASE",
+            "artifact_lifecycle": "accepted",
+            "artifact_type": "COS-A05",
+            "cost_gate_result": "approved_within_ceiling",
+            "cost_owner_binding": {
+              "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+              "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+              "accepted_a03_binding_id": "binding-cost-owner-expired",
+              "actor_id": "human-cost-owner",
+              "actor_kind": "human",
+              "authority_source_checksum": "9999999999999999999999999999999999999999999999999999999999999999",
+              "authority_source_ref": "cos:decision/COS-019",
+              "scope": "M5-B evidence and decision packet"
+            },
+            "created_at": "2026-07-15T00:00:00Z",
+            "currency": "USD",
+            "effective_cost_allow": true,
+            "estimates": [
+              {
+                "amount": 100,
+                "assumptions": [
+                  "bounded usage"
+                ],
+                "cost_class": "usage",
+                "currency": "USD",
+                "horizon_months": 12
+              }
+            ],
+            "exit_trigger": "Exit before vendor lock-in.",
+            "parent_decision_frame_checksum": "4444444444444444444444444444444444444444444444444444444444444444",
+            "parent_decision_frame_id": "decision-frame-1",
+            "preparer_actor_id": "ai-preparer",
+            "protocol_run": {
+              "downstream_started": false,
+              "failure_envelope": null,
+              "outcome": "success",
+              "protocol_id": "COS-P04-COST-GATE",
+              "stages": [
+                {
+                  "invoked": true,
+                  "reason": "static assertion completed",
+                  "stage_id": "cost_trigger_analysis",
+                  "status": "completed"
+                },
+                {
+                  "invoked": true,
+                  "reason": "static assertion completed",
+                  "stage_id": "cost_inventory",
+                  "status": "completed"
+                },
+                {
+                  "invoked": true,
+                  "reason": "static assertion completed",
+                  "stage_id": "unknown_cost_check",
+                  "status": "completed"
+                },
+                {
+                  "invoked": true,
+                  "reason": "static assertion completed",
+                  "stage_id": "cost_owner_review",
+                  "status": "completed"
+                },
+                {
+                  "invoked": true,
+                  "reason": "static assertion completed",
+                  "stage_id": "a05_acceptance",
+                  "status": "completed"
+                },
+                {
+                  "invoked": true,
+                  "reason": "static assertion completed",
+                  "stage_id": "archive_lineage",
+                  "status": "completed"
+                }
+              ]
+            },
+            "revisit_trigger": "Revisit if estimate exceeds ceiling.",
+            "schema_version": "0.1",
+            "time_horizon_months": 12,
+            "trigger_analysis": "A paid external capability would be required.",
+            "trigger_applicable": true,
+            "trigger_classes": [
+              "paid_or_potentially_paid"
+            ],
+            "unknown_costs": []
+          },
+          "relation": "accepted_cost_gate",
+          "target_schema": "COS-A05"
+        }
+      ],
+      "target_schema": "COS-A04",
+      "variant_id": "M5B-P04-POS-01K-A05-EXPIRED-BINDING"
+    },
+    {
+      "artifact": {
+        "acceptance_event": {
+          "acceptance_event_id": "accept-cos-a04-approved",
+          "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+          "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+          "accepted_a03_binding_id": "binding-decision-owner",
+          "accepted_at": "2026-07-15T01:00:00Z",
+          "accepted_by_actor_id": "human-decision-owner",
+          "artifact_checksum": "af4b6b70364ec89f8cf382918f0c5bd99e2d84f63770c421329c6cd345a2cfd8",
+          "artifact_id": "COS-A04-APPROVED",
+          "assertions": [
+            "M5B-AST-P04-APPROVED"
+          ],
+          "authority_source_checksum": "9999999999999999999999999999999999999999999999999999999999999999",
+          "authority_source_ref": "cos:decision/COS-019",
+          "result": "pass",
+          "scope": "M5-B manual static acceptance"
+        },
+        "accepted_limitations": [],
+        "artifact_id": "COS-A04-APPROVED",
+        "artifact_lifecycle": "accepted",
+        "artifact_type": "COS-A04",
+        "chosen_option": "option-approve",
+        "common_lineage": {
+          "a01": {
+            "artifact_id": "COS-A01-M5A-ACCEPTED",
+            "artifact_lifecycle": "accepted",
+            "checksum": "1111111111111111111111111111111111111111111111111111111111111111",
+            "current": true,
+            "cutoff": "2026-07-15T00:00:00Z"
+          },
+          "a02": {
+            "artifact_id": "COS-A02-CANDIDATE-BASE",
+            "artifact_lifecycle": "accepted",
+            "checksum": "2222222222222222222222222222222222222222222222222222222222222222",
+            "current": true,
+            "cutoff": "2026-07-15T00:00:00Z"
+          },
+          "a03": {
+            "artifact_id": "COS-A03-M5A-ACCEPTED",
+            "artifact_lifecycle": "accepted",
+            "checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+            "current": true,
+            "cutoff": "2026-07-15T00:00:00Z"
+          },
+          "authority_source_checksum": "9999999999999999999999999999999999999999999999999999999999999999"
+        },
+        "cost_gate": {
+          "a05_artifact_checksum": "56ac2c83f2da0f85c6af05c81c6faed1055a2965c8ebfc0980c652cdb7f53a30",
+          "a05_artifact_id": "COS-A05-CANDIDATE-BASE",
+          "cost_gate_result": "approved_within_ceiling",
+          "effective_cost_allow": true,
+          "required_unknown_cost_count": 0,
+          "triggered": true
+        },
+        "counterevidence": [],
+        "created_at": "2026-07-15T00:00:00Z",
+        "decision_disposition": "approved",
+        "decision_frame": {
+          "alternatives": [
+            "option-approve",
+            "option-reject"
+          ],
+          "baseline_option": "option-reject",
+          "deadline": "2026-07-16T00:00:00Z",
+          "decision_frame_checksum": "4444444444444444444444444444444444444444444444444444444444444444",
+          "decision_frame_id": "decision-frame-1",
+          "in_scope": [
+            "bounded M5-B decision"
+          ],
+          "out_of_scope": [
+            "P05 execution"
+          ],
+          "question": "Approve the bounded option?"
+        },
+        "decision_owner_binding": {
+          "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+          "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+          "accepted_a03_binding_id": "binding-decision-owner",
+          "actor_id": "human-decision-owner",
+          "actor_kind": "human",
+          "authority_source_checksum": "9999999999999999999999999999999999999999999999999999999999999999",
+          "authority_source_ref": "cos:decision/COS-019",
+          "scope": "M5-B evidence and decision packet"
+        },
+        "eligible_for_p05_evaluation": true,
+        "evidence_basis": [
+          {
+            "admission_disposition": "admitted",
+            "decision_basis_eligible": true,
+            "evidence_item_id": "evidence-required-1"
+          }
+        ],
+        "expiry_condition": "Expires when common lineage is superseded.",
+        "is_current": true,
+        "known_consequences": [
+          "A future P05 evaluation may be requested."
+        ],
+        "non_goals": [
+          "No execution is authorized."
+        ],
+        "p05_started": false,
+        "preparer_actor_id": "ai-preparer",
+        "protocol_run": {
+          "downstream_started": false,
+          "failure_envelope": null,
+          "outcome": "success",
+          "protocol_id": "COS-P04",
+          "stages": [
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "prerequisite_common_lineage",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "decision_frame",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "qualified_evidence_basis",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "authority_separation",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "cost_gate",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "human_decision",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "independent_record_review",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "a04_a05_acceptance",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "downstream_eligibility_archive",
+              "status": "completed"
+            },
+            {
+              "invoked": false,
+              "reason": "fixed disabled in M5-B",
+              "stage_id": "automated_instruction_generation",
+              "status": "disabled"
+            }
+          ]
+        },
+        "rationale": "Human owner explicitly recorded approved.",
+        "reversal_condition": "Revisit on changed evidence.",
+        "schema_version": "0.1",
+        "supersedes": "none",
+        "unknowns": []
+      },
+      "expected_schema_valid": true,
+      "expected_semantic_valid": false,
+      "related_artifacts": [
+        {
+          "artifact": {
+            "acceptance_event": {
+              "acceptance_event_id": "accept-cos-a05-candidate-base",
+              "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+              "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+              "accepted_a03_binding_id": "binding-cost-owner",
+              "accepted_at": "2026-07-15T01:00:00Z",
+              "accepted_by_actor_id": "human-cost-owner",
+              "artifact_checksum": "56ac2c83f2da0f85c6af05c81c6faed1055a2965c8ebfc0980c652cdb7f53a30",
+              "artifact_id": "COS-A05-CANDIDATE-BASE",
+              "assertions": [
+                "M5B-AST-A05-POS-01"
+              ],
+              "authority_source_checksum": "9999999999999999999999999999999999999999999999999999999999999999",
+              "authority_source_ref": "cos:decision/COS-019",
+              "result": "pass",
+              "scope": "M5-B manual static acceptance"
+            },
+            "approval_ceiling": 150,
+            "artifact_id": "COS-A05-CANDIDATE-BASE",
+            "artifact_lifecycle": "accepted",
+            "artifact_type": "COS-A05",
+            "cost_gate_result": "approved_within_ceiling",
+            "cost_owner_binding": {
+              "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+              "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+              "accepted_a03_binding_id": "binding-cost-owner",
+              "actor_id": "human-cost-owner",
+              "actor_kind": "human",
+              "authority_source_checksum": "9999999999999999999999999999999999999999999999999999999999999999",
+              "authority_source_ref": "cos:decision/COS-019",
+              "scope": "M5-B evidence and decision packet"
+            },
+            "created_at": "2026-07-15T00:00:00Z",
+            "currency": "USD",
+            "effective_cost_allow": true,
+            "estimates": [
+              {
+                "amount": 100,
+                "assumptions": [
+                  "bounded usage"
+                ],
+                "cost_class": "usage",
+                "currency": "USD",
+                "horizon_months": 12
+              }
+            ],
+            "exit_trigger": "Exit before vendor lock-in.",
+            "parent_decision_frame_checksum": "4444444444444444444444444444444444444444444444444444444444444444",
+            "parent_decision_frame_id": "decision-frame-1",
+            "preparer_actor_id": "ai-preparer",
+            "protocol_run": {
+              "downstream_started": false,
+              "failure_envelope": null,
+              "outcome": "success",
+              "protocol_id": "COS-P04-COST-GATE",
+              "stages": [
+                {
+                  "invoked": true,
+                  "reason": "static assertion completed",
+                  "stage_id": "cost_trigger_analysis",
+                  "status": "completed"
+                },
+                {
+                  "invoked": true,
+                  "reason": "static assertion completed",
+                  "stage_id": "cost_inventory",
+                  "status": "completed"
+                },
+                {
+                  "invoked": true,
+                  "reason": "static assertion completed",
+                  "stage_id": "unknown_cost_check",
+                  "status": "completed"
+                },
+                {
+                  "invoked": true,
+                  "reason": "static assertion completed",
+                  "stage_id": "cost_owner_review",
+                  "status": "completed"
+                },
+                {
+                  "invoked": true,
+                  "reason": "static assertion completed",
+                  "stage_id": "a05_acceptance",
+                  "status": "completed"
+                },
+                {
+                  "invoked": true,
+                  "reason": "static assertion completed",
+                  "stage_id": "archive_lineage",
+                  "status": "completed"
+                }
+              ]
+            },
+            "revisit_trigger": "Revisit if estimate exceeds ceiling.",
+            "schema_version": "0.1",
+            "time_horizon_months": 12,
+            "trigger_analysis": "A paid external capability would be required.",
+            "trigger_applicable": true,
+            "trigger_classes": [
+              "paid_or_potentially_paid"
+            ],
+            "unknown_costs": []
+          },
+          "relation": "accepted_cost_gate",
+          "target_schema": "COS-A05"
+        },
+        {
+          "artifact": {
+            "acceptance_event": {
+              "acceptance_event_id": "accept-cos-a05-candidate-base",
+              "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+              "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+              "accepted_a03_binding_id": "binding-cost-owner",
+              "accepted_at": "2026-07-15T01:00:00Z",
+              "accepted_by_actor_id": "human-cost-owner",
+              "artifact_checksum": "56ac2c83f2da0f85c6af05c81c6faed1055a2965c8ebfc0980c652cdb7f53a30",
+              "artifact_id": "COS-A05-CANDIDATE-BASE",
+              "assertions": [
+                "M5B-AST-A05-POS-01"
+              ],
+              "authority_source_checksum": "9999999999999999999999999999999999999999999999999999999999999999",
+              "authority_source_ref": "cos:decision/COS-019",
+              "result": "pass",
+              "scope": "M5-B manual static acceptance"
+            },
+            "approval_ceiling": 150,
+            "artifact_id": "COS-A05-CANDIDATE-BASE",
+            "artifact_lifecycle": "accepted",
+            "artifact_type": "COS-A05",
+            "cost_gate_result": "approved_within_ceiling",
+            "cost_owner_binding": {
+              "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+              "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+              "accepted_a03_binding_id": "binding-cost-owner",
+              "actor_id": "human-cost-owner",
+              "actor_kind": "human",
+              "authority_source_checksum": "9999999999999999999999999999999999999999999999999999999999999999",
+              "authority_source_ref": "cos:decision/COS-019",
+              "scope": "M5-B evidence and decision packet"
+            },
+            "created_at": "2026-07-15T00:00:00Z",
+            "currency": "USD",
+            "effective_cost_allow": true,
+            "estimates": [
+              {
+                "amount": 100,
+                "assumptions": [
+                  "bounded usage"
+                ],
+                "cost_class": "usage",
+                "currency": "USD",
+                "horizon_months": 12
+              }
+            ],
+            "exit_trigger": "Exit before vendor lock-in.",
+            "parent_decision_frame_checksum": "4444444444444444444444444444444444444444444444444444444444444444",
+            "parent_decision_frame_id": "decision-frame-1",
+            "preparer_actor_id": "ai-preparer",
+            "protocol_run": {
+              "downstream_started": false,
+              "failure_envelope": null,
+              "outcome": "success",
+              "protocol_id": "COS-P04-COST-GATE",
+              "stages": [
+                {
+                  "invoked": true,
+                  "reason": "static assertion completed",
+                  "stage_id": "cost_trigger_analysis",
+                  "status": "completed"
+                },
+                {
+                  "invoked": true,
+                  "reason": "static assertion completed",
+                  "stage_id": "cost_inventory",
+                  "status": "completed"
+                },
+                {
+                  "invoked": true,
+                  "reason": "static assertion completed",
+                  "stage_id": "unknown_cost_check",
+                  "status": "completed"
+                },
+                {
+                  "invoked": true,
+                  "reason": "static assertion completed",
+                  "stage_id": "cost_owner_review",
+                  "status": "completed"
+                },
+                {
+                  "invoked": true,
+                  "reason": "static assertion completed",
+                  "stage_id": "a05_acceptance",
+                  "status": "completed"
+                },
+                {
+                  "invoked": true,
+                  "reason": "static assertion completed",
+                  "stage_id": "archive_lineage",
+                  "status": "completed"
+                }
+              ]
+            },
+            "revisit_trigger": "Revisit if estimate exceeds ceiling.",
+            "schema_version": "0.1",
+            "time_horizon_months": 12,
+            "trigger_analysis": "A paid external capability would be required.",
+            "trigger_applicable": true,
+            "trigger_classes": [
+              "paid_or_potentially_paid"
+            ],
+            "unknown_costs": []
+          },
+          "relation": "accepted_cost_gate",
+          "target_schema": "COS-A05"
+        }
+      ],
+      "target_schema": "COS-A04",
+      "variant_id": "M5B-P04-POS-01L-DUPLICATE-A05-REGISTRY-IDENTITY"
+    },
+    {
+      "artifact": {
+        "acceptance_event": {
+          "acceptance_event_id": "accept-cos-a04-approved",
+          "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+          "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+          "accepted_a03_binding_id": "binding-decision-owner",
+          "accepted_at": "2026-07-15T01:00:00Z",
+          "accepted_by_actor_id": "human-decision-owner",
+          "artifact_checksum": "af4b6b70364ec89f8cf382918f0c5bd99e2d84f63770c421329c6cd345a2cfd8",
+          "artifact_id": "COS-A04-APPROVED",
+          "assertions": [
+            "M5B-AST-P04-APPROVED"
+          ],
+          "authority_source_checksum": "9999999999999999999999999999999999999999999999999999999999999999",
+          "authority_source_ref": "cos:decision/COS-019",
+          "result": "pass",
+          "scope": "M5-B production acceptance"
+        },
+        "accepted_limitations": [],
+        "artifact_id": "COS-A04-APPROVED",
+        "artifact_lifecycle": "accepted",
+        "artifact_type": "COS-A04",
+        "chosen_option": "option-approve",
+        "common_lineage": {
+          "a01": {
+            "artifact_id": "COS-A01-M5A-ACCEPTED",
+            "artifact_lifecycle": "accepted",
+            "checksum": "1111111111111111111111111111111111111111111111111111111111111111",
+            "current": true,
+            "cutoff": "2026-07-15T00:00:00Z"
+          },
+          "a02": {
+            "artifact_id": "COS-A02-CANDIDATE-BASE",
+            "artifact_lifecycle": "accepted",
+            "checksum": "2222222222222222222222222222222222222222222222222222222222222222",
+            "current": true,
+            "cutoff": "2026-07-15T00:00:00Z"
+          },
+          "a03": {
+            "artifact_id": "COS-A03-M5A-ACCEPTED",
+            "artifact_lifecycle": "accepted",
+            "checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+            "current": true,
+            "cutoff": "2026-07-15T00:00:00Z"
+          },
+          "authority_source_checksum": "9999999999999999999999999999999999999999999999999999999999999999"
+        },
+        "cost_gate": {
+          "a05_artifact_checksum": "56ac2c83f2da0f85c6af05c81c6faed1055a2965c8ebfc0980c652cdb7f53a30",
+          "a05_artifact_id": "COS-A05-CANDIDATE-BASE",
+          "cost_gate_result": "approved_within_ceiling",
+          "effective_cost_allow": true,
+          "required_unknown_cost_count": 0,
+          "triggered": true
+        },
+        "counterevidence": [],
+        "created_at": "2026-07-15T00:00:00Z",
+        "decision_disposition": "approved",
+        "decision_frame": {
+          "alternatives": [
+            "option-approve",
+            "option-reject"
+          ],
+          "baseline_option": "option-reject",
+          "deadline": "2026-07-16T00:00:00Z",
+          "decision_frame_checksum": "4444444444444444444444444444444444444444444444444444444444444444",
+          "decision_frame_id": "decision-frame-1",
+          "in_scope": [
+            "bounded M5-B decision"
+          ],
+          "out_of_scope": [
+            "P05 execution"
+          ],
+          "question": "Approve the bounded option?"
+        },
+        "decision_owner_binding": {
+          "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+          "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+          "accepted_a03_binding_id": "binding-decision-owner",
+          "actor_id": "human-decision-owner",
+          "actor_kind": "human",
+          "authority_source_checksum": "9999999999999999999999999999999999999999999999999999999999999999",
+          "authority_source_ref": "cos:decision/COS-019",
+          "scope": "M5-B evidence and decision packet"
+        },
+        "eligible_for_p05_evaluation": true,
+        "evidence_basis": [
+          {
+            "admission_disposition": "admitted",
+            "decision_basis_eligible": true,
+            "evidence_item_id": "evidence-required-1"
+          }
+        ],
+        "expiry_condition": "Expires when common lineage is superseded.",
+        "is_current": true,
+        "known_consequences": [
+          "A future P05 evaluation may be requested."
+        ],
+        "non_goals": [
+          "No execution is authorized."
+        ],
+        "p05_started": false,
+        "preparer_actor_id": "ai-preparer",
+        "protocol_run": {
+          "downstream_started": false,
+          "failure_envelope": null,
+          "outcome": "success",
+          "protocol_id": "COS-P04",
+          "stages": [
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "prerequisite_common_lineage",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "decision_frame",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "qualified_evidence_basis",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "authority_separation",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "cost_gate",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "human_decision",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "independent_record_review",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "a04_a05_acceptance",
+              "status": "completed"
+            },
+            {
+              "invoked": true,
+              "reason": "static assertion completed",
+              "stage_id": "downstream_eligibility_archive",
+              "status": "completed"
+            },
+            {
+              "invoked": false,
+              "reason": "fixed disabled in M5-B",
+              "stage_id": "automated_instruction_generation",
+              "status": "disabled"
+            }
+          ]
+        },
+        "rationale": "Human owner explicitly recorded approved.",
+        "reversal_condition": "Revisit on changed evidence.",
+        "schema_version": "0.1",
+        "supersedes": "none",
+        "unknowns": []
+      },
+      "expected_schema_valid": true,
+      "expected_scope_classification": "failed",
+      "expected_semantic_valid": false,
+      "related_artifacts": [
+        {
+          "artifact": {
+            "acceptance_event": {
+              "acceptance_event_id": "accept-cos-a05-candidate-base",
+              "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+              "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+              "accepted_a03_binding_id": "binding-cost-owner",
+              "accepted_at": "2026-07-15T01:00:00Z",
+              "accepted_by_actor_id": "human-cost-owner",
+              "artifact_checksum": "56ac2c83f2da0f85c6af05c81c6faed1055a2965c8ebfc0980c652cdb7f53a30",
+              "artifact_id": "COS-A05-CANDIDATE-BASE",
+              "assertions": [
+                "M5B-AST-A05-POS-01"
+              ],
+              "authority_source_checksum": "9999999999999999999999999999999999999999999999999999999999999999",
+              "authority_source_ref": "cos:decision/COS-019",
+              "result": "pass",
+              "scope": "M5-B manual static acceptance"
+            },
+            "approval_ceiling": 150,
+            "artifact_id": "COS-A05-CANDIDATE-BASE",
+            "artifact_lifecycle": "accepted",
+            "artifact_type": "COS-A05",
+            "cost_gate_result": "approved_within_ceiling",
+            "cost_owner_binding": {
+              "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+              "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+              "accepted_a03_binding_id": "binding-cost-owner",
+              "actor_id": "human-cost-owner",
+              "actor_kind": "human",
+              "authority_source_checksum": "9999999999999999999999999999999999999999999999999999999999999999",
+              "authority_source_ref": "cos:decision/COS-019",
+              "scope": "M5-B evidence and decision packet"
+            },
+            "created_at": "2026-07-15T00:00:00Z",
+            "currency": "USD",
+            "effective_cost_allow": true,
+            "estimates": [
+              {
+                "amount": 100,
+                "assumptions": [
+                  "bounded usage"
+                ],
+                "cost_class": "usage",
+                "currency": "USD",
+                "horizon_months": 12
+              }
+            ],
+            "exit_trigger": "Exit before vendor lock-in.",
+            "parent_decision_frame_checksum": "4444444444444444444444444444444444444444444444444444444444444444",
+            "parent_decision_frame_id": "decision-frame-1",
+            "preparer_actor_id": "ai-preparer",
+            "protocol_run": {
+              "downstream_started": false,
+              "failure_envelope": null,
+              "outcome": "success",
+              "protocol_id": "COS-P04-COST-GATE",
+              "stages": [
+                {
+                  "invoked": true,
+                  "reason": "static assertion completed",
+                  "stage_id": "cost_trigger_analysis",
+                  "status": "completed"
+                },
+                {
+                  "invoked": true,
+                  "reason": "static assertion completed",
+                  "stage_id": "cost_inventory",
+                  "status": "completed"
+                },
+                {
+                  "invoked": true,
+                  "reason": "static assertion completed",
+                  "stage_id": "unknown_cost_check",
+                  "status": "completed"
+                },
+                {
+                  "invoked": true,
+                  "reason": "static assertion completed",
+                  "stage_id": "cost_owner_review",
+                  "status": "completed"
+                },
+                {
+                  "invoked": true,
+                  "reason": "static assertion completed",
+                  "stage_id": "a05_acceptance",
+                  "status": "completed"
+                },
+                {
+                  "invoked": true,
+                  "reason": "static assertion completed",
+                  "stage_id": "archive_lineage",
+                  "status": "completed"
+                }
+              ]
+            },
+            "revisit_trigger": "Revisit if estimate exceeds ceiling.",
+            "schema_version": "0.1",
+            "time_horizon_months": 12,
+            "trigger_analysis": "A paid external capability would be required.",
+            "trigger_applicable": true,
+            "trigger_classes": [
+              "paid_or_potentially_paid"
+            ],
+            "unknown_costs": []
+          },
+          "relation": "accepted_cost_gate",
+          "target_schema": "COS-A05"
+        }
+      ],
+      "target_schema": "COS-A04",
+      "variant_id": "M5B-P04-POS-01M-ACCEPTANCE-SCOPE-BROADER"
+    }
+  ]
+}

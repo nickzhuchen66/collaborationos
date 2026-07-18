@@ -1,0 +1,153 @@
+{
+  "artifact": {
+    "a06_ref": {
+      "artifact_id": "COS-A06-M5C-01",
+      "checksum": "6666666666666666666666666666666666666666666666666666666666666666",
+      "current": true,
+      "cutoff": "2026-07-15T05:00:00Z",
+      "lifecycle": "accepted"
+    },
+    "acceptance_event": {
+      "acceptance_event_id": "accept-a07-01",
+      "accepted_a03_binding_id": "binding-result_acceptor",
+      "actor_id": "human-result",
+      "artifact_body_checksum": "08721a5d2d29953fc84bccc84157f01d023451ebcbbadca5959b78b3bec0251d",
+      "artifact_id": "COS-A07-M5C-01",
+      "authority_source_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+      "authority_source_ref": "COS-A03-M5A-ACCEPTED",
+      "reason": "independent evidence accepted",
+      "result": "accepted",
+      "reviewed_at": "2026-07-15T05:15:00Z",
+      "scope": "M5-C exact bounded attempt"
+    },
+    "artifact_body_checksum": "08721a5d2d29953fc84bccc84157f01d023451ebcbbadca5959b78b3bec0251d",
+    "artifact_id": "COS-A07-M5C-01",
+    "artifact_type": "COS-A07",
+    "builder_actor_id": "actor-builder",
+    "builder_evidence_events": [
+      {
+        "event_checksum": "06a0378be12e2c3b585b3c7003baee123e057fd15f2aa58ba4e7bcc391a5838e",
+        "event_id": "event-a07-builder-01",
+        "event_kind": "builder_evidence",
+        "observed_at": "2026-07-15T05:10:00Z",
+        "previous_event_checksum": null,
+        "previous_event_id": null,
+        "sequence": 1
+      }
+    ],
+    "builder_execution_result": "success",
+    "business_disposition_after": "approved",
+    "business_disposition_observed": "approved",
+    "derived_builder_head_event_id": "event-a07-builder-01",
+    "execution_attempt_id": "attempt-m5c-01",
+    "expected_operations": [
+      {
+        "irreversible": false,
+        "operation": "MODIFY",
+        "operation_id": "op-modify-01",
+        "owner_actor_id": "actor-builder",
+        "path": "docs/example.md",
+        "postimage_checksum": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "precondition": "regular_nonsymlink_exact_preimage",
+        "preimage_checksum": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+      }
+    ],
+    "failure_envelope": null,
+    "lifecycle": "accepted",
+    "observed_operations": [
+      {
+        "irreversible": false,
+        "operation": "MODIFY",
+        "operation_id": "op-modify-01",
+        "owner_actor_id": "actor-builder",
+        "path": "docs/example.md",
+        "postimage_checksum": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "precondition": "regular_nonsymlink_exact_preimage",
+        "preimage_checksum": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+      }
+    ],
+    "optional_limitations": [],
+    "protected_surface_parity": true,
+    "protocol_outcome": "success",
+    "required_acceptance_items_passed": true,
+    "result_acceptor": {
+      "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+      "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+      "accepted_a03_binding_id": "binding-result_acceptor",
+      "actor_id": "human-result",
+      "actor_kind": "human",
+      "authority_domain": "acceptance",
+      "authority_source_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+      "authority_source_ref": "COS-A03-M5A-ACCEPTED",
+      "current": true,
+      "expires_at": "2026-12-31T23:59:59Z",
+      "functional_role": "result_acceptor",
+      "governed_scope": "M5-C exact bounded attempt"
+    },
+    "schema_version": "0.1",
+    "side_effect_state": "none",
+    "stages": [
+      {
+        "stage": "bind_execution_handoff",
+        "status": "completed"
+      },
+      {
+        "stage": "admit_builder_change_evidence",
+        "status": "completed"
+      },
+      {
+        "stage": "verify_scope_integrity_and_side_effects",
+        "status": "completed"
+      },
+      {
+        "stage": "verify_tests_and_assertion_reachability",
+        "status": "completed"
+      },
+      {
+        "stage": "resolve_independent_acceptor_authority",
+        "status": "completed"
+      },
+      {
+        "stage": "record_independent_acceptance",
+        "status": "completed"
+      },
+      {
+        "stage": "record_failure_final",
+        "status": "completed"
+      },
+      {
+        "stage": "evaluate_and_record_rollback",
+        "status": "completed"
+      },
+      {
+        "stage": "acknowledge_manual_takeover",
+        "status": "completed"
+      },
+      {
+        "stage": "reduce_p06_outcome",
+        "status": "completed"
+      }
+    ],
+    "test_evidence": [
+      {
+        "assertion_ids": [
+          "M5C-AST-03"
+        ],
+        "command_class": "manual_static",
+        "invocation_id": "invoke-m5c-static-01",
+        "reachable": true,
+        "result": "pass"
+      }
+    ],
+    "transient_paths": [
+      ".m5c-transient"
+    ]
+  },
+  "expected_schema_valid": true,
+  "expected_semantic_valid": false,
+  "fixture_id": "M5C-N12-extra-missing-operation-or-transient",
+  "primary_assertion_id": "M5C-AST-20",
+  "scenario": "operation_inventory",
+  "target_predicate": "OPERATION_INVENTORY_MISMATCH",
+  "target_schema": "COS-A07"
+}

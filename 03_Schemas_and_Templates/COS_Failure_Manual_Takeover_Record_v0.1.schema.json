@@ -1,0 +1,644 @@
+{
+  "$defs": {
+    "acceptance_event": {
+      "additionalProperties": false,
+      "properties": {
+        "acceptance_event_id": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{2,159}$",
+          "type": "string"
+        },
+        "accepted_a03_binding_id": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{2,159}$",
+          "type": "string"
+        },
+        "actor_id": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{2,159}$",
+          "type": "string"
+        },
+        "artifact_body_checksum": {
+          "pattern": "^[a-f0-9]{64}$",
+          "type": "string"
+        },
+        "artifact_id": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{2,159}$",
+          "type": "string"
+        },
+        "authority_source_checksum": {
+          "pattern": "^[a-f0-9]{64}$",
+          "type": "string"
+        },
+        "authority_source_ref": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "reason": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "result": {
+          "enum": [
+            "accepted",
+            "rejected",
+            "needs_information",
+            "not_attempted"
+          ]
+        },
+        "reviewed_at": {
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(?:\\.\\d+)?(?:Z|[+-]\\d{2}:\\d{2})$",
+          "type": "string"
+        },
+        "scope": {
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "required": [
+        "acceptance_event_id",
+        "artifact_id",
+        "artifact_body_checksum",
+        "actor_id",
+        "accepted_a03_binding_id",
+        "authority_source_ref",
+        "authority_source_checksum",
+        "scope",
+        "result",
+        "reason",
+        "reviewed_at"
+      ],
+      "type": "object"
+    },
+    "actor_binding": {
+      "additionalProperties": false,
+      "properties": {
+        "accepted_a03_artifact_checksum": {
+          "pattern": "^[a-f0-9]{64}$",
+          "type": "string"
+        },
+        "accepted_a03_artifact_id": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{2,159}$",
+          "type": "string"
+        },
+        "accepted_a03_binding_id": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{2,159}$",
+          "type": "string"
+        },
+        "actor_id": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{2,159}$",
+          "type": "string"
+        },
+        "actor_kind": {
+          "enum": [
+            "human",
+            "ai_agent",
+            "deterministic_system",
+            "organization_ref"
+          ]
+        },
+        "authority_domain": {
+          "enum": [
+            "execution",
+            "acceptance",
+            "takeover"
+          ]
+        },
+        "authority_source_checksum": {
+          "pattern": "^[a-f0-9]{64}$",
+          "type": "string"
+        },
+        "authority_source_ref": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "current": {
+          "type": "boolean"
+        },
+        "expires_at": {
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(?:\\.\\d+)?(?:Z|[+-]\\d{2}:\\d{2})$",
+          "type": "string"
+        },
+        "functional_role": {
+          "enum": [
+            "issuer",
+            "builder",
+            "executor",
+            "handoff_acceptor",
+            "result_acceptor",
+            "takeover_owner"
+          ]
+        },
+        "governed_scope": {
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "required": [
+        "actor_id",
+        "actor_kind",
+        "functional_role",
+        "authority_domain",
+        "governed_scope",
+        "accepted_a03_artifact_id",
+        "accepted_a03_artifact_checksum",
+        "accepted_a03_binding_id",
+        "authority_source_ref",
+        "authority_source_checksum",
+        "current",
+        "expires_at"
+      ],
+      "type": "object"
+    },
+    "artifact_id": {
+      "pattern": "^COS-A08-[A-Za-z0-9._-]+$",
+      "type": "string"
+    },
+    "artifact_ref": {
+      "additionalProperties": false,
+      "properties": {
+        "artifact_id": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{2,159}$",
+          "type": "string"
+        },
+        "checksum": {
+          "pattern": "^[a-f0-9]{64}$",
+          "type": "string"
+        },
+        "current": {
+          "type": "boolean"
+        },
+        "cutoff": {
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(?:\\.\\d+)?(?:Z|[+-]\\d{2}:\\d{2})$",
+          "type": "string"
+        },
+        "lifecycle": {
+          "enum": [
+            "draft",
+            "under_review",
+            "accepted",
+            "rejected",
+            "superseded"
+          ]
+        }
+      },
+      "required": [
+        "artifact_id",
+        "checksum",
+        "lifecycle",
+        "current",
+        "cutoff"
+      ],
+      "type": "object"
+    },
+    "checksum": {
+      "pattern": "^[a-f0-9]{64}$",
+      "type": "string"
+    },
+    "event": {
+      "additionalProperties": false,
+      "properties": {
+        "event_checksum": {
+          "pattern": "^[a-f0-9]{64}$",
+          "type": "string"
+        },
+        "event_id": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{2,159}$",
+          "type": "string"
+        },
+        "event_kind": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{2,159}$",
+          "type": "string"
+        },
+        "observed_at": {
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(?:\\.\\d+)?(?:Z|[+-]\\d{2}:\\d{2})$",
+          "type": "string"
+        },
+        "previous_event_checksum": {
+          "pattern": "^[a-f0-9]{64}$",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "previous_event_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "sequence": {
+          "minimum": 1,
+          "type": "integer"
+        }
+      },
+      "required": [
+        "event_id",
+        "event_kind",
+        "sequence",
+        "previous_event_id",
+        "previous_event_checksum",
+        "event_checksum",
+        "observed_at"
+      ],
+      "type": "object"
+    },
+    "operation": {
+      "additionalProperties": false,
+      "properties": {
+        "irreversible": {
+          "type": "boolean"
+        },
+        "operation": {
+          "enum": [
+            "ADD",
+            "MODIFY",
+            "REMOVE"
+          ]
+        },
+        "operation_id": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{2,159}$",
+          "type": "string"
+        },
+        "owner_actor_id": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{2,159}$",
+          "type": "string"
+        },
+        "path": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "postimage_checksum": {
+          "pattern": "^[a-f0-9]{64}$",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "precondition": {
+          "enum": [
+            "must_be_absent",
+            "regular_nonsymlink_exact_preimage"
+          ]
+        },
+        "preimage_checksum": {
+          "pattern": "^[a-f0-9]{64}$",
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "operation_id",
+        "operation",
+        "path",
+        "owner_actor_id",
+        "precondition",
+        "preimage_checksum",
+        "postimage_checksum",
+        "irreversible"
+      ],
+      "type": "object"
+    },
+    "permission": {
+      "additionalProperties": false,
+      "properties": {
+        "a03_binding_id": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{2,159}$",
+          "type": "string"
+        },
+        "authority_source_checksum": {
+          "pattern": "^[a-f0-9]{64}$",
+          "type": "string"
+        },
+        "authority_source_ref": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "current": {
+          "type": "boolean"
+        },
+        "declared_allowed": {
+          "enum": [
+            true,
+            false,
+            "not_observed"
+          ]
+        },
+        "effective_allowed": {
+          "type": "boolean"
+        },
+        "governed_scope": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "permission_id": {
+          "enum": [
+            "read_context",
+            "prepare_artifact",
+            "propose",
+            "challenge",
+            "edit_authorized_scope",
+            "external_call",
+            "incur_cost",
+            "perform_irreversible_action",
+            "make_decision",
+            "accept_result",
+            "takeover",
+            "promote_core",
+            "canonical_write",
+            "release_product"
+          ]
+        }
+      },
+      "required": [
+        "permission_id",
+        "declared_allowed",
+        "effective_allowed",
+        "a03_binding_id",
+        "governed_scope",
+        "authority_source_ref",
+        "authority_source_checksum",
+        "current"
+      ],
+      "type": "object"
+    },
+    "stable_id": {
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{2,159}$",
+      "type": "string"
+    },
+    "stage": {
+      "additionalProperties": false,
+      "properties": {
+        "stage": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{2,159}$",
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "completed",
+            "skipped",
+            "disabled",
+            "not_attempted",
+            "legal_stop",
+            "failed"
+          ]
+        }
+      },
+      "required": [
+        "stage",
+        "status"
+      ],
+      "type": "object"
+    },
+    "timestamp": {
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(?:\\.\\d+)?(?:Z|[+-]\\d{2}:\\d{2})$",
+      "type": "string"
+    }
+  },
+  "$id": "https://collaborationos.local/schemas/COS_Failure_Manual_Takeover_Record_v0.1.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "a06_ref": {
+      "$ref": "#/$defs/artifact_ref"
+    },
+    "a07_ref": {
+      "$ref": "#/$defs/artifact_ref"
+    },
+    "artifact_body_checksum": {
+      "$ref": "#/$defs/checksum"
+    },
+    "artifact_id": {
+      "$ref": "#/$defs/artifact_id"
+    },
+    "artifact_type": {
+      "const": "COS-A08"
+    },
+    "derived_head_event_id": {
+      "$ref": "#/$defs/stable_id"
+    },
+    "events": {
+      "items": {
+        "$ref": "#/$defs/event"
+      },
+      "minItems": 1,
+      "type": "array"
+    },
+    "execution_attempt_id": {
+      "$ref": "#/$defs/stable_id"
+    },
+    "failure": {
+      "additionalProperties": false,
+      "properties": {
+        "code": {
+          "$ref": "#/$defs/stable_id"
+        },
+        "current_parity_known": {
+          "type": "boolean"
+        },
+        "failure_class": {
+          "enum": [
+            "design",
+            "implementation",
+            "test_oracle",
+            "harness",
+            "environment",
+            "permission",
+            "authority",
+            "integrity",
+            "unknown"
+          ]
+        },
+        "last_safe_checkpoint": {
+          "$ref": "#/$defs/stable_id"
+        },
+        "public_message": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "secret_redacted": {
+          "const": true
+        },
+        "side_effect_state": {
+          "enum": [
+            "none",
+            "observed_within_scope",
+            "observed_outside_scope",
+            "not_observed"
+          ]
+        },
+        "technical_detail_ref": {
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "required": [
+        "failure_class",
+        "code",
+        "public_message",
+        "technical_detail_ref",
+        "secret_redacted",
+        "side_effect_state",
+        "last_safe_checkpoint",
+        "current_parity_known"
+      ],
+      "type": "object"
+    },
+    "lifecycle": {
+      "enum": [
+        "draft",
+        "under_review",
+        "accepted",
+        "rejected",
+        "superseded"
+      ]
+    },
+    "new_attempt_started": {
+      "const": false
+    },
+    "partial_state_treated_as_acceptance": {
+      "type": "boolean"
+    },
+    "prior_attempt_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "protocol_outcome": {
+      "enum": [
+        "success",
+        "partial_success",
+        "legal_stop",
+        "failed"
+      ]
+    },
+    "recovery_disposition": {
+      "enum": [
+        "investigate",
+        "rollback_manually",
+        "accept_partial_state",
+        "abandon_attempt",
+        "route_new_attempt_authorization_request"
+      ]
+    },
+    "retry_authorized": {
+      "const": false
+    },
+    "retry_recommended": {
+      "type": "boolean"
+    },
+    "rollback": {
+      "additionalProperties": false,
+      "properties": {
+        "attempted": {
+          "type": "boolean"
+        },
+        "authorized": {
+          "type": "boolean"
+        },
+        "history_preserved": {
+          "type": "boolean"
+        },
+        "operation": {
+          "enum": [
+            "ADD",
+            "MODIFY",
+            "REMOVE"
+          ]
+        },
+        "owner_matches": {
+          "type": "boolean"
+        },
+        "path_matches": {
+          "type": "boolean"
+        },
+        "preimage_valid": {
+          "type": "boolean"
+        },
+        "result": {
+          "enum": [
+            "succeeded",
+            "failed",
+            "not_attempted"
+          ]
+        },
+        "target_state": {
+          "enum": [
+            "authorized_postimage",
+            "foreign_replacement",
+            "hash_mismatch",
+            "absent",
+            "occupied"
+          ]
+        }
+      },
+      "required": [
+        "operation",
+        "authorized",
+        "owner_matches",
+        "path_matches",
+        "target_state",
+        "preimage_valid",
+        "attempted",
+        "result",
+        "history_preserved"
+      ],
+      "type": "object"
+    },
+    "schema_version": {
+      "const": "0.1"
+    },
+    "scope_expanded": {
+      "type": "boolean"
+    },
+    "stages": {
+      "items": {
+        "$ref": "#/$defs/stage"
+      },
+      "maxItems": 10,
+      "minItems": 10,
+      "type": "array"
+    },
+    "takeover_acknowledged": {
+      "type": "boolean"
+    },
+    "takeover_owner": {
+      "$ref": "#/$defs/actor_binding"
+    },
+    "unresolved_risks": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "minItems": 0,
+      "type": "array"
+    }
+  },
+  "required": [
+    "schema_version",
+    "artifact_type",
+    "artifact_id",
+    "lifecycle",
+    "a06_ref",
+    "a07_ref",
+    "execution_attempt_id",
+    "prior_attempt_id",
+    "events",
+    "derived_head_event_id",
+    "failure",
+    "rollback",
+    "takeover_owner",
+    "takeover_acknowledged",
+    "recovery_disposition",
+    "scope_expanded",
+    "partial_state_treated_as_acceptance",
+    "retry_recommended",
+    "retry_authorized",
+    "new_attempt_started",
+    "stages",
+    "protocol_outcome",
+    "unresolved_risks",
+    "artifact_body_checksum"
+  ],
+  "type": "object"
+}

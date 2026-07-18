@@ -1,0 +1,769 @@
+{
+  "$defs": {
+    "acceptance_event": {
+      "additionalProperties": false,
+      "properties": {
+        "acceptance_event_id": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{2,159}$",
+          "type": "string"
+        },
+        "accepted_a03_binding_id": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{2,159}$",
+          "type": "string"
+        },
+        "actor_id": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{2,159}$",
+          "type": "string"
+        },
+        "artifact_body_checksum": {
+          "pattern": "^[a-f0-9]{64}$",
+          "type": "string"
+        },
+        "artifact_id": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{2,159}$",
+          "type": "string"
+        },
+        "authority_source_checksum": {
+          "pattern": "^[a-f0-9]{64}$",
+          "type": "string"
+        },
+        "authority_source_ref": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "reason": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "result": {
+          "enum": [
+            "accepted",
+            "rejected",
+            "needs_information",
+            "not_attempted"
+          ]
+        },
+        "reviewed_at": {
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(?:\\.\\d+)?(?:Z|[+-]\\d{2}:\\d{2})$",
+          "type": "string"
+        },
+        "scope": {
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "required": [
+        "acceptance_event_id",
+        "artifact_id",
+        "artifact_body_checksum",
+        "actor_id",
+        "accepted_a03_binding_id",
+        "authority_source_ref",
+        "authority_source_checksum",
+        "scope",
+        "result",
+        "reason",
+        "reviewed_at"
+      ],
+      "type": "object"
+    },
+    "actor_binding": {
+      "additionalProperties": false,
+      "properties": {
+        "accepted_a03_artifact_checksum": {
+          "pattern": "^[a-f0-9]{64}$",
+          "type": "string"
+        },
+        "accepted_a03_artifact_id": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{2,159}$",
+          "type": "string"
+        },
+        "accepted_a03_binding_id": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{2,159}$",
+          "type": "string"
+        },
+        "actor_id": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{2,159}$",
+          "type": "string"
+        },
+        "actor_kind": {
+          "enum": [
+            "human",
+            "ai_agent",
+            "deterministic_system",
+            "organization_ref"
+          ]
+        },
+        "authority_domain": {
+          "enum": [
+            "execution",
+            "acceptance",
+            "takeover"
+          ]
+        },
+        "authority_source_checksum": {
+          "pattern": "^[a-f0-9]{64}$",
+          "type": "string"
+        },
+        "authority_source_ref": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "current": {
+          "type": "boolean"
+        },
+        "expires_at": {
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(?:\\.\\d+)?(?:Z|[+-]\\d{2}:\\d{2})$",
+          "type": "string"
+        },
+        "functional_role": {
+          "enum": [
+            "issuer",
+            "builder",
+            "executor",
+            "handoff_acceptor",
+            "result_acceptor",
+            "takeover_owner"
+          ]
+        },
+        "governed_scope": {
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "required": [
+        "actor_id",
+        "actor_kind",
+        "functional_role",
+        "authority_domain",
+        "governed_scope",
+        "accepted_a03_artifact_id",
+        "accepted_a03_artifact_checksum",
+        "accepted_a03_binding_id",
+        "authority_source_ref",
+        "authority_source_checksum",
+        "current",
+        "expires_at"
+      ],
+      "type": "object"
+    },
+    "artifact_id": {
+      "pattern": "^COS-A06-[A-Za-z0-9._-]+$",
+      "type": "string"
+    },
+    "artifact_ref": {
+      "additionalProperties": false,
+      "properties": {
+        "artifact_id": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{2,159}$",
+          "type": "string"
+        },
+        "checksum": {
+          "pattern": "^[a-f0-9]{64}$",
+          "type": "string"
+        },
+        "current": {
+          "type": "boolean"
+        },
+        "cutoff": {
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(?:\\.\\d+)?(?:Z|[+-]\\d{2}:\\d{2})$",
+          "type": "string"
+        },
+        "lifecycle": {
+          "enum": [
+            "draft",
+            "under_review",
+            "accepted",
+            "rejected",
+            "superseded"
+          ]
+        }
+      },
+      "required": [
+        "artifact_id",
+        "checksum",
+        "lifecycle",
+        "current",
+        "cutoff"
+      ],
+      "type": "object"
+    },
+    "checksum": {
+      "pattern": "^[a-f0-9]{64}$",
+      "type": "string"
+    },
+    "event": {
+      "additionalProperties": false,
+      "properties": {
+        "event_checksum": {
+          "pattern": "^[a-f0-9]{64}$",
+          "type": "string"
+        },
+        "event_id": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{2,159}$",
+          "type": "string"
+        },
+        "event_kind": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{2,159}$",
+          "type": "string"
+        },
+        "observed_at": {
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(?:\\.\\d+)?(?:Z|[+-]\\d{2}:\\d{2})$",
+          "type": "string"
+        },
+        "previous_event_checksum": {
+          "pattern": "^[a-f0-9]{64}$",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "previous_event_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "sequence": {
+          "minimum": 1,
+          "type": "integer"
+        }
+      },
+      "required": [
+        "event_id",
+        "event_kind",
+        "sequence",
+        "previous_event_id",
+        "previous_event_checksum",
+        "event_checksum",
+        "observed_at"
+      ],
+      "type": "object"
+    },
+    "operation": {
+      "additionalProperties": false,
+      "properties": {
+        "irreversible": {
+          "type": "boolean"
+        },
+        "operation": {
+          "enum": [
+            "ADD",
+            "MODIFY",
+            "REMOVE"
+          ]
+        },
+        "operation_id": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{2,159}$",
+          "type": "string"
+        },
+        "owner_actor_id": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{2,159}$",
+          "type": "string"
+        },
+        "path": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "postimage_checksum": {
+          "pattern": "^[a-f0-9]{64}$",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "precondition": {
+          "enum": [
+            "must_be_absent",
+            "regular_nonsymlink_exact_preimage"
+          ]
+        },
+        "preimage_checksum": {
+          "pattern": "^[a-f0-9]{64}$",
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "operation_id",
+        "operation",
+        "path",
+        "owner_actor_id",
+        "precondition",
+        "preimage_checksum",
+        "postimage_checksum",
+        "irreversible"
+      ],
+      "type": "object"
+    },
+    "permission": {
+      "additionalProperties": false,
+      "properties": {
+        "a03_binding_id": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{2,159}$",
+          "type": "string"
+        },
+        "authority_source_checksum": {
+          "pattern": "^[a-f0-9]{64}$",
+          "type": "string"
+        },
+        "authority_source_ref": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "current": {
+          "type": "boolean"
+        },
+        "declared_allowed": {
+          "enum": [
+            true,
+            false,
+            "not_observed"
+          ]
+        },
+        "effective_allowed": {
+          "type": "boolean"
+        },
+        "governed_scope": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "permission_id": {
+          "enum": [
+            "read_context",
+            "prepare_artifact",
+            "propose",
+            "challenge",
+            "edit_authorized_scope",
+            "external_call",
+            "incur_cost",
+            "perform_irreversible_action",
+            "make_decision",
+            "accept_result",
+            "takeover",
+            "promote_core",
+            "canonical_write",
+            "release_product"
+          ]
+        }
+      },
+      "required": [
+        "permission_id",
+        "declared_allowed",
+        "effective_allowed",
+        "a03_binding_id",
+        "governed_scope",
+        "authority_source_ref",
+        "authority_source_checksum",
+        "current"
+      ],
+      "type": "object"
+    },
+    "stable_id": {
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{2,159}$",
+      "type": "string"
+    },
+    "stage": {
+      "additionalProperties": false,
+      "properties": {
+        "stage": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{2,159}$",
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "completed",
+            "skipped",
+            "disabled",
+            "not_attempted",
+            "legal_stop",
+            "failed"
+          ]
+        }
+      },
+      "required": [
+        "stage",
+        "status"
+      ],
+      "type": "object"
+    },
+    "timestamp": {
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(?:\\.\\d+)?(?:Z|[+-]\\d{2}:\\d{2})$",
+      "type": "string"
+    }
+  },
+  "$id": "https://collaborationos.local/schemas/COS_Execution_Handoff_v0.1.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "acceptance_event": {
+      "$ref": "#/$defs/acceptance_event"
+    },
+    "acceptance_plan": {
+      "additionalProperties": false,
+      "properties": {
+        "assertion_ids": {
+          "items": {
+            "$ref": "#/$defs/stable_id"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "handoff_acceptor_actor_id": {
+          "$ref": "#/$defs/stable_id"
+        },
+        "old_passing_behavior_required": {
+          "const": true
+        },
+        "result_acceptor_actor_id": {
+          "$ref": "#/$defs/stable_id"
+        },
+        "stop_threshold": {
+          "const": "first_failure"
+        }
+      },
+      "required": [
+        "assertion_ids",
+        "old_passing_behavior_required",
+        "handoff_acceptor_actor_id",
+        "result_acceptor_actor_id",
+        "stop_threshold"
+      ],
+      "type": "object"
+    },
+    "actors": {
+      "additionalProperties": false,
+      "properties": {
+        "builder": {
+          "$ref": "#/$defs/actor_binding"
+        },
+        "executor": {
+          "$ref": "#/$defs/actor_binding"
+        },
+        "handoff_acceptor": {
+          "$ref": "#/$defs/actor_binding"
+        },
+        "issuer": {
+          "$ref": "#/$defs/actor_binding"
+        },
+        "takeover_owner": {
+          "$ref": "#/$defs/actor_binding"
+        }
+      },
+      "required": [
+        "issuer",
+        "builder",
+        "executor",
+        "handoff_acceptor",
+        "takeover_owner"
+      ],
+      "type": "object"
+    },
+    "artifact_body_checksum": {
+      "$ref": "#/$defs/checksum"
+    },
+    "artifact_id": {
+      "$ref": "#/$defs/artifact_id"
+    },
+    "artifact_type": {
+      "const": "COS-A06"
+    },
+    "cost_contract": {
+      "additionalProperties": false,
+      "properties": {
+        "a05_accepted_current": {
+          "type": "boolean"
+        },
+        "cost_state": {
+          "enum": [
+            "known",
+            "unknown",
+            "not_applicable"
+          ]
+        },
+        "cost_triggered": {
+          "type": "boolean"
+        },
+        "within_ceiling": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "cost_triggered",
+        "cost_state",
+        "a05_accepted_current",
+        "within_ceiling"
+      ],
+      "type": "object"
+    },
+    "environment": {
+      "additionalProperties": false,
+      "properties": {
+        "external_call_count": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "incremental_cost_usd": {
+          "minimum": 0,
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "repository_root_id": {
+          "$ref": "#/$defs/stable_id"
+        },
+        "runtime_mode": {
+          "const": "manual_static"
+        },
+        "secret_material_allowed": {
+          "const": false
+        }
+      },
+      "required": [
+        "repository_root_id",
+        "runtime_mode",
+        "external_call_count",
+        "incremental_cost_usd",
+        "secret_material_allowed"
+      ],
+      "type": "object"
+    },
+    "execution_attempt_id": {
+      "$ref": "#/$defs/stable_id"
+    },
+    "lifecycle": {
+      "enum": [
+        "draft",
+        "under_review",
+        "accepted",
+        "rejected",
+        "superseded"
+      ]
+    },
+    "limitations": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "minItems": 0,
+      "type": "array"
+    },
+    "lineage": {
+      "additionalProperties": false,
+      "properties": {
+        "a01": {
+          "$ref": "#/$defs/artifact_ref"
+        },
+        "a03": {
+          "$ref": "#/$defs/artifact_ref"
+        },
+        "a04": {
+          "$ref": "#/$defs/artifact_ref"
+        },
+        "a05": {
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "a05_required": {
+          "type": "boolean"
+        },
+        "common_a01_lineage_checksum": {
+          "$ref": "#/$defs/checksum"
+        }
+      },
+      "required": [
+        "a01",
+        "a03",
+        "a04",
+        "a05_required",
+        "a05",
+        "common_a01_lineage_checksum"
+      ],
+      "type": "object"
+    },
+    "operations": {
+      "items": {
+        "$ref": "#/$defs/operation"
+      },
+      "minItems": 1,
+      "type": "array"
+    },
+    "permission_projection": {
+      "items": {
+        "$ref": "#/$defs/permission"
+      },
+      "maxItems": 14,
+      "minItems": 14,
+      "type": "array"
+    },
+    "protected_surfaces": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "checksum": {
+            "$ref": "#/$defs/checksum"
+          },
+          "path": {
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "required": [
+          "path",
+          "checksum"
+        ],
+        "type": "object"
+      },
+      "minItems": 1,
+      "type": "array"
+    },
+    "protocol_outcome": {
+      "enum": [
+        "success",
+        "partial_success",
+        "legal_stop",
+        "failed"
+      ]
+    },
+    "rollback_contract": {
+      "additionalProperties": false,
+      "properties": {
+        "hash_gated": {
+          "const": true
+        },
+        "manual_takeover_on_mismatch": {
+          "const": true
+        },
+        "owner_actor_id": {
+          "$ref": "#/$defs/stable_id"
+        },
+        "rollback_authorized": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "rollback_authorized",
+        "owner_actor_id",
+        "hash_gated",
+        "manual_takeover_on_mismatch"
+      ],
+      "type": "object"
+    },
+    "schema_version": {
+      "const": "0.1"
+    },
+    "stages": {
+      "items": {
+        "$ref": "#/$defs/stage"
+      },
+      "maxItems": 8,
+      "minItems": 8,
+      "type": "array"
+    },
+    "start_predicates": {
+      "additionalProperties": false,
+      "properties": {
+        "a04_accepted_current": {
+          "enum": [
+            true,
+            false,
+            "not_observed"
+          ]
+        },
+        "a06_current_unexpired": {
+          "enum": [
+            true,
+            false,
+            "not_observed"
+          ]
+        },
+        "a06_human_accepted": {
+          "enum": [
+            true,
+            false,
+            "not_observed"
+          ]
+        },
+        "cost_gate_satisfied": {
+          "enum": [
+            true,
+            false,
+            "not_observed"
+          ]
+        },
+        "eligible_for_p05_evaluation": {
+          "enum": [
+            true,
+            false,
+            "not_observed"
+          ]
+        },
+        "execution_may_start": {
+          "type": "boolean"
+        },
+        "lineage_current": {
+          "enum": [
+            true,
+            false,
+            "not_observed"
+          ]
+        },
+        "p05_success": {
+          "enum": [
+            true,
+            false,
+            "not_observed"
+          ]
+        },
+        "required_permissions_true": {
+          "enum": [
+            true,
+            false,
+            "not_observed"
+          ]
+        }
+      },
+      "required": [
+        "a04_accepted_current",
+        "lineage_current",
+        "eligible_for_p05_evaluation",
+        "cost_gate_satisfied",
+        "p05_success",
+        "a06_human_accepted",
+        "a06_current_unexpired",
+        "required_permissions_true",
+        "execution_may_start"
+      ],
+      "type": "object"
+    }
+  },
+  "required": [
+    "schema_version",
+    "artifact_type",
+    "artifact_id",
+    "lifecycle",
+    "lineage",
+    "execution_attempt_id",
+    "actors",
+    "operations",
+    "protected_surfaces",
+    "environment",
+    "permission_projection",
+    "cost_contract",
+    "start_predicates",
+    "acceptance_plan",
+    "rollback_contract",
+    "stages",
+    "protocol_outcome",
+    "limitations",
+    "artifact_body_checksum",
+    "acceptance_event"
+  ],
+  "type": "object"
+}

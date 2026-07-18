@@ -1,0 +1,357 @@
+{
+  "accepted_bindings": {
+    "a02": {
+      "artifact_checksum": "b23280c959e5c753fbbff7854a72ed8124d2b0ae9e8fca6b23b346722da23e44",
+      "artifact_id": "COS-A02-TEST",
+      "current_event_checksum": "db0497bc82586e92b51b5960941e3bea4075ed3e8a0d01ab4e2c719537b56433",
+      "current_event_id": "A02-EVT-1",
+      "cutoff": "2026-07-15T12:00:00+08:00",
+      "lifecycle": "accepted",
+      "source_ref": "packet:test-facts:a02"
+    },
+    "a03": {
+      "artifact_checksum": "6d9145c86bba9558be49abf9bcf942b4928bc3e1363a18efd0ac3b9f49c5ac74",
+      "artifact_id": "COS-A03-TEST",
+      "current_event_checksum": "2e451c4dc9cca029bb970a456ef37591ed0543e0512759fb243dd086e172ecae",
+      "current_event_id": "A03-EVT-1",
+      "cutoff": "2026-07-15T12:00:00+08:00",
+      "lifecycle": "accepted",
+      "source_ref": "packet:test-facts:a03"
+    },
+    "a07": {
+      "artifact_checksum": "489cbf5ea59f7028954dea971b5375d17fcb419141ce5c89749ca95423a03c98",
+      "artifact_id": "COS-A07-TEST",
+      "current_event_checksum": "9c958b78508a225228f96a7be6597ff0a4bc00546cf019d26764e86ed55084f2",
+      "current_event_id": "A07-EVT-1",
+      "cutoff": "2026-07-15T12:00:00+08:00",
+      "lifecycle": "accepted",
+      "source_ref": "packet:test-facts:a07"
+    },
+    "a08": {
+      "artifact_checksum": "not_applicable",
+      "artifact_id": "not_applicable",
+      "current_event_checksum": "not_applicable",
+      "current_event_id": "not_applicable",
+      "cutoff": "2026-07-15T12:00:00+08:00",
+      "lifecycle": "not_applicable",
+      "source_ref": "not_applicable"
+    }
+  },
+  "artifact_id": "COS-A09-ART-08",
+  "artifact_lifecycle": "reviewed",
+  "authority_resolution": {
+    "action_policy_digest": "0547b35b10c7b92298b67ae35955e528ed448981650f5c78b211070967e39531",
+    "canonical_owner": {
+      "a03_artifact_id": "COS-A03-TEST",
+      "a03_checksum": "6d9145c86bba9558be49abf9bcf942b4928bc3e1363a18efd0ac3b9f49c5ac74",
+      "a03_current_event_checksum": "2e451c4dc9cca029bb970a456ef37591ed0543e0512759fb243dd086e172ecae",
+      "a03_current_event_id": "A03-EVT-1",
+      "actor_id": "HUMAN-CANONICAL-OWNER",
+      "actor_kind": "human",
+      "authority_domain": "canonical_release",
+      "authority_source_checksum": "7e895d67c7a5ebaa2887c2a10596d16cf4ff809da1a7fc6e45022a97c2404e00",
+      "authority_source_ref": "packet:test-facts:accepted-a03",
+      "effective_allowed": true,
+      "governed_scope": "cos:core:P07-C10@v0.1:scope-test",
+      "permission_ids": [
+        "canonical_write",
+        "release_product"
+      ],
+      "role": "authority_owner",
+      "role_binding_id": "RB-CANONICAL"
+    },
+    "promotion_owner": {
+      "a03_artifact_id": "COS-A03-TEST",
+      "a03_checksum": "6d9145c86bba9558be49abf9bcf942b4928bc3e1363a18efd0ac3b9f49c5ac74",
+      "a03_current_event_checksum": "2e451c4dc9cca029bb970a456ef37591ed0543e0512759fb243dd086e172ecae",
+      "a03_current_event_id": "A03-EVT-1",
+      "actor_id": "HUMAN-PROMOTION-OWNER",
+      "actor_kind": "human",
+      "authority_domain": "promotion",
+      "authority_source_checksum": "7e895d67c7a5ebaa2887c2a10596d16cf4ff809da1a7fc6e45022a97c2404e00",
+      "authority_source_ref": "packet:test-facts:accepted-a03",
+      "effective_allowed": true,
+      "governed_scope": "cos:core:P07-C10@v0.1:scope-test",
+      "permission_ids": [
+        "make_decision",
+        "promote_core"
+      ],
+      "role": "decision_owner",
+      "role_binding_id": "RB-PROMOTION"
+    },
+    "reviewer": {
+      "a03_artifact_id": "COS-A03-TEST",
+      "a03_checksum": "6d9145c86bba9558be49abf9bcf942b4928bc3e1363a18efd0ac3b9f49c5ac74",
+      "a03_current_event_checksum": "2e451c4dc9cca029bb970a456ef37591ed0543e0512759fb243dd086e172ecae",
+      "a03_current_event_id": "A03-EVT-1",
+      "actor_id": "HUMAN-REVIEWER",
+      "actor_kind": "human",
+      "authority_domain": "acceptance",
+      "authority_source_checksum": "7e895d67c7a5ebaa2887c2a10596d16cf4ff809da1a7fc6e45022a97c2404e00",
+      "authority_source_ref": "packet:test-facts:accepted-a03",
+      "effective_allowed": true,
+      "governed_scope": "cos:a09:review:COS-A09-CAND-08",
+      "permission_ids": [
+        "accept_result"
+      ],
+      "role": "reviewer",
+      "role_binding_id": "RB-REVIEWER"
+    },
+    "self_review_exception": {
+      "candidate_id": "not_applicable",
+      "decision_checksum": "not_applicable",
+      "decision_id": "not_applicable",
+      "effective_at": "not_applicable",
+      "expires_at": "not_applicable",
+      "request_checksum": "not_applicable",
+      "request_id": "not_applicable",
+      "scope": "not_applicable",
+      "status": "not_requested"
+    }
+  },
+  "automation": {
+    "automatic_apply": false,
+    "automatic_canonical_write": false,
+    "automatic_decision": false,
+    "automatic_evidence_admission": false,
+    "automatic_external_call": false,
+    "automatic_host_adoption": false,
+    "automatic_maturity_transition": false,
+    "automatic_promotion": false,
+    "automatic_release": false,
+    "automatic_review_acceptance": false,
+    "automatic_submission": false,
+    "runtime_invocation": false
+  },
+  "candidate_id": "COS-A09-CAND-08",
+  "created_at": "2026-07-15T12:00:00+08:00",
+  "disclosure": {
+    "forbidden_business_payload_present": false,
+    "nda_present": false,
+    "personal_data_present": false,
+    "reason": "source-bound pass",
+    "redaction_result": "passed",
+    "review_observation": "observed",
+    "secret_present": false
+  },
+  "expected_assertion": {
+    "assertion_id": "M5D-AST-08",
+    "expected_outcome": "success",
+    "target_reached": true
+  },
+  "host_adoption": {
+    "host_decision_ref": "not_applicable",
+    "status": "not_reviewed"
+  },
+  "intake": {
+    "cos_intake_registrar": {
+      "a03_artifact_id": "COS-A03-TEST",
+      "a03_checksum": "6d9145c86bba9558be49abf9bcf942b4928bc3e1363a18efd0ac3b9f49c5ac74",
+      "a03_current_event_checksum": "2e451c4dc9cca029bb970a456ef37591ed0543e0512759fb243dd086e172ecae",
+      "a03_current_event_id": "A03-EVT-1",
+      "actor_id": "HUMAN-REGISTRAR",
+      "actor_kind": "human",
+      "authority_domain": "final_direction",
+      "authority_source_checksum": "7e895d67c7a5ebaa2887c2a10596d16cf4ff809da1a7fc6e45022a97c2404e00",
+      "authority_source_ref": "packet:test-facts:accepted-a03",
+      "effective_allowed": true,
+      "governed_scope": "cos:a09:intake:COS-A09-CAND-08",
+      "permission_ids": [
+        "propose"
+      ],
+      "role": "proposer",
+      "role_binding_id": "RB-PROPOSER"
+    },
+    "crosswalk_inventory_digest": "b1518d4047d983d30e7efda39ffbfe595d064187a909e1d9ebebe1ed50deae7a",
+    "host_submitter_claim": "HOST-SUBMITTER",
+    "submission_checksum": "897cc0016a620d90c5cec8ff3d8ad4c3126355df7d468688b4c38cf88f0fa497",
+    "submission_ref": "COS-LRN-SUB-08"
+  },
+  "limitations": [],
+  "maturity": {
+    "cohort_digest": "83a5fa6b098fa1f2886a0d2697aba9cfd1f41b82fa3e21e28e9b22c2b636cc69",
+    "current_observation": "observed",
+    "current_state": "OBSERVED_SINGLE_HOST",
+    "derived_ceiling": "SUPPORTED_CROSS_HOST",
+    "final_state": "PROMOTED_CORE",
+    "host_policy_digest": "28f4096d8bd13c6ba248d61c26d4cfa648b506bf8d372b90e405310e58f4c042",
+    "limitation_policy_digest": "1edef47bf8c6a23f797517ed7c10414dda7312f9f53ea4cedeb7d7770d0cdebf",
+    "recommended_state": "PROMOTED_CORE"
+  },
+  "promotion_lineage": {
+    "basis_review_event_checksum": "2e1617b8d1b01d9df8629875995c2a813a1581828fb7eec573b16f3d0de5fce3",
+    "basis_review_event_id": "A09-REVIEW-08-1",
+    "build_log_checksum": "25bab7f19693cefdca040bfbf54a22a00b135f931226d54996d36ef7074ffe84",
+    "build_log_ref": "COS-BUILD-DEC-PROMOTE-1",
+    "core_change_checksum": "9d3d4c0020187883ade149a5c16cb44eccf20115f599a283f4b29950af02d86e",
+    "core_change_ref": "COS-CORE-CHANGE-1",
+    "core_version": "v0.3-test",
+    "decision_checksum": "5e42432242577db581c7fd743df25f1fdbaa086108c58e708ebfe64dbdcc6c50",
+    "decision_id": "COS-DEC-PROMOTE-1",
+    "decision_result": "approve",
+    "final_event_checksum": "d1fd304d8564844a278c789117f1ce3954794628ec016b13f23e1bef07e5c097",
+    "final_event_id": "A09-PROMOTION-FINAL-1",
+    "required": true
+  },
+  "protocol_outcome": "success",
+  "review_chain": [
+    {
+      "candidate_checksum": "ea34a7e330fbf6a0ea5f0bdb4a2e2ef2328c078a48c7b11d39340215655dfbdc",
+      "derived_ceiling": "SUPPORTED_CROSS_HOST",
+      "event_checksum": "2e1617b8d1b01d9df8629875995c2a813a1581828fb7eec573b16f3d0de5fce3",
+      "event_id": "A09-REVIEW-08-1",
+      "previous_event_checksum": "not_applicable",
+      "previous_event_id": "not_applicable",
+      "reason": "bounded candidate review",
+      "recommendation": "ADOPT",
+      "reviewed_at": "2026-07-15T12:00:00+08:00",
+      "reviewed_route": "COS_CORE_CANDIDATE",
+      "reviewer": {
+        "a03_artifact_id": "COS-A03-TEST",
+        "a03_checksum": "6d9145c86bba9558be49abf9bcf942b4928bc3e1363a18efd0ac3b9f49c5ac74",
+        "a03_current_event_checksum": "2e451c4dc9cca029bb970a456ef37591ed0543e0512759fb243dd086e172ecae",
+        "a03_current_event_id": "A03-EVT-1",
+        "actor_id": "HUMAN-REVIEWER",
+        "actor_kind": "human",
+        "authority_domain": "acceptance",
+        "authority_source_checksum": "7e895d67c7a5ebaa2887c2a10596d16cf4ff809da1a7fc6e45022a97c2404e00",
+        "authority_source_ref": "packet:test-facts:accepted-a03",
+        "effective_allowed": true,
+        "governed_scope": "cos:a09:review:COS-A09-CAND-08",
+        "permission_ids": [
+          "accept_result"
+        ],
+        "role": "reviewer",
+        "role_binding_id": "RB-REVIEWER"
+      },
+      "sequence": 1,
+      "source_set_digest": "83a5fa6b098fa1f2886a0d2697aba9cfd1f41b82fa3e21e28e9b22c2b636cc69"
+    }
+  ],
+  "routing": {
+    "reason": "general candidate",
+    "reviewed_route": "COS_CORE_CANDIDATE",
+    "split_children": [],
+    "submitted_route": "COS_CORE_CANDIDATE"
+  },
+  "schema_version": "COS_LEARNING_CANDIDATE_RECORD_V0_1",
+  "source_authority": "CollaborationOS",
+  "source_cohort": [
+    {
+      "actual_scope_predicates": [
+        "source_bound",
+        "independent_review"
+      ],
+      "event_id": "HOST-EVT-08-1",
+      "failure_path": "reached",
+      "host_alias": "HOST-A-ALIAS",
+      "host_authority_ref": "authority:HOST-A",
+      "host_identity": "HOST-A",
+      "host_structure_fingerprint": "74a462ca17fd3085f83a346da2a7a11440e968f426ea76fa778adf3cf793c917",
+      "independent_acceptance": "passed",
+      "manual_takeover": "available_not_used",
+      "positive_path": "reached",
+      "run_id": "RUN-08-1",
+      "structural_dimensions": [
+        "authority_topology"
+      ]
+    },
+    {
+      "actual_scope_predicates": [
+        "source_bound",
+        "independent_review"
+      ],
+      "event_id": "HOST-EVT-B-2",
+      "failure_path": "reached",
+      "host_alias": "HOST-B-ALIAS",
+      "host_authority_ref": "authority:HOST-B",
+      "host_identity": "HOST-B",
+      "host_structure_fingerprint": "acd6c8df2aae9984da1876cdfcd1c00a33cbbf6a33f6456b44bff5052bbb1789",
+      "independent_acceptance": "passed",
+      "manual_takeover": "available_not_used",
+      "positive_path": "reached",
+      "run_id": "RUN-B-2",
+      "structural_dimensions": [
+        "execution_environment",
+        "failure_surface"
+      ]
+    }
+  ],
+  "stages": [
+    {
+      "invoked": true,
+      "reason": "completed",
+      "stage_id": "bind_candidate_sources",
+      "status": "completed"
+    },
+    {
+      "invoked": true,
+      "reason": "completed",
+      "stage_id": "validate_disclosure_and_redaction",
+      "status": "completed"
+    },
+    {
+      "invoked": true,
+      "reason": "completed",
+      "stage_id": "verify_evidence_admission_and_reachability",
+      "status": "completed"
+    },
+    {
+      "invoked": true,
+      "reason": "completed",
+      "stage_id": "classify_route_and_split_ownership",
+      "status": "completed"
+    },
+    {
+      "invoked": true,
+      "reason": "completed",
+      "stage_id": "derive_maturity_ceiling",
+      "status": "completed"
+    },
+    {
+      "invoked": true,
+      "reason": "completed",
+      "stage_id": "resolve_independent_reviewer_authority",
+      "status": "completed"
+    },
+    {
+      "invoked": true,
+      "reason": "completed",
+      "stage_id": "record_candidate_review_recommendation",
+      "status": "completed"
+    },
+    {
+      "invoked": true,
+      "reason": "completed",
+      "stage_id": "bind_human_promotion_decision_if_required",
+      "status": "completed"
+    },
+    {
+      "invoked": true,
+      "reason": "completed",
+      "stage_id": "record_promotion_or_nonpromotion_disposition",
+      "status": "completed"
+    },
+    {
+      "invoked": true,
+      "reason": "completed",
+      "stage_id": "reduce_p07_outcome",
+      "status": "completed"
+    }
+  ],
+  "supersession": {
+    "predecessor_candidate_id": "not_applicable",
+    "registry_digest": "a6e78a4781ff91fb7465f45e43defe3daad9608c9c29e5e6d5185b27c19f7f7e",
+    "successor_candidate_id": "not_applicable"
+  },
+  "target": {
+    "clause_id": "P07-C10",
+    "contract_version": "v0.1",
+    "protocol_id": "COS-P07",
+    "scope_digest": "6c23925c035c87fb3abef656a6e0d6cd28dcda16575b07af70c2392ec9fe6449",
+    "scope_predicates": [
+      "source_bound",
+      "independent_review"
+    ]
+  }
+}

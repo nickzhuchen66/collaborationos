@@ -1,0 +1,363 @@
+{
+  "artifact": {
+    "acceptance_event": {
+      "acceptance_event_id": "accept-a06-01",
+      "accepted_a03_binding_id": "binding-handoff_acceptor",
+      "actor_id": "human-handoff",
+      "artifact_body_checksum": "ecbe6b52fde1f9eb6f6267b102207212a9ffee62edd6e5fa356ca6b04af7b095",
+      "artifact_id": "COS-A06-M5C-01",
+      "authority_source_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+      "authority_source_ref": "COS-A03-M5A-ACCEPTED",
+      "reason": "bounded handoff accepted",
+      "result": "accepted",
+      "reviewed_at": "2026-07-15T05:05:00Z",
+      "scope": "M5-C exact bounded attempt"
+    },
+    "acceptance_plan": {
+      "assertion_ids": [
+        "M5C-AST-01"
+      ],
+      "handoff_acceptor_actor_id": "human-handoff",
+      "old_passing_behavior_required": true,
+      "result_acceptor_actor_id": "human-result",
+      "stop_threshold": "first_failure"
+    },
+    "actors": {
+      "builder": {
+        "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+        "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+        "accepted_a03_binding_id": "binding-builder",
+        "actor_id": "actor-builder",
+        "actor_kind": "ai_agent",
+        "authority_domain": "execution",
+        "authority_source_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+        "authority_source_ref": "COS-A03-M5A-ACCEPTED",
+        "current": true,
+        "expires_at": "2026-12-31T23:59:59Z",
+        "functional_role": "builder",
+        "governed_scope": "M5-C exact bounded attempt"
+      },
+      "executor": {
+        "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+        "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+        "accepted_a03_binding_id": "binding-executor",
+        "actor_id": "actor-executor",
+        "actor_kind": "ai_agent",
+        "authority_domain": "execution",
+        "authority_source_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+        "authority_source_ref": "COS-A03-M5A-ACCEPTED",
+        "current": true,
+        "expires_at": "2026-12-31T23:59:59Z",
+        "functional_role": "executor",
+        "governed_scope": "M5-C exact bounded attempt"
+      },
+      "handoff_acceptor": {
+        "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+        "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+        "accepted_a03_binding_id": "binding-handoff_acceptor",
+        "actor_id": "human-handoff",
+        "actor_kind": "human",
+        "authority_domain": "execution",
+        "authority_source_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+        "authority_source_ref": "COS-A03-M5A-ACCEPTED",
+        "current": true,
+        "expires_at": "2026-12-31T23:59:59Z",
+        "functional_role": "handoff_acceptor",
+        "governed_scope": "M5-C exact bounded attempt"
+      },
+      "issuer": {
+        "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+        "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+        "accepted_a03_binding_id": "binding-issuer",
+        "actor_id": "actor-issuer",
+        "actor_kind": "human",
+        "authority_domain": "execution",
+        "authority_source_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+        "authority_source_ref": "COS-A03-M5A-ACCEPTED",
+        "current": true,
+        "expires_at": "2026-12-31T23:59:59Z",
+        "functional_role": "issuer",
+        "governed_scope": "M5-C exact bounded attempt"
+      },
+      "takeover_owner": {
+        "accepted_a03_artifact_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+        "accepted_a03_artifact_id": "COS-A03-M5A-ACCEPTED",
+        "accepted_a03_binding_id": "binding-takeover_owner",
+        "actor_id": "human-takeover",
+        "actor_kind": "human",
+        "authority_domain": "takeover",
+        "authority_source_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+        "authority_source_ref": "COS-A03-M5A-ACCEPTED",
+        "current": true,
+        "expires_at": "2026-12-31T23:59:59Z",
+        "functional_role": "takeover_owner",
+        "governed_scope": "M5-C exact bounded attempt"
+      }
+    },
+    "artifact_body_checksum": "ecbe6b52fde1f9eb6f6267b102207212a9ffee62edd6e5fa356ca6b04af7b095",
+    "artifact_id": "COS-A06-M5C-01",
+    "artifact_type": "COS-A06",
+    "cost_contract": {
+      "a05_accepted_current": false,
+      "cost_state": "not_applicable",
+      "cost_triggered": false,
+      "within_ceiling": true
+    },
+    "environment": {
+      "external_call_count": 0,
+      "incremental_cost_usd": 0.0,
+      "repository_root_id": "repo-collaborationos",
+      "runtime_mode": "manual_static",
+      "secret_material_allowed": false
+    },
+    "execution_attempt_id": "attempt-m5c-01",
+    "lifecycle": "accepted",
+    "limitations": [],
+    "lineage": {
+      "a01": {
+        "artifact_id": "COS-A01-M5A-ACCEPTED",
+        "checksum": "1111111111111111111111111111111111111111111111111111111111111111",
+        "current": true,
+        "cutoff": "2026-07-15T05:00:00Z",
+        "lifecycle": "accepted"
+      },
+      "a03": {
+        "artifact_id": "COS-A03-M5A-ACCEPTED",
+        "checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+        "current": false,
+        "cutoff": "2026-07-15T05:00:00Z",
+        "lifecycle": "accepted"
+      },
+      "a04": {
+        "artifact_id": "COS-A04-M5B-APPROVED",
+        "checksum": "4444444444444444444444444444444444444444444444444444444444444444",
+        "current": true,
+        "cutoff": "2026-07-15T05:00:00Z",
+        "lifecycle": "accepted"
+      },
+      "a05": null,
+      "a05_required": false,
+      "common_a01_lineage_checksum": "1111111111111111111111111111111111111111111111111111111111111111"
+    },
+    "operations": [
+      {
+        "irreversible": false,
+        "operation": "MODIFY",
+        "operation_id": "op-modify-01",
+        "owner_actor_id": "actor-builder",
+        "path": "docs/example.md",
+        "postimage_checksum": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "precondition": "regular_nonsymlink_exact_preimage",
+        "preimage_checksum": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+      }
+    ],
+    "permission_projection": [
+      {
+        "a03_binding_id": "binding-read_context",
+        "authority_source_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+        "authority_source_ref": "COS-A03-M5A-ACCEPTED",
+        "current": true,
+        "declared_allowed": true,
+        "effective_allowed": true,
+        "governed_scope": "M5-C exact bounded attempt",
+        "permission_id": "read_context"
+      },
+      {
+        "a03_binding_id": "binding-prepare_artifact",
+        "authority_source_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+        "authority_source_ref": "COS-A03-M5A-ACCEPTED",
+        "current": true,
+        "declared_allowed": true,
+        "effective_allowed": true,
+        "governed_scope": "M5-C exact bounded attempt",
+        "permission_id": "prepare_artifact"
+      },
+      {
+        "a03_binding_id": "binding-propose",
+        "authority_source_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+        "authority_source_ref": "COS-A03-M5A-ACCEPTED",
+        "current": true,
+        "declared_allowed": true,
+        "effective_allowed": true,
+        "governed_scope": "M5-C exact bounded attempt",
+        "permission_id": "propose"
+      },
+      {
+        "a03_binding_id": "binding-challenge",
+        "authority_source_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+        "authority_source_ref": "COS-A03-M5A-ACCEPTED",
+        "current": true,
+        "declared_allowed": true,
+        "effective_allowed": true,
+        "governed_scope": "M5-C exact bounded attempt",
+        "permission_id": "challenge"
+      },
+      {
+        "a03_binding_id": "binding-edit_authorized_scope",
+        "authority_source_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+        "authority_source_ref": "COS-A03-M5A-ACCEPTED",
+        "current": true,
+        "declared_allowed": true,
+        "effective_allowed": true,
+        "governed_scope": "M5-C exact bounded attempt",
+        "permission_id": "edit_authorized_scope"
+      },
+      {
+        "a03_binding_id": "binding-external_call",
+        "authority_source_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+        "authority_source_ref": "COS-A03-M5A-ACCEPTED",
+        "current": true,
+        "declared_allowed": false,
+        "effective_allowed": false,
+        "governed_scope": "M5-C exact bounded attempt",
+        "permission_id": "external_call"
+      },
+      {
+        "a03_binding_id": "binding-incur_cost",
+        "authority_source_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+        "authority_source_ref": "COS-A03-M5A-ACCEPTED",
+        "current": true,
+        "declared_allowed": false,
+        "effective_allowed": false,
+        "governed_scope": "M5-C exact bounded attempt",
+        "permission_id": "incur_cost"
+      },
+      {
+        "a03_binding_id": "binding-perform_irreversible_action",
+        "authority_source_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+        "authority_source_ref": "COS-A03-M5A-ACCEPTED",
+        "current": true,
+        "declared_allowed": false,
+        "effective_allowed": false,
+        "governed_scope": "M5-C exact bounded attempt",
+        "permission_id": "perform_irreversible_action"
+      },
+      {
+        "a03_binding_id": "binding-make_decision",
+        "authority_source_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+        "authority_source_ref": "COS-A03-M5A-ACCEPTED",
+        "current": true,
+        "declared_allowed": false,
+        "effective_allowed": false,
+        "governed_scope": "M5-C exact bounded attempt",
+        "permission_id": "make_decision"
+      },
+      {
+        "a03_binding_id": "binding-accept_result",
+        "authority_source_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+        "authority_source_ref": "COS-A03-M5A-ACCEPTED",
+        "current": true,
+        "declared_allowed": true,
+        "effective_allowed": true,
+        "governed_scope": "M5-C exact bounded attempt",
+        "permission_id": "accept_result"
+      },
+      {
+        "a03_binding_id": "binding-takeover",
+        "authority_source_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+        "authority_source_ref": "COS-A03-M5A-ACCEPTED",
+        "current": true,
+        "declared_allowed": true,
+        "effective_allowed": true,
+        "governed_scope": "M5-C exact bounded attempt",
+        "permission_id": "takeover"
+      },
+      {
+        "a03_binding_id": "binding-promote_core",
+        "authority_source_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+        "authority_source_ref": "COS-A03-M5A-ACCEPTED",
+        "current": true,
+        "declared_allowed": false,
+        "effective_allowed": false,
+        "governed_scope": "M5-C exact bounded attempt",
+        "permission_id": "promote_core"
+      },
+      {
+        "a03_binding_id": "binding-canonical_write",
+        "authority_source_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+        "authority_source_ref": "COS-A03-M5A-ACCEPTED",
+        "current": true,
+        "declared_allowed": false,
+        "effective_allowed": false,
+        "governed_scope": "M5-C exact bounded attempt",
+        "permission_id": "canonical_write"
+      },
+      {
+        "a03_binding_id": "binding-release_product",
+        "authority_source_checksum": "3333333333333333333333333333333333333333333333333333333333333333",
+        "authority_source_ref": "COS-A03-M5A-ACCEPTED",
+        "current": true,
+        "declared_allowed": false,
+        "effective_allowed": false,
+        "governed_scope": "M5-C exact bounded attempt",
+        "permission_id": "release_product"
+      }
+    ],
+    "protected_surfaces": [
+      {
+        "checksum": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+        "path": "00_Governance/COS_Constitution.md"
+      }
+    ],
+    "protocol_outcome": "legal_stop",
+    "rollback_contract": {
+      "hash_gated": true,
+      "manual_takeover_on_mismatch": true,
+      "owner_actor_id": "human-takeover",
+      "rollback_authorized": true
+    },
+    "schema_version": "0.1",
+    "stages": [
+      {
+        "stage": "bind_upstream_authority",
+        "status": "completed"
+      },
+      {
+        "stage": "validate_decision_and_cost_eligibility",
+        "status": "completed"
+      },
+      {
+        "stage": "freeze_attempt_scope_and_preconditions",
+        "status": "legal_stop"
+      },
+      {
+        "stage": "resolve_permissions_and_environment",
+        "status": "not_attempted"
+      },
+      {
+        "stage": "freeze_acceptance_and_recovery_contract",
+        "status": "not_attempted"
+      },
+      {
+        "stage": "record_independent_handoff_acceptance",
+        "status": "not_attempted"
+      },
+      {
+        "stage": "issue_accepted_execution_handoff",
+        "status": "not_attempted"
+      },
+      {
+        "stage": "reduce_p05_outcome",
+        "status": "not_attempted"
+      }
+    ],
+    "start_predicates": {
+      "a04_accepted_current": true,
+      "a06_current_unexpired": false,
+      "a06_human_accepted": true,
+      "cost_gate_satisfied": true,
+      "eligible_for_p05_evaluation": true,
+      "execution_may_start": false,
+      "lineage_current": true,
+      "p05_success": true,
+      "required_permissions_true": true
+    }
+  },
+  "expected_schema_valid": true,
+  "expected_semantic_valid": true,
+  "fixture_id": "M5C-P05-STOP-02-stale-or-superseded-authority",
+  "primary_assertion_id": "M5C-AST-06",
+  "scenario": "stale_authority",
+  "target_predicate": "SEMANTIC_VALID",
+  "target_schema": "COS-A06"
+}

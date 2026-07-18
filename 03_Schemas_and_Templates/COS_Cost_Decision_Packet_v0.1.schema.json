@@ -1,0 +1,588 @@
+{
+  "$defs": {
+    "acceptance_event": {
+      "additionalProperties": false,
+      "properties": {
+        "acceptance_event_id": {
+          "$ref": "#/$defs/acceptance_event_id"
+        },
+        "accepted_a03_artifact_checksum": {
+          "$ref": "#/$defs/checksum"
+        },
+        "accepted_a03_artifact_id": {
+          "$ref": "#/$defs/stable_id"
+        },
+        "accepted_a03_binding_id": {
+          "$ref": "#/$defs/stable_id"
+        },
+        "accepted_at": {
+          "$ref": "#/$defs/timestamp"
+        },
+        "accepted_by_actor_id": {
+          "$ref": "#/$defs/stable_id"
+        },
+        "artifact_checksum": {
+          "$ref": "#/$defs/checksum"
+        },
+        "artifact_id": {
+          "$ref": "#/$defs/artifact_id"
+        },
+        "assertions": {
+          "items": {
+            "$ref": "#/$defs/stable_id"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "authority_source_checksum": {
+          "$ref": "#/$defs/checksum"
+        },
+        "authority_source_ref": {
+          "$ref": "#/$defs/safe_ref"
+        },
+        "result": {
+          "enum": [
+            "pass",
+            "fail",
+            "not_observed",
+            "not_attempted"
+          ]
+        },
+        "scope": {
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "required": [
+        "acceptance_event_id",
+        "artifact_id",
+        "artifact_checksum",
+        "accepted_by_actor_id",
+        "accepted_a03_artifact_id",
+        "accepted_a03_artifact_checksum",
+        "accepted_a03_binding_id",
+        "authority_source_ref",
+        "authority_source_checksum",
+        "accepted_at",
+        "scope",
+        "assertions",
+        "result"
+      ],
+      "type": "object"
+    },
+    "acceptance_event_id": {
+      "maxLength": 160,
+      "minLength": 3,
+      "pattern": "^accept-[A-Za-z0-9._-]+$",
+      "type": "string"
+    },
+    "actor_binding": {
+      "additionalProperties": false,
+      "properties": {
+        "accepted_a03_artifact_checksum": {
+          "$ref": "#/$defs/checksum"
+        },
+        "accepted_a03_artifact_id": {
+          "$ref": "#/$defs/stable_id"
+        },
+        "accepted_a03_binding_id": {
+          "$ref": "#/$defs/stable_id"
+        },
+        "actor_id": {
+          "$ref": "#/$defs/stable_id"
+        },
+        "actor_kind": {
+          "enum": [
+            "human",
+            "ai_agent",
+            "deterministic_system",
+            "organization_ref"
+          ]
+        },
+        "authority_source_checksum": {
+          "$ref": "#/$defs/checksum"
+        },
+        "authority_source_ref": {
+          "$ref": "#/$defs/safe_ref"
+        },
+        "scope": {
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "required": [
+        "actor_id",
+        "actor_kind",
+        "accepted_a03_artifact_id",
+        "accepted_a03_artifact_checksum",
+        "accepted_a03_binding_id",
+        "authority_source_ref",
+        "authority_source_checksum",
+        "scope"
+      ],
+      "type": "object"
+    },
+    "artifact_id": {
+      "maxLength": 160,
+      "minLength": 3,
+      "pattern": "^COS-A05-[A-Za-z0-9._-]*$",
+      "type": "string"
+    },
+    "artifact_ref": {
+      "additionalProperties": false,
+      "properties": {
+        "artifact_id": {
+          "$ref": "#/$defs/stable_id"
+        },
+        "artifact_lifecycle": {
+          "enum": [
+            "draft",
+            "under_review",
+            "accepted",
+            "rejected",
+            "superseded"
+          ]
+        },
+        "checksum": {
+          "$ref": "#/$defs/checksum"
+        },
+        "current": {
+          "type": "boolean"
+        },
+        "cutoff": {
+          "$ref": "#/$defs/timestamp"
+        }
+      },
+      "required": [
+        "artifact_id",
+        "checksum",
+        "cutoff",
+        "artifact_lifecycle",
+        "current"
+      ],
+      "type": "object"
+    },
+    "checksum": {
+      "pattern": "^[a-f0-9]{64}$",
+      "type": "string"
+    },
+    "estimate": {
+      "additionalProperties": false,
+      "properties": {
+        "amount": {
+          "minimum": 0,
+          "type": "number"
+        },
+        "assumptions": {
+          "items": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "type": "array",
+          "uniqueItems": true
+        },
+        "cost_class": {
+          "enum": [
+            "acquisition",
+            "usage",
+            "grounding",
+            "retry",
+            "operations",
+            "migration",
+            "exit"
+          ]
+        },
+        "currency": {
+          "pattern": "^[A-Z]{3}$",
+          "type": "string"
+        },
+        "horizon_months": {
+          "enum": [
+            1,
+            12,
+            36
+          ]
+        }
+      },
+      "required": [
+        "cost_class",
+        "amount",
+        "currency",
+        "horizon_months",
+        "assumptions"
+      ],
+      "type": "object"
+    },
+    "failure_envelope": {
+      "additionalProperties": false,
+      "properties": {
+        "code": {
+          "$ref": "#/$defs/stable_id"
+        },
+        "evidence_refs": {
+          "items": {
+            "$ref": "#/$defs/safe_ref"
+          },
+          "type": "array",
+          "uniqueItems": true
+        },
+        "last_safe_checkpoint": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "manual_takeover_required": {
+          "type": "boolean"
+        },
+        "owner_role": {
+          "$ref": "#/$defs/stable_id"
+        },
+        "public_message": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "retryable": {
+          "type": "boolean"
+        },
+        "side_effect_occurred": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "code",
+        "public_message",
+        "retryable",
+        "side_effect_occurred",
+        "last_safe_checkpoint",
+        "manual_takeover_required",
+        "owner_role",
+        "evidence_refs"
+      ],
+      "type": "object"
+    },
+    "none_or_checksum": {
+      "pattern": "^(?:none|[a-f0-9]{64})$",
+      "type": "string"
+    },
+    "none_or_id": {
+      "pattern": "^(?:none|[A-Za-z0-9][A-Za-z0-9._:-]{2,127})$",
+      "type": "string"
+    },
+    "protocol_run": {
+      "additionalProperties": false,
+      "properties": {
+        "downstream_started": {
+          "const": false
+        },
+        "failure_envelope": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/failure_envelope"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "outcome": {
+          "enum": [
+            "success",
+            "legal_stop",
+            "failed"
+          ]
+        },
+        "protocol_id": {
+          "$ref": "#/$defs/stable_id"
+        },
+        "stages": {
+          "items": {
+            "$ref": "#/$defs/stage"
+          },
+          "maxItems": 6,
+          "minItems": 6,
+          "type": "array"
+        }
+      },
+      "required": [
+        "protocol_id",
+        "stages",
+        "outcome",
+        "failure_envelope",
+        "downstream_started"
+      ],
+      "type": "object"
+    },
+    "safe_ref": {
+      "maxLength": 256,
+      "minLength": 3,
+      "type": "string"
+    },
+    "stable_id": {
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{2,127}$",
+      "type": "string"
+    },
+    "stage": {
+      "additionalProperties": false,
+      "properties": {
+        "invoked": {
+          "type": "boolean"
+        },
+        "reason": {
+          "type": "string"
+        },
+        "stage_id": {
+          "enum": [
+            "cost_trigger_analysis",
+            "cost_inventory",
+            "unknown_cost_check",
+            "cost_owner_review",
+            "a05_acceptance",
+            "archive_lineage"
+          ]
+        },
+        "status": {
+          "enum": [
+            "completed",
+            "skipped",
+            "disabled",
+            "not_attempted",
+            "legal_stop",
+            "failed"
+          ]
+        }
+      },
+      "required": [
+        "stage_id",
+        "status",
+        "invoked",
+        "reason"
+      ],
+      "type": "object"
+    },
+    "timestamp": {
+      "format": "date-time",
+      "type": "string"
+    }
+  },
+  "$id": "https://collaborationos.local/schemas/COS_Cost_Decision_Packet_v0.1.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "effective_cost_allow": {
+            "const": true
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "cost_gate_result": {
+            "const": "approved_within_ceiling"
+          },
+          "unknown_costs": {
+            "maxItems": 0
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "cost_gate_result": {
+            "const": "approved_within_ceiling"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "effective_cost_allow": {
+            "const": true
+          },
+          "unknown_costs": {
+            "maxItems": 0
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "cost_gate_result": {
+            "const": "not_applicable"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "effective_cost_allow": {
+            "const": false
+          },
+          "trigger_applicable": {
+            "const": false
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "artifact_lifecycle": {
+            "const": "accepted"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "acceptance_event": {
+            "$ref": "#/$defs/acceptance_event"
+          }
+        }
+      }
+    }
+  ],
+  "properties": {
+    "acceptance_event": {
+      "oneOf": [
+        {
+          "$ref": "#/$defs/acceptance_event"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "approval_ceiling": {
+      "minimum": 0,
+      "type": "number"
+    },
+    "artifact_id": {
+      "$ref": "#/$defs/artifact_id"
+    },
+    "artifact_lifecycle": {
+      "enum": [
+        "draft",
+        "under_review",
+        "accepted",
+        "rejected",
+        "superseded"
+      ]
+    },
+    "artifact_type": {
+      "const": "COS-A05"
+    },
+    "cost_gate_result": {
+      "enum": [
+        "approved_within_ceiling",
+        "rejected",
+        "deferred",
+        "needs_information",
+        "not_applicable"
+      ]
+    },
+    "cost_owner_binding": {
+      "$ref": "#/$defs/actor_binding"
+    },
+    "created_at": {
+      "$ref": "#/$defs/timestamp"
+    },
+    "currency": {
+      "pattern": "^[A-Z]{3}$",
+      "type": "string"
+    },
+    "effective_cost_allow": {
+      "type": "boolean"
+    },
+    "estimates": {
+      "items": {
+        "$ref": "#/$defs/estimate"
+      },
+      "type": "array"
+    },
+    "exit_trigger": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "parent_decision_frame_checksum": {
+      "$ref": "#/$defs/checksum"
+    },
+    "parent_decision_frame_id": {
+      "$ref": "#/$defs/stable_id"
+    },
+    "preparer_actor_id": {
+      "$ref": "#/$defs/stable_id"
+    },
+    "protocol_run": {
+      "$ref": "#/$defs/protocol_run"
+    },
+    "revisit_trigger": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "schema_version": {
+      "const": "0.1"
+    },
+    "time_horizon_months": {
+      "enum": [
+        12,
+        36
+      ]
+    },
+    "trigger_analysis": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "trigger_applicable": {
+      "type": "boolean"
+    },
+    "trigger_classes": {
+      "items": {
+        "enum": [
+          "external_capability",
+          "paid_or_potentially_paid",
+          "ongoing_operations",
+          "migration_exit",
+          "vendor_lock_in"
+        ]
+      },
+      "type": "array",
+      "uniqueItems": true
+    },
+    "unknown_costs": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "type": "array",
+      "uniqueItems": true
+    }
+  },
+  "required": [
+    "schema_version",
+    "artifact_type",
+    "artifact_id",
+    "created_at",
+    "artifact_lifecycle",
+    "parent_decision_frame_id",
+    "parent_decision_frame_checksum",
+    "preparer_actor_id",
+    "cost_owner_binding",
+    "trigger_applicable",
+    "trigger_classes",
+    "trigger_analysis",
+    "currency",
+    "time_horizon_months",
+    "estimates",
+    "unknown_costs",
+    "approval_ceiling",
+    "cost_gate_result",
+    "effective_cost_allow",
+    "revisit_trigger",
+    "exit_trigger",
+    "acceptance_event",
+    "protocol_run"
+  ],
+  "title": "COS A05 Cost Decision Packet v0.1",
+  "type": "object"
+}
