@@ -8,6 +8,10 @@ This kit explains how another project can reference COS without copying or
 overriding COS core authority. The adopting project remains the owner of its
 business data, decisions, permissions, execution, acceptance, and risk.
 
+New adopters should begin with the shorter
+[Getting Started hub](../getting-started/README.md), then return here for the
+formal manual and canonical templates.
+
 ## Documents
 
 - [New Host Project Adoption Manual](COS_NEW_HOST_PROJECT_ADOPTION_MANUAL_v0.1.md)
@@ -34,4 +38,3 @@ This kit cannot make a business decision, authorize access or execution,
 accept its own implementation, authorize retry or promotion, or modify a host
 source of truth. Adoption by reference does not make ordinary host activity
 cross-host COS validation.
-

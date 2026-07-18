@@ -12,6 +12,9 @@ production readiness.
 
 - bilingual repository onboarding;
 - Mermaid architecture and governance-loop diagrams;
+- import guide, 10-minute L1 setup, and host adoption checklist;
+- synthetic copy-and-adapt starter host;
+- designed host adoption path diagram;
 - public roadmap and citation metadata;
 - structured issue forms, pull request template, and CODEOWNERS;
 - GitHub Discussions and repository discovery metadata.
@@ -20,6 +23,7 @@ production readiness.
 
 - reorganized the README around purpose, architecture, quick start, adoption,
   boundaries, and community entry points;
+- promoted the host adoption path to the README first-use experience;
 - clarified the stable v0.1.0 release state while preserving its manual/static
   capability ceiling.
 

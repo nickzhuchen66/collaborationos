@@ -24,6 +24,10 @@ acceptance, retry, promotion, canonical write, or production use.
 
 ## Start here
 
+New host projects should first use the
+[Getting Started hub](../getting-started/README.md) to select an import method
+and prepare the three host-owned adoption records.
+
 1. Read [Manual Operator Flow](MANUAL_OPERATOR_FLOW.md).
 2. Use [Artifact Selection and Ownership](ARTIFACT_SELECTION_AND_OWNERSHIP.md).
 3. Use [Manual Conformance Guide](MANUAL_CONFORMANCE_GUIDE.md).
@@ -50,4 +54,3 @@ AI may prepare, inspect, or challenge artifacts. It does not become the final
 decision owner, independent acceptor, cost owner, takeover owner, or promotion
 authority. Execution evidence is not acceptance, and a learning candidate is
 not promotion.
-

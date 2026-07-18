@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="690" viewBox="0 0 1440 690" role="img" aria-labelledby="title desc">
+  <title id="title">CollaborationOS host adoption path</title>
+  <desc id="desc">Three read-only import methods converge on a five-step L1 host adoption path, followed by a separate optional L2 decision.</desc>
+  <defs>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M 32 0 L 0 0 0 32" fill="none" stroke="#26334A" stroke-width="1" opacity="0.28"/>
+    </pattern>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#71839D"/>
+    </marker>
+    <marker id="gateArrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#61D7D0"/>
+    </marker>
+  </defs>
+
+  <rect width="1440" height="690" fill="#0B1020"/>
+  <rect width="1440" height="690" fill="url(#grid)"/>
+
+  <rect x="64" y="42" width="8" height="86" rx="4" fill="#77D196"/>
+  <text x="94" y="66" fill="#77D196" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="15" font-weight="700">GETTING STARTED / HOST ADOPTION</text>
+  <text x="94" y="102" fill="#F4F7FB" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="32" font-weight="700">Reference first. Decide separately. Expand only after evidence.</text>
+  <text x="94" y="130" fill="#9FB0C7" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="17">The 10-minute path prepares an L1 draft. It never grants host access or execution.</text>
+
+  <text x="72" y="180" fill="#71839D" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12" font-weight="700">CHOOSE ONE READ-ONLY IMPORT METHOD</text>
+
+  <rect x="72" y="198" width="264" height="54" rx="8" fill="#17384A" stroke="#2E6768"/>
+  <circle cx="96" cy="225" r="6" fill="#61D7D0"/>
+  <text x="114" y="221" fill="#F4F7FB" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="15" font-weight="700">GitHub release reference</text>
+  <text x="114" y="240" fill="#9FDCD9" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11">recommended · no local copy</text>
+
+  <rect x="352" y="198" width="264" height="54" rx="8" fill="#182338" stroke="#33425D"/>
+  <circle cx="376" cy="225" r="6" fill="#6EA8FE"/>
+  <text x="394" y="221" fill="#F4F7FB" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="15" font-weight="700">Read-only sibling checkout</text>
+  <text x="394" y="240" fill="#9FB0C7" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11">same development workspace</text>
+
+  <rect x="632" y="198" width="264" height="54" rx="8" fill="#182338" stroke="#33425D"/>
+  <circle cx="656" cy="225" r="6" fill="#F2C66D"/>
+  <text x="674" y="221" fill="#F4F7FB" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="15" font-weight="700">Approved read-only snapshot</text>
+  <text x="674" y="240" fill="#9FB0C7" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11">offline or restricted environment</text>
+
+  <path d="M204 252 V276 H188" fill="none" stroke="#71839D" stroke-width="2"/>
+  <path d="M484 252 V276 H188" fill="none" stroke="#71839D" stroke-width="2"/>
+  <path d="M764 252 V276 H188" fill="none" stroke="#71839D" stroke-width="2"/>
+
+  <g stroke="#71839D" stroke-width="2" fill="none" marker-end="url(#arrow)">
+    <path d="M312 395 H334"/>
+    <path d="M570 395 H592"/>
+    <path d="M828 395 H850"/>
+    <path d="M1086 395 H1108"/>
+  </g>
+
+  <g>
+    <rect x="72" y="286" width="240" height="218" rx="8" fill="#121A2B" stroke="#33425D"/>
+    <rect x="72" y="286" width="240" height="7" rx="4" fill="#6EA8FE"/>
+    <text x="94" y="330" fill="#6EA8FE" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="14" font-weight="700">01 · PIN</text>
+    <text x="94" y="366" fill="#F4F7FB" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="20" font-weight="700">Stable baseline</text>
+    <text x="94" y="396" fill="#9FB0C7" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13">release · commit · manifest</text>
+    <line x1="94" y1="420" x2="288" y2="420" stroke="#2A3853"/>
+    <text x="94" y="451" fill="#D7DEEA" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13">Use v0.1.0, not main</text>
+    <text x="94" y="477" fill="#77D196" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12" font-weight="700">INTEGRITY BEFORE USE</text>
+  </g>
+
+  <g>
+    <rect x="330" y="286" width="240" height="218" rx="8" fill="#121A2B" stroke="#33425D"/>
+    <rect x="330" y="286" width="240" height="7" rx="4" fill="#61D7D0"/>
+    <text x="352" y="330" fill="#61D7D0" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="14" font-weight="700">02 · CREATE</text>
+    <text x="352" y="366" fill="#F4F7FB" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="20" font-weight="700">Three host records</text>
+    <text x="352" y="396" fill="#9FB0C7" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13">pointer · adoption · adapter</text>
+    <line x1="352" y1="420" x2="546" y2="420" stroke="#2A3853"/>
+    <text x="352" y="451" fill="#D7DEEA" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13">Host-owned and proposed</text>
+    <text x="352" y="477" fill="#77D196" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12" font-weight="700">NO AUTHORITY YET</text>
+  </g>
+
+  <g>
+    <rect x="588" y="286" width="240" height="218" rx="8" fill="#121A2B" stroke="#33425D"/>
+    <rect x="588" y="286" width="240" height="7" rx="4" fill="#B69AF8"/>
+    <text x="610" y="330" fill="#B69AF8" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="14" font-weight="700">03 · MAP</text>
+    <text x="610" y="366" fill="#F4F7FB" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="20" font-weight="700">Truth and authority</text>
+    <text x="610" y="396" fill="#9FB0C7" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13">source · roles · A01-A05</text>
+    <line x1="610" y1="420" x2="804" y2="420" stroke="#2A3853"/>
+    <text x="610" y="451" fill="#D7DEEA" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13">Permissions default false</text>
+    <text x="610" y="477" fill="#77D196" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12" font-weight="700">HOST TRUTH STAYS LOCAL</text>
+  </g>
+
+  <g>
+    <rect x="846" y="286" width="240" height="218" rx="8" fill="#121A2B" stroke="#33425D"/>
+    <rect x="846" y="286" width="240" height="7" rx="4" fill="#F2C66D"/>
+    <text x="868" y="330" fill="#F2C66D" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="14" font-weight="700">04 · REHEARSE</text>
+    <text x="868" y="366" fill="#F4F7FB" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="20" font-weight="700">Historical decision</text>
+    <text x="868" y="396" fill="#9FB0C7" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13">Decision-Only · no rewrite</text>
+    <line x1="868" y1="420" x2="1062" y2="420" stroke="#2A3853"/>
+    <text x="868" y="451" fill="#D7DEEA" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13">Review stops and limitations</text>
+    <text x="868" y="477" fill="#77D196" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12" font-weight="700">ZERO LIVE EXECUTION</text>
+  </g>
+
+  <g>
+    <rect x="1104" y="286" width="264" height="218" rx="8" fill="#121A2B" stroke="#33425D"/>
+    <rect x="1104" y="286" width="264" height="7" rx="4" fill="#77D196"/>
+    <text x="1126" y="330" fill="#77D196" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="14" font-weight="700">05 · DECIDE</text>
+    <text x="1126" y="366" fill="#F4F7FB" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="20" font-weight="700">Human adoption gate</text>
+    <text x="1126" y="396" fill="#9FB0C7" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13">ADOPT · ADAPT · DEFER · REJECT</text>
+    <line x1="1126" y1="420" x2="1344" y2="420" stroke="#2A3853"/>
+    <text x="1126" y="451" fill="#D7DEEA" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13">Record claim ceiling + limits</text>
+    <text x="1126" y="477" fill="#77D196" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12" font-weight="700">L1 ONLY WHEN ACCEPTED</text>
+  </g>
+
+  <rect x="72" y="542" width="1296" height="94" rx="8" fill="#101827" stroke="#2A3853"/>
+  <rect x="94" y="563" width="168" height="30" rx="6" fill="#1F3C39"/>
+  <text x="178" y="583" text-anchor="middle" fill="#77D196" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12" font-weight="700">ACCURATE L1 RESULT</text>
+  <text x="286" y="584" fill="#F4F7FB" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="16" font-weight="700">Manual/static decision governance adopted at a pinned version</text>
+  <text x="94" y="617" fill="#9FB0C7" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13">No runtime · no host access · no execution · no cross-host validation</text>
+
+  <path d="M1044 589 H1120" fill="none" stroke="#61D7D0" stroke-width="2" marker-end="url(#gateArrow)"/>
+  <rect x="1132" y="561" width="214" height="54" rx="8" fill="#17384A" stroke="#2E6768"/>
+  <text x="1239" y="583" text-anchor="middle" fill="#61D7D0" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11" font-weight="700">SEPARATE LATER DECISION</text>
+  <text x="1239" y="604" text-anchor="middle" fill="#F4F7FB" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="14" font-weight="700">Optional L2 Governed Change</text>
+
+  <text x="72" y="672" fill="#71839D" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12">Setup prepares evidence for a decision; documentation never authorizes itself.</text>
+  <text x="1368" y="672" text-anchor="end" fill="#77D196" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12" font-weight="700">FINAL CONSEQUENTIAL AUTHORITY REMAINS HUMAN</text>
+</svg>

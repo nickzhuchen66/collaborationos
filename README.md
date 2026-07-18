@@ -16,9 +16,9 @@ outcomes independently, preserve failure truth, and learn without handing final
 accountability to an AI system.
 
 <p>
-  <a href="#architecture"><strong>Explore the architecture</strong></a>
+  <a href="#adopt-cos-in-10-minutes"><strong>Get started</strong></a>
   ·
-  <a href="#quick-start">Quick start</a>
+  <a href="#architecture">Architecture</a>
   ·
   <a href="docs/adoption-kit-v0.1/COS_NEW_HOST_PROJECT_ADOPTION_MANUAL_v0.1.md">Adoption manual</a>
   ·
@@ -30,6 +30,27 @@ accountability to an AI system.
 > COS v0.1.0 is a **manual/static governance baseline**. It is not an agent
 > runtime, automated policy engine, production authority, or completed
 > cross-host validation claim.
+
+## Adopt COS in 10 Minutes
+
+COS does not need to be installed as a runtime. A new project adopts a pinned
+release by reference, creates three host-owned governance files, and routes the
+draft to a human decision owner.
+
+![CollaborationOS host adoption path](assets/architecture/cos-host-adoption-path.svg)
+
+| Step | Do this | Public guide |
+|---|---|---|
+| 1. Import | Choose a GitHub release reference, read-only sibling checkout, or approved snapshot | [Import Guide](docs/getting-started/IMPORT_GUIDE.md) |
+| 2. Prepare | Create an L1 Entry Pointer, Adoption Record, and Host Adapter | [10-Minute L1 Setup](docs/getting-started/10_MINUTE_QUICKSTART.md) |
+| 3. Check | Verify identity, authority, permissions, rehearsal, and stop conditions | [Host Adoption Checklist](docs/getting-started/HOST_ADOPTION_CHECKLIST.md) |
+| 4. Decide | Complete the formal manual and obtain a final-human disposition | [Full Adoption Manual](docs/adoption-kit-v0.1/COS_NEW_HOST_PROJECT_ADOPTION_MANUAL_v0.1.md) |
+| 5. Use | Run one Decision-Only flow at L1; expand to L2 only through a separate decision | [Manual Operator Flow](docs/gate-pack-v0.1/MANUAL_OPERATOR_FLOW.md) |
+
+Start from the [synthetic starter host](examples/starter-host/README.md) when you
+want files to copy and adapt. The 10-minute path prepares an `L1` draft only. It
+does not authorize host access, execution, cost, retry, acceptance, promotion,
+runtime, or production.
 
 ## Why CollaborationOS Exists
 
@@ -79,7 +100,7 @@ retroactively.
 - a synthetic end-to-end walkthrough;
 - Apache-2.0 licensing and public contribution policies.
 
-## Quick Start
+## Explore the Full Framework
 
 ### 1. Understand the invariants
 
@@ -123,6 +144,7 @@ host's source of truth outside COS.
 
 | You are... | Start with... | Outcome |
 |---|---|---|
+| Adopting COS in a new project | [Getting Started](docs/getting-started/README.md) | Prepare and review a pinned L1 host adoption |
 | Evaluating COS | [Methodology](01_Core/COS_Methodology.md) | Understand the operating model and claim boundary |
 | Designing a governed AI workflow | [Protocol System Map](02_Protocols/COS_Protocol_System_Map_v0.1.md) | Map the required P01-P07 stages |
 | Preparing a consequential change | [Manual Operator Flow](docs/gate-pack-v0.1/MANUAL_OPERATOR_FLOW.md) | Assemble a bounded manual Gate Pack |
@@ -151,9 +173,12 @@ host's source of truth outside COS.
 ├── 03_Schemas_and_Templates/   # A01-A09 schemas and human templates
 ├── 05_Conformance/             # Manual matrices and 126 fixtures
 ├── docs/
+│   ├── getting-started/         # Import, 10-minute L1 setup, and checklist
 │   ├── gate-pack-v0.1/         # Operator-facing manual/static Gate Pack
 │   └── adoption-kit-v0.1/      # New-host adoption guide and templates
-├── examples/synthetic/         # Fictional walkthrough; no host payload
+├── examples/
+│   ├── starter-host/            # Copy-and-adapt synthetic L1 scaffold
+│   └── synthetic/               # Fictional walkthrough; no host payload
 └── .github/                    # Contribution and issue workflows
 ```
 

@@ -12,9 +12,9 @@
 **CollaborationOS（COS）** 是面向重要人类-AI协作的开源治理框架。它帮助团队恢复上下文、准入证据、绑定权限、形成决策、控制执行、独立验收、保留失败事实并沉淀学习，同时不把最终责任转交给 AI。
 
 <p>
-  <a href="#架构"><strong>了解架构</strong></a>
+  <a href="#10-分钟接入-cos"><strong>开始接入</strong></a>
   ·
-  <a href="#快速开始">快速开始</a>
+  <a href="#架构">了解架构</a>
   ·
   <a href="docs/adoption-kit-v0.1/COS_NEW_HOST_PROJECT_ADOPTION_MANUAL_v0.1.md">接入手册</a>
   ·
@@ -24,6 +24,22 @@
 </p>
 
 > COS v0.1.0 是一个**人工/静态治理基线**。它不是 Agent runtime、自动策略引擎、生产权限系统，也不声称已经完成跨 Host 验证。
+
+## 10 分钟接入 COS
+
+COS 不需要作为 runtime 安装。新项目通过引用固定版本、创建三个 Host 自有治理文件，并把草案提交给人类决策所有者来完成初始准备。
+
+![CollaborationOS Host 接入路径](assets/architecture/cos-host-adoption-path.svg)
+
+| 步骤 | 操作 | 公开指南 |
+|---|---|---|
+| 1. 导入 | 选择 GitHub Release 引用、只读 sibling checkout 或受控 snapshot | [Import Guide](docs/getting-started/IMPORT_GUIDE.md) |
+| 2. 准备 | 创建 L1 Entry Pointer、Adoption Record 和 Host Adapter | [10-Minute L1 Setup](docs/getting-started/10_MINUTE_QUICKSTART.md) |
+| 3. 检查 | 检查版本、权限、角色、rehearsal 与 stop conditions | [Host Adoption Checklist](docs/getting-started/HOST_ADOPTION_CHECKLIST.md) |
+| 4. 决策 | 完成正式手册，由人类作出最终采用处置 | [完整 Adoption Manual](docs/adoption-kit-v0.1/COS_NEW_HOST_PROJECT_ADOPTION_MANUAL_v0.1.md) |
+| 5. 使用 | 在 L1 跑一次 Decision-Only；只有独立决策后才能进入 L2 | [Manual Operator Flow](docs/gate-pack-v0.1/MANUAL_OPERATOR_FLOW.md) |
+
+希望直接复制文件时，从[合成 Starter Host](examples/starter-host/README.md)开始。10 分钟路径只会准备好 `L1` 草案，不授权 Host access、执行、成本、重试、验收、晋升、runtime 或 production。
 
 ## 为什么需要 CollaborationOS
 
@@ -64,7 +80,7 @@ COS 把稳定的治理核心与每个接入项目的业务系统分开。Host �
 - 一个合成端到端案例；
 - Apache-2.0 许可证与公开协作规则。
 
-## 快速开始
+## 深入了解完整框架
 
 1. 阅读[宪法](00_Governance/COS_Constitution.md)、[方法论](01_Core/COS_Methodology.md)和[目标架构](01_Core/COS_Target_Architecture.md)。
 2. 根据[协议系统图](02_Protocols/COS_Protocol_System_Map_v0.1.md)依次执行 P01-P07。
@@ -77,6 +93,7 @@ COS 把稳定的治理核心与每个接入项目的业务系统分开。Host �
 
 | 你的目标 | 推荐入口 | 结果 |
 |---|---|---|
+| 为新项目接入 COS | [Getting Started](docs/getting-started/README.md) | 准备并审查固定版本的 L1 Host Adoption |
 | 评估 COS | [方法论](01_Core/COS_Methodology.md) | 理解运行模型与能力边界 |
 | 设计受治理的 AI 流程 | [协议系统图](02_Protocols/COS_Protocol_System_Map_v0.1.md) | 映射 P01-P07 阶段 |
 | 准备重要变更 | [人工操作流程](docs/gate-pack-v0.1/MANUAL_OPERATOR_FLOW.md) | 组装有边界的人工 Gate Pack |
@@ -105,9 +122,12 @@ COS 把稳定的治理核心与每个接入项目的业务系统分开。Host �
 ├── 03_Schemas_and_Templates/   # A01-A09 Schema 与模板
 ├── 05_Conformance/             # 4 个 Matrix 与 126 个 Fixture
 ├── docs/
+│   ├── getting-started/         # 导入、10 分钟 L1 准备与检查清单
 │   ├── gate-pack-v0.1/         # 面向操作者的 Manual/Static Gate Pack
 │   └── adoption-kit-v0.1/      # 新 Host 接入指南与模板
-├── examples/synthetic/         # 虚构案例，不包含 Host payload
+├── examples/
+│   ├── starter-host/            # 可复制修改的合成 L1 脚手架
+│   └── synthetic/               # 虚构案例，不包含 Host payload
 └── .github/                    # 公开协作入口
 ```
 

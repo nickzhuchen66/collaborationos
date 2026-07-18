@@ -5,7 +5,7 @@
   "license": "Apache-2.0",
   "non_self": true,
   "publication_authorized": true,
-  "member_count": 198,
+  "member_count": 207,
   "members": [
     {
       "path": ".github/CODEOWNERS",
@@ -874,8 +874,8 @@
     },
     {
       "path": "CHANGELOG.md",
-      "bytes": 1337,
-      "sha256": "b107cbfeef282b9f8b6ce87d4edc814a647b2ffa345abd7316afdd0380d18217"
+      "bytes": 1552,
+      "sha256": "3a85d22517e664913e1bd17e8996f53dd7286e83e2efbabf0e82682824302bbe"
     },
     {
       "path": "CITATION.cff",
@@ -904,13 +904,13 @@
     },
     {
       "path": "README.md",
-      "bytes": 9627,
-      "sha256": "11fafe5ea2e90372a079b26071f3073a9b875e5bf66d7d79107baf3e579abe73"
+      "bytes": 11390,
+      "sha256": "7696234fe5ea80bee8e9b70690ec604e70e88459b345bf1d4e4a7340ac03c2e1"
     },
     {
       "path": "README.zh-CN.md",
-      "bytes": 7552,
-      "sha256": "453b428f148e20e9fd2e8978951f6450f6d7b5c83528b63254ba3a60bcea894c"
+      "bytes": 9236,
+      "sha256": "c66ff5f2e40bb2c34265288198c7c710bbe01d346ce0fdef2ee8419d9aa47c83"
     },
     {
       "path": "RELEASE_NOTES.md",
@@ -926,6 +926,11 @@
       "path": "SECURITY.md",
       "bytes": 1174,
       "sha256": "568ee5c4445432fb41e3d63182a01c97a0c55365890b4042871d68cb395dc967"
+    },
+    {
+      "path": "assets/architecture/cos-host-adoption-path.svg",
+      "bytes": 11275,
+      "sha256": "ba4f8156dd1f01765bb26451566de0d7fc77d42cb58f76c71fa008d389d4f2b9"
     },
     {
       "path": "assets/architecture/cos-seven-protocol-loop.svg",
@@ -945,12 +950,12 @@
     {
       "path": "docs/adoption-kit-v0.1/PACKAGE_MANIFEST.json",
       "bytes": 1194,
-      "sha256": "bc8b33fbf1360f6a347c91ef8d5910dc64e7d34fdfc5da366d0401ae0ba64163"
+      "sha256": "a23f7bf1406757ec817074583f85efa1a6cf5b897412372119bca20c7696da16"
     },
     {
       "path": "docs/adoption-kit-v0.1/README.md",
-      "bytes": 1446,
-      "sha256": "30e59abd045e8f896ba17667fc4ff6eef19000c46a4f021b9d9fb313cf3703ac"
+      "bytes": 1606,
+      "sha256": "94f6c1dd7ecabdc8810cff476d14c207c1eacda9270bf388fc4772902bb13ad3"
     },
     {
       "path": "docs/adoption-kit-v0.1/templates/COS_HOST_ADAPTER_TEMPLATE_v0.1.md",
@@ -985,12 +990,52 @@
     {
       "path": "docs/gate-pack-v0.1/PACKAGE_MANIFEST.json",
       "bytes": 913,
-      "sha256": "1e1634ccd724198d65e61f2d21c518fff13fefc96ae6a2725919990b6b8af406"
+      "sha256": "b82c6a82ae133c24499723ec3d048a3b31e0698fd2f4d7a334529d7c0c4572fa"
     },
     {
       "path": "docs/gate-pack-v0.1/README.md",
-      "bytes": 1982,
-      "sha256": "839b868a625f5e8b11439faab843e103b8fa844dbe2fddcccc8316ca39ef5bcf"
+      "bytes": 2151,
+      "sha256": "5206c632d37f8911c7fe50e0385e02b61871dc3315d3ef4a1a373abfca608dd6"
+    },
+    {
+      "path": "docs/getting-started/10_MINUTE_QUICKSTART.md",
+      "bytes": 3943,
+      "sha256": "d0413fd19e4f5b4e046ba7e2eff22143d09f73a2e9840b9f517236140fdebe5f"
+    },
+    {
+      "path": "docs/getting-started/HOST_ADOPTION_CHECKLIST.md",
+      "bytes": 3871,
+      "sha256": "fc6d6f8b0683b465f397765072b8bca7224c97c7bac73855a214bdc17f84bce6"
+    },
+    {
+      "path": "docs/getting-started/IMPORT_GUIDE.md",
+      "bytes": 4794,
+      "sha256": "6286360b0b39d4570cbeecf2749605958fe9d2f8ddde2d8675381bfc98ef29a7"
+    },
+    {
+      "path": "docs/getting-started/README.md",
+      "bytes": 3384,
+      "sha256": "b7d27c5ff254ce72b5bafd4ec2c6509ae645baccdde4de7f5496758c7c0abfd9"
+    },
+    {
+      "path": "examples/starter-host/README.md",
+      "bytes": 1713,
+      "sha256": "3cb402c2a23ab78735d8f18207388a891ce41f4832b30c09e51b036755bc248d"
+    },
+    {
+      "path": "examples/starter-host/governance/cos/COS_HOST_ADAPTER.md",
+      "bytes": 4901,
+      "sha256": "975410d3b650511c3622fc77cb548fe17f4d743efa9b9ab82065e98721cbd649"
+    },
+    {
+      "path": "examples/starter-host/governance/cos/COS_HOST_ADOPTION_RECORD.md",
+      "bytes": 4086,
+      "sha256": "b526eeee0aa68d76cfdfd54c38b194991065f1e2dfbc2c941e0b892d3cb9dbb8"
+    },
+    {
+      "path": "examples/starter-host/governance/cos/COS_HOST_ENTRY_POINTER.md",
+      "bytes": 1513,
+      "sha256": "2a348bddc90846ee084936a8f2658ea2794a2e195aae65d8b35f3f149dcea4db"
     },
     {
       "path": "examples/synthetic/README.md",
