@@ -8,6 +8,8 @@ production readiness.
 
 ## [Unreleased]
 
+## [0.2.0] - 2026-07-23
+
 ### Added
 
 - bilingual repository onboarding;
@@ -48,5 +50,6 @@ production readiness.
 - synthetic walkthrough;
 - Apache-2.0 licensing and community policies.
 
-[Unreleased]: https://github.com/nickzhuchen66/collaborationos/compare/v0.1.0...HEAD
+[Unreleased]: https://github.com/nickzhuchen66/collaborationos/compare/v0.2.0...HEAD
+[0.2.0]: https://github.com/nickzhuchen66/collaborationos/compare/v0.1.0...v0.2.0
 [0.1.0]: https://github.com/nickzhuchen66/collaborationos/releases/tag/v0.1.0

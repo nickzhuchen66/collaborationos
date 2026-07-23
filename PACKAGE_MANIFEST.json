@@ -884,13 +884,13 @@
     },
     {
       "path": "CHANGELOG.md",
-      "bytes": 1964,
-      "sha256": "842969efce2a4bd95a25b5e0d40c30f309b38a3834016c193adb438460ebdfa8"
+      "bytes": 2071,
+      "sha256": "5aebe359f83220e872a341cd1f053235ed18c3103f7b2963861f6be8827fbc9e"
     },
     {
       "path": "CITATION.cff",
       "bytes": 602,
-      "sha256": "3981dee522ab99eb571e771316fd926aa18fc85a294757dce7aab7a477b07eb2"
+      "sha256": "b60f6ce5c69a99957b40d895121c680e8dd90f54fbb6193183f69970b6869950"
     },
     {
       "path": "CODE_OF_CONDUCT.md",
@@ -914,13 +914,13 @@
     },
     {
       "path": "README.md",
-      "bytes": 14500,
-      "sha256": "801554af47a733a85d1c425fc58579878daaafae4a6cca99cde7d7e0c1af4002"
+      "bytes": 14673,
+      "sha256": "c1e2c60198fa12196b86b151a454eadceb1150f2a6258007c6f528449f897e4c"
     },
     {
       "path": "README.zh-CN.md",
-      "bytes": 12161,
-      "sha256": "55b43a0c41b16f50d92830ea2043b13051f8b04c2c48c3e885380302b2e6c95e"
+      "bytes": 12335,
+      "sha256": "47774e92e9e34b942612858ed0787641bbc2da2bb384927afe9a558b774a454a"
     },
     {
       "path": "RELEASE_NOTES.md",
@@ -929,8 +929,8 @@
     },
     {
       "path": "ROADMAP.md",
-      "bytes": 2681,
-      "sha256": "b7dbd82156a98598b26b0865d0c231d3bccf699c1b7a51b36a49b4a5a25820fe"
+      "bytes": 2938,
+      "sha256": "b851db0f5e4efc5098de1bc75589ba3aa12e90c1288ad8c61eb2b231862be75a"
     },
     {
       "path": "SECURITY.md",

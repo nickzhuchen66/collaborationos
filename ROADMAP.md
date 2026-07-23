@@ -14,6 +14,14 @@ truth, independent acceptance, and the published claim ceiling.
 - synthetic positive, legal-stop, and failure/takeover walkthrough;
 - Apache-2.0 public release and community policies.
 
+## Shipped: v0.2.0 Public Agent Toolkit
+
+- four public experimental, Codex-compatible Skills;
+- dependency-free Decision-Only Workflow helper;
+- source-binding and repository verification;
+- Skill and Workflow contribution lanes;
+- GitHub Actions validation and structured contribution templates.
+
 ## Now: Public Usability
 
 - improve repository navigation and bilingual onboarding;
@@ -27,10 +35,9 @@ truth, independent acceptance, and the published claim ceiling.
 
 ## Next: Reusable Operator Assets
 
-Wave 1 on `main` now includes separately structured Skills and a Decision-Only
-Workflow derived from the manual baseline. They are not part of v0.1.0 and must
-not silently gain execution, access, acceptance, retry, promotion, or
-production authority.
+Wave 1 includes separately structured Skills and a Decision-Only Workflow
+derived from the manual baseline. They must not silently gain execution,
+access, acceptance, retry, promotion, or production authority.
 
 Before any executable package is accepted, it should have:
 
@@ -48,7 +55,7 @@ claim. Any future validation must use de-identified evidence, preserve each
 host's source of truth, and distinguish protocol applicability from automated
 or production readiness.
 
-## Explicitly Not on the v0.1.x Roadmap
+## Explicitly Not on the v0.2.x Roadmap
 
 - autonomous final decision authority;
 - silent host access or payload ingestion;

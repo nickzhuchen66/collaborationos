@@ -26,7 +26,9 @@
   <a href="CONTRIBUTING.md">参与贡献</a>
 </p>
 
-> COS v0.1.0 是一个**人工/静态治理基线**。它不是 Agent runtime、自动策略引擎、生产权限系统，也不声称已经完成跨 Host 验证。
+> COS v0.2.0 将**人工/静态治理基线**与公开实验性、无执行权限的 Agent
+> Toolkit 结合起来。它不是 Agent runtime、自动策略引擎、生产权限系统，
+> 也不声称已经完成跨 Host 验证。
 
 ## 10 分钟接入 COS
 
@@ -112,7 +114,7 @@ COS 把稳定的治理核心与每个接入项目的业务系统分开。Host �
 
 每个阶段都检查当前上游证据和权限。文件名、参与者身份、工具调用成功或后续结果，都不能反向创造权限。
 
-## v0.1.0 包含什么
+## v0.2.0 包含什么
 
 - P01-P07 **7 个治理协议**；
 - A01-A09 **9 个严格 JSON Schema** 与对应的人类可读模板；
@@ -121,10 +123,12 @@ COS 把稳定的治理核心与每个接入项目的业务系统分开。Host �
 - 面向操作者的 **Manual/Static Gate Pack**；
 - **新 Host 接入手册**和 Host 侧模板；
 - 一个合成端到端案例；
-- Apache-2.0 许可证与公开协作规则。
+- Apache-2.0 许可证与公开协作规则；
+- 四个公开实验性、Codex-compatible Skills；
+- dependency-free、无执行权限的 Decision-Only Workflow helper；
+- 仓库、source binding、链接、manifest 与 Toolkit 自动检查。
 
-尚未发布的 `main` 分支还包含公开实验性 Wave 1 Skills 与 Decision-Only
-helper；它们不扩大稳定版 v0.1.0 的能力声明。
+Wave 1 Toolkit 不扩大稳定的人工/静态能力声明。
 
 ## 深入了解完整框架
 
@@ -186,9 +190,10 @@ helper；它们不扩大稳定版 v0.1.0 的能力声明。
 
 ## 项目状态与边界
 
-稳定公开版本为 `v0.1.0`。`main` 上的工作优先改善公开可用性和仓库质量，不扩大 v0.1.0 的能力声明。
+稳定公开版本为 `v0.2.0`。`main` 上的工作优先改善公开可用性和仓库质量，
+不扩大人工/静态能力声明。
 
-`main` 现在包含小型实验性本地 validator 和四个 Agent Skills。COS
+COS 包含小型实验性本地 validator 和四个 Agent Skills。COS
 仍**不包含**生产策略引擎、SDK、SaaS、自主 Agent framework、具有执行
 权限的 Workflow、Host connector 或生产执行权限，也不声称完成跨 Host
 验证。详见[公开路线图](ROADMAP.md)。历史实验、内部治理记录和 Host

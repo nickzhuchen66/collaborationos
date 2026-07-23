@@ -30,9 +30,10 @@ accountability to an AI system.
   <a href="CONTRIBUTING.md">Contribute</a>
 </p>
 
-> COS v0.1.0 is a **manual/static governance baseline**. It is not an agent
-> runtime, automated policy engine, production authority, or completed
-> cross-host validation claim.
+> COS v0.2.0 combines the **manual/static governance baseline** with a public
+> experimental, no-execution Agent Toolkit. It is not an agent runtime,
+> automated policy engine, production authority, or completed cross-host
+> validation claim.
 
 ## Adopt COS in 10 Minutes
 
@@ -133,7 +134,7 @@ Every transition checks current upstream evidence and authority. A filename,
 actor identity, successful tool call, or later result cannot create authority
 retroactively.
 
-## What Ships in v0.1.0
+## What Ships in v0.2.0
 
 - **7 governance protocols**, P01-P07;
 - **9 strict JSON schemas** and matching human-readable templates, A01-A09;
@@ -143,11 +144,12 @@ retroactively.
 - a **Manual/Static Gate Pack** for operators;
 - a **new-host adoption manual** and host-side templates;
 - a synthetic end-to-end walkthrough;
-- Apache-2.0 licensing and public contribution policies.
+- Apache-2.0 licensing and public contribution policies;
+- four public experimental, Codex-compatible Skills;
+- the dependency-free, no-execution Decision-Only Workflow helper;
+- automated repository, source-binding, link, manifest, and Toolkit checks.
 
-The unreleased `main` branch additionally includes the public experimental
-Wave 1 Skills and Decision-Only helper. They do not widen the stable v0.1.0
-claim.
+The Wave 1 Toolkit does not widen the stable manual/static capability claim.
 
 ## Explore the Full Framework
 
@@ -241,11 +243,11 @@ file on the current branch by path, byte count, and SHA-256 digest.
 
 ## Project Status and Boundaries
 
-The stable public release is `v0.1.0`. Work on `main` improves public usability
-and repository quality without widening the v0.1.0 capability claim.
+The stable public release is `v0.2.0`. Work on `main` improves public usability
+and repository quality without widening the manual/static capability claim.
 
-COS now ships a small experimental, dependency-free local validator and four
-agent Skills on `main`. COS still does **not** ship:
+COS ships a small experimental, dependency-free local validator and four agent
+Skills. COS still does **not** ship:
 
 - a production policy engine, SDK, SaaS product, or autonomous agent framework;
 - an execution-bearing Workflow or permission enforcement runtime;
