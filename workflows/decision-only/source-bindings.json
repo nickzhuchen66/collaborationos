@@ -1,0 +1,32 @@
+{
+  "schema_version": "0.1-public",
+  "workflow_id": "COS-WF02",
+  "requires_cos_repository": true,
+  "sources": [
+    {
+      "role": "a01_schema",
+      "path": "03_Schemas_and_Templates/COS_Context_Packet_v0.1.schema.json",
+      "sha256": "9aea4593685934e309615c3f71ddb9de47f34164510212c835266ae8f4d1edee"
+    },
+    {
+      "role": "a02_protocol",
+      "path": "02_Protocols/COS_Evidence_Admission_Grounding_Protocol_v0.1.md",
+      "sha256": "92c735323e5a87949c552dcb384176c67431a6ec7b1194150f8df3de081d8431"
+    },
+    {
+      "role": "a02_schema",
+      "path": "03_Schemas_and_Templates/COS_Evidence_Record_v0.1.schema.json",
+      "sha256": "ef338a37c8bbca1f40db3d376b6f0b578e78d5d8d88c0a4897f436bba54a62df"
+    },
+    {
+      "role": "a03_schema",
+      "path": "03_Schemas_and_Templates/COS_Role_Authority_Map_v0.1.schema.json",
+      "sha256": "1371fbb871cad8b14fd955896b530dc182d0e05263abfe5acd4c94ada32bd4aa"
+    },
+    {
+      "role": "a04_schema",
+      "path": "03_Schemas_and_Templates/COS_Decision_Packet_v0.1.schema.json",
+      "sha256": "e96782d116b79ce26856e92a8fb2cdc8f687a36a2ccf230a6ec48883725a07d4"
+    }
+  ]
+}

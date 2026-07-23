@@ -5,6 +5,7 @@
 <p>
   <a href="https://github.com/nickzhuchen66/collaborationos/releases"><img alt="Release" src="https://img.shields.io/github/v/release/nickzhuchen66/collaborationos?style=for-the-badge&label=release"></a>
   <a href="LICENSE"><img alt="License" src="https://img.shields.io/github/license/nickzhuchen66/collaborationos?style=for-the-badge"></a>
+  <a href="https://github.com/nickzhuchen66/collaborationos/actions/workflows/validate.yml"><img alt="Validation" src="https://img.shields.io/github/actions/workflow/status/nickzhuchen66/collaborationos/validate.yml?style=for-the-badge&label=validation"></a>
   <a href="docs/gate-pack-v0.1/README.md"><img alt="Mode: manual and static" src="https://img.shields.io/badge/mode-manual%20%2F%20static-4f7cac?style=for-the-badge"></a>
   <a href="https://github.com/nickzhuchen66/collaborationos/discussions"><img alt="Discussions" src="https://img.shields.io/badge/discussions-open-2f855a?style=for-the-badge"></a>
 </p>
@@ -19,6 +20,8 @@ accountability to an AI system.
   <a href="#adopt-cos-in-10-minutes"><strong>Get started</strong></a>
   ·
   <a href="#architecture">Architecture</a>
+  ·
+  <a href="#use-cos-with-ai-agents">Agent toolkit</a>
   ·
   <a href="docs/adoption-kit-v0.1/COS_NEW_HOST_PROJECT_ADOPTION_MANUAL_v0.1.md">Adoption manual</a>
   ·
@@ -51,6 +54,48 @@ Start from the [synthetic starter host](examples/starter-host/README.md) when yo
 want files to copy and adapt. The 10-minute path prepares an `L1` draft only. It
 does not authorize host access, execution, cost, retry, acceptance, promotion,
 runtime, or production.
+
+## Use COS with AI Agents
+
+The public Wave 1 toolkit turns four bounded COS capabilities into
+Codex-compatible Skills and provides one dependency-free Decision-Only
+Workflow helper.
+
+| Capability | Public entry | What it can do |
+|---|---|---|
+| Context Recovery | [`cos-context-recovery`](skills/cos-context-recovery/SKILL.md) | Prepare or inspect an A01 draft |
+| Role and Authority Binding | [`cos-role-authority-binding`](skills/cos-role-authority-binding/SKILL.md) | Prepare or inspect an A03 map |
+| Decision Packet Preparation | [`cos-decision-packet-preparation`](skills/cos-decision-packet-preparation/SKILL.md) | Prepare or inspect an A04 packet |
+| Review Circuit Breaker | [`cos-review-circuit-breaker`](skills/cos-review-circuit-breaker/SKILL.md) | Classify review state and recommend stop routing |
+| Decision-Only Workflow | [`COS-WF02`](workflows/decision-only/WORKFLOW.md) | Validate accepted A01-A04 relations and stop before P05 |
+
+Install the Skills locally:
+
+```bash
+for skill in \
+  cos-context-recovery \
+  cos-role-authority-binding \
+  cos-decision-packet-preparation \
+  cos-review-circuit-breaker
+do
+  target="$HOME/.codex/skills/$skill"
+  test ! -e "$target" || { echo "Refusing to overwrite: $target" >&2; exit 1; }
+  cp -R "skills/$skill" "$target"
+done
+```
+
+Start a new Codex task, then ask for a Skill by name. Before using the helper,
+verify that every Skill and Workflow is bound to this checkout:
+
+```bash
+python3 tools/cos_wave1.py verify-bindings --cos-root .
+python3 -m unittest discover -s tests -p "test_*.py" -v
+```
+
+The toolkit is **public experimental and no-execution**. Its outputs are drafts
+or observations with `authority_effect=none`; they cannot accept themselves,
+grant Host access, authorize implementation, or advance governance state. See
+the [Skills guide](skills/README.md) and [Workflow guide](workflows/README.md).
 
 ## Why CollaborationOS Exists
 
@@ -100,6 +145,10 @@ retroactively.
 - a synthetic end-to-end walkthrough;
 - Apache-2.0 licensing and public contribution policies.
 
+The unreleased `main` branch additionally includes the public experimental
+Wave 1 Skills and Decision-Only helper. They do not widen the stable v0.1.0
+claim.
+
 ## Explore the Full Framework
 
 ### 1. Understand the invariants
@@ -148,6 +197,7 @@ host's source of truth outside COS.
 | Evaluating COS | [Methodology](01_Core/COS_Methodology.md) | Understand the operating model and claim boundary |
 | Designing a governed AI workflow | [Protocol System Map](02_Protocols/COS_Protocol_System_Map_v0.1.md) | Map the required P01-P07 stages |
 | Preparing a consequential change | [Manual Operator Flow](docs/gate-pack-v0.1/MANUAL_OPERATOR_FLOW.md) | Assemble a bounded manual Gate Pack |
+| Using COS with an AI coding agent | [Public Skills](skills/README.md) | Install bounded preparation Skills with no execution authority |
 | Integrating a new project | [Host Adoption Manual](docs/adoption-kit-v0.1/COS_NEW_HOST_PROJECT_ADOPTION_MANUAL_v0.1.md) | Adopt COS without importing host payloads |
 | Reviewing a schema or protocol | [Conformance Guide](docs/gate-pack-v0.1/MANUAL_CONFORMANCE_GUIDE.md) | Test positive, legal-stop, and failure cases |
 | Contributing publicly | [Contributing Guide](CONTRIBUTING.md) | Propose a synthetic, reviewable change |
@@ -172,6 +222,10 @@ host's source of truth outside COS.
 ├── 02_Protocols/               # P01-P07 and protocol dependency map
 ├── 03_Schemas_and_Templates/   # A01-A09 schemas and human templates
 ├── 05_Conformance/             # Manual matrices and 126 fixtures
+├── skills/                     # Public Wave 1 Codex-compatible Skills
+├── workflows/                  # Decision-Only workflow contract and schema
+├── tools/                      # Dependency-free local validation helper
+├── tests/                      # Public toolkit regression tests
 ├── docs/
 │   ├── getting-started/         # Import, 10-minute L1 setup, and checklist
 │   ├── gate-pack-v0.1/         # Operator-facing manual/static Gate Pack
@@ -190,10 +244,11 @@ file on the current branch by path, byte count, and SHA-256 digest.
 The stable public release is `v0.1.0`. Work on `main` improves public usability
 and repository quality without widening the v0.1.0 capability claim.
 
-COS currently does **not** ship:
+COS now ships a small experimental, dependency-free local validator and four
+agent Skills on `main`. COS still does **not** ship:
 
-- an automated validator, CLI, SDK, SaaS product, or agent framework;
-- executable Skills or Workflows;
+- a production policy engine, SDK, SaaS product, or autonomous agent framework;
+- an execution-bearing Workflow or permission enforcement runtime;
 - a host connector or authority to access another repository;
 - production execution authority;
 - completed cross-host validation.
@@ -205,8 +260,8 @@ repository.
 ## Community
 
 Contributions are welcome when they improve clarity, safety boundaries,
-schemas, templates, synthetic fixtures, conformance coverage, or adoption
-guidance.
+schemas, templates, synthetic fixtures, conformance coverage, adoption
+guidance, public Skills, or no-execution Workflows.
 
 - Read [CONTRIBUTING.md](CONTRIBUTING.md) and the
   [Code of Conduct](CODE_OF_CONDUCT.md).
@@ -214,6 +269,8 @@ guidance.
   for design questions and adoption conversations.
 - Use [Issues](https://github.com/nickzhuchen66/collaborationos/issues) for
   bounded defects, documentation gaps, and proposals.
+- Every pull request runs strict JSON, source-binding, public toolkit,
+  local-link, private-path, and package-manifest checks.
 - Report sensitive problems through the process in [SECURITY.md](SECURITY.md).
 
 If COS helps your team make human-AI work more inspectable, starring the

@@ -1,0 +1,4 @@
+interface:
+  display_name: "COS Review Circuit Breaker"
+  short_description: "Classify review findings and enforce stop budgets"
+  default_prompt: "Use $cos-review-circuit-breaker to assess review budgets, findings, and the permitted next action."

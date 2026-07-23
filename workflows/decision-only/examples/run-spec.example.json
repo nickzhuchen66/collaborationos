@@ -1,0 +1,10 @@
+{
+  "workflow_run_id": "wf02-replace-with-local-run-id",
+  "as_of": "2026-07-23T00:00:00Z",
+  "artifacts": {
+    "A01": "replace/with/accepted-a01.json",
+    "A02": "replace/with/accepted-a02.json",
+    "A03": "replace/with/accepted-a03.json",
+    "A04": "replace/with/accepted-a04.json"
+  }
+}

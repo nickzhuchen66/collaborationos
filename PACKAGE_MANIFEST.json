@@ -5,7 +5,7 @@
   "license": "Apache-2.0",
   "non_self": true,
   "publication_authorized": true,
-  "member_count": 207,
+  "member_count": 237,
   "members": [
     {
       "path": ".github/CODEOWNERS",
@@ -38,9 +38,19 @@
       "sha256": "2d72614fcd79db46c757bba6a29c9d3826681f1050eab8f652313d24e7d38f28"
     },
     {
+      "path": ".github/ISSUE_TEMPLATE/skill-workflow.yml",
+      "bytes": 1670,
+      "sha256": "d0d54b293d9a138c07a8532b4eba1638c2248764420d40dad5060e67ed11b9a1"
+    },
+    {
       "path": ".github/PULL_REQUEST_TEMPLATE.md",
-      "bytes": 1172,
-      "sha256": "d78eb87b4e8e9319ded9eaea9186f3e5be3de481f47447c03efae3711b1cb534"
+      "bytes": 1350,
+      "sha256": "1a9223ff902c3bfc41783fae7154ac20f897c8052243b77b082607dda85fe56a"
+    },
+    {
+      "path": ".github/workflows/validate.yml",
+      "bytes": 654,
+      "sha256": "a0158540288a3b3c6477809543faa119a27c7ebbc382f3d2dd4bb20df670afb0"
     },
     {
       "path": ".gitignore",
@@ -874,8 +884,8 @@
     },
     {
       "path": "CHANGELOG.md",
-      "bytes": 1552,
-      "sha256": "3a85d22517e664913e1bd17e8996f53dd7286e83e2efbabf0e82682824302bbe"
+      "bytes": 1964,
+      "sha256": "842969efce2a4bd95a25b5e0d40c30f309b38a3834016c193adb438460ebdfa8"
     },
     {
       "path": "CITATION.cff",
@@ -889,8 +899,8 @@
     },
     {
       "path": "CONTRIBUTING.md",
-      "bytes": 2627,
-      "sha256": "25e547b200083a80574c30a485ddcabcb11c7972ec6bbc5d181390c6de61cf63"
+      "bytes": 4233,
+      "sha256": "6d8177cb815bd50401fce0d9a67130c3ce1b4362f3ec1354d25cc2df775e720c"
     },
     {
       "path": "LICENSE",
@@ -904,13 +914,13 @@
     },
     {
       "path": "README.md",
-      "bytes": 11390,
-      "sha256": "7696234fe5ea80bee8e9b70690ec604e70e88459b345bf1d4e4a7340ac03c2e1"
+      "bytes": 14500,
+      "sha256": "801554af47a733a85d1c425fc58579878daaafae4a6cca99cde7d7e0c1af4002"
     },
     {
       "path": "README.zh-CN.md",
-      "bytes": 9236,
-      "sha256": "c66ff5f2e40bb2c34265288198c7c710bbe01d346ce0fdef2ee8419d9aa47c83"
+      "bytes": 12161,
+      "sha256": "55b43a0c41b16f50d92830ea2043b13051f8b04c2c48c3e885380302b2e6c95e"
     },
     {
       "path": "RELEASE_NOTES.md",
@@ -919,8 +929,8 @@
     },
     {
       "path": "ROADMAP.md",
-      "bytes": 2495,
-      "sha256": "922c5529f674f93563f03d249fdeb068ed02b0019d63fa7f664ceca79f2cee6a"
+      "bytes": 2681,
+      "sha256": "b7dbd82156a98598b26b0865d0c231d3bccf699c1b7a51b36a49b4a5a25820fe"
     },
     {
       "path": "SECURITY.md",
@@ -971,6 +981,11 @@
       "path": "docs/adoption-kit-v0.1/templates/COS_HOST_ENTRY_POINTER_TEMPLATE_v0.1.md",
       "bytes": 1150,
       "sha256": "69b5852d499562b332626a45e6c2e901d13d6a652aaae91f2475c1b99b4b6e0b"
+    },
+    {
+      "path": "docs/contributing/REVIEW_CONTROL_PROFILE.md",
+      "bytes": 2156,
+      "sha256": "facfc393a58864bc4b4cf959910e0aa812969fb4247e7eab22c680db8b49842e"
     },
     {
       "path": "docs/gate-pack-v0.1/ARTIFACT_SELECTION_AND_OWNERSHIP.md",
@@ -1041,6 +1056,141 @@
       "path": "examples/synthetic/README.md",
       "bytes": 3077,
       "sha256": "8f2153e7e499a3b2031fc71e3e7e6cb9ecafd866b0f27b7c37c8612d70979a29"
+    },
+    {
+      "path": "scripts/update_package_manifest.py",
+      "bytes": 1463,
+      "sha256": "12d8bfdd0a3ff732fb9515e401bd649032498f932a824f7a75f0fb7c6d50180a"
+    },
+    {
+      "path": "scripts/verify_repository.py",
+      "bytes": 3924,
+      "sha256": "c8a2f8cb7380e6c068d40780167ae497ac3a30e4da8bb29abadc727172c54978"
+    },
+    {
+      "path": "skills/README.md",
+      "bytes": 1762,
+      "sha256": "e559ee965194e5e130dd457c7086c1952055c54cea02b693ced6661597339087"
+    },
+    {
+      "path": "skills/cos-context-recovery/SKILL.md",
+      "bytes": 1768,
+      "sha256": "ea4f98a0c3880cf2d999e91755949cf96a6ab9dfd99e751db5357ee50d874856"
+    },
+    {
+      "path": "skills/cos-context-recovery/agents/openai.yaml",
+      "bytes": 243,
+      "sha256": "8576c1f27ed0a3213c8b2abe673b0e9e7b437be4882a403fc0accc1a30953881"
+    },
+    {
+      "path": "skills/cos-context-recovery/references/contract.md",
+      "bytes": 634,
+      "sha256": "236f08b13623874e522c075b71f93de4a46eff5f64759dabe6d0aeb8a46239b1"
+    },
+    {
+      "path": "skills/cos-context-recovery/references/source-bindings.json",
+      "bytes": 705,
+      "sha256": "4b66a9fe3acfc59afbf7085ab35bdbdeb640e92341f89144c81df9cb3d7e2235"
+    },
+    {
+      "path": "skills/cos-decision-packet-preparation/SKILL.md",
+      "bytes": 1755,
+      "sha256": "1c026cac9b991414338f3abd24154a55035597200d58dc3d0a262db43ab9e409"
+    },
+    {
+      "path": "skills/cos-decision-packet-preparation/agents/openai.yaml",
+      "bytes": 256,
+      "sha256": "106ec7cd82a37e7bce86cbbe344e64e6ce1592de68f8344f86babcde3cc05ba3"
+    },
+    {
+      "path": "skills/cos-decision-packet-preparation/references/contract.md",
+      "bytes": 662,
+      "sha256": "1cccfe858578fb00416a999ad9cfa51a06d6b9de03fd4813a64a4eaf5d90b7f9"
+    },
+    {
+      "path": "skills/cos-decision-packet-preparation/references/source-bindings.json",
+      "bytes": 927,
+      "sha256": "5802161525cd66ce8e8375deec4cd33eb963d8d6dbcda7e0612b80b8cf746ff5"
+    },
+    {
+      "path": "skills/cos-review-circuit-breaker/SKILL.md",
+      "bytes": 1774,
+      "sha256": "92426495cefbbd564be211e4c0ab8b81060dc3eb5821eff1d285b2c52c1c9815"
+    },
+    {
+      "path": "skills/cos-review-circuit-breaker/agents/openai.yaml",
+      "bytes": 248,
+      "sha256": "b43ab792a41824bce704bd645a5f4f4d6a699a3079914414e19a9b024c199f7c"
+    },
+    {
+      "path": "skills/cos-review-circuit-breaker/references/contract.md",
+      "bytes": 520,
+      "sha256": "7f2bcbc676ca3ac92845bd64472dd5b1f8f44fe75f256c32d9ceb339aaca6138"
+    },
+    {
+      "path": "skills/cos-review-circuit-breaker/references/source-bindings.json",
+      "bytes": 321,
+      "sha256": "26e236df7ce44d06383c9b1f7ad8522bab76b00494c2b634b360c909f285be3f"
+    },
+    {
+      "path": "skills/cos-role-authority-binding/SKILL.md",
+      "bytes": 1835,
+      "sha256": "ab4325b6b67349009a8d071ba84bb8f15732b2b2e8517b0b0d10cb3fcbb0e79e"
+    },
+    {
+      "path": "skills/cos-role-authority-binding/agents/openai.yaml",
+      "bytes": 241,
+      "sha256": "af2c5c3c59583bfafce976030f9ad545920a1ab46f859c475e0368a7c18f6d1d"
+    },
+    {
+      "path": "skills/cos-role-authority-binding/references/contract.md",
+      "bytes": 784,
+      "sha256": "407dcaabd8d01260a0c1cbf1e04a93bd8356f535fc0f7e8f4f011222466ba2e6"
+    },
+    {
+      "path": "skills/cos-role-authority-binding/references/source-bindings.json",
+      "bytes": 719,
+      "sha256": "95200ba81be8b017b594be114e01ae0e82e94e8b276d1b2299931ccbd0a4babe"
+    },
+    {
+      "path": "tests/test_wave1_public.py",
+      "bytes": 10098,
+      "sha256": "2c8edf3e6e2822b77373246602f3f151ed0ae4df6937e85f3456f3f76f6b10d1"
+    },
+    {
+      "path": "tools/cos_wave1.py",
+      "bytes": 29483,
+      "sha256": "0a83468c81ec8a6f78839dcf2ec53f796312743e66a17de92dafa3ee7d526cb7"
+    },
+    {
+      "path": "workflows/README.md",
+      "bytes": 420,
+      "sha256": "b1a42fd21a94908bd73e9fe864e15c4278f15ea6e3dcceb1ef4316c676803b1d"
+    },
+    {
+      "path": "workflows/decision-only/COS_Decision_Only_Workflow_State_v0.1.schema.json",
+      "bytes": 1914,
+      "sha256": "19e6cd8f6410aa08dfe05baadf680f65071bfa64e983b7815f1fb058f0aa1120"
+    },
+    {
+      "path": "workflows/decision-only/WORKFLOW.md",
+      "bytes": 1735,
+      "sha256": "9dcaab568fb15c62147181c611aff051608902c4fa9832f6146047cca4523f55"
+    },
+    {
+      "path": "workflows/decision-only/examples/review-facts-clear.example.json",
+      "bytes": 650,
+      "sha256": "9e68758a2e6c9cb52e409a75efd3fc510d26d70196e41f0ae9b5948af3b1ce55"
+    },
+    {
+      "path": "workflows/decision-only/examples/run-spec.example.json",
+      "bytes": 294,
+      "sha256": "cee9b93b14f6a7889dd46afe77727853f6823997782ac410411271e504d9222c"
+    },
+    {
+      "path": "workflows/decision-only/source-bindings.json",
+      "bytes": 1140,
+      "sha256": "2892f0a5fc67282ee8c529c4cdb58857268be84d50e6d28ba3bab865c790c4de"
     }
   ]
 }

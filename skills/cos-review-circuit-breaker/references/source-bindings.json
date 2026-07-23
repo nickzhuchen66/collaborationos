@@ -1,0 +1,12 @@
+{
+  "schema_version": "0.1-public",
+  "skill_id": "COS-SK11",
+  "requires_cos_repository": true,
+  "sources": [
+    {
+      "role": "public_review_control_profile",
+      "path": "docs/contributing/REVIEW_CONTROL_PROFILE.md",
+      "sha256": "facfc393a58864bc4b4cf959910e0aa812969fb4247e7eab22c680db8b49842e"
+    }
+  ]
+}

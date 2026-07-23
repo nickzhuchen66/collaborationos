@@ -21,12 +21,16 @@ truth, independent acceptance, and the published claim ceiling.
 - improve public issue, discussion, and contribution paths;
 - collect schema, documentation, fixture, and adoption feedback;
 - keep package manifests and release notes independently inspectable.
+- collect feedback on four public experimental Skills and the Decision-Only
+  Workflow helper;
+- keep public Toolkit behavior local, dependency-free, and no-execution.
 
 ## Next: Reusable Operator Assets
 
-Candidate work may include separately versioned Skills and Workflows derived
-from the manual baseline. These are not part of v0.1.0 and must not silently
-gain execution, access, acceptance, retry, promotion, or production authority.
+Wave 1 on `main` now includes separately structured Skills and a Decision-Only
+Workflow derived from the manual baseline. They are not part of v0.1.0 and must
+not silently gain execution, access, acceptance, retry, promotion, or
+production authority.
 
 Before any executable package is accepted, it should have:
 

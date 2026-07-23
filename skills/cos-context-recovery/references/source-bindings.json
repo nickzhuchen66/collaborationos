@@ -1,0 +1,22 @@
+{
+  "schema_version": "0.1-public",
+  "skill_id": "COS-SK01",
+  "requires_cos_repository": true,
+  "sources": [
+    {
+      "role": "protocol",
+      "path": "02_Protocols/COS_Context_Recovery_Protocol_v0.1.md",
+      "sha256": "ec4c7c2c49a113eec84d58a6e7a18606bffc46fd601d9ff8fc0f2c87edb3b8e8"
+    },
+    {
+      "role": "schema",
+      "path": "03_Schemas_and_Templates/COS_Context_Packet_v0.1.schema.json",
+      "sha256": "9aea4593685934e309615c3f71ddb9de47f34164510212c835266ae8f4d1edee"
+    },
+    {
+      "role": "template",
+      "path": "03_Schemas_and_Templates/COS_Context_Packet_Template_v0.1.md",
+      "sha256": "eaa5bd52487e0663e5cdbcc04234c8dc3df97caeb53cd3be7e451a87af49bd25"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "schema_version": "0.1-public",
+  "skill_id": "COS-SK03",
+  "requires_cos_repository": true,
+  "sources": [
+    {
+      "role": "protocol",
+      "path": "02_Protocols/COS_Role_Authority_Binding_Protocol_v0.1.md",
+      "sha256": "59349f02d94e9436244509f30485a17ceef9af2acc799df13984096486a0826c"
+    },
+    {
+      "role": "schema",
+      "path": "03_Schemas_and_Templates/COS_Role_Authority_Map_v0.1.schema.json",
+      "sha256": "1371fbb871cad8b14fd955896b530dc182d0e05263abfe5acd4c94ada32bd4aa"
+    },
+    {
+      "role": "template",
+      "path": "03_Schemas_and_Templates/COS_Role_Authority_Map_Template_v0.1.md",
+      "sha256": "af846d80d94768ac521f451d4ae120488401cd3428c5e376bb269489c8a2eee3"
+    }
+  ]
+}
