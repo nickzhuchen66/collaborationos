@@ -1,0 +1,4 @@
+interface:
+  display_name: "COS Decision Packet Preparation"
+  short_description: "Prepare human-owned decisions before instructions"
+  default_prompt: "Use $cos-decision-packet-preparation to prepare a COS A04 decision packet without starting execution."

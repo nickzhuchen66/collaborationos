@@ -1,0 +1,20 @@
+{
+  "gate_id": "EXAMPLE-GATE",
+  "development_lab_status": "IN_PROGRESS",
+  "governed_candidate_number": 0,
+  "review_count": 0,
+  "elapsed_engineer_hours": 1.5,
+  "in_scope_p1_families": 0,
+  "new_root_cause_family": false,
+  "contract_growth_after_freeze": false,
+  "review_coverage_complete": true,
+  "effective_entry_required": false,
+  "effective_entry_reached": false,
+  "preflight_engine_count": 0,
+  "effective_engine_count": 0,
+  "subject_oracle_observer_independent": true,
+  "authority_or_ownership_ambiguity": false,
+  "repeated_checklist_failure_family": false,
+  "short_causal_model_available": true,
+  "human_budget_override": false
+}

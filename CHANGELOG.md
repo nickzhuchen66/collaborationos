@@ -18,6 +18,12 @@ production readiness.
 - public roadmap and citation metadata;
 - structured issue forms, pull request template, and CODEOWNERS;
 - GitHub Discussions and repository discovery metadata.
+- four public experimental, Codex-compatible COS Skills;
+- the dependency-free WF02 Decision-Only helper, public state schema, examples,
+  and regression tests;
+- public review-control profile and source-binding verification;
+- GitHub Actions validation for bindings, tests, links, private paths, strict
+  JSON, and the package manifest.
 
 ### Changed
 
@@ -26,6 +32,7 @@ production readiness.
 - promoted the host adoption path to the README first-use experience;
 - clarified the stable v0.1.0 release state while preserving its manual/static
   capability ceiling.
+- expanded the contribution model with explicit Skill and Workflow lanes.
 
 ## [0.1.0] - 2026-07-18
 

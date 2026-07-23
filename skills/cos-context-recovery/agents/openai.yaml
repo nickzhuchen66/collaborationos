@@ -1,0 +1,4 @@
+interface:
+  display_name: "COS Context Recovery"
+  short_description: "Prepare bounded context packets with source conflicts"
+  default_prompt: "Use $cos-context-recovery to prepare a COS A01 context packet draft from approved source facts."

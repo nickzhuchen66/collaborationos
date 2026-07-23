@@ -1,0 +1,4 @@
+interface:
+  display_name: "COS Role and Authority Binding"
+  short_description: "Map actors, roles, permissions, and takeover"
+  default_prompt: "Use $cos-role-authority-binding to prepare a deny-by-default COS A03 role and authority map."

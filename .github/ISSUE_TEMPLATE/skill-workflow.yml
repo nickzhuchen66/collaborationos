@@ -1,0 +1,55 @@
+name: Skill or Workflow proposal
+description: Propose or report a bounded issue in a public COS Skill, Workflow, or helper.
+title: "[Skill/Workflow]: "
+labels:
+  - enhancement
+body:
+  - type: dropdown
+    id: surface
+    attributes:
+      label: Surface
+      options:
+        - Existing Skill
+        - New Skill
+        - Existing Workflow
+        - New Workflow
+        - Public helper or validator
+    validations:
+      required: true
+  - type: input
+    id: contract
+    attributes:
+      label: Owning public contract
+      description: Name the protocol, schema, template, or public review profile.
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: Describe the trigger, current behavior, and concrete wrong or missing outcome.
+    validations:
+      required: true
+  - type: textarea
+    id: boundary
+    attributes:
+      label: Authority and claim boundary
+      description: State what must remain human-owned and what execution, access, retry, or acceptance remains prohibited.
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Synthetic acceptance cases
+      description: List positive, failed-closed, and downstream-not-started cases.
+    validations:
+      required: true
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Public contribution checks
+      options:
+        - label: This proposal contains no real Host payload, secret, private path, or personal data.
+          required: true
+        - label: This proposal does not grant AI final authority or implicit execution.
+          required: true

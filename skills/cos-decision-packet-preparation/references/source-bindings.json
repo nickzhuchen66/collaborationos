@@ -1,0 +1,27 @@
+{
+  "schema_version": "0.1-public",
+  "skill_id": "COS-SK04",
+  "requires_cos_repository": true,
+  "sources": [
+    {
+      "role": "protocol",
+      "path": "02_Protocols/COS_Decision_Before_Instruction_Protocol_v0.1.md",
+      "sha256": "61c5c3b6b42262f96da928cea4364f4f094854a8e3d6f3638fbbe08d1527bb7a"
+    },
+    {
+      "role": "schema",
+      "path": "03_Schemas_and_Templates/COS_Decision_Packet_v0.1.schema.json",
+      "sha256": "e96782d116b79ce26856e92a8fb2cdc8f687a36a2ccf230a6ec48883725a07d4"
+    },
+    {
+      "role": "template",
+      "path": "03_Schemas_and_Templates/COS_Decision_Packet_Template_v0.1.md",
+      "sha256": "28946f82ab9f71eee8b8981f5a7bdf09201b03a5fa58f099980541171ebbbdc3"
+    },
+    {
+      "role": "cost_schema",
+      "path": "03_Schemas_and_Templates/COS_Cost_Decision_Packet_v0.1.schema.json",
+      "sha256": "f60dc52c82ae09fbf43f41c2119b4575ea8d689d247f8db1b828e5707f69eb57"
+    }
+  ]
+}

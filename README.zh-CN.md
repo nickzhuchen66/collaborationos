@@ -5,6 +5,7 @@
 <p>
   <a href="https://github.com/nickzhuchen66/collaborationos/releases"><img alt="Release" src="https://img.shields.io/github/v/release/nickzhuchen66/collaborationos?style=for-the-badge&label=release"></a>
   <a href="LICENSE"><img alt="License" src="https://img.shields.io/github/license/nickzhuchen66/collaborationos?style=for-the-badge"></a>
+  <a href="https://github.com/nickzhuchen66/collaborationos/actions/workflows/validate.yml"><img alt="Validation" src="https://img.shields.io/github/actions/workflow/status/nickzhuchen66/collaborationos/validate.yml?style=for-the-badge&label=validation"></a>
   <a href="docs/gate-pack-v0.1/README.md"><img alt="Mode: manual and static" src="https://img.shields.io/badge/mode-manual%20%2F%20static-4f7cac?style=for-the-badge"></a>
   <a href="https://github.com/nickzhuchen66/collaborationos/discussions"><img alt="Discussions" src="https://img.shields.io/badge/discussions-open-2f855a?style=for-the-badge"></a>
 </p>
@@ -15,6 +16,8 @@
   <a href="#10-分钟接入-cos"><strong>开始接入</strong></a>
   ·
   <a href="#架构">了解架构</a>
+  ·
+  <a href="#在-ai-agent-中使用-cos">Agent Toolkit</a>
   ·
   <a href="docs/adoption-kit-v0.1/COS_NEW_HOST_PROJECT_ADOPTION_MANUAL_v0.1.md">接入手册</a>
   ·
@@ -40,6 +43,46 @@ COS 不需要作为 runtime 安装。新项目通过引用固定版本、创建�
 | 5. 使用 | 在 L1 跑一次 Decision-Only；只有独立决策后才能进入 L2 | [Manual Operator Flow](docs/gate-pack-v0.1/MANUAL_OPERATOR_FLOW.md) |
 
 希望直接复制文件时，从[合成 Starter Host](examples/starter-host/README.md)开始。10 分钟路径只会准备好 `L1` 草案，不授权 Host access、执行、成本、重试、验收、晋升、runtime 或 production。
+
+## 在 AI Agent 中使用 COS
+
+公开 Wave 1 Toolkit 把四项有边界的 COS 能力封装为 Codex-compatible
+Skills，并提供一个零第三方依赖的 Decision-Only Workflow helper。
+
+| 能力 | 公开入口 | 能做什么 |
+|---|---|---|
+| Context Recovery | [`cos-context-recovery`](skills/cos-context-recovery/SKILL.md) | 准备或检查 A01 草案 |
+| Role and Authority Binding | [`cos-role-authority-binding`](skills/cos-role-authority-binding/SKILL.md) | 准备或检查 A03 权限图 |
+| Decision Packet Preparation | [`cos-decision-packet-preparation`](skills/cos-decision-packet-preparation/SKILL.md) | 准备或检查 A04 决策包 |
+| Review Circuit Breaker | [`cos-review-circuit-breaker`](skills/cos-review-circuit-breaker/SKILL.md) | 分类 review 状态并给出停止路由建议 |
+| Decision-Only Workflow | [`COS-WF02`](workflows/decision-only/WORKFLOW.md) | 验证已接受 A01-A04 的关系，并停在 P05 之前 |
+
+本地安装：
+
+```bash
+for skill in \
+  cos-context-recovery \
+  cos-role-authority-binding \
+  cos-decision-packet-preparation \
+  cos-review-circuit-breaker
+do
+  target="$HOME/.codex/skills/$skill"
+  test ! -e "$target" || { echo "Refusing to overwrite: $target" >&2; exit 1; }
+  cp -R "skills/$skill" "$target"
+done
+```
+
+重新开启一个 Codex 任务后即可按 Skill 名称调用。使用前验证公开绑定与测试：
+
+```bash
+python3 tools/cos_wave1.py verify-bindings --cos-root .
+python3 -m unittest discover -s tests -p "test_*.py" -v
+```
+
+Toolkit 状态为**公开实验性、无执行能力**。输出只是
+`authority_effect=none` 的草案或观察结果，不能自我验收、授权 Host
+访问、启动实现或推进治理状态。详见 [Skills 指南](skills/README.md)和
+[Workflow 指南](workflows/README.md)。
 
 ## 为什么需要 CollaborationOS
 
@@ -80,6 +123,9 @@ COS 把稳定的治理核心与每个接入项目的业务系统分开。Host �
 - 一个合成端到端案例；
 - Apache-2.0 许可证与公开协作规则。
 
+尚未发布的 `main` 分支还包含公开实验性 Wave 1 Skills 与 Decision-Only
+helper；它们不扩大稳定版 v0.1.0 的能力声明。
+
 ## 深入了解完整框架
 
 1. 阅读[宪法](00_Governance/COS_Constitution.md)、[方法论](01_Core/COS_Methodology.md)和[目标架构](01_Core/COS_Target_Architecture.md)。
@@ -97,6 +143,7 @@ COS 把稳定的治理核心与每个接入项目的业务系统分开。Host �
 | 评估 COS | [方法论](01_Core/COS_Methodology.md) | 理解运行模型与能力边界 |
 | 设计受治理的 AI 流程 | [协议系统图](02_Protocols/COS_Protocol_System_Map_v0.1.md) | 映射 P01-P07 阶段 |
 | 准备重要变更 | [人工操作流程](docs/gate-pack-v0.1/MANUAL_OPERATOR_FLOW.md) | 组装有边界的人工 Gate Pack |
+| 在 AI coding agent 中使用 COS | [公开 Skills](skills/README.md) | 安装无执行权限的准备型 Skills |
 | 为新项目接入 COS | [Host Adoption Manual](docs/adoption-kit-v0.1/COS_NEW_HOST_PROJECT_ADOPTION_MANUAL_v0.1.md) | 保留 Host 业务主权的引用式接入 |
 | 检查协议或 Schema | [Conformance 指南](docs/gate-pack-v0.1/MANUAL_CONFORMANCE_GUIDE.md) | 覆盖正例、legal-stop 与失败分支 |
 | 公开贡献 | [贡献指南](CONTRIBUTING.md) | 提交合成、可审查的改进 |
@@ -121,6 +168,10 @@ COS 把稳定的治理核心与每个接入项目的业务系统分开。Host �
 ├── 02_Protocols/               # P01-P07 与依赖关系
 ├── 03_Schemas_and_Templates/   # A01-A09 Schema 与模板
 ├── 05_Conformance/             # 4 个 Matrix 与 126 个 Fixture
+├── skills/                     # 公开 Wave 1 Codex-compatible Skills
+├── workflows/                  # Decision-Only Workflow 合同与 Schema
+├── tools/                      # 零第三方依赖的本地验证 helper
+├── tests/                      # 公开 Toolkit 回归测试
 ├── docs/
 │   ├── getting-started/         # 导入、10 分钟 L1 准备与检查清单
 │   ├── gate-pack-v0.1/         # 面向操作者的 Manual/Static Gate Pack
@@ -137,13 +188,19 @@ COS 把稳定的治理核心与每个接入项目的业务系统分开。Host �
 
 稳定公开版本为 `v0.1.0`。`main` 上的工作优先改善公开可用性和仓库质量，不扩大 v0.1.0 的能力声明。
 
-当前 COS **不包含**自动 validator、CLI、SDK、SaaS、Agent framework、可执行 Skill/Workflow、Host connector 或生产执行权限，也不声称完成跨 Host 验证。详见[公开路线图](ROADMAP.md)。历史实验和内部治理记录不会进入本公开仓库。
+`main` 现在包含小型实验性本地 validator 和四个 Agent Skills。COS
+仍**不包含**生产策略引擎、SDK、SaaS、自主 Agent framework、具有执行
+权限的 Workflow、Host connector 或生产执行权限，也不声称完成跨 Host
+验证。详见[公开路线图](ROADMAP.md)。历史实验、内部治理记录和 Host
+evidence 不会进入本公开仓库。
 
 ## 社区
 
 - 提交前阅读[贡献指南](CONTRIBUTING.md)和[行为准则](CODE_OF_CONDUCT.md)。
 - 在 [GitHub Discussions](https://github.com/nickzhuchen66/collaborationos/discussions) 讨论设计和接入问题。
 - 在 [Issues](https://github.com/nickzhuchen66/collaborationos/issues) 提交有边界的问题、文档缺口和建议。
+- 每个 Pull Request 都会运行 strict JSON、source binding、Toolkit
+  tests、本地链接、private path 和 package manifest 检查。
 - 敏感问题按照[安全政策](SECURITY.md)报告。
 
 如果 COS 对你的人类-AI协作有帮助，Star 可以帮助更多开发者发现它。
